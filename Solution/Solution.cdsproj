@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PowerAppsTargetsPath>$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\PowerApps</PowerAppsTargetsPath>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props')" />
+
+  <PropertyGroup>
+    <ProjectGuid>cee3358c-a95e-4a3c-b8a0-2be4718705c6</ProjectGuid>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <!--Remove TargetFramework when this is available in 16.1-->
+    <TargetFramework>net462</TargetFramework>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <SolutionRootPath>src</SolutionRootPath>
+  </PropertyGroup>
+
+  <!-- Built as unamnaged to allow including in the Power CAT Accelerator solution -->
+  <PropertyGroup>
+    <SolutionPackageType>Unmanaged</SolutionPackageType>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\.gitignore" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\bin\**" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\obj\**" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.cdsproj" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.cdsproj.user" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.sln" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)\**" Exclude="@(ExcludeDirectories)" />
+    <Content Include="$(SolutionPackageZipFilePath)">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\AutoWidthLabel\auto-width-label.pcfproj" />
+    <ProjectReference Include="..\Elevation\Elevation.pcfproj" />
+    <ProjectReference Include="..\Icon\Icon.pcfproj" />
+    <ProjectReference Include="..\KeyboardShortcuts\keyboard-shortcuts.pcfproj" />
+    <ProjectReference Include="..\Picker\Picker.pcfproj" />
+    <ProjectReference Include="..\ResizableTextarea\resizable-textarea.pcfproj" />
+    <ProjectReference Include="..\DetailsList\DetailsList.pcfproj" />
+    <ProjectReference Include="..\CommandBar\CommandBar.pcfproj" />
+    <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
+    <ProjectReference Include="..\Nav\Nav.pcfproj" />
+    <ProjectReference Include="..\Pivot\Pivot.pcfproj" />
+    <ProjectReference Include="..\TagList\TagList.pcfproj" />
+    <ProjectReference Include="..\Breadcrumb\BreadCrumb.pcfproj" />
+    <ProjectReference Include="..\ThemeGenerator\themeGenerator.pcfproj" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.targets" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.targets')" />
+
+</Project>

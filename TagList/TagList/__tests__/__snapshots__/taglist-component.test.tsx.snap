@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagList tag renders correctly with no style 1`] = `
+<div
+  aria-label="tag1"
+  className=
+      ms-TagItem
+      {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background: #f3f2f1;
+        border-radius: 2px;
+        box-sizing: content-box;
+        color: #323130;
+        cursor: default;
+        display: flex;
+        flex-shrink: 1;
+        flex-wrap: nowrap;
+        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        height: 26px;
+        line-height: 26px;
+        margin-bottom: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 2px;
+        max-width: 300px;
+        min-width: 0px;
+        outline: transparent;
+        position: relative;
+        user-select: none;
+      }
+      &::-moz-focus-inner {
+        border: 0;
+      }
+      .ms-Fabric--isFocusVisible &:focus:after {
+        border: 1px solid #ffffff;
+        bottom: 1px;
+        content: "";
+        left: 1px;
+        outline: 1px solid #605e5c;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        z-index: 1;
+      }
+      &:hover {
+        background: #f3f2f1;
+      }
+      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+        border-color: GrayText;
+        border: 1px solid WindowText;
+      }
+  role="listitem"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "borderColor": undefined,
+      "borderStyle": undefined,
+      "borderWidth": undefined,
+      "color": undefined,
+    }
+  }
+>
+  <span
+    className=
+        ms-TagItem-text
+        {
+          margin-bottom: 0;
+          margin-left: 8px;
+          margin-right: 8px;
+          margin-top: 0;
+          min-width: 30px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+          color: GrayText;
+        }
+    id="id__0-text"
+    title="tag1"
+  />
+</div>
+`;
+
+exports[`TagList taglist renders correctly with no style 1`] = `
+<div
+  className=""
+  style={
+    Object {
+      "alignContent": "flex-start",
+      "display": "flex",
+      "flexWrap": "wrap",
+      "maxHeight": undefined,
+      "maxWidth": "100%",
+      "overflowY": "auto",
+      "position": "relative",
+    }
+  }
+>
+  <div
+    aria-label="tag1"
+    className=
+        ms-TagItem
+        {
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+          background: #f3f2f1;
+          border-radius: 2px;
+          box-sizing: content-box;
+          color: #323130;
+          cursor: default;
+          display: flex;
+          flex-shrink: 1;
+          flex-wrap: nowrap;
+          font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          height: 26px;
+          justify-content: left;
+          line-height: 26px;
+          margin-bottom: 2px;
+          margin-left: 2px;
+          margin-right: 2px;
+          margin-top: 2px;
+          max-width: 100%;
+          min-width: 0px;
+          outline: transparent;
+          position: relative;
+          user-select: none;
+        }
+        &::-moz-focus-inner {
+          border: 0;
+        }
+        .ms-Fabric--isFocusVisible &:focus:after {
+          border: 1px solid #ffffff;
+          bottom: 1px;
+          content: "";
+          left: 1px;
+          outline: 1px solid #605e5c;
+          position: absolute;
+          right: 1px;
+          top: 1px;
+          z-index: 1;
+        }
+        &:hover {
+          background: #f3f2f1;
+        }
+        @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+          border-color: GrayText;
+          border: 1px solid WindowText;
+        }
+    role="listitem"
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": undefined,
+        "borderStyle": undefined,
+        "borderWidth": undefined,
+        "color": undefined,
+      }
+    }
+  >
+    <span
+      className=
+          ms-TagItem-text
+          {
+            margin-bottom: 0;
+            margin-left: 8px;
+            margin-right: 8px;
+            margin-top: 0;
+            min-width: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+            color: GrayText;
+          }
+      id="id__2-text"
+      title="tag1"
+    >
+      tag1
+    </span>
+  </div>
+</div>
+`;

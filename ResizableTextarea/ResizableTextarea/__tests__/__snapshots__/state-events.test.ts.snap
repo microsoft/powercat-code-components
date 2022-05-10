@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizeableTextArea element state events sets disabled styles: disabled 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: rgb(166,166,166); background: rgb(244, 244, 244);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          disabled=""
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(166, 166, 166); font-weight: 400;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events sets disabled styles: hover 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: rgb(166,166,166); background: silver;"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          disabled=""
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(166, 166, 166); font-weight: 400;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events sets disabled styles: hover:leave 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: rgb(166,166,166); background: rgb(244, 244, 244);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          disabled=""
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(166, 166, 166); font-weight: 400;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events sets read-only and masked styles due to security: disabled 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: rgb(166,166,166); background: rgb(244, 244, 244);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          disabled=""
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(166, 166, 166); font-weight: 400;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events sets read-only styles due to security: disabled 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: rgb(166,166,166); background: rgb(244, 244, 244);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          disabled=""
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(166, 166, 166); font-weight: 400;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: #00126b; background: rgb(255, 255, 255);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(0, 0, 0); font-weight: 400;"
+          tabindex="10"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: blur 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: #00126b; background: rgb(255, 255, 255);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(0, 0, 0); font-weight: 400;"
+          tabindex="10"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: focus 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 4px; margin: -2px; border-color: #00126b; background: rgb(255, 255, 255);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -2px;"
+      >
+        <textarea
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(0, 0, 0); font-weight: 400;"
+          tabindex="10"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: hover 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: #00126b; background: rgb(186, 202, 226);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(0, 0, 0); font-weight: 400;"
+          tabindex="10"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: hover:leave 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-radius: 5px; border-width: 2px; margin: -1px; border-color: #00126b; background: rgb(255, 255, 255);"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: -1px;"
+      >
+        <textarea
+          maxlength="100"
+          placeholder="Enter text here..."
+          style="font-size: 17.5px; padding: 5px 5px 5px 12px; resize: both; color: rgb(0, 0, 0); font-weight: 400;"
+          tabindex="10"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

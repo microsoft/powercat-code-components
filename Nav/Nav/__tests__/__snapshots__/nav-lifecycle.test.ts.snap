@@ -1,0 +1,1432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav theme 1`] = `
+<div
+  className=""
+>
+  <div
+    className=
+        ms-FocusZone
+        &:focus {
+          outline: none;
+        }
+    data-focuszone-id="FocusZone50"
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseDownCapture={[Function]}
+  >
+    <nav
+      aria-label=""
+      className=
+          ms-Nav
+          {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            -webkit-overflow-scrolling: touch;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            height: -1px;
+            overflow-y: auto;
+            user-select: none;
+            width: -1px;
+          }
+      role="navigation"
+    >
+      <div
+        className="ms-Nav-group is-expanded"
+      >
+        <div
+          className=
+              ms-Nav-groupContent
+              {
+                animation-duration: 0.367s;
+                animation-fill-mode: both;
+                animation-name: keyframes from{opacity:0;}to{opacity:1;} keyframes from{transform:translate3d(0,-20px,0);pointer-events:none;}to{transform:translate3d(0,0,0);pointer-events:auto;};
+                animation-timing-function: cubic-bezier(.1,.9,.2,1);
+                display: block;
+                margin-bottom: 0px;
+              }
+        >
+          <ul
+            className=
+                ms-Nav-navItems
+                {
+                  list-style-type: none;
+                  margin-bottom: 0px;
+                  margin-left: 0px;
+                  margin-right: 0px;
+                  margin-top: 0px;
+                  padding-bottom: 0px;
+                  padding-left: 0px;
+                  padding-right: 0px;
+                  padding-top: 0px;
+                }
+            role="list"
+          >
+            <li
+              className=
+                  ms-Nav-navItem
+                  {
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 0px;
+                  }
+              role="listitem"
+            >
+              <div
+                className=
+                    ms-Nav-compositeLink
+                    is-expanded
+                    {
+                      color: #323130;
+                      display: block;
+                      position: relative;
+                    }
+                name="Item 1"
+              >
+                <button
+                  aria-expanded="true"
+                  aria-label="Item 1 collapsed"
+                  className=
+                      ms-Nav-chevronButton
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        background-color: transparent;
+                        background-color: transparent;
+                        border: none;
+                        color: #323130;
+                        cursor: pointer;
+                        display: block;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        height: 42px;
+                        left: 1px;
+                        line-height: 44px;
+                        margin-bottom: 0px;
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        margin-top: 0px;
+                        outline: transparent;
+                        overflow: hidden;
+                        padding-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 0px;
+                        position: absolute;
+                        text-align: left;
+                        text-overflow: ellipsis;
+                        top: 1px;
+                        white-space: nowrap;
+                        width: 26px;
+                        z-index: 1;
+                      }
+                      &::-moz-focus-inner {
+                        border: 0;
+                      }
+                      .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      &:visited {
+                        color: #323130;
+                      }
+                      &::after {
+                        content: none;
+                      }
+                  onClick={[Function]}
+                >
+                  <i
+                    aria-hidden={true}
+                    className=
+                        ms-Nav-chevron
+                        {
+                          -moz-osx-font-smoothing: grayscale;
+                          -webkit-font-smoothing: antialiased;
+                          align-items: center;
+                          display: inline-flex;
+                          font-family: "FabricMDL2Icons";
+                          font-size: 12px;
+                          font-style: normal;
+                          font-weight: normal;
+                          height: 44px;
+                          left: 8px;
+                          line-height: 44px;
+                          position: absolute;
+                          speak: none;
+                          top: 0px;
+                          transform: rotate(-180deg);
+                          transition: transform .1s linear;
+                        }
+                    data-icon-name="ChevronDown"
+                  >
+                    
+                  </i>
+                </button>
+                <button
+                  className=
+                      ms-Button
+                      ms-Button--action
+                      ms-Button--command
+                      ms-Nav-link
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        background-color: transparent;
+                        border-radius: 2px;
+                        border: 1px solid transparent;
+                        box-sizing: border-box;
+                        color: #323130;
+                        cursor: pointer;
+                        display: block;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        height: 44px;
+                        line-height: inherit;
+                        outline: transparent;
+                        overflow: hidden;
+                        padding-bottom: 0;
+                        padding-left: 27px;
+                        padding-right: 20px;
+                        padding-top: 0;
+                        position: relative;
+                        text-align: center;
+                        text-decoration: none;
+                        text-overflow: ellipsis;
+                        user-select: none;
+                        white-space: normal;
+                        width: 100%;
+                      }
+                      &::-moz-focus-inner {
+                        border: 0;
+                      }
+                      .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                        bottom: -2px;
+                        left: -2px;
+                        outline-color: ButtonText;
+                        right: -2px;
+                        top: -2px;
+                      }
+                      &:active > * {
+                        left: 0px;
+                        position: relative;
+                        top: 0px;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                        border-color: Window;
+                        border: 0px;
+                      }
+                      &:hover {
+                        color: #test-primary;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                        color: Highlight;
+                      }
+                      &:hover .ms-Button-icon {
+                        color: #test-primary;
+                      }
+                      &:active {
+                        color: #000000;
+                      }
+                      &:active .ms-Button-icon {
+                        color: #004578;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                        border: 1px solid WindowText;
+                      }
+                      .ms-Nav-compositeLink:hover & {
+                        background-color: #f3f2f1;
+                      }
+                  data-is-focusable={true}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  title="Item 1"
+                  type="button"
+                >
+                  <span
+                    className=
+                        ms-Button-flexContainer
+                        {
+                          align-items: center;
+                          display: flex;
+                          flex-wrap: nowrap;
+                          height: 100%;
+                          justify-content: flex-start;
+                        }
+                    data-automationid="splitbuttonprimary"
+                  >
+                    <div
+                      className=
+                          ms-Nav-linkText
+                          {
+                            margin-bottom: 0;
+                            margin-left: 4px;
+                            margin-right: 4px;
+                            margin-top: 0;
+                            overflow: hidden;
+                            text-align: left;
+                            text-overflow: ellipsis;
+                            vertical-align: middle;
+                          }
+                    >
+                      Item 1
+                    </div>
+                  </span>
+                </button>
+              </div>
+              <ul
+                className=
+                    ms-Nav-navItems
+                    {
+                      list-style-type: none;
+                      margin-bottom: 0px;
+                      margin-left: 0px;
+                      margin-right: 0px;
+                      margin-top: 0px;
+                      padding-bottom: 0px;
+                      padding-left: 0px;
+                      padding-right: 0px;
+                      padding-top: 0px;
+                    }
+                role="list"
+              >
+                <li
+                  className=
+                      ms-Nav-navItem
+                      {
+                        padding-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 0px;
+                      }
+                  role="listitem"
+                >
+                  <div
+                    className=
+                        ms-Nav-compositeLink
+                        {
+                          color: #323130;
+                          display: block;
+                          position: relative;
+                        }
+                    name="Item 2"
+                  >
+                    <button
+                      className=
+                          ms-Button
+                          ms-Button--action
+                          ms-Button--command
+                          ms-Nav-link
+                          {
+                            -moz-osx-font-smoothing: grayscale;
+                            -webkit-font-smoothing: antialiased;
+                            background-color: transparent;
+                            border-radius: 2px;
+                            border: 1px solid transparent;
+                            box-sizing: border-box;
+                            color: #323130;
+                            cursor: pointer;
+                            display: block;
+                            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                            font-size: 14px;
+                            font-weight: 400;
+                            height: 44px;
+                            line-height: inherit;
+                            outline: transparent;
+                            overflow: hidden;
+                            padding-bottom: 0;
+                            padding-left: 41px;
+                            padding-right: 20px;
+                            padding-top: 0;
+                            position: relative;
+                            text-align: center;
+                            text-decoration: none;
+                            text-overflow: ellipsis;
+                            user-select: none;
+                            white-space: normal;
+                            width: 100%;
+                          }
+                          &::-moz-focus-inner {
+                            border: 0;
+                          }
+                          .ms-Fabric--isFocusVisible &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          &:active > * {
+                            left: 0px;
+                            position: relative;
+                            top: 0px;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                            border-color: Window;
+                            border: 0px;
+                          }
+                          &:hover {
+                            color: #test-primary;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                            color: Highlight;
+                          }
+                          &:hover .ms-Button-icon {
+                            color: #test-primary;
+                          }
+                          &:active {
+                            color: #000000;
+                          }
+                          &:active .ms-Button-icon {
+                            color: #004578;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                            border: 1px solid WindowText;
+                          }
+                          .ms-Nav-compositeLink:hover & {
+                            background-color: #f3f2f1;
+                          }
+                      data-is-focusable={true}
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseUp={[Function]}
+                      title="Item 2"
+                      type="button"
+                    >
+                      <span
+                        className=
+                            ms-Button-flexContainer
+                            {
+                              align-items: center;
+                              display: flex;
+                              flex-wrap: nowrap;
+                              height: 100%;
+                              justify-content: flex-start;
+                            }
+                        data-automationid="splitbuttonprimary"
+                      >
+                        <div
+                          className=
+                              ms-Nav-linkText
+                              {
+                                margin-bottom: 0;
+                                margin-left: 4px;
+                                margin-right: 4px;
+                                margin-top: 0;
+                                overflow: hidden;
+                                text-align: left;
+                                text-overflow: ellipsis;
+                                vertical-align: middle;
+                              }
+                        >
+                          Item 2
+                        </div>
+                      </span>
+                    </button>
+                  </div>
+                </li>
+                <li
+                  className=
+                      ms-Nav-navItem
+                      {
+                        padding-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 0px;
+                      }
+                  role="listitem"
+                >
+                  <div
+                    className=
+                        ms-Nav-compositeLink
+                        {
+                          color: #323130;
+                          display: block;
+                          position: relative;
+                        }
+                    name="Item 3"
+                  >
+                    <button
+                      className=
+                          ms-Button
+                          ms-Button--action
+                          ms-Button--command
+                          ms-Nav-link
+                          {
+                            -moz-osx-font-smoothing: grayscale;
+                            -webkit-font-smoothing: antialiased;
+                            background-color: transparent;
+                            border-radius: 2px;
+                            border: 1px solid transparent;
+                            box-sizing: border-box;
+                            color: #323130;
+                            cursor: pointer;
+                            display: block;
+                            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                            font-size: 14px;
+                            font-weight: 400;
+                            height: 44px;
+                            line-height: inherit;
+                            outline: transparent;
+                            overflow: hidden;
+                            padding-bottom: 0;
+                            padding-left: 41px;
+                            padding-right: 20px;
+                            padding-top: 0;
+                            position: relative;
+                            text-align: center;
+                            text-decoration: none;
+                            text-overflow: ellipsis;
+                            user-select: none;
+                            white-space: normal;
+                            width: 100%;
+                          }
+                          &::-moz-focus-inner {
+                            border: 0;
+                          }
+                          .ms-Fabric--isFocusVisible &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          &:active > * {
+                            left: 0px;
+                            position: relative;
+                            top: 0px;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                            border-color: Window;
+                            border: 0px;
+                          }
+                          &:hover {
+                            color: #test-primary;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                            color: Highlight;
+                          }
+                          &:hover .ms-Button-icon {
+                            color: #test-primary;
+                          }
+                          &:active {
+                            color: #000000;
+                          }
+                          &:active .ms-Button-icon {
+                            color: #004578;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                            border: 1px solid WindowText;
+                          }
+                          .ms-Nav-compositeLink:hover & {
+                            background-color: #f3f2f1;
+                          }
+                      data-is-focusable={true}
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseUp={[Function]}
+                      title="Item 3"
+                      type="button"
+                    >
+                      <span
+                        className=
+                            ms-Button-flexContainer
+                            {
+                              align-items: center;
+                              display: flex;
+                              flex-wrap: nowrap;
+                              height: 100%;
+                              justify-content: flex-start;
+                            }
+                        data-automationid="splitbuttonprimary"
+                      >
+                        <div
+                          className=
+                              ms-Nav-linkText
+                              {
+                                margin-bottom: 0;
+                                margin-left: 4px;
+                                margin-right: 4px;
+                                margin-top: 0;
+                                overflow: hidden;
+                                text-align: left;
+                                text-overflow: ellipsis;
+                                vertical-align: middle;
+                              }
+                        >
+                          Item 3
+                        </div>
+                      </span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li
+              className=
+                  ms-Nav-navItem
+                  {
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 0px;
+                  }
+              role="listitem"
+            >
+              <div
+                className=
+                    ms-Nav-compositeLink
+                    is-expanded
+                    {
+                      color: #323130;
+                      display: block;
+                      position: relative;
+                    }
+                name="Item 4"
+              >
+                <button
+                  aria-expanded="true"
+                  aria-label="Item 4 collapsed"
+                  className=
+                      ms-Nav-chevronButton
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        background-color: transparent;
+                        background-color: transparent;
+                        border: none;
+                        color: #323130;
+                        cursor: pointer;
+                        display: block;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        height: 42px;
+                        left: 1px;
+                        line-height: 44px;
+                        margin-bottom: 0px;
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        margin-top: 0px;
+                        outline: transparent;
+                        overflow: hidden;
+                        padding-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 0px;
+                        position: absolute;
+                        text-align: left;
+                        text-overflow: ellipsis;
+                        top: 1px;
+                        white-space: nowrap;
+                        width: 26px;
+                        z-index: 1;
+                      }
+                      &::-moz-focus-inner {
+                        border: 0;
+                      }
+                      .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      &:visited {
+                        color: #323130;
+                      }
+                      &::after {
+                        content: none;
+                      }
+                  onClick={[Function]}
+                >
+                  <i
+                    aria-hidden={true}
+                    className=
+                        ms-Nav-chevron
+                        {
+                          -moz-osx-font-smoothing: grayscale;
+                          -webkit-font-smoothing: antialiased;
+                          align-items: center;
+                          display: inline-flex;
+                          font-family: "FabricMDL2Icons";
+                          font-size: 12px;
+                          font-style: normal;
+                          font-weight: normal;
+                          height: 44px;
+                          left: 8px;
+                          line-height: 44px;
+                          position: absolute;
+                          speak: none;
+                          top: 0px;
+                          transform: rotate(-180deg);
+                          transition: transform .1s linear;
+                        }
+                    data-icon-name="ChevronDown"
+                  >
+                    
+                  </i>
+                </button>
+                <button
+                  className=
+                      ms-Button
+                      ms-Button--action
+                      ms-Button--command
+                      ms-Nav-link
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        background-color: transparent;
+                        border-radius: 2px;
+                        border: 1px solid transparent;
+                        box-sizing: border-box;
+                        color: #323130;
+                        cursor: pointer;
+                        display: block;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        height: 44px;
+                        line-height: inherit;
+                        outline: transparent;
+                        overflow: hidden;
+                        padding-bottom: 0;
+                        padding-left: 27px;
+                        padding-right: 20px;
+                        padding-top: 0;
+                        position: relative;
+                        text-align: center;
+                        text-decoration: none;
+                        text-overflow: ellipsis;
+                        user-select: none;
+                        white-space: normal;
+                        width: 100%;
+                      }
+                      &::-moz-focus-inner {
+                        border: 0;
+                      }
+                      .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                        bottom: -2px;
+                        left: -2px;
+                        outline-color: ButtonText;
+                        right: -2px;
+                        top: -2px;
+                      }
+                      &:active > * {
+                        left: 0px;
+                        position: relative;
+                        top: 0px;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                        border-color: Window;
+                        border: 0px;
+                      }
+                      &:hover {
+                        color: #test-primary;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                        color: Highlight;
+                      }
+                      &:hover .ms-Button-icon {
+                        color: #test-primary;
+                      }
+                      &:active {
+                        color: #000000;
+                      }
+                      &:active .ms-Button-icon {
+                        color: #004578;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                        border: 1px solid WindowText;
+                      }
+                      .ms-Nav-compositeLink:hover & {
+                        background-color: #f3f2f1;
+                      }
+                  data-is-focusable={true}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  title="Item 4"
+                  type="button"
+                >
+                  <span
+                    className=
+                        ms-Button-flexContainer
+                        {
+                          align-items: center;
+                          display: flex;
+                          flex-wrap: nowrap;
+                          height: 100%;
+                          justify-content: flex-start;
+                        }
+                    data-automationid="splitbuttonprimary"
+                  >
+                    <div
+                      className=
+                          ms-Nav-linkText
+                          {
+                            margin-bottom: 0;
+                            margin-left: 4px;
+                            margin-right: 4px;
+                            margin-top: 0;
+                            overflow: hidden;
+                            text-align: left;
+                            text-overflow: ellipsis;
+                            vertical-align: middle;
+                          }
+                    >
+                      Item 4
+                    </div>
+                  </span>
+                </button>
+              </div>
+              <ul
+                className=
+                    ms-Nav-navItems
+                    {
+                      list-style-type: none;
+                      margin-bottom: 0px;
+                      margin-left: 0px;
+                      margin-right: 0px;
+                      margin-top: 0px;
+                      padding-bottom: 0px;
+                      padding-left: 0px;
+                      padding-right: 0px;
+                      padding-top: 0px;
+                    }
+                role="list"
+              >
+                <li
+                  className=
+                      ms-Nav-navItem
+                      {
+                        padding-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 0px;
+                      }
+                  role="listitem"
+                >
+                  <div
+                    className=
+                        ms-Nav-compositeLink
+                        {
+                          color: #323130;
+                          display: block;
+                          position: relative;
+                        }
+                    name="Item 5"
+                  >
+                    <button
+                      className=
+                          ms-Button
+                          ms-Button--action
+                          ms-Button--command
+                          ms-Nav-link
+                          {
+                            -moz-osx-font-smoothing: grayscale;
+                            -webkit-font-smoothing: antialiased;
+                            background-color: transparent;
+                            border-radius: 2px;
+                            border: 1px solid transparent;
+                            box-sizing: border-box;
+                            color: #323130;
+                            cursor: pointer;
+                            display: block;
+                            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                            font-size: 14px;
+                            font-weight: 400;
+                            height: 44px;
+                            line-height: inherit;
+                            outline: transparent;
+                            overflow: hidden;
+                            padding-bottom: 0;
+                            padding-left: 41px;
+                            padding-right: 20px;
+                            padding-top: 0;
+                            position: relative;
+                            text-align: center;
+                            text-decoration: none;
+                            text-overflow: ellipsis;
+                            user-select: none;
+                            white-space: normal;
+                            width: 100%;
+                          }
+                          &::-moz-focus-inner {
+                            border: 0;
+                          }
+                          .ms-Fabric--isFocusVisible &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          &:active > * {
+                            left: 0px;
+                            position: relative;
+                            top: 0px;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                            border-color: Window;
+                            border: 0px;
+                          }
+                          &:hover {
+                            color: #test-primary;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                            color: Highlight;
+                          }
+                          &:hover .ms-Button-icon {
+                            color: #test-primary;
+                          }
+                          &:active {
+                            color: #000000;
+                          }
+                          &:active .ms-Button-icon {
+                            color: #004578;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                            border: 1px solid WindowText;
+                          }
+                          .ms-Nav-compositeLink:hover & {
+                            background-color: #f3f2f1;
+                          }
+                      data-is-focusable={true}
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseUp={[Function]}
+                      title="Item 5"
+                      type="button"
+                    >
+                      <span
+                        className=
+                            ms-Button-flexContainer
+                            {
+                              align-items: center;
+                              display: flex;
+                              flex-wrap: nowrap;
+                              height: 100%;
+                              justify-content: flex-start;
+                            }
+                        data-automationid="splitbuttonprimary"
+                      >
+                        <div
+                          className=
+                              ms-Nav-linkText
+                              {
+                                margin-bottom: 0;
+                                margin-left: 4px;
+                                margin-right: 4px;
+                                margin-top: 0;
+                                overflow: hidden;
+                                text-align: left;
+                                text-overflow: ellipsis;
+                                vertical-align: middle;
+                              }
+                        >
+                          Item 5
+                        </div>
+                      </span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li
+              className=
+                  ms-Nav-navItem
+                  {
+                    padding-bottom: 0px;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 0px;
+                  }
+              role="listitem"
+            >
+              <div
+                className=
+                    ms-Nav-compositeLink
+                    is-expanded
+                    {
+                      color: #323130;
+                      display: block;
+                      position: relative;
+                    }
+                name="Item 6"
+              >
+                <button
+                  aria-expanded="true"
+                  aria-label="Item 6 collapsed"
+                  className=
+                      ms-Nav-chevronButton
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        background-color: transparent;
+                        background-color: transparent;
+                        border: none;
+                        color: #323130;
+                        cursor: pointer;
+                        display: block;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 12px;
+                        font-weight: 400;
+                        height: 42px;
+                        left: 1px;
+                        line-height: 44px;
+                        margin-bottom: 0px;
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        margin-top: 0px;
+                        outline: transparent;
+                        overflow: hidden;
+                        padding-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 0px;
+                        position: absolute;
+                        text-align: left;
+                        text-overflow: ellipsis;
+                        top: 1px;
+                        white-space: nowrap;
+                        width: 26px;
+                        z-index: 1;
+                      }
+                      &::-moz-focus-inner {
+                        border: 0;
+                      }
+                      .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      &:visited {
+                        color: #323130;
+                      }
+                      &::after {
+                        content: none;
+                      }
+                  onClick={[Function]}
+                >
+                  <i
+                    aria-hidden={true}
+                    className=
+                        ms-Nav-chevron
+                        {
+                          -moz-osx-font-smoothing: grayscale;
+                          -webkit-font-smoothing: antialiased;
+                          align-items: center;
+                          display: inline-flex;
+                          font-family: "FabricMDL2Icons";
+                          font-size: 12px;
+                          font-style: normal;
+                          font-weight: normal;
+                          height: 44px;
+                          left: 8px;
+                          line-height: 44px;
+                          position: absolute;
+                          speak: none;
+                          top: 0px;
+                          transform: rotate(-180deg);
+                          transition: transform .1s linear;
+                        }
+                    data-icon-name="ChevronDown"
+                  >
+                    
+                  </i>
+                </button>
+                <button
+                  className=
+                      ms-Button
+                      ms-Button--action
+                      ms-Button--command
+                      ms-Nav-link
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        background-color: transparent;
+                        border-radius: 2px;
+                        border: 1px solid transparent;
+                        box-sizing: border-box;
+                        color: #323130;
+                        cursor: pointer;
+                        display: block;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                        height: 44px;
+                        line-height: inherit;
+                        outline: transparent;
+                        overflow: hidden;
+                        padding-bottom: 0;
+                        padding-left: 27px;
+                        padding-right: 20px;
+                        padding-top: 0;
+                        position: relative;
+                        text-align: center;
+                        text-decoration: none;
+                        text-overflow: ellipsis;
+                        user-select: none;
+                        white-space: normal;
+                        width: 100%;
+                      }
+                      &::-moz-focus-inner {
+                        border: 0;
+                      }
+                      .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                        bottom: -2px;
+                        left: -2px;
+                        outline-color: ButtonText;
+                        right: -2px;
+                        top: -2px;
+                      }
+                      &:active > * {
+                        left: 0px;
+                        position: relative;
+                        top: 0px;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                        border-color: Window;
+                        border: 0px;
+                      }
+                      &:hover {
+                        color: #test-primary;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                        color: Highlight;
+                      }
+                      &:hover .ms-Button-icon {
+                        color: #test-primary;
+                      }
+                      &:active {
+                        color: #000000;
+                      }
+                      &:active .ms-Button-icon {
+                        color: #004578;
+                      }
+                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                        border: 1px solid WindowText;
+                      }
+                      .ms-Nav-compositeLink:hover & {
+                        background-color: #f3f2f1;
+                      }
+                  data-is-focusable={true}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  title="Item 6"
+                  type="button"
+                >
+                  <span
+                    className=
+                        ms-Button-flexContainer
+                        {
+                          align-items: center;
+                          display: flex;
+                          flex-wrap: nowrap;
+                          height: 100%;
+                          justify-content: flex-start;
+                        }
+                    data-automationid="splitbuttonprimary"
+                  >
+                    <div
+                      className=
+                          ms-Nav-linkText
+                          {
+                            margin-bottom: 0;
+                            margin-left: 4px;
+                            margin-right: 4px;
+                            margin-top: 0;
+                            overflow: hidden;
+                            text-align: left;
+                            text-overflow: ellipsis;
+                            vertical-align: middle;
+                          }
+                    >
+                      Item 6
+                    </div>
+                  </span>
+                </button>
+              </div>
+              <ul
+                className=
+                    ms-Nav-navItems
+                    {
+                      list-style-type: none;
+                      margin-bottom: 0px;
+                      margin-left: 0px;
+                      margin-right: 0px;
+                      margin-top: 0px;
+                      padding-bottom: 0px;
+                      padding-left: 0px;
+                      padding-right: 0px;
+                      padding-top: 0px;
+                    }
+                role="list"
+              >
+                <li
+                  className=
+                      ms-Nav-navItem
+                      {
+                        padding-bottom: 0px;
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        padding-top: 0px;
+                      }
+                  role="listitem"
+                >
+                  <div
+                    className=
+                        ms-Nav-compositeLink
+                        {
+                          color: #323130;
+                          display: block;
+                          position: relative;
+                        }
+                    name="Item 7"
+                  >
+                    <button
+                      className=
+                          ms-Button
+                          ms-Button--action
+                          ms-Button--command
+                          ms-Nav-link
+                          {
+                            -moz-osx-font-smoothing: grayscale;
+                            -webkit-font-smoothing: antialiased;
+                            background-color: transparent;
+                            border-radius: 2px;
+                            border: 1px solid transparent;
+                            box-sizing: border-box;
+                            color: #323130;
+                            cursor: pointer;
+                            display: block;
+                            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                            font-size: 14px;
+                            font-weight: 400;
+                            height: 44px;
+                            line-height: inherit;
+                            outline: transparent;
+                            overflow: hidden;
+                            padding-bottom: 0;
+                            padding-left: 41px;
+                            padding-right: 20px;
+                            padding-top: 0;
+                            position: relative;
+                            text-align: center;
+                            text-decoration: none;
+                            text-overflow: ellipsis;
+                            user-select: none;
+                            white-space: normal;
+                            width: 100%;
+                          }
+                          &::-moz-focus-inner {
+                            border: 0;
+                          }
+                          .ms-Fabric--isFocusVisible &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          &:active > * {
+                            left: 0px;
+                            position: relative;
+                            top: 0px;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                            border-color: Window;
+                            border: 0px;
+                          }
+                          &:hover {
+                            color: #test-primary;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                            color: Highlight;
+                          }
+                          &:hover .ms-Button-icon {
+                            color: #test-primary;
+                          }
+                          &:active {
+                            color: #000000;
+                          }
+                          &:active .ms-Button-icon {
+                            color: #004578;
+                          }
+                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                            border: 1px solid WindowText;
+                          }
+                          .ms-Nav-compositeLink:hover & {
+                            background-color: #f3f2f1;
+                          }
+                      data-is-focusable={true}
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      onKeyUp={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseUp={[Function]}
+                      title="Item 7"
+                      type="button"
+                    >
+                      <span
+                        className=
+                            ms-Button-flexContainer
+                            {
+                              align-items: center;
+                              display: flex;
+                              flex-wrap: nowrap;
+                              height: 100%;
+                              justify-content: flex-start;
+                            }
+                        data-automationid="splitbuttonprimary"
+                      >
+                        <div
+                          className=
+                              ms-Nav-linkText
+                              {
+                                margin-bottom: 0;
+                                margin-left: 4px;
+                                margin-right: 4px;
+                                margin-top: 0;
+                                overflow: hidden;
+                                text-align: left;
+                                text-overflow: ellipsis;
+                                vertical-align: middle;
+                              }
+                        >
+                          Item 7
+                        </div>
+                      </span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+`;

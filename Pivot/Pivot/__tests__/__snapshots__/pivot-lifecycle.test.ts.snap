@@ -1,0 +1,812 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pivot renders 1`] = `
+<Memo(CanvasPivot)
+  disabled={false}
+  height={-1}
+  items={
+    Array [
+      Object {
+        "checked": undefined,
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "1",
+          "values": Object {
+            "ItemDisplayName": "Item 1",
+            "ItemEnabled": true,
+            "ItemIconColor": "blue",
+            "ItemIconName": "Open",
+            "ItemIconOnly": false,
+            "ItemKey": "item1",
+          },
+        },
+        "enabled": true,
+        "iconColor": "blue",
+        "iconName": "Open",
+        "iconOnly": false,
+        "id": "1",
+        "itemCount": undefined,
+        "key": "item1",
+        "name": "Item 1",
+        "parentItemKey": undefined,
+        "textColor": undefined,
+        "visible": undefined,
+      },
+      Object {
+        "checked": undefined,
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "2",
+          "values": Object {
+            "ItemDisplayName": "Item 2",
+            "ItemEnabled": false,
+            "ItemIconColor": "blue",
+            "ItemIconName": "New",
+            "ItemIconOnly": true,
+            "ItemKey": "item2",
+          },
+        },
+        "enabled": false,
+        "iconColor": "blue",
+        "iconName": "New",
+        "iconOnly": true,
+        "id": "2",
+        "itemCount": undefined,
+        "key": "item2",
+        "name": "Item 2",
+        "parentItemKey": undefined,
+        "textColor": undefined,
+        "visible": undefined,
+      },
+    ]
+  }
+  linkFormat="tabs"
+  linkSize="normal"
+  onSelected={[Function]}
+  selectedKey=""
+  setFocus=""
+  tabIndex={5}
+  themeJSON={null}
+  width={-1}
+/>
+`;
+
+exports[`Pivot renders dummy items when no items configured 1`] = `
+<Memo(CanvasPivot)
+  disabled={false}
+  height={-1}
+  items={
+    Array [
+      Object {
+        "iconName": "Unknown",
+        "id": "1",
+        "key": "1",
+        "name": "Item 1",
+      },
+      Object {
+        "iconName": "Unknown",
+        "id": "2",
+        "key": "2",
+        "name": "Item 2",
+      },
+      Object {
+        "iconName": "Unknown",
+        "id": "3",
+        "key": "3",
+        "name": "Item 3",
+      },
+    ]
+  }
+  linkFormat="tabs"
+  linkSize="normal"
+  onSelected={[Function]}
+  selectedKey=""
+  setFocus=""
+  tabIndex={5}
+  themeJSON={null}
+  width={-1}
+/>
+`;
+
+exports[`Pivot theme 1`] = `
+<div
+  className=""
+>
+  <div
+    className="PowerCATFluentPivot"
+    role="toolbar"
+  >
+    <div
+      className=
+          ms-FocusZone
+          ms-Pivot
+          ms-Pivot--tabs
+          &:focus {
+            outline: none;
+          }
+          {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #test-primary;
+            font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            position: relative;
+            white-space: nowrap;
+          }
+      data-focuszone-id="FocusZone36"
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDownCapture={[Function]}
+      role="tablist"
+      tabIndex={0}
+    >
+      <button
+        aria-selected={true}
+        className=
+            ms-Button
+            ms-Button--action
+            ms-Button--command
+            ms-Pivot-link
+            is-selected
+            {
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              background-color: #ffffff;
+              border-radius: 0px;
+              border: 0px;
+              box-sizing: border-box;
+              color: #323130;
+              cursor: pointer;
+              display: inline-block;
+              font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+              font-size: 14px;
+              font-weight: 600;
+              height: 44px;
+              line-height: 44px;
+              margin-right: 0px;
+              outline: transparent;
+              padding-bottom: 0;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 0;
+              position: relative;
+              text-align: center;
+              text-decoration: none;
+              user-select: none;
+              vertical-align: top;
+            }
+            &::-moz-focus-inner {
+              border: 0;
+            }
+            .ms-Fabric--isFocusVisible &:focus:after {
+              border: 0px;
+              bottom: 2px;
+              content: attr(data-content);
+              left: 2px;
+              outline: 1px solid #605e5c;
+              position: relative;
+              right: 2px;
+              top: 2px;
+              z-index: 1;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+              bottom: -2px;
+              left: -2px;
+              outline-color: ButtonText;
+              right: -2px;
+              top: -2px;
+            }
+            &:active > * {
+              left: 0px;
+              position: relative;
+              top: 0px;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+              border-color: Window;
+              color: Highlight;
+            }
+            &:hover {
+              background-color: #test-primary;
+              color: #ffffff;
+              cursor: pointer;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+              color: Highlight;
+            }
+            &:hover .ms-Button-icon {
+              color: #test-primary;
+            }
+            &:focus {
+              color: #000000;
+              outline-offset: -1px;
+              outline: none;
+            }
+            &:active {
+              background-color: #005a9e;
+              color: #ffffff;
+            }
+            &:active .ms-Button-icon {
+              color: #004578;
+            }
+            .ms-Fabric--isFocusVisible &:focus {
+              outline: 1px solid #605e5c;
+            }
+            &:before {
+              background-color: #test-primary;
+              bottom: 0px;
+              content: "";
+              height: 2px;
+              left: 8px;
+              position: absolute;
+              right: 8px;
+              transition: left 0.267s cubic-bezier(.1,.25,.75,.9),
+                                    right 0.267s cubic-bezier(.1,.25,.75,.9);
+            }
+            &:after {
+              color: transparent;
+              content: attr(data-content);
+              display: block;
+              font-weight: 700;
+              height: 1px;
+              overflow: hidden;
+              visibility: hidden;
+            }
+            .ms-Fabric--isFocusVisible &:focus::before {
+              background: transparent;
+              height: auto;
+              transition: none;
+            }
+            &.is-selected {
+              background-color: #test-primary;
+              color: #ffffff;
+              font-weight: 400;
+            }
+            &.is-selected:before {
+              background-color: transparent;
+              bottom: 0px;
+              content: "";
+              height: 0px;
+              left: 0px;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              transition: none;
+            }
+            &.is-selected:hover {
+              background-color: #106ebe;
+              color: #ffffff;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){&.is-selected {
+              -ms-high-contrast-adjust: none;
+              background: Highlight;
+              color: HighlightText;
+              font-weight: 600;
+              forced-color-adjust: none;
+            }
+            &[data-is-overflowing='true'] {
+              display: none;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){&:before {
+              background-color: Highlight;
+            }
+            &:hover::before {
+              left: 0px;
+              right: 0px;
+            }
+        data-content="Item 1 xx"
+        data-is-focusable={true}
+        id="Pivot35-Tab0"
+        name="Item 1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="tab"
+        type="button"
+      >
+        <span
+          className=
+              ms-Button-flexContainer
+              {
+                align-items: center;
+                display: flex;
+                flex-wrap: nowrap;
+                height: 100%;
+                justify-content: flex-start;
+              }
+          data-automationid="splitbuttonprimary"
+        >
+          <span
+            className=
+                ms-Pivot-linkContent
+                {
+                  flex: 0 1 100%;
+                }
+                & > *  {
+                  margin-left: 4px;
+                }
+                & > *:first-child {
+                  margin-left: 0px;
+                }
+          >
+            <span
+              className="ms-Pivot-icon"
+            >
+              <i
+                aria-hidden={true}
+                className=
+
+                    {
+                      display: inline-block;
+                    }
+                data-icon-name="Open"
+              />
+            </span>
+            <span
+              className=
+                  ms-Pivot-text
+                  {
+                    display: inline-block;
+                    vertical-align: top;
+                  }
+            >
+               
+              Item 1
+            </span>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-selected={false}
+        className=
+            ms-Button
+            ms-Button--action
+            ms-Button--command
+            ms-Pivot-link
+            {
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              background-color: #ffffff;
+              border-radius: 0px;
+              border: 0px;
+              box-sizing: border-box;
+              color: #323130;
+              cursor: pointer;
+              display: inline-block;
+              font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              height: 44px;
+              line-height: 44px;
+              margin-right: 0px;
+              outline: transparent;
+              padding-bottom: 0;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 0;
+              position: relative;
+              text-align: center;
+              text-decoration: none;
+              user-select: none;
+              vertical-align: top;
+            }
+            &::-moz-focus-inner {
+              border: 0;
+            }
+            .ms-Fabric--isFocusVisible &:focus:after {
+              border: 0px;
+              bottom: 2px;
+              content: attr(data-content);
+              left: 2px;
+              outline: 1px solid #605e5c;
+              position: relative;
+              right: 2px;
+              top: 2px;
+              z-index: 1;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+              bottom: -2px;
+              left: -2px;
+              outline-color: ButtonText;
+              right: -2px;
+              top: -2px;
+            }
+            &:active > * {
+              left: 0px;
+              position: relative;
+              top: 0px;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+              border-color: Window;
+            }
+            &:hover {
+              background-color: #test-primary;
+              color: #ffffff;
+              cursor: pointer;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+              color: Highlight;
+            }
+            &:hover .ms-Button-icon {
+              color: #test-primary;
+            }
+            &:focus {
+              color: #000000;
+              outline-offset: -1px;
+              outline: none;
+            }
+            &:active {
+              background-color: #005a9e;
+              color: #ffffff;
+            }
+            &:active .ms-Button-icon {
+              color: #004578;
+            }
+            .ms-Fabric--isFocusVisible &:focus {
+              outline: 1px solid #605e5c;
+            }
+            &:before {
+              background-color: transparent;
+              bottom: 0px;
+              content: "";
+              height: 2px;
+              left: 8px;
+              position: absolute;
+              right: 8px;
+              transition: left 0.267s cubic-bezier(.1,.25,.75,.9),
+                                    right 0.267s cubic-bezier(.1,.25,.75,.9);
+            }
+            &:after {
+              color: transparent;
+              content: attr(data-content);
+              display: block;
+              font-weight: 700;
+              height: 1px;
+              overflow: hidden;
+              visibility: hidden;
+            }
+            .ms-Fabric--isFocusVisible &:focus::before {
+              background: transparent;
+              height: auto;
+              transition: none;
+            }
+            &.is-selected {
+              background-color: #test-primary;
+              color: #ffffff;
+              font-weight: 400;
+            }
+            &.is-selected:before {
+              background-color: transparent;
+              bottom: 0px;
+              content: "";
+              height: 0px;
+              left: 0px;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              transition: none;
+            }
+            &.is-selected:hover {
+              background-color: #106ebe;
+              color: #ffffff;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){&.is-selected {
+              -ms-high-contrast-adjust: none;
+              background: Highlight;
+              color: HighlightText;
+              font-weight: 600;
+              forced-color-adjust: none;
+            }
+            &[data-is-overflowing='true'] {
+              display: none;
+            }
+        data-content="Item 2 xx"
+        data-is-focusable={true}
+        id="Pivot35-Tab1"
+        name="Item 2"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="tab"
+        type="button"
+      >
+        <span
+          className=
+              ms-Button-flexContainer
+              {
+                align-items: center;
+                display: flex;
+                flex-wrap: nowrap;
+                height: 100%;
+                justify-content: flex-start;
+              }
+          data-automationid="splitbuttonprimary"
+        >
+          <span
+            className=
+                ms-Pivot-linkContent
+                {
+                  flex: 0 1 100%;
+                }
+                & > *  {
+                  margin-left: 4px;
+                }
+                & > *:first-child {
+                  margin-left: 0px;
+                }
+          >
+            <span
+              className="ms-Pivot-icon"
+            >
+              <i
+                aria-hidden={true}
+                className=
+
+                    {
+                      display: inline-block;
+                    }
+                data-icon-name="New"
+              />
+            </span>
+            <span
+              className=
+                  ms-Pivot-text
+                  {
+                    display: inline-block;
+                    vertical-align: top;
+                  }
+            >
+               
+              Item 2
+            </span>
+          </span>
+        </span>
+      </button>
+      <button
+        aria-controls={null}
+        aria-expanded={false}
+        aria-haspopup={true}
+        className=
+            ms-Button
+            ms-Button--action
+            ms-Button--command
+            ms-Button--hasMenu
+            ms-Pivot-link
+            ms-Pivot-overflowMenuButton
+            {
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              background-color: #ffffff;
+              border-radius: 0px;
+              border: 0px;
+              box-sizing: border-box;
+              color: #323130;
+              cursor: pointer;
+              display: inline-block;
+              font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              height: 44px;
+              line-height: 44px;
+              margin-right: 0px;
+              outline: transparent;
+              padding-bottom: 0;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 0;
+              position: absolute;
+              right: 0px;
+              text-align: center;
+              text-decoration: none;
+              user-select: none;
+              vertical-align: top;
+              visibility: hidden;
+            }
+            &::-moz-focus-inner {
+              border: 0;
+            }
+            .ms-Fabric--isFocusVisible &:focus:after {
+              border: 0px;
+              bottom: 2px;
+              content: attr(data-content);
+              left: 2px;
+              outline: 1px solid #605e5c;
+              position: relative;
+              right: 2px;
+              top: 2px;
+              z-index: 1;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+              bottom: -2px;
+              left: -2px;
+              outline-color: ButtonText;
+              right: -2px;
+              top: -2px;
+            }
+            &:active > * {
+              left: 0px;
+              position: relative;
+              top: 0px;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+              border-color: Window;
+            }
+            &:hover {
+              background-color: #test-primary;
+              color: #ffffff;
+              cursor: pointer;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+              color: Highlight;
+            }
+            &:hover .ms-Button-icon {
+              color: #test-primary;
+            }
+            &:focus {
+              color: #000000;
+              outline-offset: -1px;
+              outline: none;
+            }
+            &:active {
+              background-color: #005a9e;
+              color: #ffffff;
+            }
+            &:active .ms-Button-icon {
+              color: #004578;
+            }
+            .ms-Fabric--isFocusVisible &:focus {
+              outline: 1px solid #605e5c;
+            }
+            &:before {
+              background-color: transparent;
+              bottom: 0px;
+              content: "";
+              height: 2px;
+              left: 8px;
+              position: absolute;
+              right: 8px;
+              transition: left 0.267s cubic-bezier(.1,.25,.75,.9),
+                                    right 0.267s cubic-bezier(.1,.25,.75,.9);
+            }
+            &:after {
+              color: transparent;
+              content: attr(data-content);
+              display: block;
+              font-weight: 700;
+              height: 1px;
+              overflow: hidden;
+              visibility: hidden;
+            }
+            .ms-Fabric--isFocusVisible &:focus::before {
+              background: transparent;
+              height: auto;
+              transition: none;
+            }
+            &.is-selected {
+              background-color: #test-primary;
+              color: #ffffff;
+              font-weight: 400;
+            }
+            &.is-selected:before {
+              background-color: transparent;
+              bottom: 0px;
+              content: "";
+              height: 0px;
+              left: 0px;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              transition: none;
+            }
+            &.is-selected:hover {
+              background-color: #106ebe;
+              color: #ffffff;
+            }
+            @media screen and (-ms-high-contrast: active), (forced-colors: active){&.is-selected {
+              -ms-high-contrast-adjust: none;
+              background: Highlight;
+              color: HighlightText;
+              font-weight: 600;
+              forced-color-adjust: none;
+            }
+            &[data-is-overflowing='true'] {
+              display: none;
+            }
+            .ms-Pivot-link[data-is-overflowing='true'] ~ & {
+              position: relative;
+              visibility: visible;
+            }
+        data-is-focusable={true}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyPress={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        type="button"
+      >
+        <span
+          className=
+              ms-Button-flexContainer
+              {
+                align-items: center;
+                display: flex;
+                flex-wrap: nowrap;
+                height: 100%;
+                justify-content: flex-start;
+              }
+          data-automationid="splitbuttonprimary"
+        >
+          <i
+            aria-hidden={true}
+            className=
+                ms-Icon
+                ms-Button-menuIcon
+                {
+                  display: inline-block;
+                }
+                {
+                  -moz-osx-font-smoothing: grayscale;
+                  -webkit-font-smoothing: antialiased;
+                  font-family: "FabricMDL2Icons";
+                  font-style: normal;
+                  font-weight: normal;
+                  speak: none;
+                }
+                {
+                  color: #605e5c;
+                  flex-shrink: 0;
+                  font-size: 12px;
+                  height: 16px;
+                  line-height: 16px;
+                  margin-bottom: 0;
+                  margin-left: 4px;
+                  margin-right: 4px;
+                  margin-top: 0;
+                  text-align: center;
+                }
+            data-icon-name="More"
+            style={
+              Object {
+                "color": "inherit",
+                "fontFamily": "\\"FabricMDL2Icons\\"",
+              }
+            }
+          >
+            
+          </i>
+        </span>
+      </button>
+    </div>
+    <div
+      aria-hidden={false}
+      aria-labelledby="Pivot35-Tab0"
+      className=
+
+          &[hidden] {
+            display: none;
+          }
+      hidden={false}
+      role="tabpanel"
+    >
+      <div />
+    </div>
+  </div>
+</div>
+`;

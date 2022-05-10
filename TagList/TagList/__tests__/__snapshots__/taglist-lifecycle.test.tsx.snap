@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommandBar renders 1`] = `
+<Memo(CanvasTagList)
+  disabled={false}
+  height={-1}
+  items={
+    Array [
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": undefined,
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "1",
+          "values": Object {
+            "ItemDisplayName": "Tag 1",
+            "ItemIconColor": "blue",
+            "ItemIconName": "Open",
+            "ItemKey": "item1",
+          },
+        },
+        "enabled": undefined,
+        "iconColor": "blue",
+        "iconName": "Open",
+        "iconOnly": undefined,
+        "id": "1",
+        "key": "item1",
+        "name": "Tag 1",
+        "textColor": undefined,
+        "visible": undefined,
+      },
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": undefined,
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "2",
+          "values": Object {
+            "ItemDisplayName": "Tag 2",
+            "ItemIconColor": "blue",
+            "ItemIconName": "New",
+            "ItemKey": "item2",
+          },
+        },
+        "enabled": undefined,
+        "iconColor": "blue",
+        "iconName": "New",
+        "iconOnly": undefined,
+        "id": "2",
+        "key": "item2",
+        "name": "Tag 2",
+        "textColor": undefined,
+        "visible": undefined,
+      },
+      Object {
+        "backgroundColor": undefined,
+        "borderColor": undefined,
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "3",
+          "values": Object {
+            "ItemDisplayName": "Tag 3",
+            "ItemIconColor": "green",
+            "ItemIconName": "Save",
+            "ItemKey": "item3",
+          },
+        },
+        "enabled": undefined,
+        "iconColor": "green",
+        "iconName": "Save",
+        "iconOnly": undefined,
+        "id": "3",
+        "key": "item3",
+        "name": "Tag 3",
+        "textColor": undefined,
+        "visible": undefined,
+      },
+    ]
+  }
+  onResize={[Function]}
+  tabIndex={5}
+  themeJSON={null}
+  width={-1}
+/>
+`;
+
+exports[`CommandBar renders dummy items when no items configured 1`] = `
+<Memo(CanvasTagList)
+  disabled={false}
+  height={-1}
+  items={
+    Array [
+      Object {
+        "iconName": "Unknown",
+        "id": "1",
+        "key": "1",
+        "name": "Item 1",
+      },
+      Object {
+        "iconName": "Unknown",
+        "id": "2",
+        "key": "2",
+        "name": "Item 2",
+      },
+      Object {
+        "iconName": "Unknown",
+        "id": "3",
+        "key": "3",
+        "name": "Item 3",
+      },
+    ]
+  }
+  onResize={[Function]}
+  tabIndex={5}
+  themeJSON={null}
+  width={-1}
+/>
+`;

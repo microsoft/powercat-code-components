@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetMapping returns correct props 1`] = `
+Array [
+  Object {
+    "backgroundColor": undefined,
+    "borderColor": undefined,
+    "data": MockEntityRecord {
+      "getNamedReference": [MockFunction],
+      "id": "1",
+      "values": Object {
+        "ItemDisplayName": "Open",
+        "ItemEnabled": true,
+        "ItemIconColor": "blue",
+        "ItemIconName": "Open",
+        "ItemIconOnly": false,
+        "ItemKey": "commandOpen",
+      },
+    },
+    "enabled": true,
+    "iconColor": "blue",
+    "iconName": "Open",
+    "iconOnly": false,
+    "id": "1",
+    "key": "commandOpen",
+    "name": "Open",
+    "textColor": undefined,
+    "visible": undefined,
+  },
+  Object {
+    "backgroundColor": undefined,
+    "borderColor": undefined,
+    "data": MockEntityRecord {
+      "getNamedReference": [MockFunction],
+      "id": "2",
+      "values": Object {
+        "ItemDisplayName": "New",
+        "ItemEnabled": false,
+        "ItemIconColor": "blue",
+        "ItemIconName": "New",
+        "ItemIconOnly": true,
+        "ItemKey": "commandNew",
+      },
+    },
+    "enabled": false,
+    "iconColor": "blue",
+    "iconName": "New",
+    "iconOnly": true,
+    "id": "2",
+    "key": "commandNew",
+    "name": "New",
+    "textColor": undefined,
+    "visible": undefined,
+  },
+  Object {
+    "backgroundColor": undefined,
+    "borderColor": undefined,
+    "data": MockEntityRecord {
+      "getNamedReference": [MockFunction],
+      "id": "3",
+      "values": Object {
+        "ItemDisplayName": "Save",
+        "ItemEnabled": false,
+        "ItemIconColor": "green",
+        "ItemIconName": "Save",
+        "ItemIconOnly": true,
+        "ItemKey": "commandSave",
+      },
+    },
+    "enabled": false,
+    "iconColor": "green",
+    "iconName": "Save",
+    "iconOnly": true,
+    "id": "3",
+    "key": "commandSave",
+    "name": "Save",
+    "textColor": undefined,
+    "visible": undefined,
+  },
+]
+`;

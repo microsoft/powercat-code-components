@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FluentDetailsList renders 1`] = `
+<Memo(Grid)
+  columns={
+    Object {
+      "1": MockEntityRecord {
+        "getNamedReference": [MockFunction],
+        "id": "1",
+        "values": Object {
+          "ColDisplayName": "Name",
+          "ColName": "name",
+          "ColWidth": "100",
+        },
+      },
+    }
+  }
+  compact={false}
+  componentRef={[Function]}
+  datasetColumns={
+    Array [
+      MockColumn {
+        "displayName": "Name",
+        "name": "name",
+      },
+    ]
+  }
+  height={-1}
+  isHeaderVisible={true}
+  onCellAction={[Function]}
+  onNavigate={[Function]}
+  onSort={[Function]}
+  overlayOnSort={false}
+  pageSize={null}
+  records={
+    Object {
+      "1": MockEntityRecord {
+        "getNamedReference": [MockFunction],
+        "id": "1",
+        "values": Object {
+          "RecordKey": "1",
+          "name": "Row 1",
+        },
+      },
+    }
+  }
+  selectOnFocus={false}
+  selection={
+    Selection {
+      "_anchoredIndex": 0,
+      "_canSelectItem": [Function],
+      "_changeEventSuppressionCount": 0,
+      "_exemptedCount": 0,
+      "_exemptedIndices": Object {},
+      "_getKey": [Function],
+      "_isModal": false,
+      "_items": Array [],
+      "_keyToIndexMap": Object {},
+      "_onItemsChanged": undefined,
+      "_onSelectionChanged": [Function],
+      "_selectedItems": null,
+      "_unselectableCount": 0,
+      "_unselectableIndices": Object {},
+      "count": 0,
+      "mode": 2,
+    }
+  }
+  selectionAlwaysVisible={false}
+  selectionType={0}
+  shimmer={false}
+  sortedColumnIds={
+    Array [
+      "1",
+    ]
+  }
+  sortedRecordIds={
+    Array [
+      "1",
+    ]
+  }
+  sorting={
+    Array [
+      Object {
+        "name": "",
+        "sortDirection": "0",
+      },
+    ]
+  }
+  visible={true}
+  width={-1}
+/>
+`;

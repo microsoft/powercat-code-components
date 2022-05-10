@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizeableTextArea lifecycle events creates the label div element wrapped in a containers: Container after init 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="border-width: 0px;"
+    />
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea lifecycle events sets positive tabindex for canvas apps 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="border-width: 0px;"
+      tabindex="15"
+    />
+  </div>
+</div>
+`;

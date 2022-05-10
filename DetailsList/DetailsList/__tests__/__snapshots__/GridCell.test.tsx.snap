@@ -1,0 +1,311 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridCell Inline Label Above 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <span
+      className="inine-label"
+    >
+      Label
+    </span>
+    <br />
+    Row1 a
+  </span>
+</div>
+`;
+
+exports[`GridCell MultiLines 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <span
+      className="inine-label"
+    >
+      Label
+    </span>
+    <span>
+      Row1 a
+      <br />
+    </span>
+    <span>
+      Row1 b
+    </span>
+  </span>
+</div>
+`;
+
+exports[`GridCell MultiLines Delimetered 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <span
+      className="inine-label"
+    >
+      Label
+    </span>
+    <span>
+      Row1 a
+      , 
+    </span>
+    <span>
+      Row1 b
+    </span>
+  </span>
+</div>
+`;
+
+exports[`GridCell bold text 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 600;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    Row1 a
+  </span>
+</div>
+`;
+
+exports[`GridCell inline label 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <span
+      className="inine-label"
+    >
+      Label
+    </span>
+    Row1 a
+  </span>
+</div>
+`;
+
+exports[`GridCell padded 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          padding-left: 8px;
+          padding-top: 8px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    Row1 a
+  </span>
+</div>
+`;
+
+exports[`GridCell renders correctly 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    Row1 a
+  </span>
+</div>
+`;
+
+exports[`GridCell status col 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <span
+      className="inine-label"
+    >
+      Label
+    </span>
+    Row1 a
+  </span>
+</div>
+`;
+
+exports[`GridCell status col blank 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <span
+      className="inine-label"
+    >
+      Label
+    </span>
+    
+  </span>
+</div>
+`;
+
+exports[`GridCell status col child row 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <span
+      className="inine-label"
+    >
+      Label
+    </span>
+    Row1 a
+  </span>
+</div>
+`;

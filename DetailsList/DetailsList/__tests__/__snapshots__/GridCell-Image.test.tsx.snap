@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridCell icon cell 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <div
+      className=
+
+          {
+            display: flex;
+            height: 100%;
+          }
+      title=""
+    >
+      <i
+        aria-hidden="true"
+        className=
+            ms-Icon
+            {
+              display: inline-block;
+            }
+            {
+              color:  !important;
+              font-size: 18px;
+            }
+        data-icon-name="Save"
+        style={
+          Object {
+            "fontFamily": undefined,
+          }
+        }
+      />
+    </div>
+  </span>
+</div>
+`;
+
+exports[`GridCell icon cell align center 1`] = `
+<div
+  className=
+
+      {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <div
+      className=
+
+          {
+            display: flex;
+            height: 100%;
+          }
+      title=""
+    >
+      <i
+        aria-hidden="true"
+        className=
+            ms-Icon
+            {
+              display: inline-block;
+            }
+            {
+              color:  !important;
+              font-size: 18px;
+            }
+        data-icon-name="Save"
+        style={
+          Object {
+            "fontFamily": undefined,
+          }
+        }
+      />
+    </div>
+  </span>
+</div>
+`;
+
+exports[`GridCell image cell 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    <div
+      className=
+
+          {
+            display: flex;
+            height: 100%;
+          }
+      title=""
+    >
+      <div
+        className=
+            ms-Image
+            {
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
+              font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              overflow: hidden;
+            }
+        style={
+          Object {
+            "height": undefined,
+            "width": 32,
+          }
+        }
+      >
+        <img
+          className=
+              ms-Image-image
+              ms-Image-image--portrait
+              is-notLoaded
+              is-fadeIn
+              {
+                display: block;
+                height: auto;
+                opacity: 0;
+                width: 100%;
+              }
+          onError={[Function]}
+          onLoad={[Function]}
+          src="https://via.placeholder.com/300x200"
+        />
+      </div>
+    </div>
+  </span>
+</div>
+`;

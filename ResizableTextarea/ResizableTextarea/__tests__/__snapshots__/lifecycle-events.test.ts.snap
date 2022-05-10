@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizeableTextArea lifecycle events creates the textarea element wrapped in containers with text value: Container after init 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-width: 0px;"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: 0px;"
+      >
+        <textarea
+          maxlength="100000"
+          style="resize: both;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea lifecycle events sets positive tabindex for canvas apps 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-width: 0px;"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: 0px;"
+      >
+        <textarea
+          maxlength="100000"
+          style="resize: both;"
+          tabindex="15"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea lifecycle events updates FontSize: after fontsize update 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-width: 0px;"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: 0px;"
+      >
+        <textarea
+          maxlength="100000"
+          style="resize: both; font-size: 20px;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea lifecycle events updates FontSize: initial 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-width: 0px;"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: 0px;"
+      >
+        <textarea
+          maxlength="100000"
+          style="resize: both;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea lifecycle events updates font styles 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-width: 0px;"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: 0px;"
+      >
+        <textarea
+          maxlength="100000"
+          style="resize: both;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea lifecycle events updates font styles: Container after FontSize update 1`] = `
+<div>
+  <div
+    class="cat-textarea-outer"
+  >
+    <div
+      class="cat-textarea-border-container"
+      style="border-width: 0px;"
+    >
+      <div
+        class="cat-textarea-border-inner"
+        style="margin: 0px;"
+      >
+        <textarea
+          maxlength="100000"
+          style="resize: both; font-size: 10px;"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

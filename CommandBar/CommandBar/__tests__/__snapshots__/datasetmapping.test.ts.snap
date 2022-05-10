@@ -1,0 +1,378 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetMapping returns correct props 1`] = `
+Array [
+  Object {
+    "buttonStyles": Object {
+      "root": Object {
+        "background": "rgba(255, 255, 255,0)",
+      },
+    },
+    "canCheck": false,
+    "checked": undefined,
+    "data": Object {
+      "checked": undefined,
+      "data": MockEntityRecord {
+        "getNamedReference": [MockFunction],
+        "id": "1",
+        "values": Object {
+          "ItemDisplayName": "Open",
+          "ItemEnabled": true,
+          "ItemIconColor": "blue",
+          "ItemIconName": "Open",
+          "ItemIconOnly": false,
+          "ItemKey": "commandOpen",
+        },
+      },
+      "enabled": true,
+      "farItem": undefined,
+      "iconColor": "blue",
+      "iconName": "Open",
+      "iconOnly": false,
+      "id": "1",
+      "key": "commandOpen",
+      "name": "Open",
+      "overflow": undefined,
+      "parentItemKey": undefined,
+      "split": undefined,
+      "visible": undefined,
+    },
+    "disabled": false,
+    "iconOnly": false,
+    "iconProps": Object {
+      "iconName": "Open",
+      "styles": Object {
+        "root": Object {
+          "color": "blue !important",
+        },
+      },
+    },
+    "key": "commandOpen",
+    "onClick": [MockFunction],
+    "split": undefined,
+    "subMenuProps": undefined,
+    "text": "Open",
+  },
+  Object {
+    "buttonStyles": Object {
+      "root": Object {
+        "background": "rgba(255, 255, 255,0)",
+      },
+    },
+    "canCheck": false,
+    "checked": undefined,
+    "data": Object {
+      "checked": undefined,
+      "data": MockEntityRecord {
+        "getNamedReference": [MockFunction],
+        "id": "2",
+        "values": Object {
+          "ItemDisplayName": "New",
+          "ItemEnabled": false,
+          "ItemIconColor": "blue",
+          "ItemIconName": "New",
+          "ItemIconOnly": true,
+          "ItemKey": "commandNew",
+        },
+      },
+      "enabled": false,
+      "farItem": undefined,
+      "iconColor": "blue",
+      "iconName": "New",
+      "iconOnly": true,
+      "id": "2",
+      "key": "commandNew",
+      "name": "New",
+      "overflow": undefined,
+      "parentItemKey": undefined,
+      "split": undefined,
+      "visible": undefined,
+    },
+    "disabled": true,
+    "iconOnly": true,
+    "iconProps": Object {
+      "iconName": "New",
+      "styles": Object {
+        "root": Object {
+          "color": "blue !important",
+        },
+      },
+    },
+    "key": "commandNew",
+    "onClick": [MockFunction],
+    "split": undefined,
+    "subMenuProps": Object {
+      "items": Array [
+        Object {
+          "buttonStyles": Object {
+            "root": Object {
+              "background": "rgba(255, 255, 255,0)",
+            },
+          },
+          "canCheck": false,
+          "checked": undefined,
+          "data": Object {
+            "checked": undefined,
+            "data": MockEntityRecord {
+              "getNamedReference": [MockFunction],
+              "id": "5",
+              "values": Object {
+                "ItemDisplayName": "NewFrom",
+                "ItemEnabled": false,
+                "ItemIconColor": "blue",
+                "ItemIconName": "New",
+                "ItemIconOnly": true,
+                "ItemKey": "commandNewFrom",
+                "ItemParentKey": "commandNew",
+              },
+            },
+            "enabled": false,
+            "farItem": undefined,
+            "iconColor": "blue",
+            "iconName": "New",
+            "iconOnly": true,
+            "id": "5",
+            "key": "commandNewFrom",
+            "name": "NewFrom",
+            "overflow": undefined,
+            "parentItemKey": "commandNew",
+            "split": undefined,
+            "visible": undefined,
+          },
+          "disabled": true,
+          "iconOnly": true,
+          "iconProps": Object {
+            "iconName": "New",
+            "styles": Object {
+              "root": Object {
+                "color": "blue !important",
+              },
+            },
+          },
+          "key": "commandNewFrom",
+          "onClick": [MockFunction],
+          "split": undefined,
+          "subMenuProps": Object {
+            "items": Array [
+              Object {
+                "buttonStyles": Object {
+                  "root": Object {
+                    "background": "rgba(255, 255, 255,0)",
+                  },
+                },
+                "canCheck": false,
+                "checked": undefined,
+                "data": Object {
+                  "checked": undefined,
+                  "data": MockEntityRecord {
+                    "getNamedReference": [MockFunction],
+                    "id": "7",
+                    "values": Object {
+                      "ItemDisplayName": "NewFromSub1",
+                      "ItemEnabled": false,
+                      "ItemIconColor": "blue",
+                      "ItemIconName": "New",
+                      "ItemIconOnly": true,
+                      "ItemKey": "commandNewFromSub1",
+                      "ItemParentKey": "commandNewFrom",
+                    },
+                  },
+                  "enabled": false,
+                  "farItem": undefined,
+                  "iconColor": "blue",
+                  "iconName": "New",
+                  "iconOnly": true,
+                  "id": "7",
+                  "key": "commandNewFromSub1",
+                  "name": "NewFromSub1",
+                  "overflow": undefined,
+                  "parentItemKey": "commandNewFrom",
+                  "split": undefined,
+                  "visible": undefined,
+                },
+                "disabled": true,
+                "iconOnly": true,
+                "iconProps": Object {
+                  "iconName": "New",
+                  "styles": Object {
+                    "root": Object {
+                      "color": "blue !important",
+                    },
+                  },
+                },
+                "key": "commandNewFromSub1",
+                "onClick": [MockFunction],
+                "split": undefined,
+                "subMenuProps": undefined,
+                "text": "NewFromSub1",
+              },
+              Object {
+                "buttonStyles": Object {
+                  "root": Object {
+                    "background": "rgba(255, 255, 255,0)",
+                  },
+                },
+                "canCheck": false,
+                "checked": undefined,
+                "data": Object {
+                  "checked": undefined,
+                  "data": MockEntityRecord {
+                    "getNamedReference": [MockFunction],
+                    "id": "8",
+                    "values": Object {
+                      "ItemDisplayName": "NewFromSub2",
+                      "ItemEnabled": false,
+                      "ItemIconColor": "blue",
+                      "ItemIconName": "New",
+                      "ItemIconOnly": true,
+                      "ItemKey": "commandNewFromSub2",
+                      "ItemParentKey": "commandNewFrom",
+                    },
+                  },
+                  "enabled": false,
+                  "farItem": undefined,
+                  "iconColor": "blue",
+                  "iconName": "New",
+                  "iconOnly": true,
+                  "id": "8",
+                  "key": "commandNewFromSub2",
+                  "name": "NewFromSub2",
+                  "overflow": undefined,
+                  "parentItemKey": "commandNewFrom",
+                  "split": undefined,
+                  "visible": undefined,
+                },
+                "disabled": true,
+                "iconOnly": true,
+                "iconProps": Object {
+                  "iconName": "New",
+                  "styles": Object {
+                    "root": Object {
+                      "color": "blue !important",
+                    },
+                  },
+                },
+                "key": "commandNewFromSub2",
+                "onClick": [MockFunction],
+                "split": undefined,
+                "subMenuProps": undefined,
+                "text": "NewFromSub2",
+              },
+            ],
+          },
+          "text": "NewFrom",
+        },
+      ],
+    },
+    "text": "New",
+  },
+  Object {
+    "buttonStyles": Object {
+      "root": Object {
+        "background": "rgba(255, 255, 255,0)",
+      },
+    },
+    "canCheck": false,
+    "checked": undefined,
+    "data": Object {
+      "checked": undefined,
+      "data": MockEntityRecord {
+        "getNamedReference": [MockFunction],
+        "id": "3",
+        "values": Object {
+          "ItemDisplayName": "Save",
+          "ItemEnabled": false,
+          "ItemFarItem": true,
+          "ItemIconColor": "green",
+          "ItemIconName": "Save",
+          "ItemIconOnly": true,
+          "ItemKey": "commandSave",
+        },
+      },
+      "enabled": false,
+      "farItem": true,
+      "iconColor": "green",
+      "iconName": "Save",
+      "iconOnly": true,
+      "id": "3",
+      "key": "commandSave",
+      "name": "Save",
+      "overflow": undefined,
+      "parentItemKey": undefined,
+      "split": undefined,
+      "visible": undefined,
+    },
+    "disabled": true,
+    "iconOnly": true,
+    "iconProps": Object {
+      "iconName": "Save",
+      "styles": Object {
+        "root": Object {
+          "color": "green !important",
+        },
+      },
+    },
+    "key": "commandSave",
+    "onClick": [MockFunction],
+    "split": undefined,
+    "subMenuProps": Object {
+      "items": Array [
+        Object {
+          "buttonStyles": Object {
+            "root": Object {
+              "background": "rgba(255, 255, 255,0)",
+            },
+          },
+          "canCheck": false,
+          "checked": undefined,
+          "data": Object {
+            "checked": undefined,
+            "data": MockEntityRecord {
+              "getNamedReference": [MockFunction],
+              "id": "6",
+              "values": Object {
+                "ItemDisplayName": "SaveAndClose",
+                "ItemEnabled": false,
+                "ItemFarItem": true,
+                "ItemIconColor": "green",
+                "ItemIconName": "Save",
+                "ItemIconOnly": true,
+                "ItemKey": "commandSaveAndClose",
+                "ItemParentKey": "commandSave",
+              },
+            },
+            "enabled": false,
+            "farItem": true,
+            "iconColor": "green",
+            "iconName": "Save",
+            "iconOnly": true,
+            "id": "6",
+            "key": "commandSaveAndClose",
+            "name": "SaveAndClose",
+            "overflow": undefined,
+            "parentItemKey": "commandSave",
+            "split": undefined,
+            "visible": undefined,
+          },
+          "disabled": true,
+          "iconOnly": true,
+          "iconProps": Object {
+            "iconName": "Save",
+            "styles": Object {
+              "root": Object {
+                "color": "green !important",
+              },
+            },
+          },
+          "key": "commandSaveAndClose",
+          "onClick": [MockFunction],
+          "split": undefined,
+          "subMenuProps": undefined,
+          "text": "SaveAndClose",
+        },
+      ],
+    },
+    "text": "Save",
+  },
+]
+`;

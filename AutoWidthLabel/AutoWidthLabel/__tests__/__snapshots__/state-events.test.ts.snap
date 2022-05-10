@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizeableTextArea element state events sets disabled styles: disabled 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="font-size: 17.5px; padding: 5px 5px 5px 12px; border-radius: 5px; color: rgb(166, 166, 166); font-weight: 400; border-width: 2px; border-color: rgb(166,166,166); background: rgb(244, 244, 244);"
+    />
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="font-size: 17.5px; padding: 5px 5px 5px 12px; border-radius: 5px; color: rgb(0, 0, 0); font-weight: 400; border-width: 2px; border-color: #00126b; background: rgb(255, 255, 255);"
+      tabindex="10"
+    />
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: blur 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="font-size: 17.5px; padding: 5px 5px 5px 12px; border-radius: 5px; color: rgb(0, 0, 0); font-weight: 400; border-width: 2px; border-color: #00126b; background: rgb(255, 255, 255);"
+      tabindex="10"
+    />
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: focus 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="font-size: 17.5px; padding: 5px 5px 5px 12px; border-radius: 5px; color: rgb(0, 0, 0); font-weight: 400; border-width: 4px; border-color: #00126b; background: rgb(255, 255, 255);"
+      tabindex="10"
+    />
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: hover 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="font-size: 17.5px; padding: 5px 5px 5px 12px; border-radius: 5px; color: rgb(0, 0, 0); font-weight: 400; border-width: 2px; border-color: #00126b; background: rgb(186, 202, 226);"
+      tabindex="10"
+    />
+  </div>
+</div>
+`;
+
+exports[`ResizeableTextArea element state events updates states on hover and focus: hover:leave 1`] = `
+<div>
+  <div
+    class="cat-label-text-container"
+  >
+    <div
+      class="cat-label-text"
+      style="font-size: 17.5px; padding: 5px 5px 5px 12px; border-radius: 5px; color: rgb(0, 0, 0); font-weight: 400; border-width: 2px; border-color: #00126b; background: rgb(255, 255, 255);"
+      tabindex="10"
+    />
+  </div>
+</div>
+`;

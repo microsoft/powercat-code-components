@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GridCell renders child cells in root cell content 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          padding-right: 4px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    Row 1 Col 1
+  </span>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+        }
+  >
+    Row 1 Col 2
+  </span>
+</div>
+`;
+
+exports[`GridCell renders child cells in root cell content followed by additional child cells 1`] = `
+<div
+  className=
+
+      {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          max-width: 400px;
+          overflow: hidden;
+          padding-right: 4px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+  >
+    Row 1 Col 1
+  </span>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+        }
+  >
+    Row 1 Col 2
+  </span>
+  <span
+    className="sub-text-row-wrapper-break"
+  />
+  <span
+    className=
+
+        {
+          font-weight: 400;
+          padding-right: 4px;
+        }
+  >
+    Row 1 Col 3
+  </span>
+  <span
+    className=
+
+        {
+          font-weight: 400;
+        }
+  >
+    Row 1 Col 4
+  </span>
+</div>
+`;

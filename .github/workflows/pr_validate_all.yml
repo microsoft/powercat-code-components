@@ -1,0 +1,43 @@
+name: Validate PR
+on: pull_request
+   
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Validate
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        component-directory:
+         - "./AutoWidthLabel"
+         - "./Breadcrumb"
+         - "./CommandBar"
+         - "./ContextMenu"
+         - "./DetailsList"
+         - "./Elevation"
+         - "./Icon"
+         - "./KeyboardShortcuts"
+         - "./Nav"
+         - "./Picker"
+         - "./Pivot"
+         - "./ResizableTextarea"
+         - "./TagList"
+
+
+    defaults:
+      run:
+        working-directory: ${{ matrix.component-directory }}
+        
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install dependencies
+      run: npm ci
+    - run: npm run build
+    - run: npm test
+    
