@@ -2,6 +2,8 @@
 
 The Power CAT code components are a set of Power Apps component framework (PCF) controls that can be used to enhance power apps.
 
+These code components are available as part of Creator-Kit and can be downloaded from [latest release](https://github.com/microsoft/powercat-creator-kit/releases).
+
 There are two types of components:
 
 - **User interface components** - controls that have a user interface and are styled using properties.
