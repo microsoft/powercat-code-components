@@ -7,7 +7,6 @@ The Tag Picker code component provides the following features:
 3. Allows users to select from suggestions or enter a free text tag
 4. Raises **On Change** event when a user adds or removes a tag
 5. Allows programmatic **Set Focus**
-6. Styled to closely match the PILL Spec.
 
 ## Datasets
 
