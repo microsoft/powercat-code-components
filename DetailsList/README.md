@@ -330,8 +330,8 @@ Manual Sorting is supported outside of the component to allow for custom connect
 
    ```vbscript
    If(ctxSortAsc,
-       'SampleNamespace.PILLTable.CurrentSortDirection'.Ascending,
-       'SampleNamespace.PILLTable.CurrentSortDirection'.Descending) 
+       'PowerCAT.FluentDetailsList.CurrentSortDirection'.Ascending,
+       'PowerCAT.FluentDetailsList.CurrentSortDirection'.Descending) 
    ```
 
 6. Set the input items collection to sort using the context variables set above:
