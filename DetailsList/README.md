@@ -38,7 +38,7 @@ The DetailsList component has the following properties:
   - `ColPaddingLeft` - Adds padding to the left of the child cell (pixels)
   - `ColPaddingTop` - Adds padding to the top of the child cell (pixels)
   - `ColLabelAbove` - Moves the label above the child cell value if it is shown as a Sub Text column.
-  - `ColMultiValueDelimeter` -  Joins multi value array values together with this delimiter. See below under multi-valued columns.
+  - `ColMultiValueDelimiter` -  Joins multi value array values together with this delimiter. See below under multi-valued columns.
   - `ColFirstMultiValueBold`  - When showing a multi-valued array value, the first item is shown as bold.
   - `ColInlineLabel` - If set to a string value, then this is used to show a label inside the cell value that could be different to the column name. E.g.  
     ![image-20220322144857658](media/README/image-20220322144857658.png)
@@ -451,7 +451,7 @@ The column metadata then could be:
         ColDisplayName: "Tags",
         ColWidth: 250,
         ColFirstMultiValueBold :true,
-        ColMultiValueDelimeter:" "
+        ColMultiValueDelimiter:" "
     }
 ```
 

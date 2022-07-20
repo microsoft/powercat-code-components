@@ -18,7 +18,7 @@ const overflowProps: IButtonProps = { ariaLabel: 'More commands' };
 function getCommandBarItems(
     items: CanvasCommandItem[],
     isDisabled: boolean,
-    onClick: (ev?: unknown, item?: IContextualMenuItem | undefined) => boolean,
+    onClick: (ev?: React.MouseEvent<HTMLButtonElement>, item?: IContextualMenuItem | undefined) => boolean,
 ) {
     const rootItems = getCommandsWithChildren(
         items.filter((i) => i.farItem !== true && i.overflow !== true),
@@ -38,11 +38,13 @@ function getCommandBarItems(
     return { rootItems, farItems, overflowItems };
 }
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const CanvasCommandBar = React.memo((props: CanvasCommandBarProps) => {
     const { items, width, height, disabled, onSelected, tabIndex, ariaLabel, setFocus, themeJSON, visible } = props;
 
     const onClick = React.useCallback(
-        (ev?: unknown, item?: IContextualMenuItem | undefined) => {
+        (ev?: React.MouseEvent<HTMLButtonElement>, item?: IContextualMenuItem | undefined) => {
+            if (item?.canCheck) ev?.preventDefault();
             onSelected(item?.data);
             return true;
         },
@@ -105,7 +107,7 @@ export const CanvasCommandBar = React.memo((props: CanvasCommandBarProps) => {
         }
     }, [setFocus, rootRef, async]);
 
-    // When the visibilty, width or items change,
+    // When the visibility, width or items change,
     // remeasure the command bar and shrink/grow accordingly
     const commandBarRef = React.useRef<ICommandBar>(null);
     React.useEffect(() => {

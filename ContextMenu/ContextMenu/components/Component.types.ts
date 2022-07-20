@@ -4,7 +4,6 @@ export interface CanvasContextMenuItem {
     name: string;
     iconName?: string;
     iconColor?: string;
-    textColor?: string;
     itemCount?: number;
     iconOnly?: boolean;
     visible?: boolean;
@@ -13,6 +12,9 @@ export interface CanvasContextMenuItem {
     data: any;
     key: string;
     checked: boolean;
+    isHeader?: boolean;
+    divider?: boolean;
+    topDivider?: boolean;
 }
 
 export interface CanvasContextMenuProps {
@@ -20,10 +22,17 @@ export interface CanvasContextMenuProps {
     height?: number;
     text?: string;
     textColor?: string;
-    iconName?: string;
+    iconSize?: number;
     iconColor?: string;
+    hoverIconColor?: string;
+    fontSize?: number;
+    fontColor?: string;
+    hoverFontColor?: string;
     borderColor?: string;
-    backgroundColor?: string;
+    hoverBorderColor?: string;
+    borderRadius?: number;
+    fillColor?: string;
+    hoverFillColor?: string;
     showChevron?: boolean;
     justify?: 'center' | 'left' | 'right';
     items: CanvasContextMenuItem[];

@@ -11,15 +11,17 @@ This code component provides a wrapper around the [Fluent UI Context Menu](https
 The control accepts the following properties:
 
 - **Items** - The action items to render. The first item is considered the root item.
-  - **ItemDisplayName** - The Display Name of the menu item
+  - **ItemDisplayName** - The Display Name of the menu item.
   - **ItemKey** - The key to use to indicate which item is selected, and when adding sub items. The keys must be unique.
-  - **ItemEnabled** - Set to false if the option is disabled
-  - **ItemVisible** - Set to false if the option is not visible
-  - **ItemChecked** - Set to true if the option is checked
+  - **ItemEnabled** - Set to false if the option is disabled.
+  - **ItemVisible** - Set to false if the option is not visible.
+  - **ItemChecked** - Set to true if the option is checked.
   - **ItemIconName** - The Fluent UI icon to use (see [Fluent UI icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons))
-  - **ItemIconColor** - The color to render the icon as (e.g. named, rgb or hex value)
-  - **ItemIconOnly** - Do not show the text label - only the icon
-  - **ItemTextColor** - Color of the text in the context menu
+  - **ItemIconColor** - The color to render the icon as (e.g. named, rgb or hex value).
+  - **ItemIconOnly** - Do not show the text label - only the icon.
+  - **ItemHeader** - Render the item as a section header. If there are items that have their **ItemParentKey** set to the key of this item, then they are added as semantically grouped items under this section.
+  - **ItemTopDivider** - Render a divider at the top of the section.
+  - **ItemDivider** - Render the item as a section divider - or if the item is a header (`ItemHeader` = true), then controls whether to render a divider at the bottom of the section.
   - **ItemParentKey** - Render the option as child item of another option.
 
 
@@ -27,14 +29,20 @@ The control accepts the following properties:
 
 - **Theme** - Accepts a JSON string that is generated using [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/). Leaving this blank will use the default theme defined by Power Apps.
 - **Chevron** - Show or hide the down chevron on the root button
-- **BackgroundColor** - The button background color
-- **BorderColor** - The button border color
-- **TextAlignment** - The alignment of the button text. Possible values: Center, Left or Right
-- **AccessibilityLabel** - Screen reader aria-label
+- **Icon color** (Optional) - color of the icon on the context menu button.
+- **Hover icon color** (Optional) - color of the icon when hovered over the context menu button.
+- **Icon size** (px)  (Optional) - the size of the icon on the context menu button.
+- **Font size** (px) (Optional) - the size of the text on the context menu button.
+- **Font color** (Optional) - the color of the text on the context menu button.
+- **Hover font color** (Optional) - the color of the text when hovered over the context menu button.
+- **Fill color** (Optional) - the background color of the context menu button.
+- **Hover fill color** (Optional) - the background color when hovered over the context menu button.
+- **Text alignment** - The alignment of the button text. Possible values: Center, Left or Right
+- **Accessibility label** - Screen reader aria-label
 
 ### Event Properties
 
-- **InputEvent** - An event to send to the control. E.g. `SetFocus`. See below.
+- **Input event** - An event to send to the control. E.g. `SetFocus`. See below.
 
 ### OnSelect Event
 

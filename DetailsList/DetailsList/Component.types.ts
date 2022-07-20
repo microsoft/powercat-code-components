@@ -12,7 +12,7 @@ export interface IGridColumn extends IColumn {
     isLabelAbove?: boolean;
     paddingLeft?: number;
     paddingTop?: number;
-    multiValuesDelimter?: string;
+    multiValuesDelimiter?: string;
     firstMultiValueBold?: boolean;
     inlineLabel?: string;
     hideWhenBlank?: boolean;

@@ -11,7 +11,7 @@ export const ClassNames = {
     textTag: 'text-tag',
     imageButton: 'image-button',
     expandIcon: 'expand-icon',
-    celltypePrefix: 'celltype-',
+    cellTypePrefix: 'celltype-',
 };
 
 export const FontStyles = {

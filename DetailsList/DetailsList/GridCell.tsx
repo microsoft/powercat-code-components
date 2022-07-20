@@ -129,9 +129,9 @@ function wrapContent(cellContents: JSX.Element, column: IGridColumn, isBlank: bo
         whiteSpace = column.isMultiline === true ? 'normal' : 'nowrap';
     }
     const targetWidth = column.currentWidth || column.maxWidth;
-    // If constained width and multi-line=true - normal wrap
-    // If constained width and multi-line=false - nowrap
-    // If constrainted = false - nowrap
+    // If constrained width and multi-line=true - normal wrap
+    // If constrained width and multi-line=false - nowrap
+    // If constrained = false - nowrap
     const cellStyle = {
         maxWidth: undefinedIf(constrainWidth, targetWidth),
         textOverflow: undefinedIf(constrainWidth, 'ellipsis'),
@@ -146,7 +146,7 @@ function wrapContent(cellContents: JSX.Element, column: IGridColumn, isBlank: bo
     const hasInlineLabel = column.inlineLabel !== undefined;
     const labelAbove = hasInlineLabel && column.isLabelAbove === true;
     cellContents = !isBlank ? (
-        <span className={mergeStyles(cellStyle)}>
+        <span className={mergeStyles(cellStyle)} key={column.key.toString()}>
             {hasInlineLabel && <span className={ClassNames.inlineLabel}>{column.inlineLabel || column.name}</span>}
             {labelAbove && <br />}
             {cellContents}
@@ -168,10 +168,10 @@ function getColorTagCell(
     // Render a status column
     // Get the actual color from the status column
 
-    const tagcolor = getCellValue<string>(column.tagColor, item)[0];
+    const tagColor = getCellValue<string>(column.tagColor, item)[0];
 
     const indicatorColorClass = `${ClassNames.statusTag} ${mergeStyles({
-        ':after': { background: tagcolor + CSS_IMPORTANT },
+        ':after': { background: tagColor + CSS_IMPORTANT },
     })}`;
     const tagText = getCellValue<string>(column.fieldName, item)[0];
     const isBlank = !tagText || tagText === '';
@@ -190,10 +190,10 @@ function getTextTagCell(
     item: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord | Record<string, unknown>,
 ) {
     const tagText = getCellValue<string>(column.fieldName, item)[0];
-    const tagcolor = getCellValue<string>(column.tagColor, item)[0];
+    const tagColor = getCellValue<string>(column.tagColor, item)[0];
     const tagBorderColor = getCellValue<string>(column.tagBorderColor, item)[0];
     const tagColorClass = `${ClassNames.textTag} ${mergeStyles({
-        background: tagcolor || '#F4F6F7' + CSS_IMPORTANT,
+        background: tagColor || '#F4F6F7' + CSS_IMPORTANT,
         borderColor: (tagBorderColor || '#CAD0D5') + CSS_IMPORTANT,
     })}`;
     const isBlank = !tagText || tagText === '';
@@ -358,10 +358,10 @@ function getCellContent(
         const values: string[] = overrideValues || getCellValue(column.fieldName, item);
         isBlank = values.length === 0 || values.join('') === '';
 
-        // Two types of cell rendering - single value and mutli-value
+        // Two types of cell rendering - single value and multi-value
         if (values.length > 1) {
-            const valueDelimeter = column.multiValuesDelimter;
-            const delimterElement = valueDelimeter || <br />;
+            const valueDelimiter = column.multiValuesDelimiter;
+            const delimiterElement = valueDelimiter || <br />;
             cellContents = (
                 <>
                     {values.map((value, index) => {
@@ -369,7 +369,7 @@ function getCellContent(
                         return (
                             <span key={index}>
                                 {valueElement}
-                                {index < values.length - 1 && delimterElement}
+                                {index < values.length - 1 && delimiterElement}
                             </span>
                         );
                     })}

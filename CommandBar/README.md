@@ -11,17 +11,20 @@ This code component provides a wrapper around the [Fluent UI Command Bar](https:
 The control accepts the following properties:
 
 - **Items** - The action items to render
-  - **ItemDisplayName** - The Display Name of the command bar item
+  - **ItemDisplayName** - The Display Name of the command bar item.
   - **ItemKey** - The key to use to indicate which item is selected, and when adding sub items. The keys must be unique.
-  - **ItemEnabled** - Set to false if the option is disabled
-  - **ItemVisible** - Set to false if the option is not visible
-  - **ItemChecked** - Set to true if the option is checked (e.g. split buttons in a command bar)
+  - **ItemEnabled** - Set to false if the option is disabled.
+  - **ItemVisible** - Set to false if the option is not visible.
+  - **ItemChecked** - Set to true if the option is checked (e.g. split buttons in a command bar).
   - **ItemSplit** - Set to true if the option can be clicked and used as a drop down flyout menu.
-  - **ItemIconName** - The Fluent UI icon to use (see [Fluent UI icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons))
-  - **ItemIconColor** - The color to render the icon as (e.g. named, rgb or hex value)
-  - **ItemIconOnly** - Do not show the text label - only the icon
-  - **ItemOverflow** - Render the option in the overflow items
-  - **ItemFarItem** - Render the option in the far items group of a command bar
+  - **ItemIconName** - The Fluent UI icon to use (see [Fluent UI icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons)).
+  - **ItemIconColor** - The color to render the icon as (e.g. named, rgb or hex value).
+  - **ItemIconOnly** - Do not show the text label - only the icon.
+  - **ItemOverflow** - Render the option in the overflow items.
+  - **ItemFarItem** - Render the option in the far items group of a command bar.
+  - **ItemHeader** - Render the item as a section header. If there are items that have their **ItemParentKey** set to the key of this item, then they are added as semantically grouped items under this section.
+  - **ItemTopDivider** - Render a divider at the top of the section.
+  - **ItemDivider** - Render the item as a section divider - or if the item is a header (`ItemHeader` = true), then controls whether to render a divider at the bottom of the section.
   - **ItemParentKey** - Render the option as child item of another option.
 
 

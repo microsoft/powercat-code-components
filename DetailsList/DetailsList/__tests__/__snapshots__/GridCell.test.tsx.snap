@@ -69,7 +69,7 @@ exports[`GridCell MultiLines 1`] = `
 </div>
 `;
 
-exports[`GridCell MultiLines Delimetered 1`] = `
+exports[`GridCell MultiLines Delimited 1`] = `
 <div
   className=
 

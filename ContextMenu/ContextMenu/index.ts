@@ -52,8 +52,17 @@ export class ContextMenu implements ComponentFramework.ReactControl<IInputs, IOu
             setFocus: this.focusKey,
             themeJSON: context.parameters.Theme.raw,
             showChevron: this.context.parameters.Chevron.raw !== false,
-            backgroundColor: this.context.parameters.BackgroundColor.raw,
-            borderColor: this.context.parameters.BorderColor.raw,
+            iconColor: undefinedIfEmpty(context.parameters.IconColor),
+            iconSize: undefinedIfZero(context.parameters.IconSize),
+            hoverIconColor: undefinedIfEmpty(context.parameters.HoverIconColor),
+            fontSize: undefinedIfZero(context.parameters.FontSize),
+            fontColor: undefinedIfEmpty(context.parameters.FontColor),
+            hoverFontColor: undefinedIfEmpty(context.parameters.HoverFontColor),
+            borderColor: undefinedIfEmpty(context.parameters.BorderColor),
+            hoverBorderColor: undefinedIfEmpty(context.parameters.HoverBorderColor),
+            borderRadius: undefinedIfEmpty(context.parameters.BorderRadius),
+            fillColor: undefinedIfEmpty(context.parameters.FillColor),
+            hoverFillColor: undefinedIfEmpty(context.parameters.HoverFillColor),
             justify: TextAlignmentTypes[textAlignment],
         } as CanvasContextMenuProps;
 
@@ -69,10 +78,22 @@ export class ContextMenu implements ComponentFramework.ReactControl<IInputs, IOu
     }
 
     onSelect = (item?: CanvasContextMenuItem): void => {
-        // Since there is no way of raising the OnSelect event without a namedreference,
+        // Since there is no way of raising the OnSelect event without a named reference,
         // We store the root context menu item in the dataset to enable the OnSelect to be raised
         if (item && item.data) {
             this.context.parameters.items.openDatasetItem(item.data.getNamedReference());
         }
     };
+}
+
+function undefinedIfEmpty(property: ComponentFramework.PropertyTypes.Property) {
+    return defaultIfEmpty(property, undefined);
+}
+
+function defaultIfEmpty<T>(property: ComponentFramework.PropertyTypes.Property, defaultValue: T) {
+    return (property.raw as T) ? property.raw : defaultValue;
+}
+
+function undefinedIfZero(property: ComponentFramework.PropertyTypes.Property) {
+    return property.raw && property.raw > 0 ? property.raw : undefined;
 }

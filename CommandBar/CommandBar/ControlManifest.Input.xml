@@ -22,6 +22,9 @@
       <property-set name="ItemIconOnly" display-name-key="IconOnly" of-type="TwoOptions" usage="bound" required="false" />
       <property-set name="ItemOverflow" display-name-key="Overflow" of-type="TwoOptions" usage="bound" required="false" />
       <property-set name="ItemFarItem" display-name-key="FarItem" of-type="TwoOptions" usage="bound" required="false" />
+      <property-set name="ItemHeader" display-name-key="ItemHeader" of-type="TwoOptions" usage="bound" required="false" />
+      <property-set name="ItemTopDivider" display-name-key="ItemTopDivider" of-type="TwoOptions" usage="bound" required="false" />
+      <property-set name="ItemDivider" display-name-key="ItemDivider" of-type="TwoOptions" usage="bound" required="false" />
       <property-set name="ItemParentKey" display-name-key="ParentKey" of-type="SingleLine.Text" usage="bound" required="false" />
     </data-set>
 

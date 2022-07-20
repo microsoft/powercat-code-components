@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 
 import { IInputs } from '../generated/ManifestTypes';
-import { MockEnumProperty, MockStringProperty, MockTwoOptionsProperty } from './mock-context';
+import { MockEnumProperty, MockStringProperty, MockTwoOptionsProperty, MockWholeNumberProperty } from './mock-context';
 import { MockDataSet } from './mock-datasets';
 
 export function getMockParameters(): IInputs {
@@ -12,7 +12,16 @@ export function getMockParameters(): IInputs {
         TextAlignment: new MockEnumProperty(),
         items: new MockDataSet([]),
         Chevron: new MockTwoOptionsProperty(),
-        BackgroundColor: new MockStringProperty(),
+        FillColor: new MockStringProperty(),
         BorderColor: new MockStringProperty(),
+        BorderRadius: new MockWholeNumberProperty(),
+        FontColor: new MockStringProperty(),
+        FontSize: new MockWholeNumberProperty(),
+        HoverBorderColor: new MockStringProperty(),
+        HoverFillColor: new MockStringProperty(),
+        HoverFontColor: new MockStringProperty(),
+        HoverIconColor: new MockStringProperty(),
+        IconColor: new MockStringProperty(),
+        IconSize: new MockWholeNumberProperty(),
     };
 }

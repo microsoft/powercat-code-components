@@ -36,10 +36,11 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
     ref: IDetailsList;
     scheduledEventOnNextUpdate = false;
     inputEvent = '';
-    currentPage = 1;
     previousHasPreviousPage = false;
     previousHasNextPage = false;
     previousTotalRecords = 0;
+    previousPageNumber = 1;
+    pagingEventPending = false;
 
     public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
         this.notifyOutputChanged = notifyOutputChanged;
@@ -58,7 +59,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
 
         this.setPageSize(context);
 
-        const datasetNotInitialised = this.records === undefined;
+        const datasetNotInitialized = this.records === undefined;
         const datasetChanged =
             !dataset.loading &&
             !columns.loading &&
@@ -66,14 +67,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
                 context.updatedProperties.indexOf('records_dataset') > -1 ||
                 context.updatedProperties.indexOf('columns_dataset') > -1);
 
-        const resetPaging =
-            datasetChanged && !dataset.loading && !dataset.paging.hasPreviousPage && this.currentPage !== 1;
-
-        if (resetPaging) {
-            this.currentPage = 1;
-        }
-
-        if (datasetChanged || datasetNotInitialised) {
+        if (datasetChanged || datasetNotInitialized) {
             // If this is the first time we are setting the records, clear the selection in case there is state from a previous
             // time the screen was shown
             if (!this.records) {
@@ -85,22 +79,31 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
             this.columns = columns.records;
             this.sortedColumnsIds = columns.sortedRecordIds;
             this.datasetColumns = dataset.columns;
+
+            // When the dataset is changed, the selected records are reset and so we must re-set them here
+            if (dataset.getSelectedRecordIds().length === 0 && this.selection.count > 0) {
+                this.onSelectionChanged();
+            }
+
+            this.pagingEventPending = false;
         }
 
-        const grid = React.createElement(Grid, this.getGridProps(context));
-
         this.handleInputEvents(context);
+
+        const grid = React.createElement(Grid, this.getGridProps(context));
 
         const pagingChanged =
             this.previousHasPreviousPage !== dataset.paging.hasPreviousPage ||
             this.previousHasNextPage !== dataset.paging.hasNextPage ||
-            this.previousTotalRecords !== dataset.paging.totalResultCount;
+            this.previousTotalRecords !== dataset.paging.totalResultCount ||
+            this.previousPageNumber !== dataset.paging.lastPageNumber;
 
         if (pagingChanged) {
             this.notifyOutputChanged();
             this.previousHasPreviousPage = dataset.paging.hasPreviousPage;
             this.previousHasNextPage = dataset.paging.hasNextPage;
             this.previousTotalRecords = dataset.paging.totalResultCount;
+            this.previousPageNumber = dataset.paging.lastPageNumber;
         }
 
         return grid;
@@ -113,8 +116,8 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
     public getOutputs(): IOutputs {
         const dataset = this.context.parameters.records;
         const defaultOutputs = {
-            PageNumber: this.currentPage,
-            TotalRecords: dataset.paging.totalResultCount,
+            PageNumber: dataset.paging.lastPageNumber,
+            TotalRecords: this.getTotalRecordCount(),
             TotalPages: this.getTotalPages(),
             HasNextPage: dataset.paging.hasNextPage,
             HasPreviousPage: dataset.paging.hasPreviousPage,
@@ -171,6 +174,19 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
                   } as ComponentFramework.PropertyHelper.DataSetApi.SortStatus,
               ];
 
+        // There are two types of visual indicators to items loading
+        // - Shimmer - for when the dataset has not yet been initialized or is in an error state
+        // - Loading overlay - a less invasive semi-transparent overlay for when we are loading data/sorting/paging
+        let shimmer = !dataset.loading && dataset.paging.totalResultCount === -1;
+        let loading = this.pagingEventPending || dataset.loading || columns.loading;
+
+        // If there are selected items, disable shimmer and instead use the loading overlay because
+        // the ShimmeredDetailsList does not preserve selected items after the shimmer has been displayed
+        if (shimmer && this.selection.count > 0) {
+            shimmer = false;
+            loading = true;
+        }
+
         return {
             width: allocatedWidth,
             height: allocatedHeight,
@@ -180,8 +196,8 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
             columns: this.columns,
             datasetColumns: this.datasetColumns,
             sortedColumnIds: this.sortedColumnsIds,
-            shimmer: !dataset.loading && dataset.paging.totalResultCount === -1,
-            itemsLoading: dataset.loading || columns.loading,
+            shimmer: shimmer,
+            itemsLoading: loading,
             selection: this.selection,
             onNavigate: this.onNavigate,
             onCellAction: this.onCellAction,
@@ -244,17 +260,17 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
     }
 
     private handleSelectionEvents(inputEvent: string) {
-        // Clear the selection if requred, before setting the focus
+        // Clear the selection if required, before setting the focus
         if (inputEvent.indexOf(InputEvents.ClearSelection) > -1) {
             this.asyncOperations(() => {
                 this.selection.setAllSelected(false);
-                this.ref.forceUpdate();
+                this.ref && this.ref.forceUpdate();
             });
         } else if (inputEvent.indexOf(InputEvents.SetSelection) > -1) {
             this.asyncOperations(() => {
                 // set the default selection
                 this.setSelected();
-                this.ref.forceUpdate();
+                this.ref && this.ref.forceUpdate();
             });
         }
     }
@@ -265,17 +281,17 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
             let rowIndex = parseInt(inputEvent.substring(InputEvents.SetFocusOnRow.length));
             if (rowIndex === undefined || isNaN(rowIndex)) rowIndex = 0; // Default to row zero
             this.asyncOperations(() => {
-                this.ref.focusIndex(rowIndex);
+                this.ref && this.ref.focusIndex(rowIndex);
             });
         } else if (inputEvent.indexOf(InputEvents.SetFocusOnHeader) > -1) {
             this.asyncOperations(() => {
-                this.ref.focusIndex(-1);
+                this.ref && this.ref.focusIndex(-1);
             });
         } else if (inputEvent.indexOf(InputEvents.SetFocus) > -1) {
             // Set focus on the first row (if no rows, then the focus is placed on the header)
             const index = this.sortedRecordsIds && this.sortedRecordsIds.length > 0 ? 0 : -1;
             this.asyncOperations(() => {
-                this.ref.focusIndex(index);
+                this.ref && this.ref.focusIndex(index);
             });
         }
     }
@@ -291,7 +307,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
     }
 
     private asyncOperations(callback: () => void) {
-        // Used to ensure setfocus gets executed after the dom is updated
+        // Used to ensure setFocus gets executed after the dom is updated
         const win = getWindow(this.container);
         if (win) {
             win.requestAnimationFrame(() => {
@@ -317,7 +333,9 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
 
     setSelectedRecords = (ids: string[]): void => {
         try {
-            this.context.parameters.records.setSelectedRecordIds(ids);
+            // Filter out any records that are no longer present in the dataset
+            const dataset = this.context.parameters.records;
+            dataset.setSelectedRecordIds(ids.filter((id) => dataset.records[id] !== undefined));
         } catch (ex) {
             console.error('DetailsList: Error when calling setSelectedRecordIds', ex);
         }
@@ -347,7 +365,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
             }
             this.eventRowKey = rowKey.toString();
 
-            // Don't use openDatasetItem here because the event is not guarenteed to fire after the EventColumn output property is set
+            // Don't use openDatasetItem here because the event is not guaranteed to fire after the EventColumn output property is set
             this.notifyOutputChanged();
         }
     };
@@ -369,7 +387,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
                 }
                 this.selection.setKeySelected(itemKey as string, true, false);
                 this.selection.setChangeEvents(true, true);
-                this.ref.forceUpdate();
+                this.ref && this.ref.forceUpdate();
             }
 
             // No event event/column, so reset it
@@ -449,7 +467,21 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
         return selectable;
     };
 
+    getTotalRecordCount(): number {
+        if (this.context.parameters.LargeDatasetPaging.raw === true) {
+            // For record sets greater than 500, the total number of records is unknown
+            return -1;
+        }
+
+        return this.context.parameters.records.paging.totalResultCount;
+    }
+
     getTotalPages(): number {
+        if (this.context.parameters.LargeDatasetPaging.raw === true) {
+            // For record sets greater than 500, the total number of records is unknown
+            return -1;
+        }
+
         const dataset = this.context.parameters.records;
         const pages = Math.floor((dataset.paging.totalResultCount - 1) / dataset.paging.pageSize + 1);
         return Math.max(1, pages);
@@ -457,27 +489,36 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
 
     loadFirstPage(): void {
         const dataset = this.context.parameters.records;
-        this.currentPage = 1;
         dataset.paging.loadExactPage(1);
-        this.notifyOutputChanged();
+        this.pagingEventPending = true;
     }
 
     loadNextPage(): void {
         const dataset = this.context.parameters.records;
-        const totalPages = this.getTotalPages();
-        if (this.currentPage < totalPages) {
-            this.currentPage++;
-            dataset.paging.loadExactPage(this.currentPage);
-            this.notifyOutputChanged();
+        if (this.hasNextPage()) {
+            dataset.paging.loadExactPage(dataset.paging.lastPageNumber + 1);
+            this.pagingEventPending = true;
         }
+    }
+
+    hasNextPage(): boolean {
+        // For datasets greater than 500 records, PCF will not return an accurate total record count
+        // To allow paging through more than 500 records, LargeDatasetPaging is set to true, and
+        // the total page count check is skipped
+        const dataset = this.context.parameters.records;
+        if (this.context.parameters.LargeDatasetPaging.raw === true) {
+            return dataset.paging.hasNextPage;
+        }
+
+        const totalPages = this.getTotalPages();
+        return dataset.paging.lastPageNumber < totalPages;
     }
 
     loadPreviousPage(): void {
         const dataset = this.context.parameters.records;
-        if (this.currentPage > 1) {
-            this.currentPage--;
-            dataset.paging.loadExactPage(this.currentPage);
-            this.notifyOutputChanged();
+        if (dataset.paging.hasPreviousPage) {
+            dataset.paging.loadExactPage(dataset.paging.lastPageNumber - 1);
+            this.pagingEventPending = true;
         }
     }
 
