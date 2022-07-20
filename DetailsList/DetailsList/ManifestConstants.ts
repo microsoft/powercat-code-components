@@ -23,7 +23,7 @@ export const enum ColumnsColumns {
     ColPaddingTop = 'ColPaddingTop',
     ColPaddingLeft = 'ColPaddingLeft',
     ColLabelAbove = 'ColLabelAbove',
-    ColMultiValueDelimeter = 'ColMultiValueDelimeter',
+    ColMultiValueDelimiter = 'ColMultiValueDelimiter',
     ColFirstMultiValueBold = 'ColFirstMultiValueBold',
     ColInlineLabel = 'ColInlineLabel',
     ColHideWhenBlank = 'ColHideWhenBlank',

@@ -19,7 +19,7 @@ import {
     StickyPositionType,
     IObjectWithKey,
     ISelectionZoneProps,
-    Selection,
+    ISelection,
     createTheme,
     IPartialTheme,
     IRefObject,
@@ -53,7 +53,7 @@ export interface GridProps {
     shimmer: boolean;
     itemsLoading: boolean;
     selectionType: SelectionMode;
-    selection: Selection;
+    selection: ISelection;
     onNavigate: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord) => void;
     onCellAction: (item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord, column?: IColumn) => void;
     overlayOnSort?: boolean;
@@ -72,8 +72,8 @@ export interface GridProps {
 }
 
 export function getRecordKey(record: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord): string {
-    const customkey = record.getValue(RecordsColumns.RecordKey);
-    return customkey ? customkey.toString() : record.getRecordId();
+    const customKey = record.getValue(RecordsColumns.RecordKey);
+    return customKey ? customKey.toString() : record.getRecordId();
 }
 
 const cellStyleProps = {
@@ -283,7 +283,7 @@ export const Grid = React.memo((props: GridProps) => {
                     onRenderItemColumn={onRenderItemColumn}
                     items={items}
                     setKey={setName}
-                    selection={selection}
+                    selection={selectionZoneProps?.selection}
                     selectionZoneProps={selectionZoneProps}
                     componentRef={componentRef}
                 ></ShimmeredDetailsList>
@@ -373,15 +373,15 @@ function mapToGridColumn(
         alignmentClass = horizontalAlign + '-align';
     }
 
-    const cellClassName = cellType ? ClassNames.celltypePrefix + cellType.toString().toLowerCase() : '';
+    const cellClassName = cellType ? ClassNames.cellTypePrefix + cellType.toString().toLowerCase() : '';
 
     const headerClassName = concatClassNames([
         alignmentClass,
-        cellType ? ClassNames.celltypePrefix + cellType.toString().toLowerCase() : '',
+        cellType ? ClassNames.cellTypePrefix + cellType.toString().toLowerCase() : '',
     ]);
 
     return {
-        // Give the column a unique key based on the input collection so changing the colkumns will recalculate widths etc.
+        // Give the column a unique key based on the input collection so changing the columns will recalculate widths etc.
         key: 'col' + column.getRecordId(),
         name: column.getFormattedValue(ColumnsColumns.ColDisplayName),
         fieldName: columnName,
@@ -407,7 +407,7 @@ function mapToGridColumn(
         firstMultiValueBold: column.getValue(ColumnsColumns.ColFirstMultiValueBold) === true,
         paddingLeft: undefinedIfNullish(column.getValue(ColumnsColumns.ColPaddingLeft)),
         paddingTop: undefinedIfNullish(column.getValue(ColumnsColumns.ColPaddingTop)),
-        multiValuesDelimter: column.getValue(ColumnsColumns.ColMultiValueDelimeter),
+        multiValuesDelimiter: column.getValue(ColumnsColumns.ColMultiValueDelimiter),
         inlineLabel: undefinedIfNullish(column.getFormattedValue(ColumnsColumns.ColInlineLabel)),
         hideWhenBlank: column.getValue(ColumnsColumns.ColHideWhenBlank) === true,
         subTextRow: column.getValue(ColumnsColumns.ColSubTextRow),

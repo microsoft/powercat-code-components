@@ -8,13 +8,13 @@ export const enum ItemColumns {
     Enabled = 'ItemEnabled',
     IconName = 'ItemIconName',
     IconColor = 'ItemIconColor',
-    TextColor = 'ItemTextColor',
-    BackgroundColor = 'ItemBackgroundColor',
-    BorderColor = 'ItemBorderColor',
     ParentKey = 'ItemParentKey',
     IconOnly = 'ItemIconOnly',
     Visible = 'ItemVisible',
     Checked = 'ItemChecked',
+    ItemHeader = 'ItemHeader',
+    ItemTopDivider = 'ItemTopDivider',
+    ItemDivider = 'ItemDivider',
 }
 
 export const enum InputEvents {

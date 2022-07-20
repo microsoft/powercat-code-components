@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="PowerCAT" constructor="FluentDetailsList" version="0.2.1" display-name-key="FluentDetailsList" description-key="FluentDetailsList_Desc" control-type="virtual">
+  <control namespace="PowerCAT" constructor="FluentDetailsList" version="0.2.4" display-name-key="FluentDetailsList" description-key="FluentDetailsList_Desc" control-type="virtual">
     <external-service-usage enabled="false"></external-service-usage>
     <data-set name="records" display-name-key="Records" >
       <property-set name="RecordKey" display-name-key="RecordKey" of-type="SingleLine.Text" usage="bound" required="false" />
@@ -26,7 +26,7 @@
       <property-set name="ColPaddingLeft" display-name-key="ColPaddingLeft" of-type="Whole.None" usage="bound" required="false" />
       <property-set name="ColPaddingTop" display-name-key="ColPaddingTop" of-type="Whole.None" usage="bound" required="false" />
       <property-set name="ColLabelAbove" display-name-key="ColLabelAbove" of-type="TwoOptions" usage="bound" required="false" />
-      <property-set name="ColMultiValueDelimeter" display-name-key="ColMultiValueDelimeter" of-type="SingleLine.Text" usage="bound" required="false" />
+      <property-set name="ColMultiValueDelimiter" display-name-key="ColMultiValueDelimiter" of-type="SingleLine.Text" usage="bound" required="false" />
       <property-set name="ColFirstMultiValueBold" display-name-key="ColFirstMultiValueBold" of-type="TwoOptions" usage="bound" required="false" />
       <property-set name="ColInlineLabel" display-name-key="ColInlineLabel" of-type="SingleLine.Text" usage="bound" required="false" />
       <property-set name="ColHideWhenBlank" display-name-key="ColHideWhenBlank" of-type="TwoOptions" usage="bound" required="false" />
@@ -45,6 +45,7 @@
     </property>
     <property name="SelectRowsOnFocus" display-name-key="SelectRowsOnFocus" of-type="TwoOptions" usage="input" required="false" default-value="false" />
     <property name="PageSize" display-name-key="PageSize" of-type="Whole.None" usage="input" default-value="150" />
+    <property name="LargeDatasetPaging" display-name-key="LargeDatasetPaging" of-type="TwoOptions" usage="input" default-value="false" />
     <property name="PageNumber" display-name-key="PageNumber" of-type="Whole.None" usage="output" required="false" />
     <property name="HasNextPage" display-name-key="HasNextPage" of-type="TwoOptions" usage="output" required="false" />
     <property name="HasPreviousPage" display-name-key="HasNextPage" of-type="TwoOptions" usage="output" required="false" />

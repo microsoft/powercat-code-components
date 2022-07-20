@@ -1,5 +1,6 @@
 import { CanvasCommandItem } from './Component.types';
 import {
+    ContextualMenuItemType,
     getColorFromString,
     getShade,
     IButtonStyles,
@@ -19,7 +20,7 @@ export function getMenuItemsFromDataset(dataset: ComponentFramework.PropertyType
     return dataset.sortedRecordIds.map((id) => {
         const record = dataset.records[id];
         // Prevent duplicate keys by appending the duplicate index
-        let key = record.getValue(ItemColumns.Key) as string;
+        let key = (record.getFormattedValue(ItemColumns.Key) as string) ?? '';
         if (keyIndex[key] !== undefined) {
             keyIndex[key]++;
             key += `_${keyIndex[key]}`;
@@ -38,6 +39,9 @@ export function getMenuItemsFromDataset(dataset: ComponentFramework.PropertyType
             checked: undefinedIfNull(record.getValue(ItemColumns.Checked) as boolean),
             visible: defaultIfNull(record.getValue(ItemColumns.Visible) as boolean, true),
             split: undefinedIfNull(record.getValue(ItemColumns.Split) as boolean),
+            isHeader: (record.getValue(ItemColumns.ItemHeader) as boolean) ?? undefined,
+            topDivider: (record.getValue(ItemColumns.ItemTopDivider) as boolean) ?? undefined,
+            divider: (record.getValue(ItemColumns.ItemDivider) as boolean) ?? undefined,
             data: record,
         } as CanvasCommandItem;
     });
@@ -55,7 +59,7 @@ function getDummyAction(key: string): CanvasCommandItem {
 export function getCommandsWithChildren(
     items: CanvasCommandItem[],
     disabled: boolean,
-    onClick: (ev?: unknown, item?: IContextualMenuItem | undefined) => boolean,
+    onClick: (ev?: React.MouseEvent<HTMLButtonElement>, item?: IContextualMenuItem | undefined) => boolean,
 ): ICommandBarItemProps[] {
     return items
         .filter((i) => !i.parentItemKey && i.visible !== false)
@@ -68,10 +72,10 @@ export function getCommandBarItemProps(
     items: CanvasCommandItem[],
     item: CanvasCommandItem,
     disabled: boolean,
-    onClick: (ev?: unknown, item?: IContextualMenuItem | undefined) => boolean,
+    onClick: (ev?: React.MouseEvent<HTMLButtonElement>, item?: IContextualMenuItem | undefined) => boolean,
 ): ICommandBarItemProps {
     const subItems = items
-        .filter((i) => i.parentItemKey === item.key && i.visible !== false)
+        .filter((i) => i.parentItemKey === item.key && i !== item && i.visible !== false)
         .map((i) => {
             return getCommandBarItemProps(items, i, disabled, onClick);
         });
@@ -106,7 +110,7 @@ export function getCommandBarItemProps(
         }
     }
 
-    return {
+    const props = {
         key: item.key,
         text: item.name,
         disabled: item.enabled === false || disabled,
@@ -125,6 +129,32 @@ export function getCommandBarItemProps(
                   }
                 : undefined,
     } as ICommandBarItemProps;
+
+    if (item.isHeader === true && subItems.length > 0) {
+        // Semantic Section
+        props.itemType = ContextualMenuItemType.Section;
+        props.sectionProps = {
+            title: item.name,
+            topDivider: item.topDivider,
+            bottomDivider: item.divider,
+            items: subItems,
+        };
+    } else if (item.isHeader === true) {
+        // Simple Section Break
+        props.itemType = ContextualMenuItemType.Header;
+    } else if (item.divider === true) {
+        // Divider Break
+        props.itemType = ContextualMenuItemType.Divider;
+    } else {
+        props.itemType = ContextualMenuItemType.Normal;
+        props.subMenuProps =
+            subItems.length > 0
+                ? {
+                      items: subItems,
+                  }
+                : undefined;
+    }
+    return props;
 }
 
 function undefinedIfNull<T>(value: T | null) {

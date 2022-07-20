@@ -15,6 +15,9 @@ export const enum ItemColumns {
     Visible = 'ItemVisible',
     Checked = 'ItemChecked',
     Split = 'ItemSplit',
+    ItemHeader = 'ItemHeader',
+    ItemTopDivider = 'ItemTopDivider',
+    ItemDivider = 'ItemDivider',
 }
 
 export const enum InputEvents {

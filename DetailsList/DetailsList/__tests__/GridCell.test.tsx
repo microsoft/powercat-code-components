@@ -97,11 +97,11 @@ describe('GridCell', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('MultiLines Delimetered', () => {
+    it('MultiLines Delimited', () => {
         const mockProps: GridCellProps = {
             ...defaultProps,
             item: multiValueItem,
-            column: { ...defaultProps.column, inlineLabel: 'Label', multiValuesDelimter: ', ' } as IGridColumn,
+            column: { ...defaultProps.column, inlineLabel: 'Label', multiValuesDelimiter: ', ' } as IGridColumn,
         };
         const component = renderer.create(<GridCell {...mockProps} />);
         const tree = component.toJSON();

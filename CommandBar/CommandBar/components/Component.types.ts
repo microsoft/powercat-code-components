@@ -15,6 +15,9 @@ export interface CanvasCommandItem {
     key: string;
     checked?: boolean;
     split?: boolean;
+    isHeader?: boolean;
+    divider?: boolean;
+    topDivider?: boolean;
 }
 
 export interface CanvasCommandBarProps {

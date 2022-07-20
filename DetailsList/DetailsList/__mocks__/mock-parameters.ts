@@ -21,5 +21,6 @@ export function getMockParameters(): IInputs {
         SelectionAlwaysVisible: new MockTwoOptionsProperty(false),
         records: new MockDataSet([]),
         columns: new MockDataSet([]),
+        LargeDatasetPaging: new MockTwoOptionsProperty(),
     };
 }

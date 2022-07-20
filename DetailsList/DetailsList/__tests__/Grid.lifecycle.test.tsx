@@ -36,7 +36,7 @@ function createComponent() {
 
     context.parameters.records = new MockDataSet(records);
     context.parameters.records.columns = [new MockColumn('name', 'Name')];
-
+    context.parameters.records.getSelectedRecordIds = jest.fn().mockReturnValue([]);
     const columns = [
         new MockEntityRecord('1', {
             [ColumnsColumns.ColName]: 'name',

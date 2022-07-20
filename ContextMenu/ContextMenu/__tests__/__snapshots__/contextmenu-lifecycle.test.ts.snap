@@ -2,15 +2,11 @@
 
 exports[`ContextMenu renders 1`] = `
 <Memo(CanvasContextMenu)
-  backgroundColor={null}
-  borderColor={null}
   disabled={false}
   height={-1}
   items={
     Array [
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -24,20 +20,20 @@ exports[`ContextMenu renders 1`] = `
             "ItemKey": "item1",
           },
         },
+        "divider": undefined,
         "enabled": true,
         "iconColor": "blue",
         "iconName": "Open",
         "iconOnly": false,
         "id": "1",
+        "isHeader": undefined,
         "key": "item1",
         "name": "Item 1",
         "parentItemKey": undefined,
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -51,20 +47,20 @@ exports[`ContextMenu renders 1`] = `
             "ItemKey": "item2",
           },
         },
+        "divider": undefined,
         "enabled": false,
         "iconColor": "blue",
         "iconName": "New",
         "iconOnly": true,
         "id": "2",
+        "isHeader": undefined,
         "key": "item2",
         "name": "Item 2",
         "parentItemKey": undefined,
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -78,15 +74,17 @@ exports[`ContextMenu renders 1`] = `
             "ItemKey": "item3",
           },
         },
+        "divider": undefined,
         "enabled": true,
         "iconColor": "green",
         "iconName": "Save",
         "iconOnly": true,
         "id": "3",
+        "isHeader": undefined,
         "key": "item3",
         "name": "Item 3",
         "parentItemKey": undefined,
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
     ]
@@ -102,8 +100,6 @@ exports[`ContextMenu renders 1`] = `
 
 exports[`ContextMenu renders dummy items when no items configured 1`] = `
 <Memo(CanvasContextMenu)
-  backgroundColor={null}
-  borderColor={null}
   disabled={false}
   height={-1}
   items={
@@ -139,15 +135,11 @@ exports[`ContextMenu renders dummy items when no items configured 1`] = `
 
 exports[`ContextMenu renders subitems and shows the flyout menu 1`] = `
 <Memo(CanvasContextMenu)
-  backgroundColor={null}
-  borderColor={null}
   disabled={false}
   height={-1}
   items={
     Array [
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -161,20 +153,20 @@ exports[`ContextMenu renders subitems and shows the flyout menu 1`] = `
             "ItemKey": "item1",
           },
         },
+        "divider": undefined,
         "enabled": true,
         "iconColor": "blue",
         "iconName": "Open",
         "iconOnly": false,
         "id": "1",
+        "isHeader": undefined,
         "key": "item1",
         "name": "Item 1",
         "parentItemKey": undefined,
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -188,20 +180,20 @@ exports[`ContextMenu renders subitems and shows the flyout menu 1`] = `
             "ItemKey": "item2",
           },
         },
+        "divider": undefined,
         "enabled": false,
         "iconColor": "blue",
         "iconName": "New",
         "iconOnly": true,
         "id": "2",
+        "isHeader": undefined,
         "key": "item2",
         "name": "Item 2",
         "parentItemKey": undefined,
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -215,20 +207,20 @@ exports[`ContextMenu renders subitems and shows the flyout menu 1`] = `
             "ItemKey": "item3",
           },
         },
+        "divider": undefined,
         "enabled": true,
         "iconColor": "green",
         "iconName": "Save",
         "iconOnly": true,
         "id": "3",
+        "isHeader": undefined,
         "key": "item3",
         "name": "Item 3",
         "parentItemKey": undefined,
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -240,20 +232,20 @@ exports[`ContextMenu renders subitems and shows the flyout menu 1`] = `
             "ItemParentKey": "commandOpen",
           },
         },
+        "divider": undefined,
         "enabled": undefined,
         "iconColor": undefined,
         "iconName": "New",
         "iconOnly": undefined,
         "id": "5",
+        "isHeader": undefined,
         "key": "item4",
         "name": "Sub 1",
         "parentItemKey": "commandOpen",
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
       Object {
-        "backgroundColor": undefined,
-        "borderColor": undefined,
         "checked": undefined,
         "data": MockEntityRecord {
           "getNamedReference": [MockFunction],
@@ -265,15 +257,17 @@ exports[`ContextMenu renders subitems and shows the flyout menu 1`] = `
             "ItemParentKey": "commandOpen",
           },
         },
+        "divider": undefined,
         "enabled": undefined,
         "iconColor": undefined,
         "iconName": "Save",
         "iconOnly": undefined,
         "id": "6",
+        "isHeader": undefined,
         "key": "item5",
         "name": "Sub 2",
         "parentItemKey": "commandOpen",
-        "textColor": undefined,
+        "topDivider": undefined,
         "visible": undefined,
       },
     ]
