@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetMapping returns correct props 1`] = `
+Array [
+  Object {
+    "height": 10,
+    "type": 3,
+    "width": "20%",
+  },
+]
+`;
+
+exports[`DatasetMapping returns correct props 2`] = `
+Array [
+  Object {
+    "count": 5,
+    "data": MockEntityRecord {
+      "getNamedReference": [MockFunction],
+      "id": "1",
+      "values": Object {
+        "RowCount": 5,
+        "RowKey": "1",
+        "RowOrder": 1,
+        "RowWidth": 100,
+      },
+    },
+    "id": "1",
+    "key": "1",
+    "order": 1,
+    "width": 100,
+  },
+]
+`;

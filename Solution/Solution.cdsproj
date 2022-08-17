@@ -57,6 +57,10 @@
     <ProjectReference Include="..\TagList\TagList.pcfproj" />
     <ProjectReference Include="..\Breadcrumb\BreadCrumb.pcfproj" />
     <ProjectReference Include="..\ThemeGenerator\themeGenerator.pcfproj" />
+    <ProjectReference Include="..\ProgressIndicator\ProgressIndicator.pcfproj" />
+    <ProjectReference Include="..\Calendar\Calendar.pcfproj" />
+    <ProjectReference Include="..\Shimmer\Shimmer.pcfproj" />
+    <ProjectReference Include="..\Spinner\Spinner.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

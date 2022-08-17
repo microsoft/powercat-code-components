@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="PowerCAT" constructor="Spinner" version="0.0.1" display-name-key="Spinner" description-key="Spinner_desc" control-type="virtual" >
+    <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
+    <property name="Label" display-name-key="Label" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="SpinnerSize" display-name-key="SpinnerSize" description-key="SpinnerSize" usage="input" of-type="Enum" required="true">
+      <value name="xSmall" display-name-key="xSmall" description-key="xSmall">xSmall</value>
+      <value name="Small" display-name-key="Small" description-key="Small">Small</value>
+      <value name="Medium" display-name-key="Medium" description-key="Medium" default="true">Medium</value>
+      <value name="Large" display-name-key="Large" description-key="Large">Large</value>
+    </property>
+    <property name="LabelPosition" display-name-key="LabelPosition" description-key="LabelPosition" usage="input" of-type="Enum" required="true">
+      <value name="Bottom" display-name-key="Bottom" description-key="Bottom" default="true">Bottom</value>
+      <value name="Top" display-name-key="Top" description-key="Top">Top</value>
+      <value name="Right" display-name-key="Right" description-key="Right">Right</value>
+      <value name="Left" display-name-key="Left" description-key="Left">Left</value>
+    </property>
+    <resources>
+      <code path="index.ts" order="1"/>
+      <resx path="strings/Spinner.1033.resx" version="1.0.0" />
+      <platform-library name="React" version="16.8.6" />
+      <platform-library name="Fluent" version="8.29.0" />
+    </resources>
+  </control>
+</manifest>
