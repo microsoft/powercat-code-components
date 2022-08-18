@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Shimmer theme 1`] = `
-<div
-  className="css-109 body-110"
-/>
-`;

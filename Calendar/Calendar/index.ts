@@ -64,7 +64,7 @@ export class Calendar implements ComponentFramework.ReactControl<IInputs, IOutpu
             showWeekNumbers: context.parameters?.ShowWeekNumbers.raw,
             isDisabled: context.mode.isControlDisabled,
             ariaLabel: ariaLabel,
-            backgroundColor: context.parameters.BackgroundColor.raw ?? "#ffffff"
+            backgroundColor: context.parameters.BackgroundColor.raw ?? '#ffffff',
         };
         return React.createElement(CanvasCalendar, props);
     }

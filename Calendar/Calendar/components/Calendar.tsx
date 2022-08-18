@@ -24,9 +24,8 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
         maxDate,
         tabIndex,
         isDisabled,
-        backgroundColor
+        backgroundColor,
     } = props;
-    const [previousDate, setpreviousDate] = React.useState<Date>();
     const theme = React.useMemo(() => {
         try {
             return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : undefined;
@@ -51,9 +50,9 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
     }
 
     React.useEffect(() => {
-        if (selectedDateValue?.toDateString() !== previousDate?.toDateString()) { onSelected(selectedDateValue!); }
-        setpreviousDate(selectedDateValue);
-    }, [onSelected, selectedDateValue, previousDate]);
+        if (selectedDateValue) onSelected(selectedDateValue);
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         // Issue : Calendar Control does not have a Disabled prop yet - https://github.com/microsoft/fluentui/issues/19453,
