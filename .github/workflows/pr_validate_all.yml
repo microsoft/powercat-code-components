@@ -14,6 +14,7 @@ jobs:
         component-directory:
          - "./AutoWidthLabel"
          - "./Breadcrumb"
+         - "./Calendar"
          - "./CommandBar"
          - "./ContextMenu"
          - "./DetailsList"
@@ -23,7 +24,10 @@ jobs:
          - "./Nav"
          - "./Picker"
          - "./Pivot"
+         - "./ProgressIndicator"
          - "./ResizableTextarea"
+         - "./Spinner"
+         - "./Shimmer"
          - "./TagList"
 
 
