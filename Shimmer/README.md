@@ -11,26 +11,12 @@ This code component provides a wrapper around the [Fluent UI Shimmer](https://de
 The control accepts the following properties:
 
 - **Items** - The action items to render
-<<<<<<< HEAD
   - **ItemType** - The Shimmer element type from the list of three shimmer elements, i.e. cirlce, gap & line. 
-=======
-  - **ItemKey** - The key to use to indicate specific ShimmerElement. The keys must be unique.
-  - **ItemType** - The Shimmer element type from the list of three shimmer elements, i.e. cirlce, gap & line. 
-  - **ItemRowKey** - The key to use to indicate the RowKey and establish relationship.
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
   - **ItemHeight** - Height of ShimmerElement.
   - **ItemWidth** - Width of ShimmerElement
   - **ItemVerticalAlign** - To specify how the element should align. i.e. 'top', 'center' or'bottom'.
 
-<<<<<<< HEAD
 - **RowCount** - Number of Shimmers to render
-=======
-- **Rows** - The action items to render
-  - **RowKey** - The key to use to indicate specific Shimmer, and when adding sub items. The keys must be unique.
-  - **RowOrder** - The order by which the Shimmer should render
-  - **RowCount** - Number of Shimmers to render
-  - **RowWidth** - Width of Shimmer
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 
 - **SpacebetweenShimmer** - Space or Gap between each Shimmer incase of muliple rows.   
 
@@ -41,37 +27,22 @@ The control accepts the following properties:
 
 ### Usage
 
-<<<<<<< HEAD
 Here is an example which can be used to create a Shimmer effect as shown in the below screen shot.
-=======
-Here is an example which can be used to create a Shimmer effect shown in the below screen shot.
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 
 ![image](./media/Shimmer.gif)
 
 ### Items Property value
 
-<<<<<<< HEAD
 Each Record in the below table can have following values.
 
 |Property Name|Property Value|Required|
 |--|--|--|
 |ItemType|"circle"|Yes|
-=======
-Each Record in the below Table contains can have following values.
-
-|Property Name|Property Value|Required|
-|--|--|--|
-|ItemKey|"1"|Yes|
-|ItemType|"circle"|Yes|
-|ItemRowKey|"1"|Yes|
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 |ItemWidth|"20"||
 |ItemHeight|10||
 
 
 ```
-<<<<<<< HEAD
 Table(
     {
         ItemWidth: "3.8",
@@ -98,40 +69,11 @@ Table(
         ItemHeight: 20,
         ItemType: "line"
     })
-=======
-Table({ItemKey:"1",ItemWidth:"3.8",ItemHeight:60,ItemRowKey:"1",ItemType:"circle"},{ItemKey:"2",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"3",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"4",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"5",ItemWidth:"2.8",ItemHeight:30,ItemRowKey:"1",ItemType:"line"},{ItemKey:"6",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"7",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"8",ItemWidth:"1",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"9",ItemWidth:"3.8",ItemHeight:40,ItemRowKey:"1",ItemType:"line"},{ItemKey:"10",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"11",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"12",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"13",ItemWidth:"2.8",ItemHeight:30,ItemRowKey:"1",ItemType:"line"},{ItemKey:"14",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"15",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"16",ItemWidth:"1",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"})
-```
-### Rows (rows_Items) Property value
-
-Each Record in the below Table contains can have following values.
-
-|Property Name|Property Value|Required|
-|--|--|--|
-|RowKey|"1"|Yes|
-|RowOrder|1||
-|RowCount|5||
-|RowWidth|100||
-
-
-```
-Table(
-    {
-        RowKey: "1",
-        RowOrder:1,
-        RowCount:5,
-        RowWidth: 100
-    }
-)
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 ```
 
 ### Example Theme
 
-<<<<<<< HEAD
 The following is an example of setting theme based on the output from the [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/). 
-=======
-The following is an example of setting the theme based on the output from the [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/). 
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 
 ```
 Set(varThemeBlue, {

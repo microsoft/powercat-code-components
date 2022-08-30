@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
-<<<<<<< HEAD
   <control namespace="PowerCAT" constructor="Shimmer" version="0.0.1" display-name-key="Shimmer" description-key="Shimmer_Desc" control-type="virtual">
 
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
@@ -8,30 +7,10 @@
     <property name="RowCount" display-name-key="RowCount" of-type="Whole.None" usage="input" default-value="1" required="true" />
     <data-set name="items" display-name-key="Items">
       <property-set name="ItemType" display-name-key="ItemType" of-type="SingleLine.Text" usage="bound" required="true" />
-=======
-  <control namespace="PowerCAT" constructor="Shimmer" version="0.0.2" display-name-key="Shimmer" description-key="Shimmer_Desc" control-type="virtual">
-
-    <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
-    <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
-
-    <data-set name="items" display-name-key="Items">
-      <property-set name="ItemKey" display-name-key="ItemKey" of-type="SingleLine.Text" usage="bound" required="true" />
-      <property-set name="ItemType" display-name-key="ItemType" of-type="SingleLine.Text" usage="bound" required="true" />
-      <property-set name="ItemRowKey" display-name-key="ItemRowKey" of-type="SingleLine.Text" usage="bound" required="true" />
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
       <property-set name="ItemHeight" display-name-key="ItemHeight" of-type="Whole.None" usage="bound" required="false" />
       <property-set name="ItemWidth" display-name-key="ItemWidth" of-type="Whole.None" usage="bound" required="false" />
       <property-set name="ItemVerticalAlign" display-name-key="ItemVerticalAlign" of-type="SingleLine.Text" usage="bound" required="false" />
     </data-set>
-<<<<<<< HEAD
-=======
-    <data-set name="rows" display-name-key="Rows" description-key="Rows">
-      <property-set name="RowKey" display-name-key="RowKey" of-type="SingleLine.Text" usage="bound" required="true" />
-      <property-set name="RowOrder" display-name-key="RowOrder" of-type="Whole.None" usage="bound" required="false" />
-      <property-set name="RowCount" display-name-key="RowCount" of-type="Whole.None" usage="bound" required="false" />
-      <property-set name="RowWidth" display-name-key="RowWidth" of-type="Whole.None" usage="bound" required="false" />
-    </data-set>
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     <property name="SpacebetweenShimmer" display-name-key="SpacebetweenShimmer" description-key="SpaceBetweenShimmer" usage="input" of-type="Enum" required="true">
       <value name="0px" display-name-key="0px" description-key="0">0</value>
       <value name="10px" display-name-key="10px" description-key="10px" default="true">10px</value>

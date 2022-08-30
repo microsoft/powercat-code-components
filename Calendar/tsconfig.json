@@ -1,18 +1,10 @@
 {
     "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
     "compilerOptions": {
-<<<<<<< HEAD
         "module": "es2020",
         "moduleResolution": "Node",
         "target": "ES6",
         "typeRoots": ["node_modules/@types"],
         "esModuleInterop": true,
-=======
-        "module": "es2015",
-        "moduleResolution": "Node",
-        "target": "ES6",
-        "typeRoots": ["node_modules/@types"],
-        "esModuleInterop": true
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     }
 }

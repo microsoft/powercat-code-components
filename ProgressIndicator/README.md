@@ -1,6 +1,6 @@
 # Progress Indicator
 
-This code component provides a wrapper around the [Fluent UI ProgressIndicator](https://developer.microsoft.com/en-us/fluentui#/controls/web/progressindicator) control for use in canvas & custom pages.
+This code component provides a wrapper around the [Fluent UI Spinner](https://developer.microsoft.com/en-us/fluentui#/controls/web/progressindicator) control for use in canvas & custom pages.
 
 | Canvas apps | Custom pages | Model-driven apps | Portals |
 | ----------- | ------------ | ----------------- | ------- |
@@ -11,11 +11,7 @@ This code component provides a wrapper around the [Fluent UI ProgressIndicator](
 The control accepts the following properties:
 
 -   **Label** - Optional label for spinner.
-<<<<<<< HEAD
 -   **Percentage Complete** - Percentage of the operation completed, on the scale of 0 to 100. 
-=======
--   **Percentage Complete** - Percentage of the operation completed, on the scale of 0 to 1. If not set Indeterminate Indicator will be shown.
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 -   **Type of Indicator** -
     -   **Default Indicator**
     -   **Indeterminate Indicator**
@@ -33,7 +29,6 @@ UpdateContext({ var_showProgress: true , var_progressValue: 0 });
 
 /* Some code ... */
 
-<<<<<<< HEAD
 UpdateContext({ var_progressValue: 25 });
 
 /* Some code ... */
@@ -47,21 +42,6 @@ UpdateContext({ var_progressValue: 70 });
 /* Some code ... */
 
 UpdateContext({ var_progressValue: 80 });
-=======
-UpdateContext({ var_progressValue: 0.25 });
-
-/* Some code ... */
-
-UpdateContext({ var_progressValue: 0.50 });
-
-/* Some code ... */
-
-UpdateContext({ var_progressValue: 0.70 });
-
-/* Some code ... */
-
-UpdateContext({ var_progressValue: 0.80 });
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 
 Notify("Successfully completed process", NotificationType.Success);
 

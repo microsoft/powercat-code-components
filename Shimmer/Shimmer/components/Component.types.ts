@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import { IShimmerElement } from '@fluentui/react';
 
-=======
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 export interface ICustomShimmerItem {
     id: string;
     type: string;
@@ -28,15 +25,8 @@ export interface IShimmerRows {
 export interface IShimmerProps {
     width?: number;
     height?: number;
-<<<<<<< HEAD
     shimmerElements: IShimmerElement[];
     themeJSON?: string;
     spacebetweenShimmer?: string;
     rowCount?: number;
-=======
-    items: ICustomShimmerItem[];
-    rowDetails: IShimmerRows[];
-    themeJSON?: string;
-    spacebetweenShimmer?: string;
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 }

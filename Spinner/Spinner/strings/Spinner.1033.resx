@@ -118,11 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="Spinner" xml:space="preserve">
-<<<<<<< HEAD
         <value>Fluent Spinner (%VERSION%) Preview</value>
-=======
-        <value>Fluent Spinner (%VERSION%)</value>
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     </data>
     <data name="AccessibilityLabel" xml:space="preserve">
         <value>Accessibility label</value>
@@ -142,13 +138,10 @@
     <data name="LabelPosition" xml:space="preserve">
         <value>Label Position</value>
     </data>
-<<<<<<< HEAD
     <data name="SpinnerAlignment" xml:space="preserve">
         <value>Spinner Alignment</value>
     </data>
     <data name="BackgroundColor" xml:space="preserve">
         <value>Background Color</value>
     </data>
-=======
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 </root>

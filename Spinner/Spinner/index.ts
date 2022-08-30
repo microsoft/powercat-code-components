@@ -2,10 +2,7 @@ import { IInputs, IOutputs } from './generated/ManifestTypes';
 import { CanvasSpinner, ISpinnerProps } from './Spinner';
 import * as React from 'react';
 import { SpinnerLabelPosition } from '@fluentui/react';
-<<<<<<< HEAD
 import { SpinnerSizes, SpinnerAlignmentTypes } from './ManifestTypes';
-=======
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 
 export class Spinner implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
@@ -27,26 +24,18 @@ export class Spinner implements ComponentFramework.ReactControl<IInputs, IOutput
      * @returns ReactElement root react element for the control
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-<<<<<<< HEAD
         const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
         const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
-=======
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
         const props: ISpinnerProps = {
             label: context.parameters.Label.raw ?? '',
             ariaLabel: context.parameters.AccessibilityLabel.raw ?? '',
             themeJSON: context.parameters.Theme.raw ?? '',
-<<<<<<< HEAD
             spinnerSize: SpinnerSizes[context.parameters.SpinnerSize.raw],
             labelPosition: context.parameters.LabelPosition.raw.toLowerCase() as SpinnerLabelPosition,
             justify: SpinnerAlignmentTypes[context.parameters.SpinnerAlignment.raw],
             width: allocatedWidth,
             height: allocatedHeight,
             backgroundColor: context.parameters.BackgroundColor.raw ?? undefined,
-=======
-            spinnerSize: context.parameters.SpinnerSize.raw,
-            labelPosition: context.parameters.LabelPosition.raw.toLowerCase() as SpinnerLabelPosition,
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
         };
         return React.createElement(CanvasSpinner, props);
     }

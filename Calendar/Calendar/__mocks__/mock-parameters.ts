@@ -20,9 +20,6 @@ export function getMockParameters(): IInputs {
         ShowWeekNumbers: new MockTwoOptionsProperty(),
         FirstDayOfWeek: new MockEnumProperty(),
         BackgroundColor: new MockStringProperty(),
-<<<<<<< HEAD
         Language: new MockStringProperty(),
-=======
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     };
 }

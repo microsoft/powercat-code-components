@@ -46,7 +46,6 @@ describe('Spinner', () => {
     it('test SpinnerSize', async () => {
         const { component, context } = createComponent();
         component.init(context);
-<<<<<<< HEAD
         context.parameters.SpinnerSize.raw = '0';
         let spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
@@ -57,18 +56,6 @@ describe('Spinner', () => {
         spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
         context.parameters.SpinnerSize.raw = '3';
-=======
-        context.parameters.SpinnerSize.raw = 'xSmall';
-        let spinnerComponent = renderer.create(component.updateView(context));
-        expect(spinnerComponent.toJSON()).toMatchSnapshot();
-        context.parameters.SpinnerSize.raw = 'Small';
-        spinnerComponent = renderer.create(component.updateView(context));
-        expect(spinnerComponent.toJSON()).toMatchSnapshot();
-        context.parameters.SpinnerSize.raw = 'Medium';
-        spinnerComponent = renderer.create(component.updateView(context));
-        expect(spinnerComponent.toJSON()).toMatchSnapshot();
-        context.parameters.SpinnerSize.raw = 'Large';
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
         spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
     });
@@ -80,11 +67,7 @@ function createComponent() {
     const context = new MockContext<IInputs>(getMockParameters());
     context.parameters.Label.raw = 'Loading...';
     context.parameters.AccessibilityLabel.raw = 'Spinner';
-<<<<<<< HEAD
     context.parameters.SpinnerSize.raw = '2';
-=======
-    context.parameters.SpinnerSize.raw = 'Medium';
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     context.parameters.LabelPosition.raw = 'Top';
     const state = new MockState();
     const container = document.createElement('div');

@@ -3,10 +3,7 @@
   <control namespace="PowerCAT" constructor="Calendar" version="0.0.1" display-name-key="Calendar" description-key="Calendar_Desc" control-type="virtual">
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
     <property name="BackgroundColor" default-value="#ffffff" display-name-key="BackgroundColor" of-type="SingleLine.Text" usage="input" />
-<<<<<<< HEAD
     <property name="Language" display-name-key="Language" of-type="SingleLine.Text" usage="input" required="false" />
-=======
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="SelectedDateValue" display-name-key="SelectedDateValue" of-type="DateAndTime.DateOnly" usage="bound" required="true" />
     <property name="MinDate" display-name-key="MinDate" of-type="DateAndTime.DateOnly" usage="input" required="false" />

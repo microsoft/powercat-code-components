@@ -4,7 +4,6 @@
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
     <property name="Label" display-name-key="Label" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
-<<<<<<< HEAD
     <property name="BackgroundColor" default-value="#ffffff" display-name-key="BackgroundColor" of-type="SingleLine.Text" usage="input" />
     <property name="SpinnerSize" display-name-key="SpinnerSize" description-key="SpinnerSize" usage="input" of-type="Enum" required="true">
       <value name="xSmall" display-name-key="xSmall" description-key="xSmall">0</value>
@@ -16,13 +15,6 @@
       <value name="Center" display-name-key="Center" description-key="Center" default="true">0</value>
       <value name="Left" display-name-key="Left" description-key="Left">1</value>
       <value name="Right" display-name-key="Right" description-key="Right">2</value>
-=======
-    <property name="SpinnerSize" display-name-key="SpinnerSize" description-key="SpinnerSize" usage="input" of-type="Enum" required="true">
-      <value name="xSmall" display-name-key="xSmall" description-key="xSmall">xSmall</value>
-      <value name="Small" display-name-key="Small" description-key="Small">Small</value>
-      <value name="Medium" display-name-key="Medium" description-key="Medium" default="true">Medium</value>
-      <value name="Large" display-name-key="Large" description-key="Large">Large</value>
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     </property>
     <property name="LabelPosition" display-name-key="LabelPosition" description-key="LabelPosition" usage="input" of-type="Enum" required="true">
       <value name="Bottom" display-name-key="Bottom" description-key="Bottom" default="true">Bottom</value>

@@ -1,13 +1,7 @@
 import * as React from 'react';
-<<<<<<< HEAD
 import { ProgressIndicator, createTheme, ThemeProvider, IPartialTheme, IProgressIndicatorProps } from '@fluentui/react';
 
 export interface ICustomProgressIndicatorProps {
-=======
-import { ProgressIndicator, createTheme, ThemeProvider, IPartialTheme } from '@fluentui/react';
-
-export interface IProgressIndicatorProps {
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
   label?: string;
   typeofIndidcator: string;
   description?: string;
@@ -18,17 +12,11 @@ export interface IProgressIndicatorProps {
   intervalDelay?: number;
   progressHidden?: boolean;
   barHeight?: number;
-<<<<<<< HEAD
   width?: number;
   height?: number;
 }
 
 export const CanvasProgressIndicator = React.memo((props: ICustomProgressIndicatorProps) => {
-=======
-}
-
-export const CanvasProgressIndicator = React.memo((props: IProgressIndicatorProps) => {
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
   const {
     label, description, percentComplete, themeJSON, typeofIndidcator, progressHidden, barHeight
   } = props;
@@ -42,7 +30,6 @@ export const CanvasProgressIndicator = React.memo((props: IProgressIndicatorProp
     }
   }, [themeJSON]);
 
-<<<<<<< HEAD
   const progressIndidcatorProps = {
     styles: {
       root: { width: props.width }
@@ -57,18 +44,5 @@ export const CanvasProgressIndicator = React.memo((props: IProgressIndicatorProp
   return (<ThemeProvider theme={theme} >
     <ProgressIndicator {...progressIndidcatorProps} />
   </ThemeProvider >);
-=======
-  if (typeofIndidcator === "Default Indicator") {
-    return (<ThemeProvider theme={theme} >
-      <ProgressIndicator progressHidden={progressHidden} barHeight={barHeight} label={label} description={description} percentComplete={percentComplete} />
-    </ThemeProvider>);
-  }
-
-  return (
-    <ThemeProvider theme={theme} >
-      <ProgressIndicator progressHidden={progressHidden} barHeight={barHeight}  label={label} description={description} />
-    </ThemeProvider>
-  );
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 });
 CanvasProgressIndicator.displayName = 'CanvasProgressIndicator';

@@ -5,13 +5,7 @@
     <property name="Label" display-name-key="Label" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="Description" display-name-key="Description" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
-<<<<<<< HEAD
     <property name="PercentComplete" description-key="PercentComplete_Desc" display-name-key="PercentComplete" required="true" usage="input" of-type="Whole.None" default-value="40" />
-=======
-    <property name="PercentComplete" description-key="PercentComplete_Desc" display-name-key="PercentComplete" required="true" usage="input" of-type="Decimal" default-value="0" />
-    <!--<property name="IntervalIncrement" description-key="IntervalIncrement_desc" display-name-key="IntervalIncrement_desc" required="false" usage="input" of-type="Decimal" default-value="0.01" />
-    <property name="IntervalDelay" description-key="IntervalDelay_Desc" display-name-key="Interval Delay" required="false" usage="input" of-type="Whole.None" default-value="100" />-->
->>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     <property name="TypeofIndicator" display-name-key="TypeofIndicator" description-key="TypeofIndicator" usage="input" of-type="Enum" required="true">
       <value name="DefaultIndicator" display-name-key="DefaultIndicator" description-key="DefaultIndicator" default="true">Default Indicator</value>
       <value name="IndeterminateIndicator" display-name-key="IndeterminateIndicator" description-key="IndeterminateIndicator">Indeterminate Indicator</value>
