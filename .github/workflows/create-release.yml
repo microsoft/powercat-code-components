@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: windows-latest
     env:
-      MajorVersion: 0
+      MajorVersion: 1
       MinorVersion: 0
       BuildVersion: ${{ github.run_number }}
 
@@ -50,7 +50,6 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/ResizableTextarea/ResizableTextarea`,
                 `${process.env.GITHUB_WORKSPACE}/Shimmer/Shimmer`,
                 `${process.env.GITHUB_WORKSPACE}/Spinner/Spinner`,
-                `${process.env.GITHUB_WORKSPACE}/SubwayNav/SubwayNav`,
                 `${process.env.GITHUB_WORKSPACE}/TagList/TagList`,
                 `${process.env.GITHUB_WORKSPACE}/ThemeGenerator/ThemeGenerator`
                 ],
