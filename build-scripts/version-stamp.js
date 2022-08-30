@@ -1,6 +1,6 @@
 // To test from commandline use the following from the repo root directory
 // node build-scripts/version-stamp.test.js
-module.exports = ({ majorVersion, minorVersion, buildVersion, manifestsPaths, solutionPaths }) => {
+module.exports = ({ majorVersion, minorVersion, buildVersion, manifestsPaths, solutionPaths, beta }) => {
     const fs = require("fs");
     const path = require("path");
 
@@ -27,7 +27,7 @@ module.exports = ({ majorVersion, minorVersion, buildVersion, manifestsPaths, so
     const resultsResx = replace.sync({
         files: manifestsPaths.map(f => f + "/strings/*.resx"),
         from: /\%VERSION\%/g,
-        to: `${majorVersion}.${minorVersion}.${buildVersion}`,
+        to: beta ? `${majorVersion}.${minorVersion}.${buildVersion}-beta`:`${majorVersion}.${minorVersion}.${buildVersion}`,
         countMatches: true,
     });
     console.log(resultsResx);
