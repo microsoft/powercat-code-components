@@ -1,9 +1,17 @@
 import * as React from 'react';
-import { ThemeProvider, createTheme, IPartialTheme, defaultCalendarStrings, ICalendar } from '@fluentui/react';
+import {
+    ThemeProvider,
+    createTheme,
+    IPartialTheme,
+    ICalendar,
+    ICalendarStrings,
+    defaultCalendarStrings,
+} from '@fluentui/react';
 import { Calendar as CustomCalendar } from '../fluentui-fork/Calendar/Calendar';
 import { ICalendarProps } from './Component.types';
 import { getWeeksFirstDay } from '../components/Utilities';
 import { useAsync } from '@fluentui/react-hooks';
+import { DateTimePickerStrings } from './DateTimePickerStrings';
 
 export const CanvasCalendar = React.memo((props: ICalendarProps) => {
     const {
@@ -24,9 +32,10 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
         maxDate,
         tabIndex,
         isDisabled,
-        backgroundColor
+        backgroundColor,
+        language,
     } = props;
-    const [previousDate, setpreviousDate] = React.useState<Date>();
+    const [calendarString, setCalendarSting] = React.useState<ICalendarStrings>();
     const theme = React.useMemo(() => {
         try {
             return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : undefined;
@@ -51,9 +60,20 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
     }
 
     React.useEffect(() => {
-        if (selectedDateValue?.toDateString() !== previousDate?.toDateString()) { onSelected(selectedDateValue!); }
-        setpreviousDate(selectedDateValue);
-    }, [onSelected, selectedDateValue, previousDate]);
+        if (selectedDateValue) onSelected(selectedDateValue);
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    React.useEffect(() => {
+        async function getCalendarStrings() {
+            setCalendarSting((await DateTimePickerStrings(language)) as ICalendarStrings);
+        }
+        if (language?.substring(0, 2) !== 'en') {
+            getCalendarStrings();
+        } else {
+            setCalendarSting(defaultCalendarStrings);
+        }
+    }, [language]);
 
     return (
         // Issue : Calendar Control does not have a Disabled prop yet - https://github.com/microsoft/fluentui/issues/19453,
@@ -66,7 +86,7 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
                 onSelectDate={onSelectDate}
                 value={selectedDateValue}
                 aria-label={ariaLabel}
-                strings={defaultCalendarStrings}
+                strings={calendarString}
                 tabIndex={isDisabled ? -1 : tabIndex}
                 isMonthPickerVisible={monthPickerVisible}
                 isDayPickerVisible={dayPickerVisible}

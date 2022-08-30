@@ -11,18 +11,12 @@ This code component provides a wrapper around the [Fluent UI Shimmer](https://de
 The control accepts the following properties:
 
 - **Items** - The action items to render
-  - **ItemKey** - The key to use to indicate specific ShimmerElement. The keys must be unique.
   - **ItemType** - The Shimmer element type from the list of three shimmer elements, i.e. cirlce, gap & line. 
-  - **ItemRowKey** - The key to use to indicate the RowKey and establish relationship.
   - **ItemHeight** - Height of ShimmerElement.
   - **ItemWidth** - Width of ShimmerElement
   - **ItemVerticalAlign** - To specify how the element should align. i.e. 'top', 'center' or'bottom'.
 
-- **Rows** - The action items to render
-  - **RowKey** - The key to use to indicate specific Shimmer, and when adding sub items. The keys must be unique.
-  - **RowOrder** - The order by which the Shimmer should render
-  - **RowCount** - Number of Shimmers to render
-  - **RowWidth** - Width of Shimmer
+- **RowCount** - Number of Shimmers to render
 
 - **SpacebetweenShimmer** - Space or Gap between each Shimmer incase of muliple rows.   
 
@@ -33,52 +27,53 @@ The control accepts the following properties:
 
 ### Usage
 
-Here is an example which can be used to create a Shimmer effect shown in the below screen shot.
+Here is an example which can be used to create a Shimmer effect as shown in the below screen shot.
 
 ![image](./media/Shimmer.gif)
 
 ### Items Property value
 
-Each Record in the below Table contains can have following values.
+Each Record in the below table can have following values.
 
 |Property Name|Property Value|Required|
 |--|--|--|
-|ItemKey|"1"|Yes|
 |ItemType|"circle"|Yes|
-|ItemRowKey|"1"|Yes|
 |ItemWidth|"20"||
 |ItemHeight|10||
 
 
 ```
-Table({ItemKey:"1",ItemWidth:"3.8",ItemHeight:60,ItemRowKey:"1",ItemType:"circle"},{ItemKey:"2",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"3",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"4",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"5",ItemWidth:"2.8",ItemHeight:30,ItemRowKey:"1",ItemType:"line"},{ItemKey:"6",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"7",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"8",ItemWidth:"1",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"9",ItemWidth:"3.8",ItemHeight:40,ItemRowKey:"1",ItemType:"line"},{ItemKey:"10",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"11",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"12",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"13",ItemWidth:"2.8",ItemHeight:30,ItemRowKey:"1",ItemType:"line"},{ItemKey:"14",ItemWidth:"2",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"15",ItemWidth:"20",ItemHeight:10,ItemRowKey:"1",ItemType:"line"},{ItemKey:"16",ItemWidth:"1",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"})
-```
-### Rows (rows_Items) Property value
-
-Each Record in the below Table contains can have following values.
-
-|Property Name|Property Value|Required|
-|--|--|--|
-|RowKey|"1"|Yes|
-|RowOrder|1||
-|RowCount|5||
-|RowWidth|100||
-
-
-```
 Table(
     {
-        RowKey: "1",
-        RowOrder:1,
-        RowCount:5,
-        RowWidth: 100
-    }
-)
+        ItemWidth: "3.8",
+        ItemHeight: 25,
+        ItemType: "circle"
+    },
+    {
+        ItemWidth: "5",
+        ItemHeight: 10,
+        ItemType: "gap"
+    },
+    {
+        ItemWidth: "100",
+        ItemHeight: 20,
+        ItemType: "line"
+    },
+    {
+        ItemWidth: "10",
+        ItemHeight: 10,
+        ItemType: "gap"
+    },
+    {
+        ItemWidth: "100",
+        ItemHeight: 20,
+        ItemType: "line"
+    })
 ```
 
 ### Example Theme
 
-The following is an example of setting the theme based on the output from the [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/). 
+The following is an example of setting theme based on the output from the [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/). 
 
 ```
 Set(varThemeBlue, {

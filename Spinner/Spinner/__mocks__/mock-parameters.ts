@@ -10,5 +10,7 @@ export function getMockParameters(): IInputs {
         Label: new MockStringProperty(),
         SpinnerSize: new MockEnumProperty(),
         LabelPosition: new MockEnumProperty(),
+        SpinnerAlignment: new MockEnumProperty(),
+        BackgroundColor: new MockStringProperty(),
     };
 }

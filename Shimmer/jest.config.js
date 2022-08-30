@@ -21,5 +21,6 @@ module.exports = {
             },
         },
     },
+    snapshotSerializers: ['@fluentui/jest-serializer-merge-styles'],
     setupFiles: [path.resolve(path.join(__dirname, 'config', 'tests.js'))],
 };

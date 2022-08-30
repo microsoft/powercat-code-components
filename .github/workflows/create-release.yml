@@ -50,10 +50,12 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/ResizableTextarea/ResizableTextarea`,
                 `${process.env.GITHUB_WORKSPACE}/Shimmer/Shimmer`,
                 `${process.env.GITHUB_WORKSPACE}/Spinner/Spinner`,
+                `${process.env.GITHUB_WORKSPACE}/SubwayNav/SubwayNav`,
                 `${process.env.GITHUB_WORKSPACE}/TagList/TagList`,
                 `${process.env.GITHUB_WORKSPACE}/ThemeGenerator/ThemeGenerator`
                 ],
-              solutionPaths: `${process.env.GITHUB_WORKSPACE}/Solution/src/Other/Solution.xml`}
+              solutionPaths: `${process.env.GITHUB_WORKSPACE}/Solution/src/Other/Solution.xml`,
+              beta: true}
               )
 
       - run: npm ci
@@ -87,7 +89,7 @@ jobs:
       - run: npm ci
         working-directory: "./Shimmer"        
       - run: npm ci
-        working-directory: "./Spinner"         
+        working-directory: "./Spinner"                
       - run: npm ci
         working-directory: "./TagList"
       - run: npm ci
@@ -112,7 +114,7 @@ jobs:
           prerelease: true
 
       - name: Upload Release Asset
-        id: upload-release-asset
+        id: upload-release-asset1
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -121,3 +123,15 @@ jobs:
           asset_path: Solution/bin/Release/Solution.zip
           asset_name: PowerCATCodeComponents_unmanaged_${{ env.MajorVersion }}_${{ env.MinorVersion }}_0_${{ env.BuildVersion }}.zip
           asset_content_type: application/zip
+
+      - name: Upload Release Asset
+        id: upload-release-asset2
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: Solution/bin/Release/Solution_managed.zip
+          asset_name: PowerCATCodeComponents_managed_${{ env.MajorVersion }}_${{ env.MinorVersion }}_0_${{ env.BuildVersion }}.zip
+          asset_content_type: application/zip
+          

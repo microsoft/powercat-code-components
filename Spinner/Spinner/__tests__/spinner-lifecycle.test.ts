@@ -46,16 +46,16 @@ describe('Spinner', () => {
     it('test SpinnerSize', async () => {
         const { component, context } = createComponent();
         component.init(context);
-        context.parameters.SpinnerSize.raw = 'xSmall';
+        context.parameters.SpinnerSize.raw = '0';
         let spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
-        context.parameters.SpinnerSize.raw = 'Small';
+        context.parameters.SpinnerSize.raw = '1';
         spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
-        context.parameters.SpinnerSize.raw = 'Medium';
+        context.parameters.SpinnerSize.raw = '2';
         spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
-        context.parameters.SpinnerSize.raw = 'Large';
+        context.parameters.SpinnerSize.raw = '3';
         spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
     });
@@ -67,7 +67,7 @@ function createComponent() {
     const context = new MockContext<IInputs>(getMockParameters());
     context.parameters.Label.raw = 'Loading...';
     context.parameters.AccessibilityLabel.raw = 'Spinner';
-    context.parameters.SpinnerSize.raw = 'Medium';
+    context.parameters.SpinnerSize.raw = '2';
     context.parameters.LabelPosition.raw = 'Top';
     const state = new MockState();
     const container = document.createElement('div');

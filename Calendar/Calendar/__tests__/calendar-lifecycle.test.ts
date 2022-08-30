@@ -1,12 +1,12 @@
+import ReactDOM from 'react-dom';
+import * as ReactTestUtils from 'react-dom/test-utils';
+import * as renderer from 'react-test-renderer';
 import { Calendar } from '..';
 import { IInputs } from '../generated/ManifestTypes';
 import { MockContext, MockState } from '../__mocks__/mock-context';
 import { getMockParameters } from '../__mocks__/mock-parameters';
 import { getWeeksFirstDay } from '../components/Utilities';
 import { ContextEx } from '../ContextExtended';
-import * as renderer from 'react-test-renderer';
-import * as ReactTestUtils from 'react-dom/test-utils';
-import ReactDOM from 'react-dom';
 
 // Since requestAnimationFrame does not exist in the test DOM, mock it
 window.requestAnimationFrame = jest.fn().mockImplementation((callback) => {
@@ -50,19 +50,17 @@ describe('Calendar', () => {
         const date = new Date();
         //pick yesterday's date to select
         date.setDate(date.getDate() - 1);
-        const requiredDateFormat = date
-            .toLocaleDateString('en-GB', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric',
-            })
-            .replace(/ /g, ', ');
-        const ariaLblDate = '[aria-label="'.concat(requiredDateFormat, '"]');
-
+        const ariaLblDate = '[aria-label="'.concat(
+            date.toLocaleString('en-GB', { day: 'numeric' }),
+            ', ',
+            date.toLocaleString('en-GB', { month: 'long' }),
+            ', ',
+            date.toLocaleString('en-GB', { year: 'numeric' }),
+            '"]',
+        );
         //pre-select todays date
         const container = document.createElement('div');
         document.body.appendChild(container);
-
         ReactTestUtils.act(() => {
             ReactDOM.render(component.updateView(context), container);
             // find yesterdays date btn
@@ -71,7 +69,7 @@ describe('Calendar', () => {
             ReactTestUtils.Simulate.click(calendarBtn);
         });
         const outputs = component.getOutputs();
-        expect(notifyOutputChanged).toBeCalledTimes(1);
+        expect(notifyOutputChanged).toBeCalledTimes(2);
         expect(outputs.SelectedDateValue?.toDateString()).toEqual(date.toDateString());
         ReactDOM.unmountComponentAtNode(container);
     });

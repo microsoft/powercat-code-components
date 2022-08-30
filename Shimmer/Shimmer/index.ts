@@ -1,17 +1,17 @@
 import { IInputs, IOutputs } from './generated/ManifestTypes';
 import { CanvasShimmer } from './components/CanvasShimmer';
 import * as React from 'react';
-import { ICustomShimmerItem, IShimmerRows, IShimmerProps } from './components/Component.types';
-import { getItemsFromDataset, getRowDetailsFromDataset } from './components/DatasetMapping';
+import { ICustomShimmerItem, IShimmerProps } from './components/Component.types';
+import { getItemsFromDataset, getShimmerElements } from './components/DatasetMapping';
 import { ManifestPropertyNames } from './ManifestConstants';
+import { IShimmerElement } from '@fluentui/react';
 
 export class Shimmer implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     theComponent: ComponentFramework.ReactControl<IInputs, IOutputs>;
     notifyOutputChanged: () => void;
     context: ComponentFramework.Context<IInputs>;
     items: ICustomShimmerItem[];
-    rowDetails: IShimmerRows[];
-
+    shimmerElements: IShimmerElement[];
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
      * Data-set values are not initialized here, use updateView.
@@ -31,12 +31,10 @@ export class Shimmer implements ComponentFramework.ReactControl<IInputs, IOutput
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const dataset = context.parameters.items;
-        const rowinfo = context.parameters.rows;
         const datasetChanged = context.updatedProperties.indexOf(ManifestPropertyNames.dataset) > -1 || !this.items;
-        const rowDataChanged = context.updatedProperties.indexOf('rows_dataset') > -1 || !this.rowDetails;
-        if (datasetChanged || rowDataChanged) {
+        if (datasetChanged) {
             this.items = getItemsFromDataset(dataset);
-            this.rowDetails = getRowDetailsFromDataset(rowinfo);
+            this.shimmerElements = getShimmerElements(this.items);
         }
 
         // The test harness provides width/height as strings so use parseInt
@@ -45,10 +43,10 @@ export class Shimmer implements ComponentFramework.ReactControl<IInputs, IOutput
         const props: IShimmerProps = {
             width: allocatedWidth,
             height: allocatedHeight,
-            items: this.items,
+            shimmerElements: this.shimmerElements,
             themeJSON: context.parameters?.Theme.raw ?? '',
-            rowDetails: this.rowDetails,
             spacebetweenShimmer: context.parameters?.SpacebetweenShimmer.raw ?? '10px',
+            rowCount: context.parameters.RowCount.raw ?? 0,
         };
         return React.createElement(CanvasShimmer, props);
     }

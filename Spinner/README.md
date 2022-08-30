@@ -12,13 +12,17 @@ The control accepts the following properties:
 
 -   **Label** - Optional label for spinner.
 -   **SpinnerSize** - The size of spinner to be rendered
-    -   **xSmall** 
-    -   **Small** 
+    -   **xSmall**
+    -   **Small**
     -   **Medium**
     -   **Large**
-- **LabelPosition** - Optional placing of spinner label to a particular position
-    -   **Bottom** 
-    -   **Top** 
+-   **SpinnerAlignment** - Aligning Spinner
+    -   **Center**
+    -   **Left**
+    -   **Right**
+-   **LabelPosition** - Optional placing of spinner label to a particular position
+    -   **Bottom**
+    -   **Top**
     -   **Left**
     -   **Right**
 

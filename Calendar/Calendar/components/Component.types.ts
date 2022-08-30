@@ -17,6 +17,7 @@ export interface ICalendarProps {
     showWeekNumbers: boolean;
     firstDayOfWeek: string;
     isDisabled: boolean;
+    language: string;
     // eslint-disable-next-line
     onSelected: (selectedDateValue: Date) => void;
     backgroundColor?: string;

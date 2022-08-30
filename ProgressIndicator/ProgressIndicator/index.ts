@@ -1,5 +1,5 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { CanvasProgressIndicator, IProgressIndicatorProps } from "./ProgressIndicator";
+import { CanvasProgressIndicator, ICustomProgressIndicatorProps } from "./ProgressIndicator";
 import * as React from "react";
 
 export class ProgressIndicator implements ComponentFramework.ReactControl<IInputs, IOutputs> {
@@ -24,7 +24,11 @@ export class ProgressIndicator implements ComponentFramework.ReactControl<IInput
      * @returns ReactElement root react element for the control
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const props: IProgressIndicatorProps = {
+        const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
+        const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
+        const props: ICustomProgressIndicatorProps = {
+            width: allocatedWidth,
+            height: allocatedHeight,
             label: context.parameters.Label.raw ?? "",
             description: context.parameters.Description.raw ?? "",
             ariaLabel: context.parameters.AccessibilityLabel.raw ?? "",

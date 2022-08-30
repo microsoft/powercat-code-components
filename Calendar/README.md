@@ -20,6 +20,12 @@ DateValue("24/7/2022",Language())
 // or specific regional language
 DateValue("24/07/2022","en-GB")
 ```
+-   **Language** - Language in which the calendar should render. Important : Read 'Calendar Language' section of this documentation to know the language supported currently.
+For e.g. :
+Language()
+//or
+"en-US"
+
 -   **Show Go to Today** - Specify Yes or No to show or hide Go to Today option.
 -   **Is a Month Picker** - Specify Yes or No to show or hide month picker.
 -   **Is a Day Picker** - Specify Yes or No to show or hide day picker.
@@ -78,6 +84,24 @@ UpdateContext({ctxResizableTextareaEvent:"SetFocus" & Text(Rand())}));
 ```
 
 The context variable `ctxResizableTextareaEvent` would then be bound to the property `Input Event` property.
+
+### Calendar Language
+
+Below list of languages are currently unavailable. Inorder to include new language, refer the [Readme file](/Calendar/loc/Readme.md)
+ - Czech(cs-CZ)
+ - Spanish-Mexico(es-MX)
+ - Galician(gl-ES)
+ - Hindi (hi-IN)
+ - Croatian(hr-HR)
+ - Hungarian(hu-HU)
+ - Indonesian(id-ID)
+ - Latvian(lv-LV)
+ - Korean(ko-KR)
+ - Kazakh(kk-KZ)
+ - Slovenian(sl-SL)
+ - Serbian (Cyrillic)
+ - Thai(th-TH)
+ - Ukrainian(uk-UA)
 
 ### Example Theme
 

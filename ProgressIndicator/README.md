@@ -11,7 +11,7 @@ This code component provides a wrapper around the [Fluent UI Spinner](https://de
 The control accepts the following properties:
 
 -   **Label** - Optional label for spinner.
--   **Percentage Complete** - Percentage of the operation completed, on the scale of 0 to 1. If not set Indeterminate Indicator will be shown.
+-   **Percentage Complete** - Percentage of the operation completed, on the scale of 0 to 100. 
 -   **Type of Indicator** -
     -   **Default Indicator**
     -   **Indeterminate Indicator**
@@ -29,19 +29,19 @@ UpdateContext({ var_showProgress: true , var_progressValue: 0 });
 
 /* Some code ... */
 
-UpdateContext({ var_progressValue: 0.25 });
+UpdateContext({ var_progressValue: 25 });
 
 /* Some code ... */
 
-UpdateContext({ var_progressValue: 0.50 });
+UpdateContext({ var_progressValue: 50 });
 
 /* Some code ... */
 
-UpdateContext({ var_progressValue: 0.70 });
+UpdateContext({ var_progressValue: 70 });
 
 /* Some code ... */
 
-UpdateContext({ var_progressValue: 0.80 });
+UpdateContext({ var_progressValue: 80 });
 
 Notify("Successfully completed process", NotificationType.Success);
 
