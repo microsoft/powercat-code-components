@@ -45,11 +45,15 @@
       ],
       "quotes": [
           "error",
+<<<<<<< HEAD
           "single",
           {
             "avoidEscape": true,
             "allowTemplateLiterals": true
           }
+=======
+          "single"
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
       ],
       "semi": [
           "error",

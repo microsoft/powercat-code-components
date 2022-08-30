@@ -1,4 +1,5 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import {
     ThemeProvider,
     createTheme,
@@ -7,11 +8,17 @@ import {
     ICalendarStrings,
     defaultCalendarStrings,
 } from '@fluentui/react';
+=======
+import { ThemeProvider, createTheme, IPartialTheme, defaultCalendarStrings, ICalendar } from '@fluentui/react';
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 import { Calendar as CustomCalendar } from '../fluentui-fork/Calendar/Calendar';
 import { ICalendarProps } from './Component.types';
 import { getWeeksFirstDay } from '../components/Utilities';
 import { useAsync } from '@fluentui/react-hooks';
+<<<<<<< HEAD
 import { DateTimePickerStrings } from './DateTimePickerStrings';
+=======
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 
 export const CanvasCalendar = React.memo((props: ICalendarProps) => {
     const {
@@ -33,9 +40,13 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
         tabIndex,
         isDisabled,
         backgroundColor,
+<<<<<<< HEAD
         language,
     } = props;
     const [calendarString, setCalendarSting] = React.useState<ICalendarStrings>();
+=======
+    } = props;
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     const theme = React.useMemo(() => {
         try {
             return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : undefined;
@@ -64,6 +75,7 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
         //eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+<<<<<<< HEAD
     React.useEffect(() => {
         async function getCalendarStrings() {
             setCalendarSting((await DateTimePickerStrings(language)) as ICalendarStrings);
@@ -75,6 +87,8 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
         }
     }, [language]);
 
+=======
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
     return (
         // Issue : Calendar Control does not have a Disabled prop yet - https://github.com/microsoft/fluentui/issues/19453,
         // Hence custom styling with negative tabIndex are included to support disabling
@@ -86,7 +100,11 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
                 onSelectDate={onSelectDate}
                 value={selectedDateValue}
                 aria-label={ariaLabel}
+<<<<<<< HEAD
                 strings={calendarString}
+=======
+                strings={defaultCalendarStrings}
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
                 tabIndex={isDisabled ? -1 : tabIndex}
                 isMonthPickerVisible={monthPickerVisible}
                 isDayPickerVisible={dayPickerVisible}

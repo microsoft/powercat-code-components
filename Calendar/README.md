@@ -20,12 +20,15 @@ DateValue("24/7/2022",Language())
 // or specific regional language
 DateValue("24/07/2022","en-GB")
 ```
+<<<<<<< HEAD
 -   **Language** - Language in which the calendar should render. Important : Read 'Calendar Language' section of this documentation to know the language supported currently.
 For e.g. :
 Language()
 //or
 "en-US"
 
+=======
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 -   **Show Go to Today** - Specify Yes or No to show or hide Go to Today option.
 -   **Is a Month Picker** - Specify Yes or No to show or hide month picker.
 -   **Is a Day Picker** - Specify Yes or No to show or hide day picker.
@@ -85,6 +88,7 @@ UpdateContext({ctxResizableTextareaEvent:"SetFocus" & Text(Rand())}));
 
 The context variable `ctxResizableTextareaEvent` would then be bound to the property `Input Event` property.
 
+<<<<<<< HEAD
 ### Calendar Language
 
 Below list of languages are currently unavailable. Inorder to include new language, refer the [Readme file](/Calendar/loc/Readme.md)
@@ -103,6 +107,8 @@ Below list of languages are currently unavailable. Inorder to include new langua
  - Thai(th-TH)
  - Ukrainian(uk-UA)
 
+=======
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
 ### Example Theme
 
 The following is an example of setting the theme based on the output from the [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/).

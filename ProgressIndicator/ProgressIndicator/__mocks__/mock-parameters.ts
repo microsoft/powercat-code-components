@@ -10,7 +10,11 @@ export function getMockParameters(): IInputs {
         Label: new MockStringProperty(),
         Description: new MockStringProperty(),
         TypeofIndicator: new MockEnumProperty(),
+<<<<<<< HEAD
         PercentComplete: new MockWholeNumberProperty(),
+=======
+        PercentComplete: new MockDecimalNumberProperty(),
+>>>>>>> 48d69ffc393a155d03b3e7517eb7dc7512b10fd5
         HideProgressBar: new MockTwoOptionsProperty(),
         BarHeight: new MockWholeNumberProperty()
     };
