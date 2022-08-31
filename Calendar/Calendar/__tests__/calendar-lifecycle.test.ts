@@ -73,19 +73,6 @@ describe('Calendar', () => {
         expect(outputs.SelectedDateValue?.toDateString()).toEqual(date.toDateString());
         ReactDOM.unmountComponentAtNode(container);
     });
-
-    it('theme', async () => {
-        const { component, context, notifyOutputChanged } = createComponent();
-        context.parameters.Theme.raw = JSON.stringify({
-            palette: {
-                themePrimary: '#test-primary',
-            },
-        });
-
-        component.init(context, notifyOutputChanged);
-        const themedCalendar = renderer.create(component.updateView(context));
-        expect(themedCalendar.toJSON()).toMatchSnapshot();
-    });
 });
 
 function createComponent() {
