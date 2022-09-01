@@ -23,6 +23,7 @@ exports[`ProgressIndicator test type of Indicator 1`] = `
           font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
           font-size: 14px;
           font-weight: 400;
+          width: -1px;
         }
   >
     <div
@@ -135,6 +136,7 @@ exports[`ProgressIndicator theme 1`] = `
           font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
           font-size: 14px;
           font-weight: 400;
+          width: -1px;
         }
   >
     <div
