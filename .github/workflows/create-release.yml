@@ -54,7 +54,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/ThemeGenerator/ThemeGenerator`
                 ],
               solutionPaths: `${process.env.GITHUB_WORKSPACE}/Solution/src/Other/Solution.xml`,
-              beta: true}
+              beta: false}
               )
 
       - run: npm ci
