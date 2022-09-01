@@ -5,6 +5,11 @@ exports[`Spinner test SpinnerSize 1`] = `
   className=
 
       {
+        display: flex;
+        height: -1px;
+        width: -1px;
+      }
+      {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         background: #ffffff;
@@ -74,6 +79,11 @@ exports[`Spinner test SpinnerSize 2`] = `
 <div
   className=
 
+      {
+        display: flex;
+        height: -1px;
+        width: -1px;
+      }
       {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -145,6 +155,11 @@ exports[`Spinner test SpinnerSize 3`] = `
   className=
 
       {
+        display: flex;
+        height: -1px;
+        width: -1px;
+      }
+      {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         background: #ffffff;
@@ -215,6 +230,11 @@ exports[`Spinner test SpinnerSize 4`] = `
   className=
 
       {
+        display: flex;
+        height: -1px;
+        width: -1px;
+      }
+      {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         background: #ffffff;
@@ -284,6 +304,11 @@ exports[`Spinner theme 1`] = `
 <div
   className=
 
+      {
+        display: flex;
+        height: -1px;
+        width: -1px;
+      }
       {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
