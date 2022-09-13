@@ -19,9 +19,9 @@ export class Picker implements ComponentFramework.ReactControl<IInputs, IOutputs
     resources: ComponentFramework.Resources;
     tags: ITagItem[];
     isFullScreen = false;
-    tagEvent: string | undefined;
-    tagDisplayName: string | undefined;
-    tagKey: string | undefined;
+    tagEvent = '';
+    tagDisplayName: string | undefined = '';
+    tagKey: string | undefined = '';
     suggestions: ITagItem[];
     searchText: string;
     previousSearchText: string;
