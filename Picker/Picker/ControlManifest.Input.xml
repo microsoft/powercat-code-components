@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="PowerCAT" constructor="Picker" version="1.0.82209122" display-name-key="Picker (1.0.82209122)" description-key="Picker_Desc" control-type="virtual">
+  <control namespace="PowerCAT" constructor="Picker" version="0.0.1" display-name-key="Picker" description-key="Picker_Desc" control-type="virtual">
     <!-- Style Properties -->
     <property name="TagMaxWidth" description-key="TagMaxWidth_Desc" display-name-key="TagMaxWidth" required="true" usage="input" of-type="Decimal" default-value="200" />
     <property name="AllowFreeText" description-key="AllowFreeText_Desc" display-name-key="AllowFreeText" usage="input" of-type="TwoOptions" />
