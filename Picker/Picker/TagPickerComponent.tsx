@@ -42,7 +42,7 @@ export interface TagPickerComponentProps {
     onAdd: (item: ITag) => void;
     filterSuggestions: (search: string) => Promise<ITag[]> | ITag[];
     onResize?: (width: number, height: number) => void;
-    minumumFilterLength: number | null;
+    minimumFilterLength: number | null;
     keepTypingMessage: string | null;
     noSuggestionsMessage: string | null;
     maxTags: number | undefined;
@@ -86,7 +86,7 @@ export const TagPickerComponent = React.memo((props: TagPickerComponentProps) =>
         onRemove,
         onAdd,
         filterSuggestions,
-        minumumFilterLength,
+        minimumFilterLength,
         keepTypingMessage,
         noSuggestionsMessage,
         maxTags,
@@ -258,11 +258,11 @@ export const TagPickerComponent = React.memo((props: TagPickerComponentProps) =>
     const pickerSuggestionsProps: IBasePickerSuggestionsProps = React.useMemo(() => {
         return {
             noResultsFoundText:
-                searchTerm && minumumFilterLength && searchTerm.length < minumumFilterLength
+                searchTerm && minimumFilterLength && searchTerm.length < minimumFilterLength
                     ? (keepTypingMessage as string)
                     : (noSuggestionsMessage as string),
         };
-    }, [searchTerm, keepTypingMessage, noSuggestionsMessage, minumumFilterLength]);
+    }, [searchTerm, keepTypingMessage, noSuggestionsMessage, minimumFilterLength]);
 
     const target = React.useRef<HTMLElement>(null);
 

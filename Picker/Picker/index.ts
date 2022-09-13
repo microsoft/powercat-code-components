@@ -137,7 +137,7 @@ export class Picker implements ComponentFramework.ReactControl<IInputs, IOutputs
             onAdd: this.addTag,
             onRemove: this.removeTag,
             filterSuggestions: this.filterSuggestions,
-            minumumFilterLength: this.context.parameters.MinimumSearchTermLength.raw,
+            minimumFilterLength: this.context.parameters.MinimumSearchTermLength.raw,
             keepTypingMessage: this.context.parameters.SearchTermToShortMessage.raw,
             noSuggestionsMessage: this.context.parameters.NoSuggestionFoundMessage.raw,
             maxTags: this.undefinedIfZero(this.context.parameters.MaxTags),
@@ -179,8 +179,8 @@ export class Picker implements ComponentFramework.ReactControl<IInputs, IOutputs
         const keyIndex: Record<string, number> = {};
         return tagsDataset.sortedRecordIds.map((id) => {
             const record = tagsDataset.records[id];
-            const recordid = record.getRecordId();
-            let key = (record.getValue(TagsColumns.TagsKey) as string) ?? recordid;
+            const recordId = record.getRecordId();
+            let key = (record.getValue(TagsColumns.TagsKey) as string) ?? recordId;
             // Prevent duplicate keys by appending the duplicate index
             if (keyIndex[key] !== undefined) {
                 keyIndex[key]++;
@@ -206,8 +206,8 @@ export class Picker implements ComponentFramework.ReactControl<IInputs, IOutputs
         const keyIndex: Record<string, number> = {};
         return suggestionsDataset.sortedRecordIds.map((id) => {
             const record = suggestionsDataset.records[id];
-            const recordid = record.getRecordId();
-            let key = (record.getValue(SuggestionsColumns.SuggestionKey) as string) ?? recordid;
+            const recordId = record.getRecordId();
+            let key = (record.getValue(SuggestionsColumns.SuggestionKey) as string) ?? recordId;
             // Prevent duplicate keys by appending the duplicate index
             if (keyIndex[key] !== undefined) {
                 keyIndex[key]++;
