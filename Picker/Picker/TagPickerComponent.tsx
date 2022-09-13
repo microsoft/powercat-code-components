@@ -141,6 +141,7 @@ export const TagPickerComponent = React.memo((props: TagPickerComponentProps) =>
         // This is needed for custom pages to ensure the Tag Picker grows to the full width
         return {
             width: width,
+            height: 'fit-content',
         } as React.CSSProperties;
     }, [width]);
 
