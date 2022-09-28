@@ -57,7 +57,7 @@ export class Elevation implements ComponentFramework.StandardControl<IInputs, IO
     this.elevationContainer.style.right = this.getPixelStyleFromParameter(this.context.parameters.PaddingRight);
     this.elevationContainer.style.top = this.getPixelStyleFromParameter(this.context.parameters.PaddingTop);
     this.elevationContainer.style.bottom = this.getPixelStyleFromParameter(this.context.parameters.PaddingBottom);
-
+    this.elevationContainer.style.borderRadius = this.getPixelStyleFromParameter(this.context.parameters.BorderRadius);
     const fillColor = this.selectStateValue(
       this.context.parameters.FillColor.raw,
       this.context.parameters.HoverFillColor.raw,
