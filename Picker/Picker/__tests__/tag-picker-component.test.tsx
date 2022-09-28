@@ -22,7 +22,7 @@ const defaultProps = {
     height: 32,
     tags: [] as ITag[],
     tabIndex: 1,
-    minumumFilterLength: 0,
+    minimumFilterLength: 0,
     keepTypingMessage: null,
     noSuggestionsMessage: null,
     maxTags: undefined,

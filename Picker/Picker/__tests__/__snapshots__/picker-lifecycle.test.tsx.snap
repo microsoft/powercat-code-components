@@ -5,6 +5,7 @@ exports[`Picker renders 1`] = `
   className="PowerCATTagPicker"
   style={
     Object {
+      "height": "fit-content",
       "width": -1,
     }
   }
@@ -142,6 +143,7 @@ exports[`Picker renders with simple tags 1`] = `
   className="PowerCATTagPicker"
   style={
     Object {
+      "height": "fit-content",
       "width": -1,
     }
   }
@@ -281,7 +283,7 @@ exports[`Picker renders with simple tags 1`] = `
                   background: #0078d4;
                   color: #ffffff;
                 }
-                @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                   border: 1px solid WindowText;
                 }
             role="listitem"
@@ -351,7 +353,7 @@ exports[`Picker renders with simple tags 1`] = `
                     top: 2px;
                     z-index: 1;
                   }
-                  @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
                     bottom: -2px;
                     left: -2px;
                     outline-color: ButtonText;
@@ -368,7 +370,7 @@ exports[`Picker renders with simple tags 1`] = `
                     background: #e1dfdd;
                     color: #323130;
                   }
-                  @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                     border-color: Highlight;
                     color: Highlight;
                   }
@@ -483,7 +485,7 @@ exports[`Picker renders with simple tags 1`] = `
                   background: #0078d4;
                   color: #ffffff;
                 }
-                @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                   border: 1px solid WindowText;
                 }
             role="listitem"
@@ -553,7 +555,7 @@ exports[`Picker renders with simple tags 1`] = `
                     top: 2px;
                     z-index: 1;
                   }
-                  @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
                     bottom: -2px;
                     left: -2px;
                     outline-color: ButtonText;
@@ -570,7 +572,7 @@ exports[`Picker renders with simple tags 1`] = `
                     background: #e1dfdd;
                     color: #323130;
                   }
-                  @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                     border-color: Highlight;
                     color: Highlight;
                   }
@@ -685,7 +687,7 @@ exports[`Picker renders with simple tags 1`] = `
                   background: #0078d4;
                   color: #ffffff;
                 }
-                @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                   border: 1px solid WindowText;
                 }
             role="listitem"
@@ -755,7 +757,7 @@ exports[`Picker renders with simple tags 1`] = `
                     top: 2px;
                     z-index: 1;
                   }
-                  @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
                     bottom: -2px;
                     left: -2px;
                     outline-color: ButtonText;
@@ -772,7 +774,7 @@ exports[`Picker renders with simple tags 1`] = `
                     background: #e1dfdd;
                     color: #323130;
                   }
-                  @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                     border-color: Highlight;
                     color: Highlight;
                   }
