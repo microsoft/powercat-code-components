@@ -41,6 +41,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/ContextMenu/ContextMenu`,
                 `${process.env.GITHUB_WORKSPACE}/DetailsList/DetailsList`,
                 `${process.env.GITHUB_WORKSPACE}/Elevation/Elevation`,
+                `${process.env.GITHUB_WORKSPACE}/Facepile/Facepile`,
                 `${process.env.GITHUB_WORKSPACE}/Icon/Icon`,
                 `${process.env.GITHUB_WORKSPACE}/KeyboardShortcuts/KeyboardShortcuts`,
                 `${process.env.GITHUB_WORKSPACE}/Nav/Nav`,
@@ -71,6 +72,8 @@ jobs:
         working-directory: "./DetailsList"
       - run: npm ci
         working-directory: "./Elevation"
+      - run: npm ci
+        working-directory: "./Facepile"
       - run: npm ci
         working-directory: "./Icon"
       - run: npm ci

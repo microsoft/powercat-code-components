@@ -19,6 +19,7 @@ jobs:
          - "./ContextMenu"
          - "./DetailsList"
          - "./Elevation"
+         - "./Facepile"
          - "./Icon"
          - "./KeyboardShortcuts"
          - "./Nav"
