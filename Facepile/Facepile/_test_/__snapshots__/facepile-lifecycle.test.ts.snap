@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FacePile renders 1`] = `
+<Memo(CanvasFacepile)
+  addbuttonAriaLabel=""
+  ariaLabel=""
+  displayedPersonas={5}
+  height={-1}
+  imagesFadeIn={true}
+  items={
+    Array [
+      Object {
+        "clickable": true,
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "1",
+          "values": Object {
+            "IsImage": false,
+            "ItemPersonaClickable": true,
+            "ItemPersonaImageUrl": "https://static2.sharepointonline.com/files/fabric/office-ui-fabric-react-assets/persona-male.png",
+            "ItemPersonaKey": "item1",
+            "ItemPersonaName": "Diego Siciliani",
+            "ItemPersonaPresence": "away",
+          },
+        },
+        "id": "1",
+        "imageUrl": "",
+        "key": "item1",
+        "personaName": "Diego Siciliani",
+        "presence": "away",
+      },
+      Object {
+        "clickable": true,
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "2",
+          "values": Object {
+            "IsImage": false,
+            "ItemPersonaClickable": true,
+            "ItemPersonaImageUrl": "https://static2.sharepointonline.com/files/fabric/office-ui-fabric-react-assets/persona-female.png",
+            "ItemPersonaKey": "item2",
+            "ItemPersonaName": "Megan Bowen",
+            "ItemPersonaPresence": "away",
+          },
+        },
+        "id": "2",
+        "imageUrl": "",
+        "key": "item2",
+        "personaName": "Megan Bowen",
+        "presence": "away",
+      },
+    ]
+  }
+  onSelected={[Function]}
+  overflowButtonAriaLabel=""
+  overflowButtonType={1}
+  personaSize={17}
+  setFocus=""
+  tabIndex={0}
+  width={-1}
+/>
+`;
+
+exports[`FacePile renders dummy items when no items configured 1`] = `
+<Memo(CanvasFacepile)
+  addbuttonAriaLabel=""
+  ariaLabel=""
+  displayedPersonas={5}
+  height={-1}
+  imagesFadeIn={true}
+  items={
+    Array [
+      Object {
+        "id": "1",
+        "imageInitials": "Item 1",
+        "imageUrl": "https://static2.sharepointonline.com/files/fabric/office-ui-fabric-react-assets/persona-female.png",
+        "initialsColor": 1,
+        "key": "1",
+        "personaName": "Megan Bowen",
+        "presence": "none",
+      },
+      Object {
+        "id": "2",
+        "imageInitials": "Item 1",
+        "imageUrl": "https://static2.sharepointonline.com/files/fabric/office-ui-fabric-react-assets/persona-male.png",
+        "initialsColor": 1,
+        "key": "2",
+        "personaName": "Diego Siciliano",
+        "presence": "none",
+      },
+    ]
+  }
+  onSelected={[Function]}
+  overflowButtonAriaLabel=""
+  overflowButtonType={1}
+  personaSize={17}
+  setFocus=""
+  tabIndex={0}
+  width={-1}
+/>
+`;
+
+exports[`FacePile theme 1`] = `<div />`;
