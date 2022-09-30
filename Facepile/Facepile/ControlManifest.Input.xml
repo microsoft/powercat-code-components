@@ -18,7 +18,7 @@
       <value name="Size32" display-name-key="Size32" description-key="Size32" default="true">Size32</value>
       <value name="Size40" display-name-key="Size40" description-key="Size40">Size40</value>
       <value name="Size48" display-name-key="Size48" description-key="Size48">Size48</value>
-      <value name="size56" display-name-key="size56" description-key="size56">size56</value>
+      <value name="Size56" display-name-key="Size56" description-key="Size56">size56</value>
     </property>
     <property name="OverflowButtonType" display-name-key="OverflowButtonType" description-key="OverflowButtonType" usage="input" of-type="Enum" required="true">
       <value name="none" display-name-key="none" description-key="none">none</value>

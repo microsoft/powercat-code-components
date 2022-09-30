@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Facepile as CustomFacepile } from '../fluenui-fork/Facepile/Facepile';
-//import { Facepile } from '@fluentui/react';
 import { IFacepilePersona, ThemeProvider, createTheme, IPartialTheme } from '@fluentui/react';
 import { IFacepileprops } from './Component.types';
 import { getFacepilePersonas } from './DatasetMapping';
