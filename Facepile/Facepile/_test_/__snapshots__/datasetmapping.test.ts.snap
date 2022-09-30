@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetMapping returns correct props 1`] = `
+Array [
+  Object {
+    "id": "1",
+    "imageUrl": "",
+    "key": "item2",
+    "onClick": [MockFunction],
+    "personaName": "Megan Bowen",
+    "presence": "none",
+  },
+  Object {
+    "id": "1",
+    "imageUrl": "",
+    "key": "item2_2",
+    "onClick": [MockFunction],
+    "personaName": "Megan Bowen",
+    "presence": "none",
+  },
+]
+`;

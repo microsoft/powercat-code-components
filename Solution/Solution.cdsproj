@@ -19,7 +19,7 @@
   <PropertyGroup>
     <SolutionPackageType>Both</SolutionPackageType>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
@@ -40,26 +40,27 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\AutoWidthLabel\auto-width-label.pcfproj" />
-    <ProjectReference Include="..\Elevation\Elevation.pcfproj" />
-    <ProjectReference Include="..\Icon\Icon.pcfproj" />
-    <ProjectReference Include="..\KeyboardShortcuts\keyboard-shortcuts.pcfproj" />
-    <ProjectReference Include="..\Picker\Picker.pcfproj" />
-    <ProjectReference Include="..\ResizableTextarea\resizable-textarea.pcfproj" />
-    <ProjectReference Include="..\DetailsList\DetailsList.pcfproj" />
+    <ProjectReference Include="..\Breadcrumb\BreadCrumb.pcfproj" />
+    <ProjectReference Include="..\Calendar\Calendar.pcfproj" />
     <ProjectReference Include="..\CommandBar\CommandBar.pcfproj" />
     <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
+    <ProjectReference Include="..\DetailsList\DetailsList.pcfproj" />
+    <ProjectReference Include="..\Elevation\Elevation.pcfproj" />
+    <ProjectReference Include="..\Facepile\Facepile.pcfproj" />
+    <ProjectReference Include="..\Icon\Icon.pcfproj" />
     <ProjectReference Include="..\Nav\Nav.pcfproj" />
     <ProjectReference Include="..\Pivot\Pivot.pcfproj" />
-    <ProjectReference Include="..\TagList\TagList.pcfproj" />
-    <ProjectReference Include="..\Breadcrumb\BreadCrumb.pcfproj" />
-    <ProjectReference Include="..\ThemeGenerator\themeGenerator.pcfproj" />
+    <ProjectReference Include="..\KeyboardShortcuts\keyboard-shortcuts.pcfproj" />
+    <ProjectReference Include="..\Picker\Picker.pcfproj" />
     <ProjectReference Include="..\ProgressIndicator\ProgressIndicator.pcfproj" />
-    <ProjectReference Include="..\Calendar\Calendar.pcfproj" />
+    <ProjectReference Include="..\ResizableTextarea\resizable-textarea.pcfproj" />
     <ProjectReference Include="..\Shimmer\Shimmer.pcfproj" />
     <ProjectReference Include="..\Spinner\Spinner.pcfproj" />
+    <ProjectReference Include="..\TagList\TagList.pcfproj" />
+    <ProjectReference Include="..\ThemeGenerator\themeGenerator.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
