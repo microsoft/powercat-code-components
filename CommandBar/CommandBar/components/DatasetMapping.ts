@@ -1,6 +1,5 @@
 import { CanvasCommandItem } from './Component.types';
 import {
-    concatStyleSets,
     ContextualMenuItemType,
     getColorFromString,
     getShade,
