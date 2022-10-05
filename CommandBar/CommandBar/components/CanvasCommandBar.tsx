@@ -1,11 +1,11 @@
 import {
     IButtonProps,
-    ICommandBarStyles,
     IContextualMenuItem,
     createTheme,
     ThemeProvider,
     IPartialTheme,
     ICommandBar,
+    mergeThemes,
 } from '@fluentui/react';
 import * as React from 'react';
 import { CommandBar as CommandBarCustom } from '../fluentui-fork/CommandBar/CommandBar';
@@ -66,31 +66,48 @@ export const CanvasCommandBar = React.memo((props: CanvasCommandBarProps) => {
         } as React.CSSProperties;
     }, [width, height]);
 
-    const commandBarStyle = React.useMemo(() => {
-        return {
-            root: {
-                height: height,
-                paddingLeft: 0,
-                // background: 'rgba(255, 255, 255,0)',
-                // This is very important for custom pages
-                // since the min-width is set to the size of the component
-                // we override to ensure that the items do not keep trying to shrink
-                // because the width is clamped
-                // See: https://github.com/microsoft/fluentui/issues/12540
-                minWidth: 0,
+    const defaultTheme = React.useMemo(() => {
+        return createTheme({
+            components: {
+                CommandBar: {
+                    styles: {
+                        root: {
+                            height: height,
+                            paddingLeft: 0,
+                            background: 'rgba(255, 255, 255, 0)',
+                            // This is very important for custom pages
+                            // since the min-width is set to the size of the component
+                            // we override to ensure that the items do not keep trying to shrink
+                            // because the width is clamped
+                            // See: https://github.com/microsoft/fluentui/issues/12540
+                            minWidth: 0,
+                        },
+                    },
+                },
+                CommandBarButton: {
+                    styles: {
+                        root: {
+                            background: 'rgba(255, 255, 255, 0)',
+                        },
+                    },
+                },
             },
-        } as ICommandBarStyles;
+        });
     }, [height]);
 
-    const theme = React.useMemo(() => {
+    const userTheme = React.useMemo(() => {
         try {
-            return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : ({} as IPartialTheme);
+            return (themeJSON ? JSON.parse(themeJSON) : {}) as IPartialTheme;
         } catch (ex) {
             /* istanbul ignore next */
             console.error('Cannot parse theme', ex);
             return {} as IPartialTheme;
         }
     }, [themeJSON]);
+
+    const theme = React.useMemo(() => {
+        return userTheme ? mergeThemes(defaultTheme, userTheme) : defaultTheme;
+    }, [defaultTheme, userTheme]);
 
     const rootRef = React.useRef<HTMLDivElement>(null);
     const async = useAsync();
@@ -126,7 +143,6 @@ export const CanvasCommandBar = React.memo((props: CanvasCommandBarProps) => {
                     componentRef={commandBarRef}
                     className={'PowerCATCommandBar'}
                     tabIndex={tabIndex}
-                    styles={commandBarStyle}
                     items={commandBarItems.rootItems}
                     overflowItems={commandBarItems.overflowItems}
                     overflowButtonProps={overflowProps}

@@ -59,19 +59,11 @@ function getDummyAction(key: string): CanvasCommandItem {
 }
 
 function getButtonStyles(stylesJSON?: string): IButtonStyles {
-    const defaultButtonStyles = {
-        root: {
-            background: 'rgba(255, 255, 255,0)',
-        },
-    } as IButtonStyles;
-
     try {
-        return stylesJSON
-            ? concatStyleSets(defaultButtonStyles, JSON.parse(stylesJSON) as IButtonStyles)
-            : defaultButtonStyles;
+        return (stylesJSON ? JSON.parse(stylesJSON) : {}) as IButtonStyles;
     } catch (ex) {
         console.error('Cannot parse command bar item style', ex);
-        return defaultButtonStyles;
+        return {} as IButtonStyles;
     }
 }
 
