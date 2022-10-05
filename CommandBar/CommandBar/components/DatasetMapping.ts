@@ -1,5 +1,6 @@
 import { CanvasCommandItem } from './Component.types';
 import {
+    concatStyleSets,
     ContextualMenuItemType,
     getColorFromString,
     getShade,
@@ -42,6 +43,7 @@ export function getMenuItemsFromDataset(dataset: ComponentFramework.PropertyType
             isHeader: (record.getValue(ItemColumns.ItemHeader) as boolean) ?? undefined,
             topDivider: (record.getValue(ItemColumns.ItemTopDivider) as boolean) ?? undefined,
             divider: (record.getValue(ItemColumns.ItemDivider) as boolean) ?? undefined,
+            stylesJSON: (record.getValue(ItemColumns.ItemStyles) as string) ?? undefined,
             data: record,
         } as CanvasCommandItem;
     });
@@ -54,6 +56,23 @@ function getDummyAction(key: string): CanvasCommandItem {
         name: 'Item ' + key,
         iconName: 'Unknown',
     } as CanvasCommandItem;
+}
+
+function getButtonStyles(stylesJSON?: string): IButtonStyles {
+    const defaultButtonStyles = {
+        root: {
+            background: 'rgba(255, 255, 255,0)',
+        },
+    } as IButtonStyles;
+
+    try {
+        return stylesJSON
+            ? concatStyleSets(defaultButtonStyles, JSON.parse(stylesJSON) as IButtonStyles)
+            : defaultButtonStyles;
+    } catch (ex) {
+        console.error('Cannot parse command bar item style', ex);
+        return defaultButtonStyles;
+    }
 }
 
 export function getCommandsWithChildren(
@@ -80,11 +99,7 @@ export function getCommandBarItemProps(
             return getCommandBarItemProps(items, i, disabled, onClick);
         });
 
-    const buttonStyles = {
-        root: {
-            background: 'rgba(255, 255, 255,0)',
-        },
-    } as IButtonStyles;
+    const buttonStyles = getButtonStyles(item.stylesJSON);
 
     const iconProps =
         item.iconName &&

@@ -18,6 +18,7 @@ export const enum ItemColumns {
     ItemHeader = 'ItemHeader',
     ItemTopDivider = 'ItemTopDivider',
     ItemDivider = 'ItemDivider',
+    ItemStyles = 'ItemStyles',
 }
 
 export const enum InputEvents {

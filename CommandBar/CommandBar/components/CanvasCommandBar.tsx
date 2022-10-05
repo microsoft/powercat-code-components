@@ -71,7 +71,7 @@ export const CanvasCommandBar = React.memo((props: CanvasCommandBarProps) => {
             root: {
                 height: height,
                 paddingLeft: 0,
-                background: 'rgba(255, 255, 255,0)',
+                // background: 'rgba(255, 255, 255,0)',
                 // This is very important for custom pages
                 // since the min-width is set to the size of the component
                 // we override to ensure that the items do not keep trying to shrink
@@ -84,10 +84,11 @@ export const CanvasCommandBar = React.memo((props: CanvasCommandBarProps) => {
 
     const theme = React.useMemo(() => {
         try {
-            return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : undefined;
+            return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : ({} as IPartialTheme);
         } catch (ex) {
             /* istanbul ignore next */
             console.error('Cannot parse theme', ex);
+            return {} as IPartialTheme;
         }
     }, [themeJSON]);
 

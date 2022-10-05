@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="PowerCAT" constructor="CommandBar" version="0.0.1" display-name-key="CommandBar" description-key="CommandBar_Desc" control-type="virtual">
+  <control namespace="PowerCAT" constructor="CommandBar" version="0.1.0" display-name-key="CommandBar" description-key="CommandBar_Desc" control-type="virtual">
      
     <!-- OnChange Event Properties -->
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
@@ -26,6 +26,7 @@
       <property-set name="ItemTopDivider" display-name-key="ItemTopDivider" of-type="TwoOptions" usage="bound" required="false" />
       <property-set name="ItemDivider" display-name-key="ItemDivider" of-type="TwoOptions" usage="bound" required="false" />
       <property-set name="ItemParentKey" display-name-key="ParentKey" of-type="SingleLine.Text" usage="bound" required="false" />
+      <property-set name="ItemStyles" display-name-key="ItemStyles" of-type="Multiple" usage="bound" required="false" />
     </data-set>
 
     <resources>

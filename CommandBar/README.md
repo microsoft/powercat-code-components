@@ -26,6 +26,7 @@ The control accepts the following properties:
   - **ItemTopDivider** - Render a divider at the top of the section.
   - **ItemDivider** - Render the item as a section divider - or if the item is a header (`ItemHeader` = true), then controls whether to render a divider at the bottom of the section.
   - **ItemParentKey** - Render the option as child item of another option.
+  - **ItemStyles** - Button styles to apply to this item (see [Button Styles](https://developer.microsoft.com/en-us/fluentui#/controls/web/button#IButtonStyles)).
 
 
 ### Style Properties
