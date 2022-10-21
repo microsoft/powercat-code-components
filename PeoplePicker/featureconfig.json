@@ -1,0 +1,6 @@
+{
+	"pcfAllowLibraryResources": "on",
+	"pcfAllowCustomWebpack": "on",
+	"pcfAllowEvents": "on",
+	"treatValidationErrorsAsWarnings": "on"
+}
