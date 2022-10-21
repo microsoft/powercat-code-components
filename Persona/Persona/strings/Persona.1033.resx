@@ -127,22 +127,37 @@
     <data name="Theme" xml:space="preserve">
         <value>Theme</value>
     </data>
-    <data name="InputEvent" xml:space="preserve">
-        <value>Input event</value>
-    </data>
     <data name="PersonaSize" xml:space="preserve">
         <value>Persona Size</value>
     </data>
     <data name="Persona_Desc" xml:space="preserve">
         <value>Persona component</value>
     </data>
-    <data name="PersonaText" xml:space="preserve">
-        <value>Persona Name</value>
+    <data name="Text" xml:space="preserve">
+        <value>Text</value>
     </data>
     <data name="ImageUrl" xml:space="preserve">
         <value>Image Url</value>
     </data>
-    <data name="PersonaPresence" xml:space="preserve">
-        <value>Persona Presence</value>
+    <data name="Presence" xml:space="preserve">
+        <value>Presence</value>
+    </data>
+    <data name="ImageInitials" xml:space="preserve">
+        <value>Image Initials</value>
+    </data>
+    <data name="SecondaryText" xml:space="preserve">
+        <value>Secondary Text</value>
+    </data>
+    <data name="TertiaryText" xml:space="preserve">
+        <value>Tertiary Text</value>
+    </data>
+    <data name="OptionalText" xml:space="preserve">
+        <value>Optional Text</value>
+    </data>
+    <data name="ImageAlt" xml:space="preserve">
+        <value>Image Alt</value>
+    </data>
+    <data name="HidePersonaDetails" xml:space="preserve">
+        <value>Hide Persona Details</value>
     </data>
 </root>
