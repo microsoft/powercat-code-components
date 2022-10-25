@@ -7,8 +7,7 @@ import { CanvasPersonaPresence, CanvasPersonaSizes } from './ManifestTypes';
 
 export class Persona implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
-    onClick: (ev: unknown, persona: IPersona) => void;
-
+    
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
      * Data-set values are not initialized here, use updateView.
@@ -37,6 +36,7 @@ export class Persona implements ComponentFramework.ReactControl<IInputs, IOutput
             imageAlt: context.parameters?.ImageAlt.raw ?? '',
             presence: CanvasPersonaPresence[context.parameters.Presence.raw],
             size: CanvasPersonaSizes[context.parameters.PersonaSize.raw],
+            hidePersonaDetails: context.parameters.HidePersonaDetails.raw,
             ariaLabel: context.parameters.AccessibilityLabel.raw ?? '',
         };
         return React.createElement(CanvasPersona, props);

@@ -28,7 +28,7 @@
     <property name="Presence" display-name-key="Presence" description-key="Presence" usage="input" of-type="Enum" required="false">
       <value name="None" display-name-key="None" description-key="None">0</value>
       <value name="Offline" display-name-key="Offline" description-key="Offline">1</value>
-      <value name="Online" display-name-key="Online" description-key="Online" default="Online">2</value>
+      <value name="Online" display-name-key="Online" description-key="Online" default="true">2</value>
       <value name="Away" display-name-key="Away" description-key="Away">3</value>
       <value name="Dnd" display-name-key="Dnd" description-key="Dnd">4</value>
       <value name="Blocked" display-name-key="Blocked" description-key="Blocked">5</value>
@@ -37,6 +37,7 @@
 
     <resources>
       <code path="index.ts" order="1"/>
+      <resx path="strings/Persona.1033.resx" version="1.0.0" />
       <platform-library name="React" version="16.8.6" />
       <platform-library name="Fluent" version="8.29.0" />
     </resources>

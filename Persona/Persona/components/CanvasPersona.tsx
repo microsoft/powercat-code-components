@@ -20,4 +20,4 @@ export const CanvasPersona = React.memo((props: IPersonaprops) => {
         </ThemeProvider>
     );
 });
-CanvasPersona.displayName = 'CanvasProgressIndicator';
+CanvasPersona.displayName = 'CanvasPersona';

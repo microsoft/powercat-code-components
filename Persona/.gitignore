@@ -9,6 +9,8 @@
 # output directory
 /out
 
+#coverage directory
+/coverage
 # msbuild output directories
 /bin
 /obj
