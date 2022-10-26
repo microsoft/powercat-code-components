@@ -209,4 +209,13 @@
     <data name="Personas" xml:space="preserve">
         <value>Personas</value>
     </data>
+    <data name="MaxPeople" xml:space="preserve">
+        <value>Max people</value>
+    </data>
+    <data name="MaxPeople_Desc" xml:space="preserve">
+        <value>The maximum number of personas that can be added</value>
+    </data>
+    <data name="PeoplePickerType" xml:space="preserve">
+        <value>Type of PeoplePicker</value>
+    </data>
 </root>

@@ -11,12 +11,14 @@ export function getMockParameters(): IInputs {
         InputEvent: new MockStringProperty(),
         Personas: new MockDataSet([]),
         Suggestions: new MockDataSet([]),
-        error: new MockTwoOptionsProperty(),
-        showSecondaryText: new MockTwoOptionsProperty(),
+        Error: new MockTwoOptionsProperty(),
+        ShowSecondaryText: new MockTwoOptionsProperty(),
         PeoplePickerType: new MockEnumProperty(),
         MinimumSearchTermLength: new MockWholeNumberProperty(),
         SearchTermToShortMessage: new MockStringProperty(),
         SuggestionsHeaderText: new MockStringProperty(),
         NoResultFoundMesage: new MockStringProperty(),
+        HintText: new MockStringProperty(),
+        MaxPeople: new MockWholeNumberProperty(),
     };
 }

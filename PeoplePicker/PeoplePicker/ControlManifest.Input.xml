@@ -10,6 +10,7 @@
     <property name="NoResultFoundMesage" description-key="NoResultFoundMesage_Desc" display-name-key="NoResultFoundMesage" required="true" usage="input" of-type="SingleLine.Text" default-value="No results found" />
     <property name="SuggestionsHeaderText" description-key="SuggestionsHeaderText_Desc" display-name-key="SuggestionsHeaderText" required="true" usage="input" of-type="SingleLine.Text" default-value="Suggested People" />
     <property name="HintText" description-key="HintText_Desc" display-name-key="HintText" required="true" usage="input" of-type="SingleLine.Text" default-value="Search" />
+    <property name="MaxPeople" description-key="MaxPeople_Desc" display-name-key="MaxPeople" required="true" usage="input" of-type="Whole.None" default-value="10" />
     <!-- People Picker Type -->
     <property name="PeoplePickerType" display-name-key="PeoplePickerType" description-key="PeoplePickerType" usage="input" of-type="Enum" required="true">
       <value name="NormalPeoplepicker" display-name-key="NormalPeoplepicker" description-key="Normal" default="true">Normal People Picker</value>
@@ -17,7 +18,7 @@
       <value name="ListPeoplepicker" display-name-key="ListPeoplepicker" description-key="List">List People Picker</value>
     </property>
     <!-- Output Properties -->
-    <property name="SelectedUsers" display-name-key="SelectedUsers_Desc" description-key="SelectedUsersDisplayName" of-type="Object" usage="output" default-value="" required="true" />
+    <property name="SelectedPeople" display-name-key="SelectedPeople_Desc" description-key="SelectedPeopleDisplayName" of-type="Object" usage="output" default-value="" required="true" />
     <property name="SearchText" description-key="SearchText_Desc" display-name-key="SearchText" usage="output" of-type="SingleLine.Text" />
     <property name="AutoHeight" description-key="AutoHeight_Desc" display-name-key="AutoHeight" usage="output" of-type="Whole.None" />
     <!-- InputEvent : "SetFocus" -->
@@ -46,7 +47,7 @@
       <property-set name="SuggestionRole" display-name-key="SuggestionRole" of-type="SingleLine.Text" usage="bound" required="false" />
     </data-set>
     <property-dependencies>
-      <property-dependency input="PeoplePickerType" output="SelectedUsers" required-for="schema" />
+      <property-dependency input="PeoplePickerType" output="SelectedPeople" required-for="schema" />
       <property-dependency input="PeoplePickerType" output="SearchText" required-for="schema" />
       <property-dependency input="PeoplePickerType" output="AutoHeight" required-for="schema" />
     </property-dependencies>

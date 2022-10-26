@@ -21,7 +21,7 @@ const personaDetails = {
 };
 
 const personaSchema = {
-    SelectedUsers: {
+    SelectedPeople: {
         type: 'array',
         items: personaDetails,
     },

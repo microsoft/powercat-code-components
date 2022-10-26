@@ -14,7 +14,6 @@ import {
     IPartialTheme,
 } from '@fluentui/react';
 import { CanvasPeoplePickerProps } from './Component.types';
-import { mru } from '@fluentui/example-data';
 import { usePrevious } from '@fluentui/react-hooks';
 import useResizeObserver from '@react-hook/resize-observer';
 
@@ -41,10 +40,11 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
         onBlur,
         width,
         hintText,
+        maxPeople,
     } = props;
-    const [mostRecentlyUsed, setMostRecentlyUsed] = React.useState<IPersonaProps[]>(mru);
+
     const [peopleList, setPeopleList] = React.useState<IPersonaProps[]>(suggestedPeople);
-    const [selectedPeople, setselectedPeople] = React.useState<IPersonaProps[]>(defaultSelected);
+    const [selectedPeople, setselectedPeople] = React.useState<IPersonaProps[] | undefined>(defaultSelected);
     const prevSelectedPeople = usePrevious(defaultSelected);
     const prevpeopleList = usePrevious(suggestedPeople);
     const [searchTerm, setSearchTerm] = React.useState<string>('');
@@ -74,9 +74,23 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
     });
 
     React.useEffect(() => {
-        if (prevSelectedPeople !== defaultSelected) setselectedPeople(defaultSelected);
-        if (prevpeopleList !== suggestedPeople) setPeopleList(suggestedPeople);
-    }, [peopleList, selectedPeople, suggestedPeople, defaultSelected, prevSelectedPeople, prevpeopleList]);
+        if (defaultSelected && prevSelectedPeople !== defaultSelected) {
+            // Set Preselected members as selected People
+            selectedItems(defaultSelected);
+            setselectedPeople(defaultSelected);
+        }
+        if (prevpeopleList !== suggestedPeople) {
+            setPeopleList(suggestedPeople);
+        }
+    }, [
+        peopleList,
+        selectedPeople,
+        selectedItems,
+        suggestedPeople,
+        defaultSelected,
+        prevSelectedPeople,
+        prevpeopleList,
+    ]);
 
     const rootStyle = React.useMemo(() => {
         // This is needed for custom pages to ensure the People Picker grows to the full width
@@ -110,20 +124,12 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
 
     const onRemoveSuggestion = (item: IPersonaProps): void => {
         const indexPeopleList: number = peopleList.indexOf(item);
-        const indexMostRecentlyUsed: number = mostRecentlyUsed.indexOf(item);
 
         if (indexPeopleList >= 0) {
             const newPeople: IPersonaProps[] = peopleList
                 .slice(0, indexPeopleList)
                 .concat(peopleList.slice(indexPeopleList + 1));
             setPeopleList(newPeople);
-        }
-
-        if (indexMostRecentlyUsed >= 0) {
-            const newSuggestedPeople: IPersonaProps[] = mostRecentlyUsed
-                .slice(0, indexMostRecentlyUsed)
-                .concat(mostRecentlyUsed.slice(indexMostRecentlyUsed + 1));
-            setMostRecentlyUsed(newSuggestedPeople);
         }
     };
 
@@ -143,6 +149,9 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
     const onChange = (items?: IPersonaProps[]): void => {
         if (Array.isArray(items) && items.length) {
             selectedItems(items);
+        } else {
+            // return empty array
+            selectedItems([]);
         }
     };
     const peoplepickerProps: IPeoplePickerProps = {
@@ -151,7 +160,6 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
         getTextFromItem: getTextFromItem,
         pickerSuggestionsProps: suggestionProps,
         className: classNames,
-        key: peoplepickerType.toLowerCase(),
         pickerCalloutProps: { doNotLayer: false }, // This must be false otherwise the flyout appears underneath other components in the app
         // eslint-disable-next-line react/jsx-no-bind
         onRemoveSuggestion: onRemoveSuggestion,
@@ -161,28 +169,29 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
             'aria-label': accessibilityLabel,
             onFocus: onFocus,
             onBlur: onBlur,
+            placeholder: hintText,
         },
-        defaultSelectedItems: defaultSelected,
+        defaultSelectedItems: props.defaultSelected,
         componentRef: componentRef,
         onInputChange: onInputChange,
         disabled: isPickerDisabled,
+        itemLimit: maxPeople,
         onChange: onChange,
-        placeholder: hintText,
     } as IPeoplePickerProps;
     switch (peoplepickerType.toLowerCase()) {
-        case 'normal':
+        case 'normal people picker':
             return (
                 <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
                     <NormalPeoplePicker {...peoplepickerProps} />
                 </ThemeProvider>
             );
-        case 'list':
+        case 'list people picker':
             return (
                 <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
                     <ListPeoplePicker {...peoplepickerProps} />
                 </ThemeProvider>
             );
-        case 'compact':
+        case 'compact people picker':
             return (
                 <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
                     <CompactPeoplePicker {...peoplepickerProps} />

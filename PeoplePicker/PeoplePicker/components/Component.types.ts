@@ -27,6 +27,7 @@ export interface CanvasPeoplePickerProps {
     noresultfoundText: string;
     suggestionsHeaderText: string;
     hintText: string;
+    maxPeople: number;
 }
 
 export interface ICustomPersonaProps {
@@ -36,6 +37,19 @@ export interface ICustomPersonaProps {
     PersonaImageAlt?: string;
     PersonaRole?: string;
     PersonaPresence?: number;
+}
+
+export interface IExtendedPersonaProps {
+    imageUrl?: string;
+    imageInitials?: string;
+    text?: string;
+    secondaryText?: string;
+    tertiaryText?: string;
+    optionalText?: string;
+    presence?: number;
+    isValid?: boolean;
+    canExpand?: boolean;
+    key: string | number;
 }
 
 /*specifying events types here until it is unlocked by platform*/

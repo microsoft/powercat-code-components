@@ -41,6 +41,9 @@ describe('PeoplePickerComponent', () => {
         const selectedItems = jest.fn();
         const updateSearchTerm = jest.fn();
         const filterSuggestions = jest.fn();
+        const onBlur = jest.fn();
+        const onFocus = jest.fn();
+
         const props = {
             width: 300,
             height: 32,
@@ -64,6 +67,10 @@ describe('PeoplePickerComponent', () => {
             suggestionsHeaderText: 'Suggested People',
             filterSuggestions: filterSuggestions,
             noresultfoundText: 'no result found',
+            onBlur: onBlur,
+            onFocus: onFocus,
+            hintText: 'Search',
+            maxPeople: 10,
         } as CanvasPeoplePickerProps;
 
         ReactDOM.render(<CanvasPeoplePicker {...props} />, root);
@@ -96,7 +103,8 @@ describe('PeoplePickerComponent', () => {
         runAllTimers();
 
         // Check selectedItems is called with suggestion
-        expect(selectedItems).toBeCalledTimes(1);
+        // To be called twice, initial call for Setting empty defaultSelected value
+        expect(selectedItems).toBeCalledTimes(2);
         expect(selectedItems).toBeCalledWith(expect.arrayContaining([{ key: '1', text: 'John Doe' }]));
 
         props.defaultSelected = [

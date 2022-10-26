@@ -1,6 +1,6 @@
 import { ICustomPersonaProps } from './Component.types';
 import { PersonaColumns, SuggestionColumns } from '../ManifestConstants';
-import { IPersonaProps } from '@fluentui/react';
+import { IPersonaProps, PersonaPresence } from '@fluentui/react';
 
 export function getPersonaFromDataset(dataset: ComponentFramework.PropertyTypes.DataSet): IPersonaProps[] {
     const keyIndex: Record<string, number> = {};
@@ -13,13 +13,13 @@ export function getPersonaFromDataset(dataset: ComponentFramework.PropertyTypes.
             key += `_${keyIndex[key]}`;
         } else keyIndex[key] = 1;
         return {
-            id: key,
             key: key,
             text: (record.getValue(PersonaColumns.PersonaName) as string) ?? '',
             imageUrl: (record.getValue(PersonaColumns.PersonaImgUrl) as string) ?? '',
             imageInitials: (record.getValue(PersonaColumns.PersonaImageAlt) as string) ?? '',
-            presence: (record.getValue(PersonaColumns.PersonaPresence) as number) ?? '',
+            presence: getPersonaPresence((record.getValue(PersonaColumns.PersonaPresence) as string) ?? ''),
             secondaryText: (record.getValue(PersonaColumns.PersonaRole) as string) ?? '',
+            isOutOfOffice: (record.getValue(PersonaColumns.PersonaOOF) as boolean) ?? false,
         } as IPersonaProps;
     });
 }
@@ -35,19 +35,44 @@ export function getSuggestionFromDataset(dataset: ComponentFramework.PropertyTyp
             key += `_${keyIndex[key]}`;
         } else keyIndex[key] = 1;
         return {
-            id: key,
             key: key,
             text: (record.getValue(SuggestionColumns.SuggestionName) as string) ?? '',
             imageUrl: (record.getValue(SuggestionColumns.SuggestionImgUrl) as string) ?? '',
             imageInitials: (record.getValue(SuggestionColumns.SuggestionImageAlt) as string) ?? '',
-            presence: (record.getValue(SuggestionColumns.SuggestionPresence) as number) ?? undefined,
+            presence: getPersonaPresence((record.getValue(SuggestionColumns.SuggestionPresence) as string) ?? ''),
             secondaryText: (record.getValue(SuggestionColumns.SuggestionRole) as string) ?? '',
+            isOutOfOffice: (record.getValue(SuggestionColumns.SuggestionOOF) as boolean) ?? false,
         } as IPersonaProps;
     });
 }
 
-export function getDataSetfromPersona(selectedUsers: IPersonaProps[]): ICustomPersonaProps[] {
-    return selectedUsers.map((user) => {
+export function getPersonaPresence(personaPresence: string): PersonaPresence {
+    if (personaPresence) {
+        switch ((personaPresence as string).toLowerCase()) {
+            case 'away':
+                return PersonaPresence.away;
+            case 'blocked':
+                return PersonaPresence.blocked;
+            case 'busy':
+                return PersonaPresence.busy;
+            case 'dnd':
+                return PersonaPresence.dnd;
+            case 'none':
+                return PersonaPresence.none;
+            case 'offline':
+                return PersonaPresence.offline;
+            case 'online':
+                return PersonaPresence.online;
+            default:
+                return PersonaPresence.none;
+        }
+    } else {
+        return PersonaPresence.none;
+    }
+}
+
+export function getDataSetfromPersona(selectedPeople: IPersonaProps[]): ICustomPersonaProps[] {
+    return selectedPeople.map((user) => {
         return {
             PersonaKey: user.key,
             PersonaName: user.text,

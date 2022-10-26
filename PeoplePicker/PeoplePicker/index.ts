@@ -32,7 +32,8 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
     previousSearchText: string;
     suggestionsFilterPending?: (suggestions: IPersonaProps[]) => void;
     refreshSuggestions: boolean;
-    resolve?: (selectedUsers: IPersonaProps[]) => void;
+    resolve?: (selectedPeople: IPersonaProps[]) => void;
+    maxTags: number;
 
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -106,9 +107,7 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
         if (getPreSelectedMember) {
             const selectedpeopleDataset = context.parameters.Personas;
             this.defaultSelected = getPersonaFromDataset(selectedpeopleDataset);
-            console.log(this.defaultSelected);
         }
-
         if (this.refreshSuggestions) {
             this.refreshSuggestions = false;
             // Check for latest dataset with a defined retries
@@ -145,6 +144,7 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
             updateSearchTerm: this.updateSearchTerm,
             onBlur: this.onBlur,
             onFocus: this.onFocus,
+            maxPeople: context.parameters.MaxPeople.raw ?? 10,
             hintText: context.parameters.HintText.raw ?? '',
             suggestionsHeaderText: context.parameters.SuggestionsHeaderText.raw ?? '',
         };
@@ -211,7 +211,7 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
      */
     public getOutputs(): IOutputs {
         return {
-            SelectedUsers: this.selectedPeople,
+            SelectedPeople: this.selectedPeople,
             SearchText: this.searchText,
             AutoHeight: this.height,
         };
