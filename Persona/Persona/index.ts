@@ -2,7 +2,6 @@ import { IInputs, IOutputs } from './generated/ManifestTypes';
 import { CanvasPersona } from './components/CanvasPersona';
 import { IPersonaprops } from './components/Component.types';
 import * as React from 'react';
-import { IPersona } from '@fluentui/react';
 import { CanvasPersonaPresence, CanvasPersonaSizes, PersonaInitialsColors } from './ManifestTypes';
 
 export class Persona implements ComponentFramework.ReactControl<IInputs, IOutputs> {

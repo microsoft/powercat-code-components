@@ -1,6 +1,6 @@
 # Persona
 
-This code component provides a wrapper around the [Fluent UI Facepile](https://developer.microsoft.com/en-us/fluentui#/controls/web/persona) control for use in canvas & custom pages.
+This code component provides a wrapper around the [Fluent UI Persona](https://developer.microsoft.com/en-us/fluentui#/controls/web/persona) control for use in canvas & custom pages.
 
 | Canvas apps | Custom pages | Model-driven apps | Portals |
 | ----------- | ------------ | ----------------- | ------- |
