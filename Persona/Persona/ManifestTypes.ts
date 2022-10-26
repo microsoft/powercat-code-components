@@ -1,4 +1,4 @@
-import { PersonaPresence, PersonaSize } from '@fluentui/react';
+import { PersonaPresence, PersonaSize, PersonaInitialsColor } from '@fluentui/react';
 
 export const CanvasPersonaPresence = {
     '0': PersonaPresence.none,
@@ -21,3 +21,27 @@ export const CanvasPersonaSizes = {
     '15': PersonaSize.size100,
     '18': PersonaSize.size120,
 };
+
+export const PersonaInitialsColors = {
+    'lightBlue': PersonaInitialsColor.lightBlue,
+    'blue': PersonaInitialsColor.blue,
+    'darkBlue': PersonaInitialsColor.darkBlue,
+    'teal': PersonaInitialsColor.teal,
+    'green': PersonaInitialsColor.green,
+    'darkGreen': PersonaInitialsColor.darkGreen,
+    'lightPink': PersonaInitialsColor.lightPink,
+    'pink': PersonaInitialsColor.pink,
+    'magenta': PersonaInitialsColor.magenta,
+    'purple':PersonaInitialsColor.purple,
+    'orange':PersonaInitialsColor.orange,
+    'lightRed':PersonaInitialsColor.lightRed,
+    'darkRed':PersonaInitialsColor.darkRed,
+    'violet':PersonaInitialsColor.violet,
+    'gold':PersonaInitialsColor.gold,
+    'burgundy':PersonaInitialsColor.burgundy,
+    'warmGray':PersonaInitialsColor.warmGray,
+    'cyan':PersonaInitialsColor.cyan,
+    'rust':PersonaInitialsColor.rust,
+    'coolGray':PersonaInitialsColor.coolGray
+};
+

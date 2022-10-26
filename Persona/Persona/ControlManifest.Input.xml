@@ -22,7 +22,6 @@
       <value name="Size72" display-name-key="Size72" description-key="Size72">14</value>
       <value name="Size100" display-name-key="Size100" description-key="Size100">15</value>
       <value name="Size120" display-name-key="Size120" description-key="Size120">18</value>
-      
     </property>
 
     <property name="Presence" display-name-key="Presence" description-key="Presence" usage="input" of-type="Enum" required="false">
@@ -34,6 +33,30 @@
       <value name="Blocked" display-name-key="Blocked" description-key="Blocked">5</value>
       <value name="Busy" display-name-key="Busy" description-key="Busy">6</value>
     </property>
+
+    <property name="PersonaInitialsColor" display-name-key="PersonaInitialsColor" description-key="PersonaInitialsColor" usage="input" of-type="Enum" required="false">
+      <value name="Light Blue" display-name-key="lightBlue" description-key="lightBlue">lightBlue</value>
+      <value name="Blue" display-name-key="blue" description-key="blue">blue</value>
+      <value name="Dark Blue" display-name-key="darkBlue" description-key="darkBlue">darkBlue</value>
+      <value name="Teal" display-name-key="teal" description-key="teal">teal</value>
+      <value name="Green" display-name-key="green" description-key="green" default="true">green</value>
+      <value name="Dark Green" display-name-key="darkGreen" description-key="darkGreen">darkGreen</value>
+      <value name="Light Pink" display-name-key="lightPink" description-key="lightPink">lightPink</value>
+      <value name="Pink" display-name-key="pink" description-key="pink">pink</value>
+      <value name="Magenta" display-name-key="magenta" description-key="magenta">magenta</value>
+      <value name="Purple" display-name-key="purple" description-key="purple">purple</value>
+      <value name="Orange" display-name-key="orange" description-key="orange">orange</value>
+      <value name="Light Red" display-name-key="lightRed" description-key="lightRed">lightRed</value>
+      <value name="DarkRed" display-name-key="darkRed" description-key="darkRed">darkRed</value>
+      <value name="Violet" display-name-key="violet" description-key="violet" default="true">violet</value>
+      <value name="Gold" display-name-key="gold" description-key="gold">gold</value>
+      <value name="Burgundy" display-name-key="burgundy" description-key="burgundy">burgundy</value>
+      <value name="WarmGray" display-name-key="warmGray" description-key="warmGray">warmGray</value>
+      <value name="Cyan" display-name-key="cyan" description-key="cyan">cyan</value>
+     <value name="Rust" display-name-key="rust" description-key="rust">rust</value>
+      <value name="CoolGray" display-name-key="coolGray" description-key="coolGray">coolGray</value>
+    </property>
+
 
     <resources>
       <code path="index.ts" order="1"/>

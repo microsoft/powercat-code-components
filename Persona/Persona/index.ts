@@ -3,7 +3,7 @@ import { CanvasPersona } from './components/CanvasPersona';
 import { IPersonaprops } from './components/Component.types';
 import * as React from 'react';
 import { IPersona } from '@fluentui/react';
-import { CanvasPersonaPresence, CanvasPersonaSizes } from './ManifestTypes';
+import { CanvasPersonaPresence, CanvasPersonaSizes, PersonaInitialsColors } from './ManifestTypes';
 
 export class Persona implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
@@ -38,6 +38,7 @@ export class Persona implements ComponentFramework.ReactControl<IInputs, IOutput
             size: CanvasPersonaSizes[context.parameters.PersonaSize.raw],
             hidePersonaDetails: context.parameters.HidePersonaDetails.raw,
             ariaLabel: context.parameters.AccessibilityLabel.raw ?? '',
+            initialsColor:PersonaInitialsColors[context.parameters.PersonaInitialsColor.raw]
         };
         return React.createElement(CanvasPersona, props);
     }

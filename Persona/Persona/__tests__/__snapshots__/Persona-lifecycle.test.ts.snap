@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Persona renders 1`] = `
-<Memo(CanvasProgressIndicator)
+<Memo(CanvasPersona)
   ariaLabel=""
   imageAlt="Annie Lindqvist, status is blocked"
   imageInitials="AL"
   imageUrl="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-react-assets/persona-female.png"
+  initialsColor={1}
   optionalText="Available at 4:00pm"
   presence={3}
   secondaryText="Software Engineer"

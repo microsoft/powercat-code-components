@@ -17,5 +17,6 @@ export function getMockParameters(): IInputs {
         TertiaryText: new MockStringProperty(),
         Text: new MockStringProperty(),
         SecondaryText: new MockStringProperty(),
+        PersonaInitialsColor:new MockEnumProperty()
     };
 }

@@ -56,6 +56,7 @@ function createComponent() {
     context.parameters.OptionalText.raw = 'Available at 4:00pm';
     context.parameters.ImageAlt.raw = 'Annie Lindqvist, status is blocked';
     context.parameters.Presence.raw = '3';
+    context.parameters.PersonaInitialsColor.raw = 'blue';
     const state = new MockState();
     const container = document.createElement('div');
     document.body.appendChild(container);

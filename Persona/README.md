@@ -28,14 +28,34 @@ The control accepts the following properties:
 
 - **PersonaSize** - Size of the persona to appear on screen.
 
-- **Presence** - Presence of the person to display - will not display presence if undefined.
+- **Presence** - Presence of the person to display - will not display presence if undefined. Value should be from one of the followings :
+    away
+    blocked
+    busy
+    dnd
+    none
+    offline
+    online
+
+### Style Properties
+
+- **Theme** - Accepts a JSON string that is generated using [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/). Leaving this blank will use the default theme defined by Power Apps.
+
+- **AccessibilityLabel** - Screen reader aria-label
 
 ### Usage
 
-Following is an example on how to use the Persona component.
+Following is an example on how to use the Persona component:
 
-
-
+    Text: "Megan Brower"
+    SecondaryText: "Software Engineer"
+    TertiaryText: "In a meeting"
+    OptionalText: "Available at 4:00pm"
+    HidePersonaDetails: false
+    ImageUrl: User().Image
+    PersonaSize: PowerCAT.Persona.PersonaSize.Size100
+    Presence: PowerCAT.Persona.Presence.Online
+    
 
 ### Example Theme
 
