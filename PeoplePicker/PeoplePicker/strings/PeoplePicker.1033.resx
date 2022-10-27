@@ -218,4 +218,16 @@
     <data name="PeoplePickerType" xml:space="preserve">
         <value>Type of PeoplePicker</value>
     </data>
+    <data name="ShowSecondaryText_Desc" xml:space="preserve">
+        <value>To Show Secondary Text(E.g. JobTitle) along with Name</value>
+    </data>
+    <data name="ShowSecondaryText" xml:space="preserve">
+        <value>Show Secondary Text</value>
+    </data>
+    <data name="SuggestionsHeaderText" xml:space="preserve">
+        <value>Suggestions Header Text</value>
+    </data>
+    <data name="SuggestionsHeaderText_Desc" xml:space="preserve">
+        <value>Text to appear above suggestions</value>
+    </data>
 </root>

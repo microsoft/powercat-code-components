@@ -13,9 +13,9 @@
     <property name="MaxPeople" description-key="MaxPeople_Desc" display-name-key="MaxPeople" required="true" usage="input" of-type="Whole.None" default-value="10" />
     <!-- People Picker Type -->
     <property name="PeoplePickerType" display-name-key="PeoplePickerType" description-key="PeoplePickerType" usage="input" of-type="Enum" required="true">
-      <value name="NormalPeoplepicker" display-name-key="NormalPeoplepicker" description-key="Normal" default="true">Normal People Picker</value>
-      <value name="CompactPeoplepicker" display-name-key="CompactPeoplepicker" description-key="Compact">Compact People Picker</value>
-      <value name="ListPeoplepicker" display-name-key="ListPeoplepicker" description-key="List">List People Picker</value>
+      <value name="NormalPeoplePicker" display-name-key="NormalPeoplePicker" description-key="Normal" default="true">Normal People Picker</value>
+      <value name="CompactPeoplePicker" display-name-key="CompactPeoplePicker" description-key="Compact">Compact People Picker</value>
+      <value name="ListPeoplePicker" display-name-key="ListPeoplePicker" description-key="List">List People Picker</value>
     </property>
     <!-- Output Properties -->
     <property name="SelectedPeople" display-name-key="SelectedPeople_Desc" description-key="SelectedPeopleDisplayName" of-type="Object" usage="output" default-value="" required="true" />
@@ -51,11 +51,6 @@
       <property-dependency input="PeoplePickerType" output="SearchText" required-for="schema" />
       <property-dependency input="PeoplePickerType" output="AutoHeight" required-for="schema" />
     </property-dependencies>
-    <!-- OnChange Event Properties 
-    <property name="PersonaEvent" description-key="PersonaEvent_Desc" display-name-key="PersonaEvent" usage="output" of-type="SingleLine.Text" />
-    <property name="PersonaKey" description-key="PersonaKey_Desc" display-name-key="PersonaKey" usage="output" of-type="SingleLine.Text" />
-    <property name="PersonaDisplayName" description-key="PersonaDisplayName_Desc" display-name-key="PersonaDisplayName" usage="output" of-type="SingleLine.Text" />
-    <property name="SearchTerm" description-key="SearchTerm_Desc" display-name-key="SearchTerm" usage="output" of-type="SingleLine.Text" />-->
     <resources>
       <code path="index.ts" order="1" />
       <resx path="strings/PeoplePicker.1033.resx" version="1.0.0" />

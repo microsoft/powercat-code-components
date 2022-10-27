@@ -23,7 +23,6 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
     context: IPropBag<IInputs>;
     private notifyOutputChanged: () => void;
     suggestedPeople: IPersonaProps[];
-    prevsuggestedPeople: IPersonaProps[];
     ref?: IBasePicker<IPersonaProps>;
     defaultSelected: IPersonaProps[];
     selectedPeople: ICustomPersonaProps[];
@@ -33,7 +32,6 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
     suggestionsFilterPending?: (suggestions: IPersonaProps[]) => void;
     refreshSuggestions: boolean;
     resolve?: (selectedPeople: IPersonaProps[]) => void;
-    maxTags: number;
 
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -89,7 +87,7 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
                   } else {
                       this.checkforLatestDataset(maxRetries);
                   }
-              }, 100);
+              }, 50);
     };
 
     /**
@@ -109,9 +107,10 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
             this.defaultSelected = getPersonaFromDataset(selectedpeopleDataset);
         }
         if (this.refreshSuggestions) {
+            this.context.events.OnSearch();
             this.refreshSuggestions = false;
             // Check for latest dataset with a defined retries
-            this.checkforLatestDataset(50);
+            this.checkforLatestDataset(100);
         }
         const inputEvent = context.parameters.InputEvent.raw;
         if (
@@ -172,7 +171,6 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
     filterSuggestions = (search: string): Promise<IPersonaProps[]> | IPersonaProps[] => {
         return new Promise((resolve: (suggestedUsers: IPersonaProps[] | PromiseLike<IPersonaProps[]>) => void) => {
             this.searchText = search;
-            this.context.events.OnSearch();
             // Notify that the search term has changed - this in turn will filter the suggestions dataset
             if (this.previousSearchText !== this.searchText) {
                 this.previousSearchText = this.searchText;
