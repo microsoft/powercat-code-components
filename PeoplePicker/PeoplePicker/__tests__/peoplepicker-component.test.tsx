@@ -38,7 +38,7 @@ describe('PeoplePickerComponent', () => {
         const root = document.createElement('div');
         document.body.appendChild(root);
         const pickerRef = React.createRef<IBasePicker<IPersonaProps>>();
-        const selectedItems = jest.fn();
+        const onPersonSelect = jest.fn();
         const updateSearchTerm = jest.fn();
         const filterSuggestions = jest.fn();
         const onBlur = jest.fn();
@@ -59,7 +59,7 @@ describe('PeoplePickerComponent', () => {
             componentRef: pickerRef,
             error: false,
             themeJSON: undefined,
-            selectedItems: selectedItems,
+            onPersonSelect: onPersonSelect,
             suggestedPeople: [] as IPersonaProps[],
             updateSearchTerm: updateSearchTerm,
             minimumFilterLength: 3,
@@ -104,8 +104,8 @@ describe('PeoplePickerComponent', () => {
 
         // Check selectedItems is called with suggestion
         // To be called twice, initial call for Setting empty defaultSelected value
-        expect(selectedItems).toBeCalledTimes(2);
-        expect(selectedItems).toBeCalledWith(expect.arrayContaining([{ key: '1', text: 'John Doe' }]));
+        expect(onPersonSelect).toBeCalledTimes(2);
+        expect(onPersonSelect).toBeCalledWith(expect.arrayContaining([{ key: '1', text: 'John Doe' }]));
 
         props.defaultSelected = [
             {

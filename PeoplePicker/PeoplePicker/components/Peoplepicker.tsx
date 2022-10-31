@@ -19,7 +19,7 @@ import useResizeObserver from '@react-hook/resize-observer';
 
 export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) => {
     const {
-        selectedItems,
+        onPersonSelect,
         suggestedPeople,
         themeJSON,
         showSecondaryText,
@@ -44,10 +44,10 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
     } = props;
 
     const [peopleList, setPeopleList] = React.useState<IPersonaProps[]>(suggestedPeople);
-    const [selectedPeople, setselectedPeople] = React.useState<IPersonaProps[] | undefined>(defaultSelected);
     const prevSelectedPeople = usePrevious(defaultSelected);
     const prevpeopleList = usePrevious(suggestedPeople);
     const [searchTerm, setSearchTerm] = React.useState<string>('');
+    const [pickerKey, setPickerKey] = React.useState<string>(peoplepickerType.split(' ')[0]);
     const suggestionProps: IBasePickerSuggestionsProps = {
         suggestionsHeaderText: suggestionsHeaderText,
         mostRecentlyUsedHeaderText: suggestionsHeaderText,
@@ -76,21 +76,14 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
     React.useEffect(() => {
         if (defaultSelected && prevSelectedPeople !== defaultSelected) {
             // Set Preselected members as selected People
-            selectedItems(defaultSelected);
-            setselectedPeople(defaultSelected);
+            onPersonSelect(defaultSelected);
+            // To re-render the existing component during pre-selected members change
+            setPickerKey(pickerKey.concat('_1'));
         }
         if (prevpeopleList !== suggestedPeople) {
             setPeopleList(suggestedPeople);
         }
-    }, [
-        peopleList,
-        selectedPeople,
-        selectedItems,
-        suggestedPeople,
-        defaultSelected,
-        prevSelectedPeople,
-        prevpeopleList,
-    ]);
+    }, [onPersonSelect, pickerKey, suggestedPeople, defaultSelected, prevSelectedPeople, prevpeopleList]);
 
     const rootStyle = React.useMemo(() => {
         // This is needed for custom pages to ensure the People Picker grows to the full width
@@ -148,10 +141,10 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
 
     const onChange = (items?: IPersonaProps[]): void => {
         if (Array.isArray(items) && items.length) {
-            selectedItems(items);
+            onPersonSelect(items);
         } else {
             // return empty array
-            selectedItems([]);
+            onPersonSelect([]);
         }
     };
     const peoplepickerProps: IPeoplePickerProps = {
@@ -171,39 +164,30 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
             onBlur: onBlur,
             placeholder: hintText,
         },
-        defaultSelectedItems: props.defaultSelected,
+        key: pickerKey,
+        defaultSelectedItems: defaultSelected,
         componentRef: componentRef,
         onInputChange: onInputChange,
         disabled: isPickerDisabled,
         itemLimit: maxPeople,
         onChange: onChange,
     } as IPeoplePickerProps;
-    switch (peoplepickerType.toLowerCase()) {
-        case 'normal people picker':
-            return (
-                <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
-                    <NormalPeoplePicker {...peoplepickerProps} />
-                </ThemeProvider>
-            );
-        case 'list people picker':
-            return (
-                <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
-                    <ListPeoplePicker {...peoplepickerProps} />
-                </ThemeProvider>
-            );
-        case 'compact people picker':
-            return (
-                <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
-                    <CompactPeoplePicker {...peoplepickerProps} />
-                </ThemeProvider>
-            );
-        default:
-            return (
-                <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
-                    <NormalPeoplePicker {...peoplepickerProps} />
-                </ThemeProvider>
-            );
-    }
+    return (
+        <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
+            {(() => {
+                switch (peoplepickerType.toLowerCase()) {
+                    case 'normal people picker':
+                        return <NormalPeoplePicker {...peoplepickerProps} />;
+                    case 'list people picker':
+                        return <ListPeoplePicker {...peoplepickerProps} />;
+                    case 'compact people picker':
+                        return <CompactPeoplePicker {...peoplepickerProps} />;
+                    default:
+                        return <NormalPeoplePicker {...peoplepickerProps} />;
+                }
+            })()}
+        </ThemeProvider>
+    );
 });
 CanvasPeoplePicker.displayName = 'CanvasPeoplePicker';
 

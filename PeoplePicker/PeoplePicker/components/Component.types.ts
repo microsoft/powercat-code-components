@@ -18,7 +18,7 @@ export interface CanvasPeoplePickerProps {
     onResize?: (width: number, height: number) => void;
     accessibilityLabel?: string;
     filterSuggestions: (search: string) => Promise<IPersonaProps[]> | IPersonaProps[];
-    selectedItems: (items: IPersonaProps[]) => void;
+    onPersonSelect: (items: IPersonaProps[]) => void;
     updateSearchTerm: (searchTerm: string) => void;
     onFocus: () => void;
     onBlur: () => void;

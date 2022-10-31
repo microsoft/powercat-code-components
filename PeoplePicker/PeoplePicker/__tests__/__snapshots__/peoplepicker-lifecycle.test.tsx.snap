@@ -193,13 +193,13 @@ exports[`PeoplePicker renders with simple personas 1`] = `
             white-space: nowrap;
             width: 1px;
           }
-      id="selected-suggestion-alert-id__2"
+      id="selected-suggestion-alert-id__21"
     >
       
     </div>
     <span
       hidden={true}
-      id="selected-items-id__2-label"
+      id="selected-items-id__21-label"
     >
       
     </span>
@@ -235,7 +235,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
             }
       >
         <span
-          aria-labelledby="selected-items-id__2-label"
+          aria-labelledby="selected-items-id__21-label"
           className=
               ms-BasePicker-itemsWrapper
               {
@@ -243,7 +243,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
                 flex-wrap: wrap;
                 max-width: 100%;
               }
-          id="selected-items-id__2"
+          id="selected-items-id__21"
           role="list"
         >
           <div
@@ -297,7 +297,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
                     min-width: 0px;
                     overflow: hidden;
                   }
-              id="selectedItemPersona-id__21"
+              id="selectedItemPersona-id__40"
             >
               <div
                 className=
@@ -496,7 +496,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
               </div>
             </div>
             <button
-              aria-labelledby="id__21 selectedItemPersona-id__21"
+              aria-labelledby="id__40 selectedItemPersona-id__40"
               className=
                   ms-Button
                   ms-Button--icon
@@ -568,7 +568,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
                   }
               data-is-focusable={true}
               data-selection-index={0}
-              id="id__21"
+              id="id__40"
               onClick={[Function]}
               onKeyDown={[Function]}
               onKeyPress={[Function]}
@@ -661,7 +661,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
                     min-width: 0px;
                     overflow: hidden;
                   }
-              id="selectedItemPersona-id__22"
+              id="selectedItemPersona-id__41"
             >
               <div
                 className=
@@ -860,7 +860,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
               </div>
             </div>
             <button
-              aria-labelledby="id__22 selectedItemPersona-id__22"
+              aria-labelledby="id__41 selectedItemPersona-id__41"
               className=
                   ms-Button
                   ms-Button--icon
@@ -932,7 +932,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
                   }
               data-is-focusable={true}
               data-selection-index={1}
-              id="id__22"
+              id="id__41"
               onClick={[Function]}
               onKeyDown={[Function]}
               onKeyPress={[Function]}
@@ -1025,7 +1025,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
                     min-width: 0px;
                     overflow: hidden;
                   }
-              id="selectedItemPersona-id__23"
+              id="selectedItemPersona-id__42"
             >
               <div
                 className=
@@ -1224,7 +1224,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
               </div>
             </div>
             <button
-              aria-labelledby="id__23 selectedItemPersona-id__23"
+              aria-labelledby="id__42 selectedItemPersona-id__42"
               className=
                   ms-Button
                   ms-Button--icon
@@ -1296,7 +1296,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
                   }
               data-is-focusable={true}
               data-selection-index={2}
-              id="id__23"
+              id="id__42"
               onClick={[Function]}
               onKeyDown={[Function]}
               onKeyPress={[Function]}
@@ -1342,7 +1342,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
         <input
           aria-autocomplete="both"
           aria-controls=""
-          aria-describedby="selected-items-id__2"
+          aria-describedby="selected-items-id__21"
           aria-expanded={false}
           aria-haspopup="listbox"
           aria-label=""
@@ -1374,7 +1374,7 @@ exports[`PeoplePicker renders with simple personas 1`] = `
               }
           data-lpignore={true}
           disabled={false}
-          id="combobox-id__2"
+          id="combobox-id__21"
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}

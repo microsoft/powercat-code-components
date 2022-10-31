@@ -11,7 +11,7 @@ export class PersonaSchema {
 const personaDetails = {
     type: 'object',
     properties: {
-        PersonaKey: { type: 'number' },
+        PersonaKey: { type: 'string' },
         PersonaName: { type: 'string' },
         PersonaImgUrl: { type: 'string', format: 'uri', 'x-ms-media-kind': 'image' },
         PersonaImageAlt: { type: 'string' },

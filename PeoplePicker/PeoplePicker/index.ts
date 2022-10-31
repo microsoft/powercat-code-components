@@ -46,6 +46,18 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
         this.context.mode.trackContainerResize(true);
         this.context.parameters.Suggestions.paging.setPageSize(500);
         this.context.parameters.Personas.paging.setPageSize(500);
+
+        //
+        this.context = context;
+
+        const getPreSelectedMember =
+            (this.defaultSelected === undefined && this.context.parameters.Personas.sortedRecordIds.length > 0) ||
+            context.updatedProperties.indexOf(ManifestPropertyNames.dataset) > -1;
+
+        if (getPreSelectedMember) {
+            const selectedpeopleDataset = context.parameters.Personas;
+            this.defaultSelected = getPersonaFromDataset(selectedpeopleDataset);
+        }
     }
 
     onResize = (width: number, height: number): void => {
@@ -97,7 +109,6 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
      */
     public updateView(context: IPropBag<IInputs>): React.ReactElement {
         this.context = context;
-
         const getPreSelectedMember =
             (this.defaultSelected === undefined && this.context.parameters.Personas.sortedRecordIds.length > 0) ||
             context.updatedProperties.indexOf(ManifestPropertyNames.dataset) > -1;
@@ -110,7 +121,7 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
             this.context.events.OnSearch();
             this.refreshSuggestions = false;
             // Check for latest dataset with a defined retries
-            this.checkforLatestDataset(100);
+            this.checkforLatestDataset(160);
         }
         const inputEvent = context.parameters.InputEvent.raw;
         if (
@@ -139,7 +150,7 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
             noresultfoundText: context.parameters.NoResultFoundMesage.raw ?? '',
             keepTypingMessage: context.parameters.SearchTermToShortMessage.raw ?? '',
             filterSuggestions: this.filterSuggestions,
-            selectedItems: this.selectedItems,
+            onPersonSelect: this.onPersonSelect,
             updateSearchTerm: this.updateSearchTerm,
             onBlur: this.onBlur,
             onFocus: this.onFocus,
@@ -158,8 +169,8 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
         this.context.events.OnFocus();
     };
 
-    selectedItems = (items: IPersonaProps[]): void => {
-        this.selectedPeople = getDataSetfromPersona(items);
+    onPersonSelect = (people: IPersonaProps[]): void => {
+        this.selectedPeople = getDataSetfromPersona(people);
         this.notifyOutputChanged();
     };
 

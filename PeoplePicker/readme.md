@@ -92,7 +92,7 @@ Step 2) Setup the Suggestions_Items Property by specifying this UserCollection.
 UserCollection
 ```
 
-Note : In Step 1, we are making a consecutive request to get UserPhoto. This leads to increase in time of fetching the results. If you want to decrease the fetching time and can compromise on not showing the profile images, then use the below code instead of UserCollection & Skip Step 1) altogether.
+Note : In Step 1, we are making a consequentive request to get UserPhoto. This leads to increase in time of fetching the results. If you want to decrease the fetching time and can compromise on not showing the profile images, then use the below code instead of UserCollection & Skip Step 1) altogether.
 
 ```Power Fx
 Office365Users.SearchUser({searchTerm:Self.SearchText,top:500})
@@ -117,7 +117,7 @@ PeoplePicker1.SelectedPeople
 
 Step 1) Setup the Suggestions_Items Property by specifying the below code snippet.
 
-Add Users or specific users(using below code) from table to the items collection(under Suggestions_Items peroperty) of peoplepicker.
+Add Users or specific users(using below code) from table to the items collection of facepile.
 
 ### For AAD Users table
 
