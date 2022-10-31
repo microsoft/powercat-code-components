@@ -69,7 +69,6 @@ export class MockWholeNumberProperty implements ComponentFramework.PropertyTypes
     type: string;
 }
 
-
 export class MockDecimalNumberProperty implements ComponentFramework.PropertyTypes.DecimalNumberProperty {
     constructor(raw?: number | null, formatted?: string | undefined) {
         this.raw = raw ?? null;

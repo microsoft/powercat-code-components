@@ -1,14 +1,12 @@
-import * as React from "react";
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { SearchBoxComponent } from "./components/SearchBox";
-import { ISearchBoxComponentProps } from "./components/Component.types";
+import * as React from 'react';
+import { IInputs, IOutputs } from './generated/ManifestTypes';
+import { SearchBoxComponent } from './components/SearchBox';
+import { ISearchBoxComponentProps } from './components/Component.types';
 
 export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
     notifyOutputChanged: () => void;
     searchTextValue: string | null;
-
-    constructor() { }
 
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -17,7 +15,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
      */
-    public init( context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
+    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
         this.notifyOutputChanged = notifyOutputChanged;
     }
 
@@ -26,15 +24,18 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-
         const props: ISearchBoxComponentProps = {
             onChanged: this.onChange,
             themeJSON: context.parameters.Theme.raw ?? '',
-            ariaLabel: context.parameters?.AccessibilityLabel.raw ?? ''
+            ariaLabel: context.parameters?.AccessibilityLabel.raw ?? '',
+            underLined: context.parameters.Underlined.raw ?? false,
+            iconName: context.parameters.IconName.raw ?? '',
+            placeholderText: context.parameters.PlaceHolderText.raw ?? '',
+            disabled: context.mode.isControlDisabled,
+            disableAnimation: context.parameters.DisableAnimation.raw ?? false,
         };
 
-        return React.createElement(SearchBoxComponent,
-             props);
+        return React.createElement(SearchBoxComponent, props);
     }
 
     /**
@@ -44,15 +45,15 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
     private onChange = (newValue: string | undefined): void => {
         this.searchTextValue = newValue ?? null;
         this.notifyOutputChanged();
-    }
+    };
 
     /**
      * It is called by the framework prior to a control receiving new data.
      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
      */
     public getOutputs(): IOutputs {
-        return { 
-            SearchText: this.searchTextValue 
+        return {
+            SearchText: this.searchTextValue,
         } as IOutputs;
     }
 
@@ -60,5 +61,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * Called when the control is to be removed from the DOM tree. Controls should use this call for cleanup.
      * i.e. cancelling any pending remote calls, removing listeners, etc.
      */
-    public destroy(): void {}
+    public destroy(): void {
+        // Add code to cleanup control if necessary
+    }
 }

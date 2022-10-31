@@ -1,124 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchBox renders 1`] = `
-<Memo(SearchBoxBase)
+<Memo(SearchBoxComponent)
   ariaLabel=""
+  disableAnimation={false}
+  disabled={false}
+  iconName=""
   onChanged={[Function]}
+  placeholderText=""
   themeJSON=""
+  underLined={false}
 />
-`;
-
-exports[`SearchBox test type of Indicator 1`] = `
-<div
-  className=
-
-      {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-        background: #ffffff;
-        color: #323130;
-        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-      }
->
-  <div
-    className=
-        ms-SearchBox
-        {
-          -moz-osx-font-smoothing: grayscale;
-          -webkit-font-smoothing: antialiased;
-          font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-          font-size: 14px;
-          font-weight: 400;
-          width: -1px;
-        }
-  >
-    <div
-      className=
-          ms-SearchBox-itemName
-          {
-            color: #323130;
-            line-height: 20px;
-            overflow: hidden;
-            padding-top: 4px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-      id="progress-indicator3-label"
-    >
-      Example Label
-    </div>
-    <div
-      className=
-          ms-SearchBox-itemProgress
-          {
-            height: 2px;
-            overflow: hidden;
-            padding-bottom: 8px;
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 8px;
-            position: relative;
-          }
-    >
-      <div
-        className=
-            ms-SearchBox-progressTrack
-            {
-              background-color: #edebe9;
-              height: 2px;
-              position: absolute;
-              width: 100%;
-            }
-            @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
-              border-bottom: 1px solid WindowText;
-            }
-      />
-      <div
-        aria-describedby="progress-indicator3-description"
-        aria-labelledby="progress-indicator3-label"
-        className=
-            ms-SearchBox-progressBar
-            {
-              animation: keyframes 0%{left:-30%;}100%{left:100%;} 3s infinite;
-              background-color: #0078d4;
-              background: linear-gradient(to right, #edebe9 0%, #0078d4 50%, #edebe9 100%);
-              height: 2px;
-              min-width: 33%;
-              position: absolute;
-              transition: width .3s ease;
-              width: 0px;
-            }
-            @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
-              -ms-high-contrast-adjust: none;
-              background-color: highlight;
-              background: highlight;
-              forced-color-adjust: none;
-            }
-        role="progressbar"
-        style={
-          Object {
-            "transition": undefined,
-            "width": undefined,
-          }
-        }
-      />
-    </div>
-    <div
-      className=
-          ms-SearchBox-itemDescription
-          {
-            color: #605e5c;
-            font-size: 12px;
-            line-height: 18px;
-          }
-      id="progress-indicator3-description"
-    >
-      Example Description
-    </div>
-  </div>
-</div>
 `;
 
 exports[`SearchBox theme 1`] = `
@@ -141,95 +33,127 @@ exports[`SearchBox theme 1`] = `
         {
           -moz-osx-font-smoothing: grayscale;
           -webkit-font-smoothing: antialiased;
+          align-items: stretch;
+          background-color: #ffffff;
+          border-radius: 2px;
+          border: 1px solid #605e5c;
+          box-shadow: none;
+          box-sizing: border-box;
+          color: #323130;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
           font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
           font-size: 14px;
           font-weight: 400;
-          width: -1px;
+          height: 32px;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 1px;
+          padding-left: 4px;
+          padding-right: 0;
+          padding-top: 1px;
         }
+        @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+          border-color: WindowText;
+        }
+        &:hover {
+          border-color: #323130;
+        }
+        @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
+          border-color: Highlight;
+        }
+        &:hover .ms-SearchBox-iconContainer {
+          color: #005a9e;
+        }
+    onFocusCapture={[Function]}
   >
     <div
+      aria-hidden={true}
       className=
-          ms-SearchBox-itemName
+          ms-SearchBox-iconContainer
           {
+            color: #0078d4;
+            cursor: text;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            font-size: 16px;
+            justify-content: center;
+            text-align: center;
+            transition: width 0.167s;
+            width: 32px;
+          }
+      onClick={[Function]}
+    >
+      <i
+        aria-hidden={true}
+        className=
+            ms-Icon-placeHolder
+            ms-SearchBox-icon
+            {
+              display: inline-block;
+              opacity: 1;
+              transition: opacity 0.167s 0s;
+              width: 1em;
+            }
+        data-icon-name=""
+      />
+    </div>
+    <input
+      aria-label=""
+      className=
+          ms-SearchBox-field
+          {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            box-sizing: border-box;
             color: #323130;
-            line-height: 20px;
+            flex: 1 1 0px;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            min-width: 0px;
+            outline: none;
             overflow: hidden;
-            padding-top: 4px;
+            padding-bottom: 0.5px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
             text-overflow: ellipsis;
-            white-space: nowrap;
           }
-      id="progress-indicator2-label"
-    >
-      Example Label
-    </div>
-    <div
-      className=
-          ms-SearchBox-itemProgress
-          {
-            height: 2px;
-            overflow: hidden;
-            padding-bottom: 8px;
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 8px;
-            position: relative;
-          }
-    >
-      <div
-        className=
-            ms-SearchBox-progressTrack
-            {
-              background-color: #edebe9;
-              height: 2px;
-              position: absolute;
-              width: 100%;
-            }
-            @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
-              border-bottom: 1px solid WindowText;
-            }
-      />
-      <div
-        aria-describedby="progress-indicator2-description"
-        aria-labelledby="progress-indicator2-label"
-        className=
-            ms-SearchBox-progressBar
-            {
-              animation: keyframes 0%{left:-30%;}100%{left:100%;} 3s infinite;
-              background-color: #test-primary;
-              background: linear-gradient(to right, #edebe9 0%, #test-primary 50%, #edebe9 100%);
-              height: 2px;
-              min-width: 33%;
-              position: absolute;
-              transition: width .3s ease;
-              width: 0px;
-            }
-            @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
-              -ms-high-contrast-adjust: none;
-              background-color: highlight;
-              background: highlight;
-              forced-color-adjust: none;
-            }
-        role="progressbar"
-        style={
-          Object {
-            "transition": undefined,
-            "width": undefined,
-          }
-        }
-      />
-    </div>
-    <div
-      className=
-          ms-SearchBox-itemDescription
-          {
+          &::placeholder {
             color: #605e5c;
-            font-size: 12px;
-            line-height: 18px;
+            opacity: 1;
           }
-      id="progress-indicator2-description"
-    >
-      Example Description
-    </div>
+          &:-ms-input-placeholder {
+            color: #605e5c;
+            opacity: 1;
+          }
+          &::-ms-input-placeholder {
+            color: #605e5c;
+            opacity: 1;
+          }
+          &::-ms-clear {
+            display: none;
+          }
+      disabled={false}
+      id="SearchBox2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onInput={[Function]}
+      onKeyDown={[Function]}
+      placeholder=""
+      role="searchbox"
+      value=""
+    />
   </div>
 </div>
 `;

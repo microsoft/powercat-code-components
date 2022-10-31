@@ -24,7 +24,7 @@ describe('SearchBox', () => {
 
     it('renders', () => {
         const { component, context, notifyOutputChanged } = createComponent();
-        component.init(context,notifyOutputChanged);
+        component.init(context, notifyOutputChanged);
         const element = component.updateView(context);
         expect(element).toMatchSnapshot();
     });
@@ -37,7 +37,7 @@ describe('SearchBox', () => {
             },
         });
 
-        component.init(context,notifyOutputChanged);
+        component.init(context, notifyOutputChanged);
         const personaComponent = renderer.create(component.updateView(context));
         expect(personaComponent.toJSON()).toMatchSnapshot();
     });

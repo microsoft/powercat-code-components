@@ -1,11 +1,15 @@
 /* istanbul ignore file */
 
 import { IInputs } from '../generated/ManifestTypes';
-import { MockEnumProperty, MockStringProperty, MockWholeNumberProperty, MockDecimalNumberProperty, MockTwoOptionsProperty } from './mock-context';
+import { MockStringProperty, MockTwoOptionsProperty } from './mock-context';
 
 export function getMockParameters(): IInputs {
     return {
         Theme: new MockStringProperty(),
-        AccessibilityLabel: new MockStringProperty()
+        AccessibilityLabel: new MockStringProperty(),
+        Underlined: new MockTwoOptionsProperty(),
+        PlaceHolderText: new MockStringProperty(),
+        IconName: new MockStringProperty(),
+        DisableAnimation: new MockTwoOptionsProperty(),
     };
 }

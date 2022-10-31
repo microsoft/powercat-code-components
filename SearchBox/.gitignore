@@ -6,6 +6,9 @@
 # generated directory
 **/generated
 
+# coverage directory
+/coverage
+
 # output directory
 /out
 
