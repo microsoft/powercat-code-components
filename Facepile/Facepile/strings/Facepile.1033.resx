@@ -134,7 +134,7 @@
         <value>Max Displayable Personas</value>
     </data>
     <data name="PersonaSize" xml:space="preserve">
-        <value>Event Name</value>
+        <value>Persona Size</value>
     </data>
     <data name="OverflowButtonType" xml:space="preserve">
         <value>OverflowButton Type</value>
