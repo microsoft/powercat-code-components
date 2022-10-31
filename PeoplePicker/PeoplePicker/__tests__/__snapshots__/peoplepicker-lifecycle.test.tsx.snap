@@ -1,0 +1,1401 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeoplePicker renders 1`] = `
+<div
+  className=
+      PowerCATPeoplepicker
+      {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background: #ffffff;
+        color: #323130;
+        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+      }
+  style={
+    Object {
+      "height": "fit-content",
+      "width": -1,
+    }
+  }
+>
+  <div
+    className="ms-BasePicker ms-PeoplePicker"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+  >
+    <div
+      aria-live="assertive"
+      className=
+
+          {
+            border: 0px;
+            height: 1px;
+            margin-bottom: -1px;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-top: -1px;
+            overflow: hidden;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+          }
+      id="selected-suggestion-alert-id__1"
+    >
+      
+    </div>
+    <span
+      hidden={true}
+      id="selected-items-id__1-label"
+    >
+      
+    </span>
+    <div
+      className="ms-SelectionZone"
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDoubleClick={[Function]}
+      onFocusCapture={[Function]}
+      onKeyDown={[Function]}
+      onKeyDownCapture={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      role="presentation"
+    >
+      <div
+        aria-owns=""
+        className=
+            ms-BasePicker-text
+            {
+              align-items: center;
+              border-radius: 2px;
+              border: 1px solid #605e5c;
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              min-height: 30px;
+              min-width: 180px;
+              position: relative;
+            }
+            &:hover {
+              border-color: #323130;
+            }
+      >
+        <input
+          aria-autocomplete="both"
+          aria-controls=""
+          aria-expanded={false}
+          aria-haspopup="listbox"
+          aria-label=""
+          autoCapitalize="off"
+          autoComplete="off"
+          className=
+              ms-BasePicker-input
+              {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                align-self: flex-end;
+                background-color: transparent;
+                border-radius: 2px;
+                border: none;
+                color: #323130;
+                flex-grow: 1;
+                font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                height: 30px;
+                outline: none;
+                padding-bottom: 0;
+                padding-left: 6px;
+                padding-right: 6px;
+                padding-top: 0;
+              }
+              &::-ms-clear {
+                display: none;
+              }
+          data-lpignore={true}
+          disabled={false}
+          id="combobox-id__1"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onCompositionUpdate={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          role="combobox"
+          spellCheck={false}
+          style={
+            Object {
+              "fontFamily": "inherit",
+            }
+          }
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PeoplePicker renders with simple personas 1`] = `
+<div
+  className=
+      PowerCATPeoplepicker
+      {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background: #ffffff;
+        color: #323130;
+        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+      }
+  style={
+    Object {
+      "height": "fit-content",
+      "width": -1,
+    }
+  }
+>
+  <div
+    className="ms-BasePicker ms-PeoplePicker"
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+  >
+    <div
+      aria-live="assertive"
+      className=
+
+          {
+            border: 0px;
+            height: 1px;
+            margin-bottom: -1px;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-top: -1px;
+            overflow: hidden;
+            padding-bottom: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+          }
+      id="selected-suggestion-alert-id__21"
+    >
+      
+    </div>
+    <span
+      hidden={true}
+      id="selected-items-id__21-label"
+    >
+      
+    </span>
+    <div
+      className="ms-SelectionZone"
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDoubleClick={[Function]}
+      onFocusCapture={[Function]}
+      onKeyDown={[Function]}
+      onKeyDownCapture={[Function]}
+      onMouseDown={[Function]}
+      onMouseDownCapture={[Function]}
+      role="presentation"
+    >
+      <div
+        aria-owns=""
+        className=
+            ms-BasePicker-text
+            {
+              align-items: center;
+              border-radius: 2px;
+              border: 1px solid #605e5c;
+              box-sizing: border-box;
+              display: flex;
+              flex-wrap: wrap;
+              min-height: 30px;
+              min-width: 180px;
+              position: relative;
+            }
+            &:hover {
+              border-color: #323130;
+            }
+      >
+        <span
+          aria-labelledby="selected-items-id__21-label"
+          className=
+              ms-BasePicker-itemsWrapper
+              {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 100%;
+              }
+          id="selected-items-id__21"
+          role="list"
+        >
+          <div
+            className=
+                ms-PickerPersona-container
+                {
+                  align-items: center;
+                  background: #f3f2f1;
+                  border-radius: 15px;
+                  cursor: default;
+                  display: inline-flex;
+                  margin-bottom: 1px;
+                  margin-left: 2px;
+                  margin-right: 2px;
+                  margin-top: 1px;
+                  max-width: 300px;
+                  min-width: 0px;
+                  outline: transparent;
+                  position: relative;
+                  user-select: none;
+                  vertical-align: middle;
+                }
+                &::-moz-focus-inner {
+                  border: 0;
+                }
+                .ms-Fabric--isFocusVisible &:focus:after {
+                  border: 1px solid #ffffff;
+                  bottom: -1px;
+                  content: "";
+                  left: -1px;
+                  outline: 1px solid #605e5c;
+                  position: absolute;
+                  right: -1px;
+                  top: -1px;
+                  z-index: 1;
+                }
+                &:hover {
+                  background: #edebe9;
+                }
+                @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                  border: 1px solid WindowText;
+                }
+            role="listitem"
+          >
+            <div
+              className=
+                  ms-PickerItem-content
+                  {
+                    flex: 0 1 auto;
+                    max-width: 100%;
+                    min-width: 0px;
+                    overflow: hidden;
+                  }
+              id="selectedItemPersona-id__40"
+            >
+              <div
+                className=
+                    ms-Persona
+                    ms-Persona--size24
+                    {
+                      -moz-osx-font-smoothing: grayscale;
+                      -webkit-font-smoothing: antialiased;
+                      align-items: center;
+                      box-shadow: none;
+                      box-sizing: border-box;
+                      color: #323130;
+                      display: flex;
+                      font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                      font-size: 14px;
+                      font-weight: 400;
+                      height: 24px;
+                      margin-bottom: 0px;
+                      margin-left: 0px;
+                      margin-right: 0px;
+                      margin-top: 0px;
+                      min-width: 24px;
+                      padding-bottom: 0px;
+                      padding-left: 0px;
+                      padding-right: 0px;
+                      padding-top: 0px;
+                      position: relative;
+                    }
+                    & .contextualHost {
+                      display: none;
+                    }
+              >
+                <div
+                  className=
+                      ms-Persona-coin
+                      ms-Persona--size24
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                      }
+                  role="presentation"
+                >
+                  <div
+                    className=
+                        ms-Persona-imageArea
+                        {
+                          flex: 0 0 auto;
+                          height: 24px;
+                          position: relative;
+                          text-align: center;
+                          width: 24px;
+                        }
+                    role="presentation"
+                  >
+                    <div
+                      aria-hidden="true"
+                      className=
+                          ms-Persona-initials
+                          {
+                            background-color: #8764B8;
+                            border-radius: 50%;
+                            color: #ffffff;
+                            font-size: 10px;
+                            font-weight: 600;
+                            height: 24px;
+                            line-height: 24px;
+                          }
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                            -ms-high-contrast-adjust: none;
+                            background-color: Window !important;
+                            border: 1px solid WindowText;
+                            box-sizing: border-box;
+                            color: WindowText;
+                            forced-color-adjust: none;
+                          }
+                          & i {
+                            font-weight: 600;
+                          }
+                    >
+                      <span>
+                        JD
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className=
+                      ms-Persona-details
+                      {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        min-width: 0px;
+                        padding-bottom: 0;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        padding-top: 0;
+                        text-align: left;
+                        width: 100%;
+                      }
+                >
+                  <div
+                    className=
+                        ms-Persona-primaryText
+                        {
+                          color: #323130;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                        &:hover {
+                          color: #201f1e;
+                        }
+                    dir="auto"
+                  >
+                    <div
+                      className=
+                          ms-TooltipHost
+                          {
+                            display: inline;
+                          }
+                      onBlurCapture={[Function]}
+                      onFocusCapture={[Function]}
+                      onKeyDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      role="none"
+                    >
+                      John Doe
+                    </div>
+                  </div>
+                  <div
+                    className=
+                        ms-Persona-secondaryText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 12px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  >
+                    <div
+                      className=
+                          ms-TooltipHost
+                          {
+                            display: inline;
+                          }
+                      onBlurCapture={[Function]}
+                      onFocusCapture={[Function]}
+                      onKeyDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      role="none"
+                    >
+                      John.Doe@Contoso.com
+                    </div>
+                  </div>
+                  <div
+                    className=
+                        ms-Persona-tertiaryText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  />
+                  <div
+                    className=
+                        ms-Persona-optionalText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  />
+                </div>
+              </div>
+            </div>
+            <button
+              aria-labelledby="id__40 selectedItemPersona-id__40"
+              className=
+                  ms-Button
+                  ms-Button--icon
+                  ms-PickerItem-removeButton
+                  {
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    background-color: transparent;
+                    border-radius: 15px;
+                    border: none;
+                    box-sizing: border-box;
+                    color: #323130;
+                    cursor: pointer;
+                    display: inline-block;
+                    flex: 0 0 auto;
+                    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    height: 24px;
+                    outline: transparent;
+                    padding-bottom: 0;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    padding-top: 0;
+                    position: relative;
+                    text-align: center;
+                    text-decoration: none;
+                    user-select: none;
+                    width: 24px;
+                  }
+                  &::-moz-focus-inner {
+                    border: 0;
+                  }
+                  .ms-Fabric--isFocusVisible &:focus:after {
+                    border: 1px solid transparent;
+                    bottom: 2px;
+                    content: "";
+                    left: 2px;
+                    outline: 1px solid #605e5c;
+                    position: absolute;
+                    right: 2px;
+                    top: 2px;
+                    z-index: 1;
+                  }
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                    bottom: -2px;
+                    left: -2px;
+                    outline-color: ButtonText;
+                    right: -2px;
+                    top: -2px;
+                  }
+                  &:active > * {
+                    left: 0px;
+                    position: relative;
+                    top: 0px;
+                  }
+                  &:hover {
+                    background-color: #f3f2f1;
+                    background: #c8c6c4;
+                    color: #201f1e;
+                  }
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
+                    border-color: Highlight;
+                    color: Highlight;
+                  }
+                  &:active {
+                    background-color: #edebe9;
+                    color: #005a9e;
+                  }
+              data-is-focusable={true}
+              data-selection-index={0}
+              id="id__40"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              type="button"
+            >
+              <span
+                className=
+                    ms-Button-flexContainer
+                    {
+                      align-items: center;
+                      display: flex;
+                      flex-wrap: nowrap;
+                      height: 100%;
+                      justify-content: center;
+                    }
+                data-automationid="splitbuttonprimary"
+              >
+                <i
+                  aria-hidden={true}
+                  className=
+                      ms-Button-icon
+                      {
+                        display: inline-block;
+                        flex-shrink: 0;
+                        font-size: 12px;
+                        height: 16px;
+                        line-height: 16px;
+                        margin-bottom: 0;
+                        margin-left: 4px;
+                        margin-right: 4px;
+                        margin-top: 0;
+                        text-align: center;
+                      }
+                  data-icon-name="Cancel"
+                />
+              </span>
+            </button>
+          </div>
+          <div
+            className=
+                ms-PickerPersona-container
+                {
+                  align-items: center;
+                  background: #f3f2f1;
+                  border-radius: 15px;
+                  cursor: default;
+                  display: inline-flex;
+                  margin-bottom: 1px;
+                  margin-left: 2px;
+                  margin-right: 2px;
+                  margin-top: 1px;
+                  max-width: 300px;
+                  min-width: 0px;
+                  outline: transparent;
+                  position: relative;
+                  user-select: none;
+                  vertical-align: middle;
+                }
+                &::-moz-focus-inner {
+                  border: 0;
+                }
+                .ms-Fabric--isFocusVisible &:focus:after {
+                  border: 1px solid #ffffff;
+                  bottom: -1px;
+                  content: "";
+                  left: -1px;
+                  outline: 1px solid #605e5c;
+                  position: absolute;
+                  right: -1px;
+                  top: -1px;
+                  z-index: 1;
+                }
+                &:hover {
+                  background: #edebe9;
+                }
+                @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                  border: 1px solid WindowText;
+                }
+            role="listitem"
+          >
+            <div
+              className=
+                  ms-PickerItem-content
+                  {
+                    flex: 0 1 auto;
+                    max-width: 100%;
+                    min-width: 0px;
+                    overflow: hidden;
+                  }
+              id="selectedItemPersona-id__41"
+            >
+              <div
+                className=
+                    ms-Persona
+                    ms-Persona--size24
+                    {
+                      -moz-osx-font-smoothing: grayscale;
+                      -webkit-font-smoothing: antialiased;
+                      align-items: center;
+                      box-shadow: none;
+                      box-sizing: border-box;
+                      color: #323130;
+                      display: flex;
+                      font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                      font-size: 14px;
+                      font-weight: 400;
+                      height: 24px;
+                      margin-bottom: 0px;
+                      margin-left: 0px;
+                      margin-right: 0px;
+                      margin-top: 0px;
+                      min-width: 24px;
+                      padding-bottom: 0px;
+                      padding-left: 0px;
+                      padding-right: 0px;
+                      padding-top: 0px;
+                      position: relative;
+                    }
+                    & .contextualHost {
+                      display: none;
+                    }
+              >
+                <div
+                  className=
+                      ms-Persona-coin
+                      ms-Persona--size24
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                      }
+                  role="presentation"
+                >
+                  <div
+                    className=
+                        ms-Persona-imageArea
+                        {
+                          flex: 0 0 auto;
+                          height: 24px;
+                          position: relative;
+                          text-align: center;
+                          width: 24px;
+                        }
+                    role="presentation"
+                  >
+                    <div
+                      aria-hidden="true"
+                      className=
+                          ms-Persona-initials
+                          {
+                            background-color: #7A7574;
+                            border-radius: 50%;
+                            color: #ffffff;
+                            font-size: 10px;
+                            font-weight: 600;
+                            height: 24px;
+                            line-height: 24px;
+                          }
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                            -ms-high-contrast-adjust: none;
+                            background-color: Window !important;
+                            border: 1px solid WindowText;
+                            box-sizing: border-box;
+                            color: WindowText;
+                            forced-color-adjust: none;
+                          }
+                          & i {
+                            font-weight: 600;
+                          }
+                    >
+                      <span>
+                        MB
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className=
+                      ms-Persona-details
+                      {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        min-width: 0px;
+                        padding-bottom: 0;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        padding-top: 0;
+                        text-align: left;
+                        width: 100%;
+                      }
+                >
+                  <div
+                    className=
+                        ms-Persona-primaryText
+                        {
+                          color: #323130;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                        &:hover {
+                          color: #201f1e;
+                        }
+                    dir="auto"
+                  >
+                    <div
+                      className=
+                          ms-TooltipHost
+                          {
+                            display: inline;
+                          }
+                      onBlurCapture={[Function]}
+                      onFocusCapture={[Function]}
+                      onKeyDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      role="none"
+                    >
+                      Megan Bowen
+                    </div>
+                  </div>
+                  <div
+                    className=
+                        ms-Persona-secondaryText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 12px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  >
+                    <div
+                      className=
+                          ms-TooltipHost
+                          {
+                            display: inline;
+                          }
+                      onBlurCapture={[Function]}
+                      onFocusCapture={[Function]}
+                      onKeyDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      role="none"
+                    >
+                      Megan.Bowen@Contoso.com
+                    </div>
+                  </div>
+                  <div
+                    className=
+                        ms-Persona-tertiaryText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  />
+                  <div
+                    className=
+                        ms-Persona-optionalText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  />
+                </div>
+              </div>
+            </div>
+            <button
+              aria-labelledby="id__41 selectedItemPersona-id__41"
+              className=
+                  ms-Button
+                  ms-Button--icon
+                  ms-PickerItem-removeButton
+                  {
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    background-color: transparent;
+                    border-radius: 15px;
+                    border: none;
+                    box-sizing: border-box;
+                    color: #323130;
+                    cursor: pointer;
+                    display: inline-block;
+                    flex: 0 0 auto;
+                    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    height: 24px;
+                    outline: transparent;
+                    padding-bottom: 0;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    padding-top: 0;
+                    position: relative;
+                    text-align: center;
+                    text-decoration: none;
+                    user-select: none;
+                    width: 24px;
+                  }
+                  &::-moz-focus-inner {
+                    border: 0;
+                  }
+                  .ms-Fabric--isFocusVisible &:focus:after {
+                    border: 1px solid transparent;
+                    bottom: 2px;
+                    content: "";
+                    left: 2px;
+                    outline: 1px solid #605e5c;
+                    position: absolute;
+                    right: 2px;
+                    top: 2px;
+                    z-index: 1;
+                  }
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                    bottom: -2px;
+                    left: -2px;
+                    outline-color: ButtonText;
+                    right: -2px;
+                    top: -2px;
+                  }
+                  &:active > * {
+                    left: 0px;
+                    position: relative;
+                    top: 0px;
+                  }
+                  &:hover {
+                    background-color: #f3f2f1;
+                    background: #c8c6c4;
+                    color: #201f1e;
+                  }
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
+                    border-color: Highlight;
+                    color: Highlight;
+                  }
+                  &:active {
+                    background-color: #edebe9;
+                    color: #005a9e;
+                  }
+              data-is-focusable={true}
+              data-selection-index={1}
+              id="id__41"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              type="button"
+            >
+              <span
+                className=
+                    ms-Button-flexContainer
+                    {
+                      align-items: center;
+                      display: flex;
+                      flex-wrap: nowrap;
+                      height: 100%;
+                      justify-content: center;
+                    }
+                data-automationid="splitbuttonprimary"
+              >
+                <i
+                  aria-hidden={true}
+                  className=
+                      ms-Button-icon
+                      {
+                        display: inline-block;
+                        flex-shrink: 0;
+                        font-size: 12px;
+                        height: 16px;
+                        line-height: 16px;
+                        margin-bottom: 0;
+                        margin-left: 4px;
+                        margin-right: 4px;
+                        margin-top: 0;
+                        text-align: center;
+                      }
+                  data-icon-name="Cancel"
+                />
+              </span>
+            </button>
+          </div>
+          <div
+            className=
+                ms-PickerPersona-container
+                {
+                  align-items: center;
+                  background: #f3f2f1;
+                  border-radius: 15px;
+                  cursor: default;
+                  display: inline-flex;
+                  margin-bottom: 1px;
+                  margin-left: 2px;
+                  margin-right: 2px;
+                  margin-top: 1px;
+                  max-width: 300px;
+                  min-width: 0px;
+                  outline: transparent;
+                  position: relative;
+                  user-select: none;
+                  vertical-align: middle;
+                }
+                &::-moz-focus-inner {
+                  border: 0;
+                }
+                .ms-Fabric--isFocusVisible &:focus:after {
+                  border: 1px solid #ffffff;
+                  bottom: -1px;
+                  content: "";
+                  left: -1px;
+                  outline: 1px solid #605e5c;
+                  position: absolute;
+                  right: -1px;
+                  top: -1px;
+                  z-index: 1;
+                }
+                &:hover {
+                  background: #edebe9;
+                }
+                @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                  border: 1px solid WindowText;
+                }
+            role="listitem"
+          >
+            <div
+              className=
+                  ms-PickerItem-content
+                  {
+                    flex: 0 1 auto;
+                    max-width: 100%;
+                    min-width: 0px;
+                    overflow: hidden;
+                  }
+              id="selectedItemPersona-id__42"
+            >
+              <div
+                className=
+                    ms-Persona
+                    ms-Persona--size24
+                    {
+                      -moz-osx-font-smoothing: grayscale;
+                      -webkit-font-smoothing: antialiased;
+                      align-items: center;
+                      box-shadow: none;
+                      box-sizing: border-box;
+                      color: #323130;
+                      display: flex;
+                      font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                      font-size: 14px;
+                      font-weight: 400;
+                      height: 24px;
+                      margin-bottom: 0px;
+                      margin-left: 0px;
+                      margin-right: 0px;
+                      margin-top: 0px;
+                      min-width: 24px;
+                      padding-bottom: 0px;
+                      padding-left: 0px;
+                      padding-right: 0px;
+                      padding-top: 0px;
+                      position: relative;
+                    }
+                    & .contextualHost {
+                      display: none;
+                    }
+              >
+                <div
+                  className=
+                      ms-Persona-coin
+                      ms-Persona--size24
+                      {
+                        -moz-osx-font-smoothing: grayscale;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                        font-size: 14px;
+                        font-weight: 400;
+                      }
+                  role="presentation"
+                >
+                  <div
+                    className=
+                        ms-Persona-imageArea
+                        {
+                          flex: 0 0 auto;
+                          height: 24px;
+                          position: relative;
+                          text-align: center;
+                          width: 24px;
+                        }
+                    role="presentation"
+                  >
+                    <div
+                      aria-hidden="true"
+                      className=
+                          ms-Persona-initials
+                          {
+                            background-color: #CA5010;
+                            border-radius: 50%;
+                            color: #ffffff;
+                            font-size: 10px;
+                            font-weight: 600;
+                            height: 24px;
+                            line-height: 24px;
+                          }
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                            -ms-high-contrast-adjust: none;
+                            background-color: Window !important;
+                            border: 1px solid WindowText;
+                            box-sizing: border-box;
+                            color: WindowText;
+                            forced-color-adjust: none;
+                          }
+                          & i {
+                            font-weight: 600;
+                          }
+                    >
+                      <span>
+                        DS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className=
+                      ms-Persona-details
+                      {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        min-width: 0px;
+                        padding-bottom: 0;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        padding-top: 0;
+                        text-align: left;
+                        width: 100%;
+                      }
+                >
+                  <div
+                    className=
+                        ms-Persona-primaryText
+                        {
+                          color: #323130;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                        &:hover {
+                          color: #201f1e;
+                        }
+                    dir="auto"
+                  >
+                    <div
+                      className=
+                          ms-TooltipHost
+                          {
+                            display: inline;
+                          }
+                      onBlurCapture={[Function]}
+                      onFocusCapture={[Function]}
+                      onKeyDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      role="none"
+                    >
+                      Diego S
+                    </div>
+                  </div>
+                  <div
+                    className=
+                        ms-Persona-secondaryText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 12px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  >
+                    <div
+                      className=
+                          ms-TooltipHost
+                          {
+                            display: inline;
+                          }
+                      onBlurCapture={[Function]}
+                      onFocusCapture={[Function]}
+                      onKeyDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      role="none"
+                    >
+                      Diego.S@Contoso.com
+                    </div>
+                  </div>
+                  <div
+                    className=
+                        ms-Persona-tertiaryText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  />
+                  <div
+                    className=
+                        ms-Persona-optionalText
+                        {
+                          color: #605e5c;
+                          display: none;
+                          font-size: 14px;
+                          font-weight: 400;
+                          overflow: hidden;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                        }
+                    dir="auto"
+                  />
+                </div>
+              </div>
+            </div>
+            <button
+              aria-labelledby="id__42 selectedItemPersona-id__42"
+              className=
+                  ms-Button
+                  ms-Button--icon
+                  ms-PickerItem-removeButton
+                  {
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    background-color: transparent;
+                    border-radius: 15px;
+                    border: none;
+                    box-sizing: border-box;
+                    color: #323130;
+                    cursor: pointer;
+                    display: inline-block;
+                    flex: 0 0 auto;
+                    font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    height: 24px;
+                    outline: transparent;
+                    padding-bottom: 0;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    padding-top: 0;
+                    position: relative;
+                    text-align: center;
+                    text-decoration: none;
+                    user-select: none;
+                    width: 24px;
+                  }
+                  &::-moz-focus-inner {
+                    border: 0;
+                  }
+                  .ms-Fabric--isFocusVisible &:focus:after {
+                    border: 1px solid transparent;
+                    bottom: 2px;
+                    content: "";
+                    left: 2px;
+                    outline: 1px solid #605e5c;
+                    position: absolute;
+                    right: 2px;
+                    top: 2px;
+                    z-index: 1;
+                  }
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                    bottom: -2px;
+                    left: -2px;
+                    outline-color: ButtonText;
+                    right: -2px;
+                    top: -2px;
+                  }
+                  &:active > * {
+                    left: 0px;
+                    position: relative;
+                    top: 0px;
+                  }
+                  &:hover {
+                    background-color: #f3f2f1;
+                    background: #c8c6c4;
+                    color: #201f1e;
+                  }
+                  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
+                    border-color: Highlight;
+                    color: Highlight;
+                  }
+                  &:active {
+                    background-color: #edebe9;
+                    color: #005a9e;
+                  }
+              data-is-focusable={true}
+              data-selection-index={2}
+              id="id__42"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseUp={[Function]}
+              type="button"
+            >
+              <span
+                className=
+                    ms-Button-flexContainer
+                    {
+                      align-items: center;
+                      display: flex;
+                      flex-wrap: nowrap;
+                      height: 100%;
+                      justify-content: center;
+                    }
+                data-automationid="splitbuttonprimary"
+              >
+                <i
+                  aria-hidden={true}
+                  className=
+                      ms-Button-icon
+                      {
+                        display: inline-block;
+                        flex-shrink: 0;
+                        font-size: 12px;
+                        height: 16px;
+                        line-height: 16px;
+                        margin-bottom: 0;
+                        margin-left: 4px;
+                        margin-right: 4px;
+                        margin-top: 0;
+                        text-align: center;
+                      }
+                  data-icon-name="Cancel"
+                />
+              </span>
+            </button>
+          </div>
+        </span>
+        <input
+          aria-autocomplete="both"
+          aria-controls=""
+          aria-describedby="selected-items-id__21"
+          aria-expanded={false}
+          aria-haspopup="listbox"
+          aria-label=""
+          autoCapitalize="off"
+          autoComplete="off"
+          className=
+              ms-BasePicker-input
+              {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                align-self: flex-end;
+                background-color: transparent;
+                border-radius: 2px;
+                border: none;
+                color: #323130;
+                flex-grow: 1;
+                font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                height: 30px;
+                outline: none;
+                padding-bottom: 0;
+                padding-left: 6px;
+                padding-right: 6px;
+                padding-top: 0;
+              }
+              &::-ms-clear {
+                display: none;
+              }
+          data-lpignore={true}
+          disabled={false}
+          id="combobox-id__21"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onCompositionEnd={[Function]}
+          onCompositionStart={[Function]}
+          onCompositionUpdate={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          placeholder=""
+          role="combobox"
+          spellCheck={false}
+          style={
+            Object {
+              "fontFamily": "inherit",
+            }
+          }
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
