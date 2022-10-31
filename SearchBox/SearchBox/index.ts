@@ -1,7 +1,7 @@
 import * as React from "react";
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import { SearchBoxComponent } from "./components/SearchBox";
-import { ISearchBoxComponentProps } from "./components/SearchBox.types";
+import { ISearchBoxComponentProps } from "./components/Component.types";
 
 export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;

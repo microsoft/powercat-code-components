@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { memo } from "react";
 import {
   SearchBox,
   createTheme,
   IPartialTheme,
   ThemeProvider
 } from '@fluentui/react';
-import { memo } from "react";
-import { ISearchBoxComponentProps } from './SearchBox.types';
+import { ISearchBoxComponentProps } from './Component.types';
 
 const SearchBoxBase = ((props: ISearchBoxComponentProps) => {
   const {
