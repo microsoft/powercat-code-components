@@ -113,6 +113,41 @@ At this point, the people picker should be working, and the selected members can
 PeoplePicker1.SelectedPeople
 ```
 
+### People Picker with Pre-Selected Members
+
+To have pre-selected members, use the following example code for reference to generate *PreSelectedUserCollection* Collection & add it in the Items Property.
+
+For best results, make sure to have the collection created before the component(People Picker) is loaded.
+
+```Power Fx
+ClearCollect(
+    PreSelectedUserCollection,
+    AddColumns(
+       // Get first 5 users who have email ID - optional
+        Filter(
+            Office365Users.SearchUser({top: 5}),
+            Mail <> Blank()
+        ),
+        "PersonaKey",
+        Mail,
+        "PersonaRole",
+        JobTitle,
+        "PersonaName",
+        DisplayName,
+        "PersonaImgUrl",
+        //Get base64 image data
+        Substitute(
+            JSON(
+                Office365Users.UserPhotoV2(Id),
+                JSONFormat.IncludeBinaryData
+            ),
+            """",
+            ""
+        )
+    )
+);
+```
+
 ## With Dataverse tables - AADUsers or Users
 
 Step 1) Setup the Suggestions_Items Property by specifying the below code snippet.
