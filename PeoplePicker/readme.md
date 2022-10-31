@@ -10,12 +10,12 @@ This code component provides a wrapper around the [Fluent UI PeoplePicker](https
 
 The control accepts the following properties:
 
-- **Items** - The Pre-selected Persona(members) to appear on Peoplepicker
+- **Items** - The Pre-selected Persona(members) to appear in the `PeoplePicker`
   - **PersonaName** - Display Name of the Persona.
-  - **PersonaKey** - The key identify the specific Item. The key must be unique.
+  - **PersonaKey** - The key to identify the specific Item. The key must be unique.
   - **PersonaImgUrl** - Url or Base64 Content of Persona Image(Profile Picture).
     - **PersonaRole** - Secondary Text, Preferably JobTitle of the Persona
-  - **PersonaPresence** - Optional - To defined the Presence of the persona. Value should be from one of the followings :
+  - **PersonaPresence** - Optional - To define the Presence of the persona. Value should be from one of the following :
     - away
     - blocked
     - busy
@@ -23,14 +23,14 @@ The control accepts the following properties:
     - none
     - offline
     - online
-  - **PersonaOOF** -  True or False, Based on whether the persona if Out of office or not.
+  - **PersonaOOF** -  True or False, Based on whether the persona if 'Out of Office' or not.
 
 - **Suggestions_Items** - List of Suggested members to pick from. This is a required dataset property
   - **SuggestionName** - Display Name of the Persona.
-  - **SuggestionKey** - The key identify the specific Item. The key must be unique.
+  - **SuggestionKey** - The key to identify the specific Item. The key must be unique.
   - **SuggestionImgUrl** - Url or Base64 Content of Persona Image(Profile Picture).
   - **SuggestionRole** - Secondary Text, Preferably JobTitle of the Persona
-  - **SuggestionPresence** - Optional - To defined the Presence of the persona. Value should be from one of the followings :
+  - **SuggestionPresence** - Optional - To define the Presence of the persona. Value should be from one of the following :
     - away
     - blocked
     - busy
@@ -38,10 +38,10 @@ The control accepts the following properties:
     - none
     - offline
     - online
-  - **SuggestionOOF** -  True or False, Based on whether the persona if Out of office or not.
-  - **PeoplePickerType** - Type of Peoplepicker to be used.
+  - **SuggestionOOF** -  True or False, Based on whether the persona if 'Out of Office' or not.
+  - **PeoplePickerType** - Type of `PeoplePicker` to be used.
   - **MaxPeople** - Maximum number of user(s) to be allowed for selection
-  - **NoResultFoundMesage** - Messgae to be shown if no result are found based on the specified search text.
+  - **NoResultFoundMesage** - Message to be shown if no results are found based on the specified search text.
   - **MinimumSearchTermLength** - Minimum search term length to be entered before providing the suggestions.
   - **SearchTermToShortMessage** - Custom message to be shown when the search text is less than *MinimumSearchTermLength*.
   - **Error** - To highlighting the people picker in red to represent that it has certain error which required validation.
@@ -55,13 +55,13 @@ The control accepts the following properties:
 
 ### Usage
 
-Following are the exmples on how to use the PeoplePicker component.
+Following are the examples on how to use the `PeoplePicker` component.
 
-Note that PeoplePicker completely support other sources from where the input collection can be retrieved.
+Note: The PeoplePicker supports other sources from where the input collection can be retrieved.
 
 ## With Office365Users Connector
 
-Step 1) Setup OnSearch Property. Add the below PowerFx command to create a UserCollection.
+Step 1) Setup OnSearch Property. Add the below Power Fx command to create a UserCollection.
 
 ```Power Fx
 ClearCollect(
@@ -98,7 +98,7 @@ Note : In Step 1, we are making a consequentive request to get UserPhoto. This l
 Office365Users.SearchUser({searchTerm:Self.SearchText,top:500})
 ```
 
-Step 3) Map the Columns according your need. Below is an example of Column-Property Mapping
+Step 3) Map the Columns according to your need. Below is an example of Column-Property Mapping
 
 |Property Name|DataSet Column|
 |--|--|
@@ -107,7 +107,7 @@ Step 3) Map the Columns according your need. Below is an example of Column-Prope
 |SuggestionRole|"JobTitle"|
 |SuggestionImgUrl|"ImageURL"|
 
-At this point, the people picker should be working and the selected members can be obtained from SelectedPeople Property.
+At this point, the people picker should be working, and the selected members can be obtained from SelectedPeople Property.
 
 ```Power Fx
 PeoplePicker1.SelectedPeople
@@ -135,7 +135,7 @@ Search('Users', Self.SearchText,"fullname","internalemailaddress")
 
 ```
 
-Step 2) Map the Columns according your need. Below is an example of Column-Property Mapping
+Step 2) Map the Columns according to your need. Below is an example of Column-Property Mapping
 
 |Property Name|AADUser Table Column|User Table Column|
 |--|--|--|
@@ -143,7 +143,7 @@ Step 2) Map the Columns according your need. Below is an example of Column-Prope
 |SuggestionName|"displayname"|"fullname"|
 |SuggestionRole|"jobtitle"|"jobtitle"|
 
-At this point, the people picker should be working and the selected members can be obtained from SelectedPeople Property.
+At this point, the people picker should be working, and the selected members can be obtained from SelectedPeople Property.
 
 ```Power Fx
 PeoplePicker1.SelectedPeople
