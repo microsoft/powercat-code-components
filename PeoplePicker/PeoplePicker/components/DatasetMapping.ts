@@ -78,7 +78,9 @@ export function getDataSetfromPersona(selectedPeople: IPersonaProps[]): ICustomP
             PersonaName: user.text,
             PersonaImageAlt: user.imageAlt,
             PersonaImgUrl: user.imageUrl,
-            PersonaPresence: user.presence,
+            PersonaPresence: user.presence
+                ? Object.keys(PersonaPresence)[Object.values(PersonaPresence).indexOf(user.presence)]
+                : '',
             PersonaRole: user.secondaryText,
         } as ICustomPersonaProps;
     });
