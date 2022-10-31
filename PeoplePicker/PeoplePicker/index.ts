@@ -46,18 +46,6 @@ export class PeoplePicker implements CustomControl<IInputs, IOutputs> {
         this.context.mode.trackContainerResize(true);
         this.context.parameters.Suggestions.paging.setPageSize(500);
         this.context.parameters.Personas.paging.setPageSize(500);
-
-        //
-        this.context = context;
-
-        const getPreSelectedMember =
-            (this.defaultSelected === undefined && this.context.parameters.Personas.sortedRecordIds.length > 0) ||
-            context.updatedProperties.indexOf(ManifestPropertyNames.dataset) > -1;
-
-        if (getPreSelectedMember) {
-            const selectedpeopleDataset = context.parameters.Personas;
-            this.defaultSelected = getPersonaFromDataset(selectedpeopleDataset);
-        }
     }
 
     onResize = (width: number, height: number): void => {
