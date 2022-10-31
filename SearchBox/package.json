@@ -7,11 +7,16 @@
     "clean": "pcf-scripts clean",
     "rebuild": "pcf-scripts rebuild",
     "start": "pcf-scripts start",
-    "refreshTypes": "pcf-scripts refreshTypes"
+    "refreshTypes": "pcf-scripts refreshTypes",
+    "lint": "eslint SearchBox --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest --collectCoverage"
   },
   "dependencies": {
-    "react": "16.8.6",
     "@fluentui/react": "8.29.0",
+    "@fluentui/utilities": "^8.9.0",
+    "@react-hook/resize-observer": "^1.2.5",
+    "react": "16.8.6",
     "react-dom": "16.8.6"
   },
   "devDependencies": {
