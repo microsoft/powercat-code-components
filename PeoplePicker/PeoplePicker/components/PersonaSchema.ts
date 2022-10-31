@@ -16,7 +16,7 @@ const personaDetails = {
         PersonaImgUrl: { type: 'string', format: 'uri', 'x-ms-media-kind': 'image' },
         PersonaImageAlt: { type: 'string' },
         PersonaRole: { type: 'string' },
-        PersonaPresence: { type: 'number' },
+        PersonaPresence: { type: 'string' },
     },
 };
 

@@ -36,7 +36,7 @@ export interface ICustomPersonaProps {
     PersonaImgUrl?: string;
     PersonaImageAlt?: string;
     PersonaRole?: string;
-    PersonaPresence?: number;
+    PersonaPresence?: string;
 }
 
 export interface IExtendedPersonaProps {
