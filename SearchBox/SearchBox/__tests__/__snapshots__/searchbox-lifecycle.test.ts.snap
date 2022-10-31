@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`SearchBox renders 1`] = `
+<Memo(SearchBoxBase)
+  ariaLabel=""
+  onChanged={[Function]}
+  themeJSON=""
+/>
+`;
+
 exports[`SearchBox test type of Indicator 1`] = `
 <div
   className=

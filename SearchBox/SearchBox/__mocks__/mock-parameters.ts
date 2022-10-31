@@ -6,12 +6,6 @@ import { MockEnumProperty, MockStringProperty, MockWholeNumberProperty, MockDeci
 export function getMockParameters(): IInputs {
     return {
         Theme: new MockStringProperty(),
-        AccessibilityLabel: new MockStringProperty(),
-        Label: new MockStringProperty(),
-        Description: new MockStringProperty(),
-        TypeofIndicator: new MockEnumProperty(),
-        PercentComplete: new MockWholeNumberProperty(),
-        HideProgressBar: new MockTwoOptionsProperty(),
-        BarHeight: new MockWholeNumberProperty()
+        AccessibilityLabel: new MockStringProperty()
     };
 }
