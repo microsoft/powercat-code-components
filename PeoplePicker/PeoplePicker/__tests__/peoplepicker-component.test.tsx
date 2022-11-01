@@ -2,7 +2,7 @@ import { IBasePicker, IPersonaProps } from '@fluentui/react';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as ReactTestUtils from 'react-dom/test-utils';
-import { CanvasPeoplePicker } from '../components/PeoplePicker';
+import { CanvasPeoplePicker } from '../components/Peoplepicker';
 import { CanvasPeoplePickerProps } from '../components/Component.types';
 import { getDataSetFromPersona } from '../components/DatasetMapping';
 
