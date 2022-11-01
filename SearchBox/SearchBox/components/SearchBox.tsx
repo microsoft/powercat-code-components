@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps } from '@fluentui/react';
+import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, mergeStyles } from '@fluentui/react';
 import { ISearchBoxComponentProps } from './Component.types';
 
 export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) => {
@@ -17,9 +17,12 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
     const onChange = (event?: React.ChangeEvent<HTMLInputElement>, newValue?: string): void => {
         onChanged(newValue);
     };
+    const wrapperClass = mergeStyles({
+        width: props.width,
+    });
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme} className={wrapperClass}>
             <SearchBox
                 placeholder={placeholderText}
                 onChange={onChange}
