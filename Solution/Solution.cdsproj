@@ -52,11 +52,14 @@
     <ProjectReference Include="..\Facepile\Facepile.pcfproj" />
     <ProjectReference Include="..\Icon\Icon.pcfproj" />
     <ProjectReference Include="..\Nav\Nav.pcfproj" />
-    <ProjectReference Include="..\Pivot\Pivot.pcfproj" />
     <ProjectReference Include="..\KeyboardShortcuts\keyboard-shortcuts.pcfproj" />
+    <ProjectReference Include="..\Persona\Persona.pcfproj" />
+    <ProjectReference Include="..\PeoplePicker\PeoplePicker.pcfproj" />
     <ProjectReference Include="..\Picker\Picker.pcfproj" />
+    <ProjectReference Include="..\Pivot\Pivot.pcfproj" />
     <ProjectReference Include="..\ProgressIndicator\ProgressIndicator.pcfproj" />
     <ProjectReference Include="..\ResizableTextarea\resizable-textarea.pcfproj" />
+    <ProjectReference Include="..\SearchBox\SearchBox.pcfproj" />
     <ProjectReference Include="..\Shimmer\Shimmer.pcfproj" />
     <ProjectReference Include="..\Spinner\Spinner.pcfproj" />
     <ProjectReference Include="..\TagList\TagList.pcfproj" />
