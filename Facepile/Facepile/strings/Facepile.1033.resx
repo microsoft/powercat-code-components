@@ -134,11 +134,7 @@
         <value>Max Displayable Personas</value>
     </data>
     <data name="PersonaSize" xml:space="preserve">
-<<<<<<< HEAD
         <value>Persona Size</value>
-=======
-        <value>Event Name</value>
->>>>>>> 3574ed17211547f623558827e54e20f9e65dd546
     </data>
     <data name="OverflowButtonType" xml:space="preserve">
         <value>OverflowButton Type</value>
@@ -179,8 +175,4 @@
     <data name="OverflowButtonAriaLabel" xml:space="preserve">
         <value>Overflow Button Aria Label</value>
     </data>
-<<<<<<< HEAD
 </root>
-=======
-</root>
->>>>>>> 3574ed17211547f623558827e54e20f9e65dd546
