@@ -5,11 +5,13 @@ exports[`SearchBox renders 1`] = `
   ariaLabel=""
   disableAnimation={false}
   disabled={false}
+  height={-1}
   iconName=""
   onChanged={[Function]}
   placeholderText=""
   themeJSON=""
   underLined={false}
+  width={-1}
 />
 `;
 
@@ -17,6 +19,9 @@ exports[`SearchBox theme 1`] = `
 <div
   className=
 
+      {
+        width: -1px;
+      }
       {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;

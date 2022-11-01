@@ -16,6 +16,8 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
      */
     public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
+        this.context = context;
+        this.context.mode.trackContainerResize(true);
         this.notifyOutputChanged = notifyOutputChanged;
     }
 
@@ -24,6 +26,8 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
+        const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
+        const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
         const props: ISearchBoxComponentProps = {
             onChanged: this.onChange,
             themeJSON: context.parameters.Theme.raw ?? '',
@@ -33,6 +37,8 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
             placeholderText: context.parameters.PlaceHolderText.raw ?? '',
             disabled: context.mode.isControlDisabled,
             disableAnimation: context.parameters.DisableAnimation.raw ?? false,
+            width: allocatedWidth,
+            height: allocatedHeight,
         };
 
         return React.createElement(SearchBoxComponent, props);
