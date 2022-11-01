@@ -1,4 +1,4 @@
-import { SearchBox } from '..';
+import { Persona } from '..';
 import { IInputs } from '../generated/ManifestTypes';
 import { MockContext, MockState } from '../__mocks__/mock-context';
 import { getMockParameters } from '../__mocks__/mock-parameters';
@@ -11,7 +11,7 @@ window.requestAnimationFrame = jest.fn().mockImplementation((callback) => {
 
 jest.useFakeTimers();
 
-describe('SearchBox', () => {
+describe('Persona', () => {
     beforeEach(() => jest.clearAllMocks());
     afterEach(() => {
         for (let i = 0; i < document.body.children.length; i++) {
@@ -23,32 +23,42 @@ describe('SearchBox', () => {
     });
 
     it('renders', () => {
-        const { component, context, notifyOutputChanged } = createComponent();
-        component.init(context, notifyOutputChanged);
+        const { component, context } = createComponent();
+        component.init(context);
         const element = component.updateView(context);
         expect(element).toMatchSnapshot();
     });
 
     it('theme', async () => {
-        const { component, context, notifyOutputChanged } = createComponent();
+        const { component, context } = createComponent();
         context.parameters.Theme.raw = JSON.stringify({
             palette: {
                 themePrimary: '#0078d4',
             },
         });
 
-        component.init(context, notifyOutputChanged);
+        component.init(context);
         const personaComponent = renderer.create(component.updateView(context));
         expect(personaComponent.toJSON()).toMatchSnapshot();
     });
 });
 
 function createComponent() {
-    const component = new SearchBox();
+    const component = new Persona();
     const context = new MockContext<IInputs>(getMockParameters());
-    const notifyOutputChanged = jest.fn();
+    context.parameters.PersonaSize.raw = '18';
+    context.parameters.ImageUrl.raw =
+        'https://static2.sharepointonline.com/files/fabric/office-ui-fabric-react-assets/persona-female.png';
+    context.parameters.Text.raw = 'Annie Lindqvist';
+    context.parameters.ImageInitials.raw = 'AL';
+    context.parameters.SecondaryText.raw = 'Software Engineer';
+    context.parameters.TertiaryText.raw = 'In a meeting';
+    context.parameters.OptionalText.raw = 'Available at 4:00pm';
+    context.parameters.ImageAlt.raw = 'Annie Lindqvist, status is blocked';
+    context.parameters.Presence.raw = '3';
+    context.parameters.PersonaInitialsColor.raw = 'blue';
     const state = new MockState();
     const container = document.createElement('div');
     document.body.appendChild(container);
-    return { component, context, notifyOutputChanged, container, state };
+    return { component, context, container, state };
 }

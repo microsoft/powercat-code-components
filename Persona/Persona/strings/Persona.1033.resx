@@ -117,8 +117,8 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Facepile" xml:space="preserve">
-        <value>Fluent Facepile (%VERSION%) Preview</value>
+    <data name="Persona" xml:space="preserve">
+        <value>Fluent Persona (%VERSION%) Preview</value>
     </data>
     <data name="AccessibilityLabel" xml:space="preserve">
         <value>Accessibility label</value>
@@ -127,60 +127,40 @@
     <data name="Theme" xml:space="preserve">
         <value>Theme</value>
     </data>
-    <data name="InputEvent" xml:space="preserve">
-        <value>Input event</value>
-    </data>
-    <data name="MaxDisplayablePersonas" xml:space="preserve">
-        <value>Max Displayable Personas</value>
-    </data>
     <data name="PersonaSize" xml:space="preserve">
-<<<<<<< HEAD
         <value>Persona Size</value>
-=======
-        <value>Event Name</value>
->>>>>>> 3574ed17211547f623558827e54e20f9e65dd546
     </data>
-    <data name="OverflowButtonType" xml:space="preserve">
-        <value>OverflowButton Type</value>
+    <data name="Persona_Desc" xml:space="preserve">
+        <value>Persona component</value>
     </data>
-    <data name="Facepile_Desc" xml:space="preserve">
-        <value>Facepile component</value>
+    <data name="Text" xml:space="preserve">
+        <value>Text</value>
     </data>
-    <data name="ImageShouldFadeIn" xml:space="preserve">
-        <value>Image Should FadeIn</value>
+    <data name="ImageUrl" xml:space="preserve">
+        <value>Image Url</value>
     </data>
-    <data name="ItemPersonaName" xml:space="preserve">
-        <value>Persona Name</value>
+    <data name="Presence" xml:space="preserve">
+        <value>Presence</value>
     </data>
-    <data name="ItemPersonaKey" xml:space="preserve">
-        <value>Persona Key</value>
+    <data name="ImageInitials" xml:space="preserve">
+        <value>Image Initials</value>
     </data>
-    <data name="ItemPersonaImage" xml:space="preserve">
-        <value>Persona Image</value>
+    <data name="SecondaryText" xml:space="preserve">
+        <value>Secondary Text</value>
     </data>
-    <data name="ItemPersonaImageInfo" xml:space="preserve">
-        <value>PersonaI mageInfo</value>
+    <data name="TertiaryText" xml:space="preserve">
+        <value>Tertiary Text</value>
     </data>
-    <data name="ItemPersonaPresence" xml:space="preserve">
-        <value>Persona Presence</value>
+    <data name="OptionalText" xml:space="preserve">
+        <value>Optional Text</value>
     </data>
-    <data name="IsImage" xml:space="preserve">
-        <value>Is Image</value>
+    <data name="ImageAlt" xml:space="preserve">
+        <value>Image Alt</value>
     </data>
-    <data name="ItemPersonaClickable" xml:space="preserve">
-        <value>Persona Clickable</value>
+    <data name="HidePersonaDetails" xml:space="preserve">
+        <value>Hide Persona Details</value>
     </data>
-    <data name="ShowAddButton" xml:space="preserve">
-        <value>Show Add Button</value>
+    <data name="PersonaInitialsColor" xml:space="preserve">
+        <value>Persona Initials Color</value>
     </data>
-    <data name="AddbuttonAriaLabel" xml:space="preserve">
-        <value>Add button Aria Label</value>
-    </data>
-    <data name="OverflowButtonAriaLabel" xml:space="preserve">
-        <value>Overflow Button Aria Label</value>
-    </data>
-<<<<<<< HEAD
 </root>
-=======
-</root>
->>>>>>> 3574ed17211547f623558827e54e20f9e65dd546

@@ -1,13 +1,12 @@
-import * as React from 'react';
 import { IInputs, IOutputs } from './generated/ManifestTypes';
-import { SearchBoxComponent } from './components/SearchBox';
-import { ISearchBoxComponentProps } from './components/Component.types';
+import { CanvasPersona } from './components/CanvasPersona';
+import { IPersonaprops } from './components/Component.types';
+import * as React from 'react';
+import { CanvasPersonaPresence, CanvasPersonaSizes, PersonaInitialsColors } from './ManifestTypes';
 
-export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+export class Persona implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
-    notifyOutputChanged: () => void;
-    searchTextValue: string | null;
-
+    
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
      * Data-set values are not initialized here, use updateView.
@@ -15,10 +14,9 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
      */
-    public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
+    public init(context: ComponentFramework.Context<IInputs>): void {
         this.context = context;
         this.context.mode.trackContainerResize(true);
-        this.notifyOutputChanged = notifyOutputChanged;
     }
 
     /**
@@ -26,41 +24,30 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * @param context The entire property bag available to control via Context Object; It contains values as set up by the customizer mapped to names defined in the manifest, as well as utility functions
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
-        const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
-        const props: ISearchBoxComponentProps = {
-            onChanged: this.onChange,
+        const props: IPersonaprops = {
             themeJSON: context.parameters.Theme.raw ?? '',
-            ariaLabel: context.parameters?.AccessibilityLabel.raw ?? '',
-            underLined: context.parameters.Underlined.raw ?? false,
-            iconName: context.parameters.IconName.raw ?? '',
-            placeholderText: context.parameters.PlaceHolderText.raw ?? '',
-            disabled: context.mode.isControlDisabled,
-            disableAnimation: context.parameters.DisableAnimation.raw ?? false,
-            width: allocatedWidth,
-            height: allocatedHeight,
+            imageUrl: context.parameters?.ImageUrl.raw ?? '',
+            imageInitials: context.parameters?.ImageInitials.raw ?? '',
+            text: context.parameters?.Text.raw ?? '',
+            secondaryText: context.parameters?.SecondaryText.raw ?? '',
+            tertiaryText: context.parameters?.TertiaryText.raw ?? '',
+            optionalText: context.parameters?.OptionalText.raw ?? '',
+            imageAlt: context.parameters?.ImageAlt.raw ?? '',
+            presence: CanvasPersonaPresence[context.parameters.Presence.raw],
+            size: CanvasPersonaSizes[context.parameters.PersonaSize.raw],
+            hidePersonaDetails: context.parameters.HidePersonaDetails.raw,
+            ariaLabel: context.parameters.AccessibilityLabel.raw ?? '',
+            initialsColor:PersonaInitialsColors[context.parameters.PersonaInitialsColor.raw]
         };
-
-        return React.createElement(SearchBoxComponent, props);
+        return React.createElement(CanvasPersona, props);
     }
-
-    /**
-     * Called when a change is detected from the control. Updates the searchTextValue variable that is assigned to the output SearchText.
-     * @param newValue a string returned as the input search text
-     */
-    private onChange = (newValue: string | undefined): void => {
-        this.searchTextValue = newValue ?? null;
-        this.notifyOutputChanged();
-    };
 
     /**
      * It is called by the framework prior to a control receiving new data.
      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
      */
     public getOutputs(): IOutputs {
-        return {
-            SearchText: this.searchTextValue,
-        } as IOutputs;
+        return {};
     }
 
     /**
