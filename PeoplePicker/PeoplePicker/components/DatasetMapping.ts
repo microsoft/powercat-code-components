@@ -71,7 +71,7 @@ export function getPersonaPresence(personaPresence: string): PersonaPresence {
     }
 }
 
-export function getDataSetfromPersona(selectedPeople: IPersonaProps[]): ICustomPersonaProps[] {
+export function getDataSetFromPersona(selectedPeople: IPersonaProps[]): ICustomPersonaProps[] {
     return selectedPeople.map((user) => {
         return {
             PersonaKey: user.key,

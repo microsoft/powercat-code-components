@@ -3,7 +3,7 @@
 exports[`PeoplePicker renders 1`] = `
 <div
   className=
-      PowerCATPeoplepicker
+      PowerCATPeoplePicker
       {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -150,7 +150,7 @@ exports[`PeoplePicker renders 1`] = `
 exports[`PeoplePicker renders with simple personas 1`] = `
 <div
   className=
-      PowerCATPeoplepicker
+      PowerCATPeoplePicker
       {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;

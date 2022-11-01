@@ -17,7 +17,7 @@ export function getMockParameters(): IInputs {
         MinimumSearchTermLength: new MockWholeNumberProperty(),
         SearchTermToShortMessage: new MockStringProperty(),
         SuggestionsHeaderText: new MockStringProperty(),
-        NoResultFoundMesage: new MockStringProperty(),
+        NoResultFoundMessage: new MockStringProperty(),
         HintText: new MockStringProperty(),
         MaxPeople: new MockWholeNumberProperty(),
     };

@@ -12,7 +12,7 @@ export interface CanvasPeoplePickerProps {
     visible?: boolean;
     isPickerDisabled: boolean;
     showSecondaryText: boolean;
-    peoplepickerType: string;
+    peoplePickerType: string;
     error?: boolean;
     componentRef?: IRefObject<IBasePicker<IPersonaProps>>;
     onResize?: (width: number, height: number) => void;
@@ -24,7 +24,7 @@ export interface CanvasPeoplePickerProps {
     onBlur: () => void;
     minimumFilterLength: number;
     keepTypingMessage: string;
-    noresultfoundText: string;
+    noResultFoundText: string;
     suggestionsHeaderText: string;
     hintText: string;
     maxPeople: number;

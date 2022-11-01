@@ -7,7 +7,7 @@
     <property name="Error" display-name-key="Error" of-type="TwoOptions" usage="input" default-value="false" required="false" />
     <property name="MinimumSearchTermLength" description-key="MinimumSearchTermLength_Desc" display-name-key="MinimumSearchTermLength" required="true" usage="input" of-type="Whole.None" default-value="3" />
     <property name="SearchTermToShortMessage" description-key="SearchTermToShortMessage_Desc" display-name-key="SearchTermToShortMessage" required="true" usage="input" of-type="SingleLine.Text" default-value="Continue Typing..." />
-    <property name="NoResultFoundMesage" description-key="NoResultFoundMesage_Desc" display-name-key="NoResultFoundMesage" required="true" usage="input" of-type="SingleLine.Text" default-value="No results found" />
+    <property name="NoResultFoundMessage" description-key="NoResultFoundMessage_Desc" display-name-key="NoResultFoundMessage" required="true" usage="input" of-type="SingleLine.Text" default-value="No results found" />
     <property name="SuggestionsHeaderText" description-key="SuggestionsHeaderText_Desc" display-name-key="SuggestionsHeaderText" required="true" usage="input" of-type="SingleLine.Text" default-value="Suggested People" />
     <property name="HintText" description-key="HintText_Desc" display-name-key="HintText" required="true" usage="input" of-type="SingleLine.Text" default-value="Search" />
     <property name="MaxPeople" description-key="MaxPeople_Desc" display-name-key="MaxPeople" required="true" usage="input" of-type="Whole.None" default-value="10" />

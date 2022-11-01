@@ -41,7 +41,7 @@ The control accepts the following properties:
   - **SuggestionOOF** -  True or False, Based on whether the persona if 'Out of Office' or not.
   - **PeoplePickerType** - Type of `PeoplePicker` to be used.
   - **MaxPeople** - Maximum number of user(s) to be allowed for selection
-  - **NoResultFoundMesage** - Message to be shown if no results are found based on the specified search text.
+  - **NoResultFoundMessage** - Message to be shown if no results are found based on the specified search text.
   - **MinimumSearchTermLength** - Minimum search term length to be entered before providing the suggestions.
   - **SearchTermToShortMessage** - Custom message to be shown when the search text is less than *MinimumSearchTermLength*.
   - **Error** - To highlighting the people picker in red to represent that it has certain error which required validation.
@@ -92,7 +92,7 @@ Step 2) Setup the Suggestions_Items Property by specifying this UserCollection.
 UserCollection
 ```
 
-Note : In Step 1, we are making a consequentive request to get UserPhoto. This leads to increase in time of fetching the results. If you want to decrease the fetching time and can compromise on not showing the profile images, then use the below code instead of UserCollection & Skip Step 1) altogether.
+Note : In Step 1, we are making a consecutive request to get UserPhoto. This leads to increase in time of fetching the results. If you want to decrease the fetching time and can compromise on not showing the profile images, then use the below code instead of UserCollection & Skip Step 1) altogether.
 
 ```Power Fx
 Office365Users.SearchUser({searchTerm:Self.SearchText,top:500})

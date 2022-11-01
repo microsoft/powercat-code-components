@@ -130,10 +130,10 @@
     <data name="SearchTermToShortMessage_Desc" xml:space="preserve">
         <value>The message to display if the search term is less than the 'Minimum Search Term Length' parameter - e.g. 'Keep typing'</value>
     </data>
-    <data name="NoResultFoundMesage" xml:space="preserve">
+    <data name="NoResultFoundMessage" xml:space="preserve">
         <value>No result found message</value>
     </data>
-    <data name="NoResultFoundMesage_Desc" xml:space="preserve">
+    <data name="NoResultFoundMessage_Desc" xml:space="preserve">
         <value>The message to display when no suggestions match the search term</value>
     </data>
     <data name="MinimumSearchTermLength" xml:space="preserve">
