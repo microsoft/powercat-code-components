@@ -2,9 +2,9 @@
  * @license Copyright (c) Microsoft Corporation. All rights reserved.
  */
 
-//import { ISearchBoxProps } from '@fluentui/react'
+import { ISearchBoxProps } from '@fluentui/react'
 
-export interface ISearchBoxComponentProps {
+export interface ISearchBoxComponentProps extends ISearchBoxProps {
     width?: number;
     height?: number;
     onChanged: (newValue: string | undefined) => void;
