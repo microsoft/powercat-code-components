@@ -15,6 +15,7 @@
   "dependencies": {
     "@fluentui/react": "8.29.0",
     "@react-hook/resize-observer": "^1.2.5",
+    "debounce": "^1.2.1",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
@@ -22,6 +23,7 @@
     "@fluentui/example-data": "^8.4.1",
     "@fluentui/jest-serializer-merge-styles": "^8.0.17",
     "@fluentui/react-hooks": "^8.6.4",
+    "@types/debounce": "^1.2.1",
     "@types/enzyme": "^3.10.11",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^27.4.0",

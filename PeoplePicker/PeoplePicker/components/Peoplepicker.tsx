@@ -26,10 +26,10 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
         filterSuggestions,
         minimumFilterLength,
         keepTypingMessage,
-        noresultfoundText,
+        noResultFoundText,
         isPickerDisabled,
         error,
-        peoplepickerType,
+        peoplePickerType,
         accessibilityLabel,
         suggestionsHeaderText,
         componentRef,
@@ -45,16 +45,16 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
 
     const [peopleList, setPeopleList] = React.useState<IPersonaProps[]>(suggestedPeople);
     const prevSelectedPeople = usePrevious(defaultSelected);
-    const prevpeopleList = usePrevious(suggestedPeople);
+    const prevPeopleList = usePrevious(suggestedPeople);
     const [searchTerm, setSearchTerm] = React.useState<string>('');
-    const [pickerKey, setPickerKey] = React.useState<string>(peoplepickerType.split(' ')[0]);
+    const [pickerKey, setPickerKey] = React.useState<string>(peoplePickerType.split(' ')[0]);
     const suggestionProps: IBasePickerSuggestionsProps = {
         suggestionsHeaderText: suggestionsHeaderText,
         mostRecentlyUsedHeaderText: suggestionsHeaderText,
         noResultsFoundText:
             searchTerm && minimumFilterLength && searchTerm.length < minimumFilterLength
                 ? keepTypingMessage
-                : noresultfoundText,
+                : noResultFoundText,
         loadingText: 'Loading',
         showRemoveButtons: true,
         suggestionsAvailableAlertText: 'People Picker Suggestions available',
@@ -80,10 +80,10 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
             // To re-render the existing component during pre-selected members change
             setPickerKey(pickerKey.concat('_1'));
         }
-        if (prevpeopleList !== suggestedPeople) {
+        if (prevPeopleList !== suggestedPeople) {
             setPeopleList(suggestedPeople);
         }
-    }, [onPersonSelect, pickerKey, suggestedPeople, defaultSelected, prevSelectedPeople, prevpeopleList]);
+    }, [onPersonSelect, pickerKey, suggestedPeople, defaultSelected, prevSelectedPeople, prevPeopleList]);
 
     const rootStyle = React.useMemo(() => {
         // This is needed for custom pages to ensure the People Picker grows to the full width
@@ -147,7 +147,7 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
             onPersonSelect([]);
         }
     };
-    const peoplepickerProps: IPeoplePickerProps = {
+    const peoplePickerProps: IPeoplePickerProps = {
         // eslint-disable-next-line react/jsx-no-bind
         onResolveSuggestions: filterSuggestedUsers,
         getTextFromItem: getTextFromItem,
@@ -173,17 +173,17 @@ export const CanvasPeoplePicker = React.memo((props: CanvasPeoplePickerProps) =>
         onChange: onChange,
     } as IPeoplePickerProps;
     return (
-        <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplepicker'} style={rootStyle}>
+        <ThemeProvider theme={theme} ref={target} className={'PowerCATPeoplePicker'} style={rootStyle}>
             {(() => {
-                switch (peoplepickerType.toLowerCase()) {
+                switch (peoplePickerType.toLowerCase()) {
                     case 'normal people picker':
-                        return <NormalPeoplePicker {...peoplepickerProps} />;
+                        return <NormalPeoplePicker {...peoplePickerProps} />;
                     case 'list people picker':
-                        return <ListPeoplePicker {...peoplepickerProps} />;
+                        return <ListPeoplePicker {...peoplePickerProps} />;
                     case 'compact people picker':
-                        return <CompactPeoplePicker {...peoplepickerProps} />;
+                        return <CompactPeoplePicker {...peoplePickerProps} />;
                     default:
-                        return <NormalPeoplePicker {...peoplepickerProps} />;
+                        return <NormalPeoplePicker {...peoplePickerProps} />;
                 }
             })()}
         </ThemeProvider>

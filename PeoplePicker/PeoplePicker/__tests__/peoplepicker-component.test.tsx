@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom';
 import * as ReactTestUtils from 'react-dom/test-utils';
 import { CanvasPeoplePicker } from '../components/PeoplePicker';
 import { CanvasPeoplePickerProps } from '../components/Component.types';
-import { getDataSetfromPersona } from '../components/DatasetMapping';
+import { getDataSetFromPersona } from '../components/DatasetMapping';
 
 // Since requestAnimationFrame does not exist in the test DOM, mock it
 window.requestAnimationFrame = jest.fn().mockImplementation((callback) => {
@@ -29,7 +29,7 @@ describe('PeoplePickerComponent', () => {
 
     it('test getDataSetfromPersona function', () => {
         const personaValue = [{ key: '1', text: 'John Doe' }] as IPersonaProps[];
-        const personaOutput = getDataSetfromPersona(personaValue);
+        const personaOutput = getDataSetFromPersona(personaValue);
         expect(personaOutput[0].PersonaKey).toBe(personaOutput[0].PersonaKey);
     });
 
@@ -48,7 +48,7 @@ describe('PeoplePickerComponent', () => {
             width: 300,
             height: 32,
             people: [{ key: '1', text: 'John Doe' }] as IPersonaProps[],
-            peoplepickerType: 'normal people picker',
+            peoplePickerType: 'normal people picker',
             defaultSelected: [] as IPersonaProps[],
             delayResults: false,
             isPickerDisabled: false,
@@ -66,7 +66,7 @@ describe('PeoplePickerComponent', () => {
             keepTypingMessage: 'Continue typing...',
             suggestionsHeaderText: 'Suggested People',
             filterSuggestions: filterSuggestions,
-            noresultfoundText: 'no result found',
+            noResultFoundText: 'no result found',
             onBlur: onBlur,
             onFocus: onFocus,
             hintText: 'Search',
