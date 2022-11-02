@@ -139,4 +139,7 @@
     <data name="DisableAnimation" xml:space="preserve">
         <value>Disable Animation</value>
     </data>
+    <data name="InputEvent" xml:space="preserve">
+        <value>Input Event</value>
+    </data>
 </root>

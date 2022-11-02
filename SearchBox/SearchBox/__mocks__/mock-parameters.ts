@@ -11,5 +11,6 @@ export function getMockParameters(): IInputs {
         PlaceHolderText: new MockStringProperty(),
         IconName: new MockStringProperty(),
         DisableAnimation: new MockTwoOptionsProperty(),
+        InputEvent: new MockStringProperty(),
     };
 }
