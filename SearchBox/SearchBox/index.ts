@@ -2,11 +2,12 @@ import * as React from 'react';
 import { IInputs, IOutputs } from './generated/ManifestTypes';
 import { SearchBoxComponent } from './components/SearchBox';
 import { ISearchBoxComponentProps } from './components/Component.types';
-
+import { InputEvents } from './ManifestConstants';
 export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
     notifyOutputChanged: () => void;
     searchTextValue: string | null;
+    setFocus = '';
 
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -28,6 +29,13 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
         const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
+        const inputEvent = this.context.parameters.InputEvent.raw;
+        const eventChanged = inputEvent && this.setFocus !== inputEvent;
+
+        if (eventChanged && inputEvent.startsWith(InputEvents.SetFocus)) {
+            this.setFocus = inputEvent;
+        }
+
         const props: ISearchBoxComponentProps = {
             onChanged: this.onChange,
             themeJSON: context.parameters.Theme.raw ?? '',
@@ -39,6 +47,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
             disableAnimation: context.parameters.DisableAnimation.raw ?? false,
             width: allocatedWidth,
             height: allocatedHeight,
+            setFocus: this.setFocus,
         };
 
         return React.createElement(SearchBoxComponent, props);
