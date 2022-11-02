@@ -22,7 +22,7 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
     });
 
     return (
-        <ThemeProvider theme={theme} className={wrapperClass}>
+        <ThemeProvider theme={theme}>
             <SearchBox
                 placeholder={placeholderText}
                 onChange={onChange}
@@ -31,6 +31,7 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
                 iconProps={filterIcon}
                 disabled={disabled}
                 disableAnimation={disableAnimation}
+                className={wrapperClass}
             />
         </ThemeProvider>
     );
