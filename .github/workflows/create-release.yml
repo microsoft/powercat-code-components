@@ -84,6 +84,10 @@ jobs:
       - run: npm ci
         working-directory: "./Nav"
       - run: npm ci
+        working-directory: "./PeoplePicker"
+      - run: npm ci
+        working-directory: "./Persona"
+      - run: npm ci
         working-directory: "./Picker"
       - run: npm ci
         working-directory: "./Pivot"       
@@ -91,6 +95,8 @@ jobs:
         working-directory: "./ProgressIndicator"
       - run: npm ci
         working-directory: "./ResizableTextarea"
+      - run: npm ci
+        working-directory: "./SearchBox"
       - run: npm ci
         working-directory: "./Shimmer"        
       - run: npm ci
