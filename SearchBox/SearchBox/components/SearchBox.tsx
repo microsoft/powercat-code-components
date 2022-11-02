@@ -3,8 +3,10 @@ import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, merge
 import { ISearchBoxComponentProps } from './Component.types';
 
 export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) => {
-    const { onChanged, themeJSON, ariaLabel, placeholderText, underLined, disabled, disableAnimation } = props;
+    const { onChanged, themeJSON, ariaLabel, placeholderText, underLined, disabled, disableAnimation, setFocus } =
+        props;
     const filterIcon: IIconProps = { iconName: props.iconName };
+    const rootRef = React.useRef<HTMLDivElement>(null);
     const theme = React.useMemo(() => {
         try {
             return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : undefined;
@@ -21,8 +23,17 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
         width: props.width,
     });
 
+    React.useEffect(() => {
+        if (setFocus && setFocus !== '' && rootRef) {
+            const searchBoxes = (rootRef.current as HTMLElement).getElementsByClassName('ms-SearchBox-field');
+            if (searchBoxes && searchBoxes.length > 0) {
+                (searchBoxes[0] as HTMLInputElement).focus();
+            }
+        }
+    }, [setFocus, rootRef]);
+
     return (
-        <ThemeProvider theme={theme} className={wrapperClass}>
+        <ThemeProvider theme={theme}>
             <SearchBox
                 placeholder={placeholderText}
                 onChange={onChange}
@@ -31,6 +42,8 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
                 iconProps={filterIcon}
                 disabled={disabled}
                 disableAnimation={disableAnimation}
+                className={wrapperClass}
+                ref={rootRef}
             />
         </ThemeProvider>
     );
