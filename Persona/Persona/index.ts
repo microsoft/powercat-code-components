@@ -2,11 +2,11 @@ import { IInputs, IOutputs } from './generated/ManifestTypes';
 import { CanvasPersona } from './components/CanvasPersona';
 import { IPersonaprops } from './components/Component.types';
 import * as React from 'react';
-import { CanvasPersonaPresence, CanvasPersonaSizes, PersonaInitialsColors } from './ManifestTypes';
+import { CanvasPersonaPresence, CanvasPersonaSizes, PersonaInitialsColors } from './ManifestConstants';
 
 export class Persona implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
-    
+
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
      * Data-set values are not initialized here, use updateView.
@@ -37,7 +37,7 @@ export class Persona implements ComponentFramework.ReactControl<IInputs, IOutput
             size: CanvasPersonaSizes[context.parameters.PersonaSize.raw],
             hidePersonaDetails: context.parameters.HidePersonaDetails.raw,
             ariaLabel: context.parameters.AccessibilityLabel.raw ?? '',
-            initialsColor:PersonaInitialsColors[context.parameters.PersonaInitialsColor.raw]
+            initialsColor: PersonaInitialsColors[context.parameters.PersonaInitialsColor.raw],
         };
         return React.createElement(CanvasPersona, props);
     }

@@ -9,6 +9,7 @@ exports[`SearchBox renders 1`] = `
   iconName=""
   onChanged={[Function]}
   placeholderText=""
+  setFocus=""
   themeJSON=""
   underLined={false}
   width={-1}
@@ -19,9 +20,6 @@ exports[`SearchBox theme 1`] = `
 <div
   className=
 
-      {
-        width: -1px;
-      }
       {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -60,6 +58,7 @@ exports[`SearchBox theme 1`] = `
           padding-left: 4px;
           padding-right: 0;
           padding-top: 1px;
+          width: -1px;
         }
         @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
           border-color: WindowText;
@@ -96,16 +95,22 @@ exports[`SearchBox theme 1`] = `
       <i
         aria-hidden={true}
         className=
-            ms-Icon-placeHolder
             ms-SearchBox-icon
             {
+              -moz-osx-font-smoothing: grayscale;
+              -webkit-font-smoothing: antialiased;
               display: inline-block;
+              font-family: "FabricMDL2Icons";
+              font-style: normal;
+              font-weight: normal;
               opacity: 1;
+              speak: none;
               transition: opacity 0.167s 0s;
-              width: 1em;
             }
-        data-icon-name=""
-      />
+        data-icon-name="search"
+      >
+        
+      </i>
     </div>
     <input
       aria-label=""
@@ -150,12 +155,12 @@ exports[`SearchBox theme 1`] = `
             display: none;
           }
       disabled={false}
-      id="SearchBox2"
+      id="SearchBox6"
       onBlur={[Function]}
       onChange={[Function]}
       onInput={[Function]}
       onKeyDown={[Function]}
-      placeholder=""
+      placeholder="search"
       role="searchbox"
       value=""
     />
