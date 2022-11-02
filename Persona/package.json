@@ -13,9 +13,8 @@
     "test": "jest --collectCoverage"
   },
   "dependencies": {
-    "@fluentui/react": "8.29.0",
-    "latest": "^0.2.0",
     "react": "16.8.6",
+    "@fluentui/react": "8.29.0",
     "react-dom": "16.8.6"
   },
   "devDependencies": {

@@ -9,9 +9,8 @@
 
   <PropertyGroup>
     <Name>Persona</Name>
-    <ProjectGuid>2f863d99-5a79-428c-93c9-949c313a5814</ProjectGuid>
+    <ProjectGuid>32d7e23a-9f8d-43ff-8698-8bcc90f3ab8f</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
-    <PcfBuildMode>production</PcfBuildMode>
   </PropertyGroup>
 
   <PropertyGroup>
