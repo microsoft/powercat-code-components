@@ -8,7 +8,7 @@ This code component provides a wrapper around the [Fluent UI SearchBox](https://
 
 ## Properties
 
-- **SearchText** - The action items to render. The first item is considered the root item.
+- **SearchText** - Text that is input by the user. Refer to this as the input for search functions. 
 
 - **IconName** - Name of the Fluent UI icon (see [Fluent UI Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons)).
 
