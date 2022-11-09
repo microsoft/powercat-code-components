@@ -153,6 +153,10 @@
     <value>Text</value>
     <comment/>
   </data>
+  <data name="TooltipContext" xml:space="preserve">
+    <value>Text</value>
+    <comment/>
+  </data>
   <data name="TextAlignment" xml:space="preserve">
     <value>Text alignment</value>
     <comment/>
