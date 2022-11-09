@@ -44,6 +44,7 @@ export class Icon implements ComponentFramework.ReactControl<IInputs, IOutputs> 
             onSelected: this.onSelect,
             iconName: defaultIfEmpty(context.parameters.IconName, 'emoji2'),
             text: defaultIfEmpty(context.parameters.Text, ''),
+            tooltipContent: defaultIfEmpty(context.parameters.TooltipContent,''),
             justify: TextAlignmentTypes[context.parameters.TextAlignment.raw],
             renderType: RenderTypes[context.parameters.IconType.raw],
             iconColor: undefinedIfEmpty(context.parameters.IconColor),
