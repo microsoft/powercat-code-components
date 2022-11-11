@@ -145,4 +145,7 @@
     <data name="DelayOutput" xml:space="preserve">
         <value>Delay Output</value>
     </data>
+    <data name="DelayOutput_Desc" xml:space="preserve">
+        <value>DelayOutput  When set to true, user input is registered after half a second delay. Useful for delaying expensive operations until user completes inputting search text (i.e. for filtering when input is used in other formulas).</value>
+    </data>
 </root>
