@@ -142,4 +142,7 @@
     <data name="InputEvent" xml:space="preserve">
         <value>Input Event</value>
     </data>
+    <data name="DelayOutput" xml:space="preserve">
+        <value>Delay Output</value>
+    </data>
 </root>
