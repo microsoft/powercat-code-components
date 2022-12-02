@@ -30,8 +30,10 @@ jobs:
          - "./ProgressIndicator"
          - "./ResizableTextarea"
          - "./SearchBox"
+         - "./SpinButton"
          - "./Spinner"
          - "./Shimmer"
+         - "./SubwayNav"         
          - "./TagList"
 
 

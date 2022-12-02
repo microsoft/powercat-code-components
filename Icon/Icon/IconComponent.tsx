@@ -10,6 +10,7 @@ import {
     IPartialTheme,
     mergeStyles,
     ThemeProvider,
+    TooltipHost,
 } from '@fluentui/react';
 import { useAsync } from '@fluentui/react-hooks';
 
@@ -18,6 +19,7 @@ export interface IconComponentProps {
     height?: number;
     iconName?: string;
     text?: string;
+    tooltipContent?: string;
     onSelected: () => void;
     disabled?: boolean;
     tabIndex?: number;
@@ -46,7 +48,7 @@ export enum IconRenderType {
 }
 
 export const IconComponent = React.memo((props: IconComponentProps) => {
-    const { text, disabled, onSelected, tabIndex, ariaLabel, setFocus, themeJSON, renderType } = props;
+    const { text, tooltipContent, disabled, onSelected, tabIndex, ariaLabel, setFocus, themeJSON, renderType } = props;
     const theme = React.useMemo(() => {
         try {
             return themeJSON ? createTheme(JSON.parse(themeJSON) as IPartialTheme) : undefined;
@@ -71,21 +73,23 @@ export const IconComponent = React.memo((props: IconComponentProps) => {
 
     return (
         <ThemeProvider applyTo="none" theme={theme} className={getIconContainerStyle(props)}>
-            {renderType === IconRenderType.Icon && (
-                <FontIcon aria-label={props.ariaLabel} className={getIconClass(props)} iconName={props.iconName} />
-            )}
-            {renderType !== IconRenderType.Icon && (
-                <RenderButtonAs
-                    componentRef={componentRef}
-                    styles={getButtonStyles(props)}
-                    iconProps={getIconProps(props)}
-                    ariaLabel={ariaLabel}
-                    disabled={disabled}
-                    text={text}
-                    onClick={onSelected}
-                    tabIndex={tabIndex}
-                />
-            )}
+            <TooltipHost content={tooltipContent}>
+                {renderType === IconRenderType.Icon && (
+                    <FontIcon aria-label={props.ariaLabel} className={getIconClass(props)} iconName={props.iconName} />
+                )}
+                {renderType !== IconRenderType.Icon && (
+                    <RenderButtonAs
+                        componentRef={componentRef}
+                        styles={getButtonStyles(props)}
+                        iconProps={getIconProps(props)}
+                        ariaLabel={ariaLabel}
+                        disabled={disabled}
+                        text={text}
+                        onClick={onSelected}
+                        tabIndex={tabIndex}
+                    />
+                )}
+            </TooltipHost>
         </ThemeProvider>
     );
 });

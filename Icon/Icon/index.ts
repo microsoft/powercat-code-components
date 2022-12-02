@@ -27,6 +27,7 @@ export class Icon implements ComponentFramework.ReactControl<IInputs, IOutputs> 
         const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
         const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
         const tabIndex = (context as unknown as ContextEx).accessibility?.assignedTabIndex ?? undefined;
+        const tooltipContent = (context as unknown as ContextEx).accessibility?.assignedTooltip ?? '';
         const inputEvent = context.parameters.InputEvent.raw;
         const eventChanged = inputEvent && this.inputEvent !== inputEvent;
 
@@ -44,6 +45,7 @@ export class Icon implements ComponentFramework.ReactControl<IInputs, IOutputs> 
             onSelected: this.onSelect,
             iconName: defaultIfEmpty(context.parameters.IconName, 'emoji2'),
             text: defaultIfEmpty(context.parameters.Text, ''),
+            tooltipContent: tooltipContent,
             justify: TextAlignmentTypes[context.parameters.TextAlignment.raw],
             renderType: RenderTypes[context.parameters.IconType.raw],
             iconColor: undefinedIfEmpty(context.parameters.IconColor),

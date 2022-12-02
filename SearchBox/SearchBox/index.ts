@@ -3,11 +3,22 @@ import { IInputs, IOutputs } from './generated/ManifestTypes';
 import { SearchBoxComponent } from './components/SearchBox';
 import { ISearchBoxComponentProps } from './components/Component.types';
 import { InputEvents } from './ManifestConstants';
+import { Async } from '@fluentui/react';
+
 export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+    private static readonly DELAY_TIMEOUT: number = 500;
     context: ComponentFramework.Context<IInputs>;
-    notifyOutputChanged: () => void;
-    searchTextValue: string | null;
+    notifyOutputChanged: ((debounce?: boolean) => void) | null;
+    searchTextValue: string;
     setFocus = '';
+    asyncFluent: Async;
+    debouncedOutputChanged: (debounce?: boolean) => void;
+    delayOutput: boolean;
+
+    constructor() {
+        this.onChange = this.onChange.bind(this);
+        this.asyncFluent = new Async();
+    }
 
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
@@ -17,9 +28,12 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * @param container If a control is marked control-type='standard', it will receive an empty div element within which it can render its content.
      */
     public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
+        this.notifyOutputChanged = notifyOutputChanged;
         this.context = context;
         this.context.mode.trackContainerResize(true);
-        this.notifyOutputChanged = notifyOutputChanged;
+        if (this.notifyOutputChanged) {
+            this.debouncedOutputChanged = this.asyncFluent.debounce(this.notifyOutputChanged, SearchBox.DELAY_TIMEOUT);
+        }
     }
 
     /**
@@ -29,13 +43,14 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
         const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
+        this.delayOutput = context.parameters.DelayOutput.raw;
         const inputEvent = this.context.parameters.InputEvent.raw;
         const eventChanged = inputEvent && this.setFocus !== inputEvent;
 
         if (eventChanged && inputEvent.startsWith(InputEvents.SetFocus)) {
             this.setFocus = inputEvent;
         }
-
+        
         const props: ISearchBoxComponentProps = {
             onChanged: this.onChange,
             themeJSON: context.parameters.Theme.raw ?? '',
@@ -57,9 +72,11 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * Called when a change is detected from the control. Updates the searchTextValue variable that is assigned to the output SearchText.
      * @param newValue a string returned as the input search text
      */
-    private onChange = (newValue: string | undefined): void => {
-        this.searchTextValue = newValue ?? null;
-        this.notifyOutputChanged();
+    private onChange = (newValue?: string): void => {
+        this.searchTextValue = newValue || '';
+        this.delayOutput
+            ? this.debouncedOutputChanged && this.debouncedOutputChanged()
+            : this.notifyOutputChanged && this.notifyOutputChanged();
     };
 
     /**
@@ -77,6 +94,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * i.e. cancelling any pending remote calls, removing listeners, etc.
      */
     public destroy(): void {
-        // Add code to cleanup control if necessary
+        this.notifyOutputChanged = null;
+        this.asyncFluent.dispose();
     }
 }

@@ -33,6 +33,7 @@ The following table provides an index to the code components in this repository:
 | [SearchBox](SearchBox)                       | User Interface | [Fluent UI SearchBox control](https://developer.microsoft.com/en-us/fluentui#/controls/web/searchbox) for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 | [Shimmer](Shimmer)                       | User Interface | This code component wraps the [Fluent Shimmer control](https://developer.microsoft.com/en-us/fluentui#/controls/web/shimmer) for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 | [Spinner](Spinner)                           | User Interface | This code component wraps the [Fluent Spinner control](https://developer.microsoft.com/en-us/fluentui#/controls/web/spinner) for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
+| [SubwayNav](SubwayNav)                           | User Interface |  | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 | [TagList](TagList)                       | User Interface | This code component provides a Tag List that provides flexible width rendering bound to a collection. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 
 ## Building & Deploying
