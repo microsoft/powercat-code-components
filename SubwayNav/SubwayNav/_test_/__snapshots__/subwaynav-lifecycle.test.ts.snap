@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubwayNav renders 1`] = `
+<Memo(CanvasSubwayNav)
+  applyDarkTheme={false}
+  ariaLabel=""
+  disabled={false}
+  height={-1}
+  items={
+    Array [
+      Object {
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "1",
+          "values": Object {
+            "ItemKey": "Item 1",
+            "ItemLabel": "item1",
+            "ItemState": "Current",
+          },
+        },
+        "disabled": undefined,
+        "id": "1",
+        "key": "Item 1",
+        "label": "item1",
+        "parentId": undefined,
+        "state": "Current",
+        "visuallyDisabled": undefined,
+      },
+      Object {
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "2",
+          "values": Object {
+            "ItemKey": "Item 2",
+            "ItemLabel": "item2",
+            "ItemState": "Not Started",
+          },
+        },
+        "disabled": undefined,
+        "id": "2",
+        "key": "Item 2",
+        "label": "item2",
+        "parentId": undefined,
+        "state": "Not Started",
+        "visuallyDisabled": undefined,
+      },
+      Object {
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "3",
+          "values": Object {
+            "ItemKey": "Item 3",
+            "ItemLabel": "item3",
+            "ItemState": "Completed",
+          },
+        },
+        "disabled": undefined,
+        "id": "3",
+        "key": "Item 3",
+        "label": "item3",
+        "parentId": undefined,
+        "state": "Completed",
+        "visuallyDisabled": undefined,
+      },
+      Object {
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "4",
+          "values": Object {
+            "ItemKey": "Item 4",
+            "ItemLabel": "item4",
+            "ItemState": "ViewedNotCompleted",
+          },
+        },
+        "disabled": undefined,
+        "id": "4",
+        "key": "Item 4",
+        "label": "item4",
+        "parentId": undefined,
+        "state": "ViewedNotCompleted",
+        "visuallyDisabled": undefined,
+      },
+      Object {
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "5",
+          "values": Object {
+            "ItemKey": "Item 4",
+            "ItemLabel": "item4",
+            "ItemState": "Error",
+          },
+        },
+        "disabled": undefined,
+        "id": "5",
+        "key": "Item 4",
+        "label": "item4",
+        "parentId": undefined,
+        "state": "Error",
+        "visuallyDisabled": undefined,
+      },
+      Object {
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "6",
+          "values": Object {
+            "ItemKey": "Item 4",
+            "ItemLabel": "item4",
+            "ItemState": "Skipped",
+          },
+        },
+        "disabled": undefined,
+        "id": "6",
+        "key": "Item 4",
+        "label": "item4",
+        "parentId": undefined,
+        "state": "Skipped",
+        "visuallyDisabled": undefined,
+      },
+      Object {
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "7",
+          "values": Object {
+            "ItemKey": "Item 4",
+            "ItemLabel": "item4",
+            "ItemState": "Unsaved",
+          },
+        },
+        "disabled": undefined,
+        "id": "7",
+        "key": "Item 4",
+        "label": "item4",
+        "parentId": undefined,
+        "state": "Unsaved",
+        "visuallyDisabled": undefined,
+      },
+    ]
+  }
+  onSelected={[Function]}
+  setFocus=""
+  tabIndex={0}
+  themeJSON="{\\"palette\\":{\\"themePrimary\\":\\"#005ba1\\",\\"themeLighterAlt\\":\\"#f1f7fb\\",\\"themeLighter\\":\\"#cadff0\\",\\"themeLight\\":\\"#9fc5e3\\",\\"themeTertiary\\":\\"#4f93c6\\",\\"themeSecondary\\":\\"#156aac\\",\\"themeDarkAlt\\":\\"#005291\\",\\"themeDark\\":\\"#00457a\\",\\"themeDarker\\":\\"#00335a\\",\\"neutralLighterAlt\\":\\"#faf9f8\\",\\"neutralLighter\\":\\"#f3f2f1\\",\\"neutralLight\\":\\"#edebe9\\",\\"neutralQuaternaryAlt\\":\\"#e1dfdd\\",\\"neutralQuaternary\\":\\"#d0d0d0\\",\\"neutralTertiaryAlt\\":\\"#c8c6c4\\",\\"neutralTertiary\\":\\"#a19f9d\\",\\"neutralSecondary\\":\\"#605e5c\\",\\"neutralPrimaryAlt\\":\\"#3b3a39\\",\\"neutralPrimary\\":\\"#323130\\",\\"neutralDark\\":\\"#201f1e\\",\\"black\\":\\"#000000\\",\\"white\\":\\"#ffffff\\"}}"
+  width={-1}
+/>
+`;
+
+exports[`SubwayNav renders dummy items when no items configured 1`] = `
+<Memo(CanvasSubwayNav)
+  applyDarkTheme={false}
+  ariaLabel=""
+  disabled={false}
+  height={-1}
+  items={
+    Array [
+      Object {
+        "id": "1",
+        "key": "1",
+        "label": "Node 1",
+        "parentId": undefined,
+        "state": "Current",
+      },
+      Object {
+        "id": "2",
+        "key": "2",
+        "label": "Node 2",
+        "parentId": undefined,
+        "state": "Not Started",
+      },
+      Object {
+        "id": "3",
+        "key": "3",
+        "label": "Node 3",
+        "parentId": undefined,
+        "state": "Not Started",
+      },
+      Object {
+        "id": "4",
+        "key": "4",
+        "label": "Node 4",
+        "parentId": undefined,
+        "state": "Not Started",
+      },
+    ]
+  }
+  onSelected={[Function]}
+  setFocus=""
+  tabIndex={0}
+  themeJSON="{\\"palette\\":{\\"themePrimary\\":\\"#005ba1\\",\\"themeLighterAlt\\":\\"#f1f7fb\\",\\"themeLighter\\":\\"#cadff0\\",\\"themeLight\\":\\"#9fc5e3\\",\\"themeTertiary\\":\\"#4f93c6\\",\\"themeSecondary\\":\\"#156aac\\",\\"themeDarkAlt\\":\\"#005291\\",\\"themeDark\\":\\"#00457a\\",\\"themeDarker\\":\\"#00335a\\",\\"neutralLighterAlt\\":\\"#faf9f8\\",\\"neutralLighter\\":\\"#f3f2f1\\",\\"neutralLight\\":\\"#edebe9\\",\\"neutralQuaternaryAlt\\":\\"#e1dfdd\\",\\"neutralQuaternary\\":\\"#d0d0d0\\",\\"neutralTertiaryAlt\\":\\"#c8c6c4\\",\\"neutralTertiary\\":\\"#a19f9d\\",\\"neutralSecondary\\":\\"#605e5c\\",\\"neutralPrimaryAlt\\":\\"#3b3a39\\",\\"neutralPrimary\\":\\"#323130\\",\\"neutralDark\\":\\"#201f1e\\",\\"black\\":\\"#000000\\",\\"white\\":\\"#ffffff\\"}}"
+  width={-1}
+/>
+`;
+
+exports[`SubwayNav theme 1`] = `<div />`;
