@@ -1,9 +1,3 @@
-/**
- * @license Copyright (c) Microsoft Corporation. All rights reserved.
- */
-
-//import { ISearchBoxProps } from '@fluentui/react'
-
 export interface ISearchBoxComponentProps {
     width?: number;
     height?: number;
@@ -15,4 +9,5 @@ export interface ISearchBoxComponentProps {
     iconName?: string;
     disabled?: boolean;
     disableAnimation?: boolean;
+    setFocus?: string;
 }
