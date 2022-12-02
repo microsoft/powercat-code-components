@@ -54,6 +54,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/SearchBox/SearchBox`,
                 `${process.env.GITHUB_WORKSPACE}/Shimmer/Shimmer`,
                 `${process.env.GITHUB_WORKSPACE}/SpinButton/SpinButton`,
+                `${process.env.GITHUB_WORKSPACE}/SpinButton/SpinButton`,
                 `${process.env.GITHUB_WORKSPACE}/Spinner/Spinner`,
                 `${process.env.GITHUB_WORKSPACE}/TagList/TagList`,
                 `${process.env.GITHUB_WORKSPACE}/ThemeGenerator/ThemeGenerator`
@@ -101,7 +102,9 @@ jobs:
       - run: npm ci
         working-directory: "./Shimmer"        
       - run: npm ci
-        working-directory: "./Spinner"  
+        working-directory: "./Spinner" 
+      - run: npm ci
+        working-directory: "./SpinButton"   
       - run: npm ci
         working-directory: "./SubwayNav"              
       - run: npm ci
