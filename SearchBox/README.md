@@ -8,15 +8,17 @@ This code component provides a wrapper around the [Fluent UI SearchBox](https://
 
 ## Properties
 
-- **SearchText** - The action items to render. The first item is considered the root item.
+- **Search Text** - The action items to render. The first item is considered the root item.
 
-- **IconName** - Name of the Fluent UI icon (see [Fluent UI Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons)).
+- **Icon Name** - Name of the Fluent UI icon (see [Fluent UI Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons)).
 
 - **Underlined** - Whether or not the SearchBox is underlined.
 
-- **DisableAnimation** - Whether or not to animate the SearchBox icon on focus.
+- **Disable Animation** - Whether or not to animate the SearchBox icon on focus.
 
-- **PlaceholderText** - Placeholder for the search box.
+- **Placeholder Text** - Placeholder for the search box.
+
+- **Delay Output** - To delay output by half a second. Useful when input is provided frequently within short duration.
 
 ## Additional properties
 

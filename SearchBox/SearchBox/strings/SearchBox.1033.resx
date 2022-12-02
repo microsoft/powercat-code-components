@@ -142,4 +142,10 @@
     <data name="InputEvent" xml:space="preserve">
         <value>Input Event</value>
     </data>
+    <data name="DelayOutput" xml:space="preserve">
+        <value>Delay Output</value>
+    </data>
+    <data name="SearchBox_desc" xml:space="preserve">
+        <value>A component to get search text as input</value>
+    </data>
 </root>
