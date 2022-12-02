@@ -61,6 +61,7 @@
     <ProjectReference Include="..\ResizableTextarea\resizable-textarea.pcfproj" />
     <ProjectReference Include="..\SearchBox\SearchBox.pcfproj" />
     <ProjectReference Include="..\Shimmer\Shimmer.pcfproj" />
+    <ProjectReference Include="..\SpinButton\SpinButton.pcfproj" />
     <ProjectReference Include="..\Spinner\Spinner.pcfproj" />
     <ProjectReference Include="..\SubwayNav\SubwayNav.pcfproj" />
     <ProjectReference Include="..\TagList\TagList.pcfproj" />
