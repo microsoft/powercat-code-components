@@ -100,7 +100,9 @@ jobs:
       - run: npm ci
         working-directory: "./Shimmer"        
       - run: npm ci
-        working-directory: "./Spinner"                
+        working-directory: "./Spinner"  
+      - run: npm ci
+        working-directory: "./SubwayNav"              
       - run: npm ci
         working-directory: "./TagList"
       - run: npm ci
