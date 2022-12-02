@@ -50,7 +50,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
         if (eventChanged && inputEvent.startsWith(InputEvents.SetFocus)) {
             this.setFocus = inputEvent;
         }
-
+        
         const props: ISearchBoxComponentProps = {
             onChanged: this.onChange,
             themeJSON: context.parameters.Theme.raw ?? '',
