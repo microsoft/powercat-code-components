@@ -9,7 +9,6 @@
       <value name="Icon" display-name-key="IconTypeIcon">2</value>
     </property>
     <property name="Text" display-name-key="Text" of-type="SingleLine.Text" usage="input" required="false" />
-    <property name="TooltipContent" display-name-key="TooltipContent" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="TextAlignment" display-name-key="TextAlignment" of-type="Enum" usage="input" required="true" default-value="1">
       <value name="Center" display-name-key="Center">0</value>
       <value name="Left" display-name-key="Left">1</value>

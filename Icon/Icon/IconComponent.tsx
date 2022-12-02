@@ -73,12 +73,11 @@ export const IconComponent = React.memo((props: IconComponentProps) => {
 
     return (
         <ThemeProvider applyTo="none" theme={theme} className={getIconContainerStyle(props)}>
-            {renderType === IconRenderType.Icon && (
-                <FontIcon aria-label={props.ariaLabel} className={getIconClass(props)} iconName={props.iconName} />
-            )}
-            {renderType !== IconRenderType.Icon && (
-                <TooltipHost
-                    content={tooltipContent}>
+            <TooltipHost content={tooltipContent}>
+                {renderType === IconRenderType.Icon && (
+                    <FontIcon aria-label={props.ariaLabel} className={getIconClass(props)} iconName={props.iconName} />
+                )}
+                {renderType !== IconRenderType.Icon && (
                     <RenderButtonAs
                         componentRef={componentRef}
                         styles={getButtonStyles(props)}
@@ -89,8 +88,8 @@ export const IconComponent = React.memo((props: IconComponentProps) => {
                         onClick={onSelected}
                         tabIndex={tabIndex}
                     />
-                </TooltipHost>
-            )}
+                )}
+            </TooltipHost>
         </ThemeProvider>
     );
 });
