@@ -18,6 +18,7 @@
       <value name="Depth16" display-name-key="Depth16">3</value>
       <value name="Depth64" display-name-key="Depth64">4</value>
     </property>
+    <property name="BorderRadius" display-name-key="BorderRadius" of-type="Whole.None" usage="bound" default-value="0" />
     <property name="PaddingLeft" display-name-key="PaddingLeft" of-type="Whole.None" usage="bound" default-value="0" />
     <property name="PaddingRight" display-name-key="PaddingRight" of-type="Whole.None" usage="bound" default-value="0" />
     <property name="PaddingTop" display-name-key="PaddingTop" of-type="Whole.None" usage="bound" default-value="0" />
