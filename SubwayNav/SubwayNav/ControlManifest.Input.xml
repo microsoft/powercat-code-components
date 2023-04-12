@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="PowerCAT" constructor="SubwayNav" version="0.0.1" display-name-key="SubwayNav" description-key="SubwayNav_Desc" control-type="virtual">
+  <control namespace="PowerCAT" constructor="SubwayNav" version="1.0.25" display-name-key="SubwayNav" description-key="SubwayNav_Desc" control-type="virtual">
     <!-- Style Properties -->
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
@@ -14,6 +14,8 @@
       <value name="WizardComplete" display-name-key="WizardComplete" description-key="WizardComplete">WizardComplete</value>
       <value name="Error" display-name-key="Error" description-key="Error">Error</value>
     </property>
+    <!--Show initial animation-->
+    <property name="ShowAnimation" display-name-key="ShowAnimation" of-type="TwoOptions" default-value="true" usage="input" />
     <!-- dataset node represents a set of entity records on CDS; allow more than one datasets -->
     <data-set name="items" display-name-key="Items">
       <property-set name="ItemLabel" display-name-key="Item Label" of-type="SingleLine.Text" usage="bound" required="true" />
@@ -26,8 +28,8 @@
     <property name="Steps" display-name-key="Steps" of-type="Object" usage="output"/>
     <property name="StepsSchema" display-name-key="StepsSchema" of-type="SingleLine.Text" usage="bound" hidden="true"/>
     <property-dependencies>
-			<property-dependency input="StepsSchema" output="Steps" required-for="schema" />
-		</property-dependencies>
+      <property-dependency input="StepsSchema" output="Steps" required-for="schema" />
+    </property-dependencies>
     <resources>
       <code path="index.ts" order="1" />
       <resx path="strings/Subwaynav.1033.resx" version="1.0.0" />

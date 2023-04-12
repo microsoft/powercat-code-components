@@ -48,6 +48,11 @@ export interface ISubwayNavProps {
    * Theme provided by higher order component
    */
   theme?: IM365Theme;
+  // # FEATURE - Disable animation
+  /**
+   * To show or hide initial animation effect
+   */
+  showAnimation?: boolean;
 }
 
 export interface ISubwayNavStyles {

@@ -67,6 +67,7 @@ export class SubwayNav implements ComponentFramework.ReactControl<IInputs, IOutp
             applyDarkTheme: context.parameters?.ApplyDarkTheme.raw ?? false,
             disabled: context.mode.isControlDisabled,
             wizardComplete: context.parameters.WizardCompleteorError.raw,
+            showAnimation: context.parameters.ShowAnimation.raw,
         };
         return React.createElement(CanvasSubwayNav, props);
     }
