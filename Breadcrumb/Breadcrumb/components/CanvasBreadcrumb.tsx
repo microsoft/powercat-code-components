@@ -51,6 +51,10 @@ export const CanvasBreadcrumb = React.memo((props: IBreadcrumbProps): React.Reac
 
     const breadcrumbItems: IBreadcrumbItem[] = getBreadcrumbItems(items, onClick);
 
+    // onReduceData is required to prevent breadcrumb from shrinking
+    // when item changes dynamically
+    const returnUndefined = () => undefined;
+
     return (
         <ThemeProvider applyTo="none" theme={theme} ref={rootRef}>
             <CustomBreadcrumb
@@ -59,6 +63,7 @@ export const CanvasBreadcrumb = React.memo((props: IBreadcrumbProps): React.Reac
                 maxDisplayedItems={maxDisplayedItems}
                 aria-label={ariaLabel}
                 overflowIndex={overflowIndex}
+                onReduceData={returnUndefined}
             />
         </ThemeProvider>
     );
