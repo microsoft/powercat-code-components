@@ -12,6 +12,7 @@ const SelectionTypes: Record<'0' | '1' | '2', SelectionMode> = {
 };
 
 export class FluentDetailsList implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+    private static readonly COLUMN_LIMIT: number = 125;
     notifyOutputChanged: () => void;
     container: HTMLDivElement;
     context: ComponentFramework.Context<IInputs>;
@@ -51,6 +52,12 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
             onSelectionChanged: this.onSelectionChanged,
             canSelectItem: this.canSelectItem,
         });
+        // Set column limit to 150
+        if (context.parameters.columns.paging.pageSize !== FluentDetailsList.COLUMN_LIMIT) {
+            const columnDataset = context.parameters.columns;
+            columnDataset.paging.setPageSize(FluentDetailsList.COLUMN_LIMIT);
+            context.parameters.columns.refresh();
+        }
     }
 
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
@@ -167,12 +174,12 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
         const sorting = this.datasetSupportsSorting()
             ? dataset.sorting
             : [
-                  {
-                      name: context.parameters.CurrentSortColumn.raw ?? '',
-                      sortDirection: context.parameters.CurrentSortDirection
-                          .raw as unknown as ComponentFramework.PropertyHelper.DataSetApi.Types.SortDirection,
-                  } as ComponentFramework.PropertyHelper.DataSetApi.SortStatus,
-              ];
+                {
+                    name: context.parameters.CurrentSortColumn.raw ?? '',
+                    sortDirection: context.parameters.CurrentSortDirection
+                        .raw as unknown as ComponentFramework.PropertyHelper.DataSetApi.Types.SortDirection,
+                } as ComponentFramework.PropertyHelper.DataSetApi.SortStatus,
+            ];
 
         // There are two types of visual indicators to items loading
         // - Shimmer - for when the dataset has not yet been initialized or is in an error state
