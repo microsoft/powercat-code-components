@@ -1,16 +1,19 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { ThemeProvider, createTheme, ITheme, IFocusZoneProps, mergeStyles } from '@fluentui/react';
+import { ThemeProvider, createTheme, ITheme, IFocusZoneProps } from '@fluentui/react';
 import { ISubwayNavNodeProps, SubwayNavNodeState } from '../utilities/subway-nav/subway-node.types';
 import { goToStepById, completeAllSteps, errorAllSteps } from '../utilities/utilities';
-import { SubwayNav as CustomSubwayNav } from '../utilities/subway-nav/subway-nav';
+import {
+    SubwayNav as CustomSubwayNav,
+    SubwayNavNoAnimation as CustomSubwayNavNoAnimation,
+} from '../utilities/subway-nav/subway-nav';
 import { ISubNavItem, ISubNavProps } from './components.types';
 
 import { M365Styles, IM365ExtendedSemanticColors } from '../utilities/customizations/src';
 import { useAsync, usePrevious } from '@fluentui/react-hooks';
 import { getSubwayNavNodeState } from './DatasetMapping';
 import { PPACActualLightTheme, PPACActualDarkTheme } from '../utilities/themes';
-import { subwayNavWidth, wizardContentMaxWidth } from '../utilities/wizard';
+import { ISubwayNavProps } from '../utilities/subway-nav/subway-nav.types';
 
 // reference : https://admincontrolsdemoapps.blob.core.windows.net/demo-app/latest/DemoApp/index.html#/examples/subwaynav
 
@@ -27,7 +30,17 @@ const ariaLabelStrings = {
 };
 
 export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElement => {
-    const { items, themeJSON, onSelected, setFocus, applyDarkTheme, tabIndex, disabled, wizardComplete } = props;
+    const {
+        items,
+        themeJSON,
+        onSelected,
+        setFocus,
+        applyDarkTheme,
+        tabIndex,
+        disabled,
+        wizardComplete,
+        showAnimation,
+    } = props;
     const [isNavCompleteOrError, setIsNavCompleteOrError] = useState(false);
     let allSteps: ISubwayNavNodeProps[];
     const prevItems = usePrevious(items);
@@ -51,10 +64,10 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
             }
             return themeJSON
                 ? createTheme({
-                    palette: { ...JSON.parse(themeJSON).palette },
-                    semanticColors: semanticColorsCopy,
-                    components: M365Styles,
-                })
+                      palette: { ...JSON.parse(themeJSON).palette },
+                      semanticColors: semanticColorsCopy,
+                      components: M365Styles,
+                  })
                 : copyofM365Theme;
         } catch (ex) {
             /* istanbul ignore next */
@@ -99,6 +112,7 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
                             disabled: item.disabled ?? false,
                             parentId: item.parentId,
                             onClickStep,
+                            index: 10,
                             isVisuallyDisabled: item.visuallyDisabled ?? false,
                         };
                     });
@@ -114,6 +128,7 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
                     ...(subSteps.length > 0 && { subSteps: subSteps }),
                     disabled: group.disabled ?? false,
                     onClickStep,
+                    index: 10,
                     isVisuallyDisabled: group.visuallyDisabled ?? false,
                 };
             }) as unknown as ISubwayNavNodeProps[];
@@ -149,17 +164,23 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
         }
     }, [wizardComplete, steps, items, getSteps, handleClickStep, prevItems, prevNavState]);
 
+    const subwaynavProps = {
+        disabled: disabled,
+        focusZoneProps: focusZoneProps,
+        stateAriaLabels: ariaLabelStrings,
+        steps: steps,
+        // This is required to override width styles in custom pages
+        styles: { root: { width: props.width } },
+        ...(wizardComplete !== 'None' && { wizardComplete: isNavCompleteOrError }),
+    } as ISubwayNavProps;
+
     return (
         <ThemeProvider theme={theme}>
-            <CustomSubwayNav
-                disabled={disabled}
-                focusZoneProps={focusZoneProps}
-                stateAriaLabels={ariaLabelStrings}
-                steps={steps}
-                //This is required to override width styles in custom pages
-                styles={{ root: { width: props.width } }}
-                {...(wizardComplete !== 'None' && { wizardComplete: isNavCompleteOrError })}
-            />
+            {showAnimation ? (
+                <CustomSubwayNav {...subwaynavProps} />
+            ) : (
+                <CustomSubwayNavNoAnimation {...subwaynavProps} />
+            )}
         </ThemeProvider>
     );
 });

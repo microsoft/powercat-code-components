@@ -150,4 +150,7 @@
     <data name="WizardCompleteorError" xml:space="preserve">
         <value>SubwayNav state</value>
     </data>
+    <data name="ShowAnimation" xml:space="preserve">
+        <value>Show animation</value>
+    </data>
 </root>

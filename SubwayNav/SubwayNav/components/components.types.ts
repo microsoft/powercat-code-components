@@ -37,4 +37,5 @@ export interface ISubNavProps {
     applyDarkTheme?: boolean;
     disabled: boolean;
     wizardComplete: string;
+    showAnimation?: boolean;
 }

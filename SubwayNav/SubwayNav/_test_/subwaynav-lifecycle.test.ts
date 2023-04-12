@@ -101,6 +101,7 @@ function createComponent() {
     const component = new SubwayNav();
     const notifyOutputChanged = jest.fn();
     const context = new MockContext<IInputs>(getMockParameters());
+    context.parameters.ShowAnimation.raw = true;
     context.parameters.items = new MockDataSet([
         new MockEntityRecord('1', {
             [ItemColumns.Key]: 'Item 1',
