@@ -10,5 +10,4 @@ export interface ISearchBoxComponentProps {
     disabled?: boolean;
     disableAnimation?: boolean;
     setFocus?: string;
-    defaultValue?: string;
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
   <control namespace="PowerCAT" constructor="SearchBox" version="0.0.1" display-name-key="SearchBox" description-key="SearchBox_desc" control-type="virtual">
-    <property name="SearchText" display-name-key="SearchBox_SearchText" description-key="SearchBox_SearchText_Desc" of-type="SingleLine.Text" usage="bound"/>
+    <property name="SearchText" display-name-key="SearchBox_SearchText" description-key="SearchBox_SearchText_Desc" of-type="SingleLine.Text" usage="output" hidden="true" />
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
     <property name="IconName" display-name-key="IconName" of-type="SingleLine.Text" usage="input" required="false" default-value="Search" />

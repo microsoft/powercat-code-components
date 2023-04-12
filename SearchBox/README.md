@@ -8,7 +8,7 @@ This code component provides a wrapper around the [Fluent UI SearchBox](https://
 
 ## Properties
 
-- **Search Text** - Use this property to get Searchbox value or set the detault value before it renders.
+- **Search Text** - The action items to render. The first item is considered the root item.
 
 - **Icon Name** - Name of the Fluent UI icon (see [Fluent UI Icons](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons)).
 

@@ -46,10 +46,11 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
         this.delayOutput = context.parameters.DelayOutput.raw;
         const inputEvent = this.context.parameters.InputEvent.raw;
         const eventChanged = inputEvent && this.setFocus !== inputEvent;
-        this.searchTextValue = context.parameters.SearchText.raw ?? '';
+
         if (eventChanged && inputEvent.startsWith(InputEvents.SetFocus)) {
             this.setFocus = inputEvent;
         }
+
         const props: ISearchBoxComponentProps = {
             onChanged: this.onChange,
             themeJSON: context.parameters.Theme.raw ?? '',
@@ -62,7 +63,6 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
             width: allocatedWidth,
             height: allocatedHeight,
             setFocus: this.setFocus,
-            defaultValue: this.searchTextValue,
         };
 
         return React.createElement(SearchBoxComponent, props);
