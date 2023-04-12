@@ -3,6 +3,7 @@
 exports[`SearchBox renders 1`] = `
 <Memo(SearchBoxComponent)
   ariaLabel=""
+  defaultValue=""
   disableAnimation={false}
   disabled={false}
   height={-1}
