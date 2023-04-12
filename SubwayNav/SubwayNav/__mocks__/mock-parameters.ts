@@ -13,5 +13,6 @@ export function getMockParameters(): IInputs {
         ApplyDarkTheme: new MockTwoOptionsProperty(),
         WizardCompleteorError: new MockEnumProperty(),
         StepsSchema: new MockStringProperty(),
+        ShowAnimation: new MockTwoOptionsProperty(),
     };
 }
