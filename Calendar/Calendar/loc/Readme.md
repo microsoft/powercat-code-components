@@ -6,7 +6,6 @@ All the translation files are borrowed from contributions(Link at the bottom) an
  - Galician(gl-ES)
  - Hindi (hi-IN)
  - Croatian(hr-HR)
- - Hungarian(hu-HU)
  - Indonesian(id-ID)
  - Latvian(lv-LV)
  - Korean(ko-KR)
@@ -23,4 +22,6 @@ Inorder to include the above mentioned language file(s), headover to [loc folder
 
 Note: Only languages which are supported by [Language function](https://docs.microsoft.com/en-us/power-platform/power-fx/reference/function-language) in PowerApps are considered, i.e. [IETF BCP-47 language tag](https://tools.ietf.org/html/bcp47) format.
 
-Reference : https://github.com/pnp/sp-dev-fx-controls-react/tree/master/src/loc 
+Important : Please submit a Pull Reuqest pointing to beta branch.
+
+Reference : https://github.com/pnp/sp-dev-fx-controls-react/tree/master/src/loc

@@ -12,6 +12,7 @@ exports[`SearchBox renders 1`] = `
   setFocus=""
   themeJSON=""
   underLined={false}
+  value=""
   width={-1}
 />
 `;
@@ -155,7 +156,7 @@ exports[`SearchBox theme 1`] = `
             display: none;
           }
       disabled={false}
-      id="SearchBox6"
+      id="SearchBox3"
       onBlur={[Function]}
       onChange={[Function]}
       onInput={[Function]}

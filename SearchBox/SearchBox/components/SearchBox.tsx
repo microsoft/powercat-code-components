@@ -3,8 +3,17 @@ import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, merge
 import { ISearchBoxComponentProps } from './Component.types';
 
 export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) => {
-    const { onChanged, themeJSON, ariaLabel, placeholderText, underLined, disabled, disableAnimation, setFocus } =
-        props;
+    const {
+        onChanged,
+        themeJSON,
+        ariaLabel,
+        placeholderText,
+        underLined,
+        disabled,
+        disableAnimation,
+        setFocus,
+        value,
+    } = props;
     const filterIcon: IIconProps = { iconName: props.iconName };
     const rootRef = React.useRef<HTMLDivElement>(null);
     const theme = React.useMemo(() => {
@@ -44,6 +53,7 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
                 disableAnimation={disableAnimation}
                 className={wrapperClass}
                 ref={rootRef}
+                value={value}
             />
         </ThemeProvider>
     );
