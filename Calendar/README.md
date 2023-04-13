@@ -93,7 +93,6 @@ Below list of languages are currently unavailable. Inorder to include new langua
  - Galician(gl-ES)
  - Hindi (hi-IN)
  - Croatian(hr-HR)
- - Hungarian(hu-HU)
  - Indonesian(id-ID)
  - Latvian(lv-LV)
  - Korean(ko-KR)
