@@ -19,11 +19,6 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
             getFormFactor: jest.fn(),
             isOffline: jest.fn(),
         };
-
-        // Canvas apps currently assigns a positive tab-index
-        // so we must use this property to assign a positive tab-index also
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (this as any).accessibility = { assignedTabIndex: 0 };
     }
     client: ComponentFramework.Client;
     device: ComponentFramework.Device;
