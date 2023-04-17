@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
   <control namespace="PowerCAT" constructor="SearchBox" version="0.0.1" display-name-key="SearchBox" description-key="SearchBox_desc" control-type="virtual">
+    <!--<property name="DefaultValue" display-name-key="SearchBox_DefaultValue" description-key="SearchBox_DefaultValue_Desc" of-type="SingleLine.Text" usage="input"/>-->
     <property name="SearchText" display-name-key="SearchBox_SearchText" description-key="SearchBox_SearchText_Desc" of-type="SingleLine.Text" usage="bound"/>
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
@@ -10,6 +11,11 @@
     <property name="PlaceHolderText" display-name-key="PlaceHolderText" of-type="SingleLine.Text" usage="input" required="false" default-value="Search" />
     <property name="InputEvent" display-name-key="InputEvent" of-type="SingleLine.Text" usage="input" required="false"/>
     <property name="DelayOutput" display-name-key="DelayOutput" of-type="TwoOptions" usage="input" required="false" />
+    <common-event name="OnChange" />
+    <feature-usage>
+      <!-- No common events (OnChange, OnSelect, etc.) are shown unless explicitly declared in the manifest -->
+      <uses-feature name="ExplicitCommonEvents" required="true" />
+    </feature-usage>
     <resources>
       <code path="index.ts" order="1" />
       <resx path="strings/SearchBox.1033.resx" version="1.0.0" />
