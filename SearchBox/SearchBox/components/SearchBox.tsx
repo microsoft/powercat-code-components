@@ -3,18 +3,10 @@ import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, merge
 import { ISearchBoxComponentProps } from './Component.types';
 
 export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) => {
-    const {
-        onChanged,
-        themeJSON,
-        ariaLabel,
-        placeholderText,
-        underLined,
-        disabled,
-        disableAnimation,
-        setFocus,
-        value,
-    } = props;
+    const { onChange, themeJSON, ariaLabel, placeholderText, underLined, disabled, disableAnimation, setFocus, value } =
+        props;
     const filterIcon: IIconProps = { iconName: props.iconName };
+    const [searchText, setSearchText] = React.useState(value);
     const rootRef = React.useRef<HTMLDivElement>(null);
     const theme = React.useMemo(() => {
         try {
@@ -25,9 +17,15 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
         }
     }, [themeJSON]);
 
-    const onChange = (event?: React.ChangeEvent<HTMLInputElement>, newValue?: string): void => {
-        onChanged(newValue);
-    };
+    React.useEffect(() => {
+        value !== searchText && setSearchText(value);
+    }, [value, searchText]);
+
+    function onChangeEvent(ev?: React.ChangeEvent<HTMLInputElement>, newValue?: string) {
+        setSearchText(newValue);
+        onChange(ev, newValue);
+    }
+
     const wrapperClass = mergeStyles({
         width: props.width,
     });
@@ -45,7 +43,7 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
         <ThemeProvider theme={theme}>
             <SearchBox
                 placeholder={placeholderText}
-                onChange={onChange}
+                onChange={onChangeEvent}
                 ariaLabel={ariaLabel}
                 underlined={underLined}
                 iconProps={filterIcon}
@@ -53,7 +51,7 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
                 disableAnimation={disableAnimation}
                 className={wrapperClass}
                 ref={rootRef}
-                value={value}
+                value={searchText}
             />
         </ThemeProvider>
     );

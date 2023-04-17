@@ -1,7 +1,7 @@
 export interface ISearchBoxComponentProps {
     width?: number;
     height?: number;
-    onChanged: (newValue: string | undefined) => void;
+    onChange: (event?: React.ChangeEvent<HTMLInputElement>, newValue?: string) => void;
     themeJSON?: string;
     ariaLabel?: string;
     underLined?: boolean;

@@ -154,4 +154,10 @@
     <data name="SearchBox_SearchText_Desc" xml:space="preserve">
         <value>Represents the default as well as the current value of search box</value>
     </data>
+    <data name="SearchBox_DefaultValue" xml:space="preserve">
+        <value>Default value</value>
+    </data>
+    <data name="SearchBox_DefaultValue_Desc" xml:space="preserve">
+        <value>Default value to set for the search box. This can be used only once</value>
+    </data>
 </root>
