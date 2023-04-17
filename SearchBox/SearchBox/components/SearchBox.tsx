@@ -3,17 +3,8 @@ import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, merge
 import { ISearchBoxComponentProps } from './Component.types';
 
 export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) => {
-    const {
-        onChange,
-        themeJSON,
-        ariaLabel,
-        placeholderText,
-        underLined,
-        disabled,
-        disableAnimation,
-        setFocus,
-        value,
-    } = props;
+    const { onChange, themeJSON, ariaLabel, placeholderText, underLined, disabled, disableAnimation, setFocus, value } =
+        props;
     const filterIcon: IIconProps = { iconName: props.iconName };
     const [searchText, setSearchText] = React.useState(value);
     const rootRef = React.useRef<HTMLDivElement>(null);
@@ -28,7 +19,7 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
 
     React.useEffect(() => {
         value !== searchText && setSearchText(value);
-    }, [value]);
+    }, [value, searchText]);
 
     function onChangeEvent(ev?: React.ChangeEvent<HTMLInputElement>, newValue?: string) {
         setSearchText(newValue);

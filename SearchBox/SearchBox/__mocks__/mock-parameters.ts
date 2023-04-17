@@ -13,6 +13,6 @@ export function getMockParameters(): IInputs {
         DisableAnimation: new MockTwoOptionsProperty(),
         InputEvent: new MockStringProperty(),
         DelayOutput: new MockTwoOptionsProperty(),
-        DefaultValue: new MockStringProperty()
+        SearchText: new MockStringProperty(),
     };
 }

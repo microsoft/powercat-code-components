@@ -9,14 +9,12 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
     private static readonly DELAY_TIMEOUT: number = 500;
     context: ComponentFramework.Context<IInputs>;
     notifyOutputChanged: ((debounce?: boolean) => void) | null;
-    _notifyOutputChangedInternal: (dontTriggerUpdateView?: boolean) => void;
     searchTextValue: string;
     defaultValue: string;
     setFocus = '';
     asyncFluent: Async;
     debouncedOutputChanged: (debounce?: boolean) => void;
     delayOutput: boolean;
-
 
     constructor() {
         this.onChanged = this.onChanged.bind(this);
@@ -32,7 +30,6 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      */
     public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
         this.notifyOutputChanged = notifyOutputChanged;
-        this._notifyOutputChangedInternal = notifyOutputChanged;
         this.context = context;
         this.context.mode.trackContainerResize(true);
         if (this.notifyOutputChanged) {
@@ -51,14 +48,12 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
         const inputEvent = this.context.parameters.InputEvent.raw;
         const eventChanged = inputEvent && this.setFocus !== inputEvent;
         const valueChanged = context.updatedProperties.indexOf(InputProperties.SearchText) > -1;
-        console.log(context.updatedProperties);
-        console.log(valueChanged);
         if (valueChanged) {
             const value = context.parameters.SearchText.raw;
             // If the default value is different from searchText value
             if (value && this.searchTextValue !== value) {
                 this.searchTextValue = value;
-                this._notifyOutputChangedInternal(false);
+                this.notifyOutputChanged;
             }
         }
         if (eventChanged && inputEvent.startsWith(InputEvents.SetFocus)) {

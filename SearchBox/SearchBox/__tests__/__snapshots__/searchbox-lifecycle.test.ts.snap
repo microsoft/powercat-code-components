@@ -12,6 +12,7 @@ exports[`SearchBox renders 1`] = `
   setFocus=""
   themeJSON=""
   underLined={false}
+  value=""
   width={-1}
 />
 `;
