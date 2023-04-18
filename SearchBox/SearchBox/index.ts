@@ -9,6 +9,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
     private static readonly DELAY_TIMEOUT: number = 500;
     context: ComponentFramework.Context<IInputs>;
     notifyOutputChanged: ((debounce?: boolean) => void) | null;
+    notifyOutputChangedNoDebounce: () => void;
     searchTextValue: string;
     defaultValue: string;
     setFocus = '';
@@ -30,6 +31,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      */
     public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
         this.notifyOutputChanged = notifyOutputChanged;
+        this.notifyOutputChangedNoDebounce = notifyOutputChanged;
         this.context = context;
         this.context.mode.trackContainerResize(true);
         if (this.notifyOutputChanged) {
@@ -53,7 +55,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
             // If the default value is different from searchText value
             if (value && this.searchTextValue !== value) {
                 this.searchTextValue = value;
-                this.notifyOutputChanged;
+                this.notifyOutputChangedNoDebounce();
             }
         }
         if (eventChanged && inputEvent.startsWith(InputEvents.SetFocus)) {
@@ -71,6 +73,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
             width: allocatedWidth,
             height: allocatedHeight,
             setFocus: this.setFocus,
+            borderColor: context.parameters.BorderColor.raw ?? '',
             value: this.searchTextValue ?? '',
         };
 
