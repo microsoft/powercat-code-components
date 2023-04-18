@@ -20,6 +20,8 @@ This code component provides a wrapper around the [Fluent UI SearchBox](https://
 
 - **Delay Output** - To delay output by half a second. Useful when input is provided frequently within short duration.
 
+- **Border color** - To define specific color for searchbox border. This exludes onhover & onfocus border color.
+
 ## Additional properties
 
 - **Theme** - Accepts a JSON string that is generated using [Fluent UI Theme Designer (windows.net)](https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/). Leaving this blank will use the default theme defined by Power Apps. Leaving this blank will use the default theme defined by Power Apps. See [theming](theme.md) for guidance on how to configure.

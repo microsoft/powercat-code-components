@@ -14,5 +14,6 @@ export function getMockParameters(): IInputs {
         InputEvent: new MockStringProperty(),
         DelayOutput: new MockTwoOptionsProperty(),
         SearchText: new MockStringProperty(),
+        BorderColor: new MockStringProperty()
     };
 }

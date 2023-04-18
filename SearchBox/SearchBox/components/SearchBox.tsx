@@ -1,10 +1,21 @@
 import * as React from 'react';
-import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, mergeStyles } from '@fluentui/react';
+import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, ISearchBoxStyles } from '@fluentui/react';
 import { ISearchBoxComponentProps } from './Component.types';
 
 export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) => {
-    const { onChange, themeJSON, ariaLabel, placeholderText, underLined, disabled, disableAnimation, setFocus, value } =
-        props;
+    const {
+        onChange,
+        themeJSON,
+        ariaLabel,
+        placeholderText,
+        underLined,
+        disabled,
+        disableAnimation,
+        setFocus,
+        value,
+        width,
+        borderColor,
+    } = props;
     const filterIcon: IIconProps = { iconName: props.iconName };
     const [searchText, setSearchText] = React.useState(value);
     const rootRef = React.useRef<HTMLDivElement>(null);
@@ -19,16 +30,19 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
 
     React.useEffect(() => {
         value !== searchText && setSearchText(value);
-    }, [value, searchText]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [value]);
 
     function onChangeEvent(ev?: React.ChangeEvent<HTMLInputElement>, newValue?: string) {
         setSearchText(newValue);
         onChange(ev, newValue);
     }
 
-    const wrapperClass = mergeStyles({
-        width: props.width,
-    });
+    const searchboxStyles = React.useMemo(() => {
+        return {
+            root: { width: width, ...(borderColor && { borderColor: borderColor }) },
+        } as ISearchBoxStyles;
+    }, [width, borderColor]);
 
     React.useEffect(() => {
         if (setFocus && setFocus !== '' && rootRef) {
@@ -38,7 +52,6 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
             }
         }
     }, [setFocus, rootRef]);
-
     return (
         <ThemeProvider theme={theme}>
             <SearchBox
@@ -49,7 +62,7 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
                 iconProps={filterIcon}
                 disabled={disabled}
                 disableAnimation={disableAnimation}
-                className={wrapperClass}
+                styles={searchboxStyles}
                 ref={rootRef}
                 value={searchText}
             />

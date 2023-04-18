@@ -160,4 +160,7 @@
     <data name="SearchBox_DefaultValue_Desc" xml:space="preserve">
         <value>Default value to set for the search box. This can be used only once</value>
     </data>
+    <data name="BorderColor" xml:space="preserve">
+        <value>Border color</value>
+    </data>
 </root>
