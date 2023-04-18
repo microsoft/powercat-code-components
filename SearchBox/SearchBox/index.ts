@@ -2,21 +2,23 @@ import * as React from 'react';
 import { IInputs, IOutputs } from './generated/ManifestTypes';
 import { SearchBoxComponent } from './components/SearchBox';
 import { ISearchBoxComponentProps } from './components/Component.types';
-import { InputEvents } from './ManifestConstants';
+import { InputEvents, InputProperties } from './ManifestConstants';
 import { Async } from '@fluentui/react';
 
 export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     private static readonly DELAY_TIMEOUT: number = 500;
     context: ComponentFramework.Context<IInputs>;
     notifyOutputChanged: ((debounce?: boolean) => void) | null;
+    notifyOutputChangedNoDebounce: () => void;
     searchTextValue: string;
+    defaultValue: string;
     setFocus = '';
     asyncFluent: Async;
     debouncedOutputChanged: (debounce?: boolean) => void;
     delayOutput: boolean;
 
     constructor() {
-        this.onChange = this.onChange.bind(this);
+        this.onChanged = this.onChanged.bind(this);
         this.asyncFluent = new Async();
     }
 
@@ -29,6 +31,7 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      */
     public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void): void {
         this.notifyOutputChanged = notifyOutputChanged;
+        this.notifyOutputChangedNoDebounce = notifyOutputChanged;
         this.context = context;
         this.context.mode.trackContainerResize(true);
         if (this.notifyOutputChanged) {
@@ -46,12 +49,20 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
         this.delayOutput = context.parameters.DelayOutput.raw;
         const inputEvent = this.context.parameters.InputEvent.raw;
         const eventChanged = inputEvent && this.setFocus !== inputEvent;
-        this.searchTextValue = context.parameters.SearchText.raw ?? '';
+        const valueChanged = context.updatedProperties.indexOf(InputProperties.SearchText) > -1;
+        if (valueChanged) {
+            const value = context.parameters.SearchText.raw;
+            // If the default value is different from searchText value
+            if (value && this.searchTextValue !== value) {
+                this.searchTextValue = value;
+                this.notifyOutputChangedNoDebounce();
+            }
+        }
         if (eventChanged && inputEvent.startsWith(InputEvents.SetFocus)) {
             this.setFocus = inputEvent;
         }
         const props: ISearchBoxComponentProps = {
-            onChanged: this.onChange,
+            onChange: this.onChanged,
             themeJSON: context.parameters.Theme.raw ?? '',
             ariaLabel: context.parameters?.AccessibilityLabel.raw ?? '',
             underLined: context.parameters.Underlined.raw ?? false,
@@ -62,7 +73,8 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
             width: allocatedWidth,
             height: allocatedHeight,
             setFocus: this.setFocus,
-            value: this.searchTextValue,
+            borderColor: context.parameters.BorderColor.raw ?? '',
+            value: this.searchTextValue ?? '',
         };
 
         return React.createElement(SearchBoxComponent, props);
@@ -72,11 +84,14 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * Called when a change is detected from the control. Updates the searchTextValue variable that is assigned to the output SearchText.
      * @param newValue a string returned as the input search text
      */
-    private onChange = (newValue?: string): void => {
-        this.searchTextValue = newValue || '';
-        this.delayOutput
-            ? this.debouncedOutputChanged && this.debouncedOutputChanged()
-            : this.notifyOutputChanged && this.notifyOutputChanged();
+    private onChanged = (event?: React.ChangeEvent<HTMLInputElement>, newValue?: string): void => {
+        // If the new Value is different from searchTextValue
+        if (this.searchTextValue !== newValue) {
+            this.searchTextValue = newValue ?? '';
+            this.delayOutput
+                ? this.debouncedOutputChanged && this.debouncedOutputChanged()
+                : this.notifyOutputChanged && this.notifyOutputChanged();
+        }
     };
 
     /**

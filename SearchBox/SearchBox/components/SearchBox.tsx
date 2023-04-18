@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, mergeStyles } from '@fluentui/react';
+import { SearchBox, createTheme, IPartialTheme, ThemeProvider, IIconProps, ISearchBoxStyles } from '@fluentui/react';
 import { ISearchBoxComponentProps } from './Component.types';
 
 export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) => {
     const {
-        onChanged,
+        onChange,
         themeJSON,
         ariaLabel,
         placeholderText,
@@ -13,8 +13,11 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
         disableAnimation,
         setFocus,
         value,
+        width,
+        borderColor,
     } = props;
     const filterIcon: IIconProps = { iconName: props.iconName };
+    const [searchText, setSearchText] = React.useState(value);
     const rootRef = React.useRef<HTMLDivElement>(null);
     const theme = React.useMemo(() => {
         try {
@@ -25,12 +28,21 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
         }
     }, [themeJSON]);
 
-    const onChange = (event?: React.ChangeEvent<HTMLInputElement>, newValue?: string): void => {
-        onChanged(newValue);
-    };
-    const wrapperClass = mergeStyles({
-        width: props.width,
-    });
+    React.useEffect(() => {
+        value !== searchText && setSearchText(value);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [value]);
+
+    function onChangeEvent(ev?: React.ChangeEvent<HTMLInputElement>, newValue?: string) {
+        setSearchText(newValue);
+        onChange(ev, newValue);
+    }
+
+    const searchboxStyles = React.useMemo(() => {
+        return {
+            root: { width: width, ...(borderColor && { borderColor: borderColor }) },
+        } as ISearchBoxStyles;
+    }, [width, borderColor]);
 
     React.useEffect(() => {
         if (setFocus && setFocus !== '' && rootRef) {
@@ -40,20 +52,19 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
             }
         }
     }, [setFocus, rootRef]);
-
     return (
         <ThemeProvider theme={theme}>
             <SearchBox
                 placeholder={placeholderText}
-                onChange={onChange}
+                onChange={onChangeEvent}
                 ariaLabel={ariaLabel}
                 underlined={underLined}
                 iconProps={filterIcon}
                 disabled={disabled}
                 disableAnimation={disableAnimation}
-                className={wrapperClass}
+                styles={searchboxStyles}
                 ref={rootRef}
-                value={value}
+                value={searchText}
             />
         </ThemeProvider>
     );

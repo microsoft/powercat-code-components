@@ -4,5 +4,5 @@ export const enum InputEvents {
 
 export const enum InputProperties {
     InputEvent = 'InputEvent',
-    SelectedKey = 'SelectedKey',
+    SearchText = 'SearchText',
 }

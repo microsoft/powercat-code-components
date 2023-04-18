@@ -3,11 +3,12 @@
 exports[`SearchBox renders 1`] = `
 <Memo(SearchBoxComponent)
   ariaLabel=""
+  borderColor=""
   disableAnimation={false}
   disabled={false}
   height={-1}
   iconName=""
-  onChanged={[Function]}
+  onChange={[Function]}
   placeholderText=""
   setFocus=""
   themeJSON=""
@@ -156,7 +157,7 @@ exports[`SearchBox theme 1`] = `
             display: none;
           }
       disabled={false}
-      id="SearchBox3"
+      id="SearchBox6"
       onBlur={[Function]}
       onChange={[Function]}
       onInput={[Function]}
