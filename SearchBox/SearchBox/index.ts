@@ -84,10 +84,10 @@ export class SearchBox implements ComponentFramework.ReactControl<IInputs, IOutp
      * Called when a change is detected from the control. Updates the searchTextValue variable that is assigned to the output SearchText.
      * @param newValue a string returned as the input search text
      */
-    private onChanged = (event: React.ChangeEvent<HTMLInputElement>, newValue: string): void => {
+    private onChanged = (event?: React.ChangeEvent<HTMLInputElement>, newValue?: string): void => {
         // If the new Value is different from searchTextValue
         if (this.searchTextValue !== newValue) {
-            this.searchTextValue = newValue;
+            this.searchTextValue = newValue ?? '';
             this.delayOutput
                 ? this.debouncedOutputChanged && this.debouncedOutputChanged()
                 : this.notifyOutputChanged && this.notifyOutputChanged();
