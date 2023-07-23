@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaskedTextField renders 1`] = `
+<Memo(CanvasMaskedTextField)
+  ariaLabel=""
+  disabled={false}
+  errorMessage="an error occured"
+  mask="************************"
+  maskChar=""
+  maskPattern="[a-zA-Z0-9]"
+  onChange={[Function]}
+  prefixValue="pre_"
+  setFocus=""
+  suffixValue=".com"
+  themeJSON=""
+  value=""
+  width={-1}
+/>
+`;
+
+exports[`MaskedTextField theme 1`] = `
+<div
+  className=
+
+      {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        background: #ffffff;
+        color: #323130;
+        font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+      }
+>
+  <div
+    className=
+        ms-TextField
+        {
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+          box-shadow: none;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          margin-bottom: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 0px;
+          padding-bottom: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 0px;
+          position: relative;
+          width: -1px;
+        }
+  >
+    <div
+      className="ms-TextField-wrapper"
+    >
+      <div
+        className=
+            ms-TextField-fieldGroup
+            {
+              align-items: stretch;
+              background: #ffffff;
+              border-color: #a4262c;
+              border-radius: 2px;
+              border: 1px solid #605e5c;
+              box-shadow: none;
+              box-sizing: border-box;
+              cursor: text;
+              display: flex;
+              flex-direction: row;
+              height: 32px;
+              margin-bottom: 0px;
+              margin-left: 0px;
+              margin-right: 0px;
+              margin-top: 0px;
+              padding-bottom: 0px;
+              padding-left: 0px;
+              padding-right: 0px;
+              padding-top: 0px;
+              position: relative;
+            }
+            &:hover {
+              border-color: #a4262c;
+            }
+            @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
+              -ms-high-contrast-adjust: none;
+              border-color: Highlight;
+              forced-color-adjust: none;
+            }
+      >
+        <div
+          className=
+              ms-TextField-prefix
+              {
+                align-items: center;
+                background: #f3f2f1;
+                color: #605e5c;
+                display: flex;
+                flex-shrink: 0;
+                line-height: 1px;
+                padding-bottom: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 0;
+                white-space: nowrap;
+              }
+              @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                background: Window;
+                color: WindowText;
+              }
+          id="TextFieldPrefix11"
+        >
+          <span
+            style={
+              Object {
+                "paddingBottom": "1px",
+              }
+            }
+          >
+            pre_
+          </span>
+        </div>
+        <input
+          aria-describedby="TextFieldDescription9"
+          aria-invalid={true}
+          aria-label=""
+          aria-labelledby="TextFieldPrefix11 TextFieldSuffix12"
+          className=
+              ms-TextField-field
+              {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                background-color: transparent;
+                background: none;
+                border-radius: 0px;
+                border: none;
+                box-shadow: none;
+                box-sizing: border-box;
+                color: #323130;
+                font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+                margin-top: 0px;
+                min-width: 0px;
+                outline: 0px;
+                padding-bottom: 0;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 0;
+                text-overflow: ellipsis;
+                width: 100%;
+              }
+              &:active {
+                outline: 0px;
+              }
+              &:focus {
+                outline: 0px;
+              }
+              &:hover {
+                outline: 0px;
+              }
+              &::-ms-clear {
+                display: none;
+              }
+              @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                background: Window;
+                color: WindowText;
+              }
+              &::placeholder {
+                color: #605e5c;
+                opacity: 1;
+              }
+              @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&::placeholder {
+                color: GrayText;
+              }
+              &:-ms-input-placeholder {
+                color: #605e5c;
+                opacity: 1;
+              }
+              @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:-ms-input-placeholder {
+                color: GrayText;
+              }
+              &::-ms-input-placeholder {
+                color: #605e5c;
+                opacity: 1;
+              }
+              @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&::-ms-input-placeholder {
+                color: GrayText;
+              }
+          disabled={false}
+          id="TextField8"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onInput={[Function]}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onMouseUp={[Function]}
+          onPaste={[Function]}
+          type="text"
+          value=""
+          width={-1}
+        />
+        <div
+          className=
+              ms-TextField-suffix
+              {
+                align-items: center;
+                background: #f3f2f1;
+                color: #605e5c;
+                display: flex;
+                flex-shrink: 0;
+                line-height: 1px;
+                padding-bottom: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 0;
+                white-space: nowrap;
+              }
+              @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
+                background: Window;
+                color: WindowText;
+              }
+          id="TextFieldSuffix12"
+        >
+          <span
+            style={
+              Object {
+                "paddingBottom": "1px",
+              }
+            }
+          >
+            .com
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      id="TextFieldDescription9"
+    >
+      <div
+        role="alert"
+      />
+    </span>
+  </div>
+</div>
+`;
