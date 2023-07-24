@@ -23,11 +23,12 @@ The following table provides an index to the code components in this repository:
 | [Facepile](Facepile)                 | User interface | This code component provides a wrapper around the [Fluent UI Facepile](https://developer.microsoft.com/en-us/fluentui#/controls/web/facepile) control for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 | [Icon](Icon)                             | User Interface | Fluent UI [Font Icon](https://developer.microsoft.com/en-us/fluentui#/controls/web/icon)/ Icon Button & Action Button with custom styling. | ✅         | ✅           | ✅            | ⬜                 | ⬜                 |
 | [Keyboard shortcuts](KeyboardShortcuts)  | Utility        | Registers key press event handlers to allow keyboard short cuts to be used inside canvas apps. | ⬜         | **✅**       | ⬜            | ⬜                 | ⬜                 |
+| [Masked TextField](MaskedTextField)                               | User Interface | This code component provides a wrapper around the [Fluent UI Customizable Masked TextField](https://developer.microsoft.com/en-us/fluentui#/controls/web/textfield) control for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 | [Nav](Nav)                               | User Interface | This code component provides a wrapper around the [Fluent UI Nav Menu](https://developer.microsoft.com/en-us/fluentui#/controls/web/nav) control bound to a button for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 | [PeoplePicker](PeoplePicker)                         | User Interface | [Fluent UI PeoplePicker control](https://developer.microsoft.com/en-us/fluentui#/controls/web/peoplepicker) for use in canvas & custom pages. | ✅         | ✅           | ✅            | ⬜                 | ⬜                 |
 | [Persona](PeoplePicker)                         | User Interface | [Fluent UI Persona control](https://developer.microsoft.com/en-us/fluentui#/controls/web/persona) for use in canvas & custom pages. | ✅         | ✅           | ✅            | ⬜                 | ⬜                 |
 | [Picker](Picker)                         | User Interface | Fluent UI Tag Picker support with custom item styling to allow for color/icons tags. | ✅         | ✅           | ✅            | ⬜                 | ⬜                 |
-| [ProgressIndicator](ProgressIndicator)               | User Interface | The DetailsList code component allows using of the [Fluent UI ProgressIndicator component](https://developer.microsoft.com/en-us/fluentui#/controls/web/progressindicator) from inside canvas apps and custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | 
+| [ProgressIndicator](ProgressIndicator)               | User Interface | The DetailsList code component allows using of the [Fluent UI ProgressIndicator component](https://developer.microsoft.com/en-us/fluentui#/controls/web/progressindicator) from inside canvas apps and custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 |
 | [Pivot](Pivot)                           | User Interface | This code component wraps the [Fluent Pivot control](https://developer.microsoft.com/en-us/fluentui#/controls/web/pivot) for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
 | [Resizable text area](ResizableTextarea) | User interface | A text area control that can be resized by the user using handle on the bottom right corner. Can be styled to look like either the classic, fluent or model-driven text field controls. | ⬜         | **✅**       | **✅**        | **✅**             | ⬜                 |
 | [SearchBox](SearchBox)                       | User Interface | [Fluent UI SearchBox control](https://developer.microsoft.com/en-us/fluentui#/controls/web/searchbox) for use in canvas & custom pages. | **✅**     | **✅**       | **✅**        | ⬜                 | ⬜                 |
@@ -46,14 +47,14 @@ First, you will need to decide on which solution publisher prefix you want to us
 
 To build and deploy the Resizable Text Area control you will first need to install the pre-requisites:
 
-1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) 
-   - Ensure the Add to PATH option is selected:  
+1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download)
+   - Ensure the Add to PATH option is selected:
      ![Add PATH](media/README/image-20211118101819181-16437559707993.png)
 
 2. [node.js](https://nodejs.org/en/download/)
-   - Installing the LTS (long term support) version is recommended:  
+   - Installing the LTS (long term support) version is recommended:
      ![LTS Version](media/README/image-20211118102026642-16437559687022.png)
-   - You **do not** need to check the **Automatically install the necessary tools** option on the **Tools for Native Modules** step:  
+   - You **do not** need to check the **Automatically install the necessary tools** option on the **Tools for Native Modules** step:
      ![image-20211207145216177](media/README/image-20211207145216177-16437559645861.png)
 
 3. [Microsoft Power Platform VS Code extension](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli#using-power-platform-vs-code-extension)
@@ -61,7 +62,7 @@ To build and deploy the Resizable Text Area control you will first need to insta
    2. Select **Extensions** icon from the **Activity** panel (`Ctrl+Shift+X`).
    3. In the search bar, enter **Power Platform Tools**.
    4. Select **Install**. Once the installation is finished, restart your Visual Studio Code to see the extension within the **Terminal** window.
-4. The [.NET 5.x SDK](https://dotnet.microsoft.com/download/dotnet/5.0) - Select the most appropriate version for your development workstation. 
+4. The [.NET 5.x SDK](https://dotnet.microsoft.com/download/dotnet/5.0) - Select the most appropriate version for your development workstation.
    **Important:** If you have any existing VSCode terminal sessions open, you must close them before the dotnet sdk will be available.
 
 ### Unit Testing the code components with code coverage
@@ -73,7 +74,7 @@ npm run test
 ```
 
 This will run the unit tests and report any failing tests, and the code-coverage metrics.
-E.g.  
+E.g.
 ![image-20220201162444337](media/README/image-20220201162444337.png)
 
 The target coverage is the default 80%.
@@ -126,9 +127,9 @@ npm run lint:fix
    pac pcf push -pp cat
    ```
 
-   In the above example, your solution publisher would need the publisher prefix of `cat`: 
+   In the above example, your solution publisher would need the publisher prefix of `cat`:
    ![image-20220201151348193](media/README/image-20220201151348193.png)
-   
+
 3. Each time you deploy, you will need to increment the build (3rd component) of the control version in the `ControlManifest.Input.xml` file.
 
 More information : [Code component application lifecycle management](https://docs.microsoft.com/en-us/powerapps/developer/component-framework/code-components-alm)

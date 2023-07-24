@@ -1,6 +1,6 @@
-# Facepile
+# Masked TextField
 
-This code component provides a wrapper around the [Fluent UI Facepile](https://developer.microsoft.com/en-us/fluentui#/controls/web/facepile) control for use in canvas & custom pages.
+This code component provides a wrapper around the [Fluent UI Masked TextField](https://developer.microsoft.com/en-us/fluentui#/controls/web/textfield) control for use in canvas & custom pages.
 
 | Canvas apps | Custom pages | Model-driven apps | Portals |
 | ----------- | ------------ | ----------------- | ------- |
@@ -16,7 +16,7 @@ The control accepts the following properties:
 
 - **Suffix** - Suffix displayed after the text field contents. This is not included in the value. Ensure a descriptive label is present to assist screen readers, as the value does not include the suffix.
 
-- **ErrorMessage** - Static error message displayed below the text field. 
+- **ErrorMessage** - Static error message displayed below the text field.
 
 - **MaskFormat** - An object defining the format characters and corresponding regexp values. Default format characters: { '9': /[0-9]/, 'a': /[a-zA-Z]/, '*': /[a-zA-Z0-9]/ }
 
