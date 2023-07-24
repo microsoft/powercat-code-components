@@ -112,7 +112,6 @@ exports[`MaskedTextField theme 1`] = `
                 background: Window;
                 color: WindowText;
               }
-          id="TextFieldPrefix11"
         >
           <span
             style={
@@ -125,10 +124,9 @@ exports[`MaskedTextField theme 1`] = `
           </span>
         </div>
         <input
-          aria-describedby="TextFieldDescription9"
+          aria-describedby="TextFieldDescription6"
           aria-invalid={true}
           aria-label=""
-          aria-labelledby="TextFieldPrefix11 TextFieldSuffix12"
           className=
               ms-TextField-field
               {
@@ -174,28 +172,43 @@ exports[`MaskedTextField theme 1`] = `
                 color: WindowText;
               }
               &::placeholder {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
                 color: #605e5c;
+                font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
                 opacity: 1;
               }
               @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&::placeholder {
                 color: GrayText;
               }
               &:-ms-input-placeholder {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
                 color: #605e5c;
+                font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
                 opacity: 1;
               }
               @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:-ms-input-placeholder {
                 color: GrayText;
               }
               &::-ms-input-placeholder {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
                 color: #605e5c;
+                font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+                font-size: 14px;
+                font-weight: 400;
                 opacity: 1;
               }
               @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&::-ms-input-placeholder {
                 color: GrayText;
               }
           disabled={false}
-          id="TextField8"
+          id="TextField5"
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -228,7 +241,6 @@ exports[`MaskedTextField theme 1`] = `
                 background: Window;
                 color: WindowText;
               }
-          id="TextFieldSuffix12"
         >
           <span
             style={
@@ -243,7 +255,7 @@ exports[`MaskedTextField theme 1`] = `
       </div>
     </div>
     <span
-      id="TextFieldDescription9"
+      id="TextFieldDescription6"
     >
       <div
         role="alert"

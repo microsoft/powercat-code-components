@@ -8,13 +8,12 @@
     "rebuild": "pcf-scripts rebuild",
     "start": "pcf-scripts start",
     "refreshTypes": "pcf-scripts refreshTypes",
-    "lint": "eslint CustomizableTextField --ext .ts,.tsx",
+    "lint": "eslint MaskedTextField --ext .ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest --collectCoverage"
   },
   "dependencies": {
-    "@fluentui/react": "^8.110.10",
-    "latest": "^0.2.0",
+    "@fluentui/react": "8.29.0",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   },
