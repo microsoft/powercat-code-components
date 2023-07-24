@@ -1,0 +1,47 @@
+{
+  "name": "pcf-project",
+  "version": "1.0.0",
+  "description": "Project containing your PowerApps Component Framework (PCF) control.",
+  "scripts": {
+    "build": "pcf-scripts build",
+    "clean": "pcf-scripts clean",
+    "rebuild": "pcf-scripts rebuild",
+    "start": "pcf-scripts start",
+    "refreshTypes": "pcf-scripts refreshTypes",
+    "lint": "eslint MaskedTextField --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest --collectCoverage"
+  },
+  "dependencies": {
+    "@fluentui/react": "8.29.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "@fluentui/jest-serializer-merge-styles": "^8.0.17",
+    "@microsoft/eslint-plugin-power-apps": "^0.2.6",
+    "@types/enzyme": "^3.10.11",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^18.8.2",
+    "@types/powerapps-component-framework": "^1.3.4",
+    "@types/react-test-renderer": "^17.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^27.4.7",
+    "pcf-scripts": "^1",
+    "pcf-start": "^1",
+    "prettier": "^2.3.1",
+    "react-test-renderer": "16.8.6",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.8.4"
+  }
+}

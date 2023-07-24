@@ -34,8 +34,9 @@ export const SearchBoxComponent = React.memo((props: ISearchBoxComponentProps) =
     }, [value]);
 
     function onChangeEvent(ev?: React.ChangeEvent<HTMLInputElement>, newValue?: string) {
-        setSearchText(newValue);
-        onChange(ev, newValue);
+        // pass empty string in case the value is undefined or null
+        setSearchText(newValue ?? '');
+        onChange(ev, newValue ?? '');
     }
 
     const searchboxStyles = React.useMemo(() => {

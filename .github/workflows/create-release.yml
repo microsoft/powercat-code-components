@@ -45,6 +45,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/Icon/Icon`,
                 `${process.env.GITHUB_WORKSPACE}/KeyboardShortcuts/KeyboardShortcuts`,
                 `${process.env.GITHUB_WORKSPACE}/Nav/Nav`,
+                `${process.env.GITHUB_WORKSPACE}/MaskedTextField/MaskedTextField`,
                 `${process.env.GITHUB_WORKSPACE}/Persona/Persona`,
                 `${process.env.GITHUB_WORKSPACE}/PeoplePicker/PeoplePicker`,
                 `${process.env.GITHUB_WORKSPACE}/Picker/Picker`,
@@ -68,7 +69,7 @@ jobs:
       - run: npm ci
         working-directory: "./Breadcrumb"
       - run: npm ci
-        working-directory: "./Calendar"        
+        working-directory: "./Calendar"
       - run: npm ci
         working-directory: "./CommandBar"
       - run: npm ci
@@ -84,6 +85,8 @@ jobs:
       - run: npm ci
         working-directory: "./KeyboardShortcuts"
       - run: npm ci
+        working-directory: "./MaskedTextField"
+      - run: npm ci
         working-directory: "./Nav"
       - run: npm ci
         working-directory: "./PeoplePicker"
@@ -92,7 +95,7 @@ jobs:
       - run: npm ci
         working-directory: "./Picker"
       - run: npm ci
-        working-directory: "./Pivot"       
+        working-directory: "./Pivot"
       - run: npm ci
         working-directory: "./ProgressIndicator"
       - run: npm ci
@@ -100,13 +103,13 @@ jobs:
       - run: npm ci
         working-directory: "./SearchBox"
       - run: npm ci
-        working-directory: "./Shimmer"        
+        working-directory: "./Shimmer"
       - run: npm ci
-        working-directory: "./Spinner" 
+        working-directory: "./Spinner"
       - run: npm ci
-        working-directory: "./SpinButton"   
+        working-directory: "./SpinButton"
       - run: npm ci
-        working-directory: "./SubwayNav"              
+        working-directory: "./SubwayNav"
       - run: npm ci
         working-directory: "./TagList"
       - run: npm ci
@@ -151,4 +154,4 @@ jobs:
           asset_path: Solution/bin/Release/Solution_managed.zip
           asset_name: PowerCATCodeComponents_managed_${{ env.MajorVersion }}_${{ env.MinorVersion }}_0_${{ env.BuildVersion }}.zip
           asset_content_type: application/zip
-          
+
