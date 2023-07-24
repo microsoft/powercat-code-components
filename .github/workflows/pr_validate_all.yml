@@ -1,7 +1,7 @@
 name: Validate PR
 on: pull_request
-   
-concurrency: 
+
+concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
@@ -22,6 +22,7 @@ jobs:
          - "./Facepile"
          - "./Icon"
          - "./KeyboardShortcuts"
+         - "./MaskedTextField"
          - "./Nav"
          - "./PeoplePicker"
          - "./Persona"
@@ -33,14 +34,14 @@ jobs:
          - "./SpinButton"
          - "./Spinner"
          - "./Shimmer"
-         - "./SubwayNav"         
+         - "./SubwayNav"
          - "./TagList"
 
 
     defaults:
       run:
         working-directory: ${{ matrix.component-directory }}
-        
+
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
@@ -50,4 +51,4 @@ jobs:
       run: npm ci
     - run: npm run build
     - run: npm test
-    
+
