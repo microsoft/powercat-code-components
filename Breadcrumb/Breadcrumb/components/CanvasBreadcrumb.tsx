@@ -4,6 +4,7 @@ import { Breadcrumb as CustomBreadcrumb } from '../fluentui-fork/Breadcrumb/Brea
 import { IBreadcrumbProps } from './components.types';
 import { getBreadcrumbItems } from './DatasetMapping';
 import { useAsync } from '@fluentui/react-hooks';
+import { wrapperStyle } from './BreadcrumbComponent.styles';
 
 export const CanvasBreadcrumb = React.memo((props: IBreadcrumbProps): React.ReactElement => {
     const { items, themeJSON, onSelected, setFocus, ariaLabel, tabIndex, maxDisplayedItems, overflowIndex } = props;
@@ -51,19 +52,14 @@ export const CanvasBreadcrumb = React.memo((props: IBreadcrumbProps): React.Reac
 
     const breadcrumbItems: IBreadcrumbItem[] = getBreadcrumbItems(items, onClick);
 
-    // onReduceData is required to prevent breadcrumb from shrinking
-    // when item changes dynamically
-    const returnUndefined = () => undefined;
-
     return (
-        <ThemeProvider applyTo="none" theme={theme} ref={rootRef}>
+        <ThemeProvider applyTo="none" theme={theme} ref={rootRef} style={wrapperStyle}>
             <CustomBreadcrumb
                 items={breadcrumbItems}
                 focusZoneProps={focusZoneProps}
                 maxDisplayedItems={maxDisplayedItems}
                 aria-label={ariaLabel}
                 overflowIndex={overflowIndex}
-                onReduceData={returnUndefined}
             />
         </ThemeProvider>
     );
