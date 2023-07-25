@@ -22,7 +22,6 @@ jobs:
          - "./Facepile"
          - "./Icon"
          - "./KeyboardShortcuts"
-         - "./MaskedTextField"
          - "./Nav"
          - "./PeoplePicker"
          - "./Persona"

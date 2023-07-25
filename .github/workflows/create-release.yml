@@ -45,7 +45,6 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/Icon/Icon`,
                 `${process.env.GITHUB_WORKSPACE}/KeyboardShortcuts/KeyboardShortcuts`,
                 `${process.env.GITHUB_WORKSPACE}/Nav/Nav`,
-                `${process.env.GITHUB_WORKSPACE}/MaskedTextField/MaskedTextField`,
                 `${process.env.GITHUB_WORKSPACE}/Persona/Persona`,
                 `${process.env.GITHUB_WORKSPACE}/PeoplePicker/PeoplePicker`,
                 `${process.env.GITHUB_WORKSPACE}/Picker/Picker`,
