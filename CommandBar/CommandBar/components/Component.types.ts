@@ -18,6 +18,7 @@ export interface CanvasCommandItem {
     isHeader?: boolean;
     divider?: boolean;
     topDivider?: boolean;
+    stylesJSON?: string;
 }
 
 export interface CanvasCommandBarProps {
