@@ -220,10 +220,8 @@ function getIconCell(
         if (imageData) {
             const iconColor = getCellValue<string>(column.tagColor, item)[0] as string;
             const ariaText = getCellValue<string>(column.ariaTextColumn, item)[0] as string;
-            const actionDisabled = getCellValue<boolean>(column.cellActionDisabledColumn, item)[0] as boolean;
-
+            const actionDisabled = getCellValue<string>(column.cellActionDisabledColumn, item)[0] as string;
             const buttonContent: JSX.Element | null = getImageTag(imageData, column, iconColor);
-
             const padding = column.imagePadding || undefined;
             if (column.cellType?.toLowerCase() === CellTypes.ClickableImage) {
                 const containerClass = `${ClassNames.imageButton} ${mergeStyles({ padding: padding })}`;
@@ -232,7 +230,7 @@ function getIconCell(
                         onClick={cellNavigation}
                         className={containerClass}
                         data-is-focusable={true}
-                        disabled={actionDisabled === true}
+                        disabled={actionDisabled === 'True'}
                         ariaDescription={ariaText}
                     >
                         {buttonContent}

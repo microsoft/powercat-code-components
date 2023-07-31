@@ -174,12 +174,12 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
         const sorting = this.datasetSupportsSorting()
             ? dataset.sorting
             : [
-                {
-                    name: context.parameters.CurrentSortColumn.raw ?? '',
-                    sortDirection: context.parameters.CurrentSortDirection
-                        .raw as unknown as ComponentFramework.PropertyHelper.DataSetApi.Types.SortDirection,
-                } as ComponentFramework.PropertyHelper.DataSetApi.SortStatus,
-            ];
+                  {
+                      name: context.parameters.CurrentSortColumn.raw ?? '',
+                      sortDirection: context.parameters.CurrentSortDirection
+                          .raw as unknown as ComponentFramework.PropertyHelper.DataSetApi.Types.SortDirection,
+                  } as ComponentFramework.PropertyHelper.DataSetApi.SortStatus,
+              ];
 
         // There are two types of visual indicators to items loading
         // - Shimmer - for when the dataset has not yet been initialized or is in an error state
