@@ -27,6 +27,7 @@ import {
     SelectionMode,
     ThemeProvider,
     IDetailsRowProps,
+    IDetailsColumnProps,
 } from '@fluentui/react';
 import * as React from 'react';
 import { IGridColumn } from './Component.types';
@@ -380,6 +381,22 @@ function mapToGridColumn(
         cellType ? ClassNames.cellTypePrefix + cellType.toString().toLowerCase() : '',
     ]);
 
+    //Set padding-left for headercell
+    const onRenderHeader: IRenderFunction<IDetailsColumnProps> = (props) => {
+        if (props) {
+            return (
+                <span
+                    style={{
+                        paddingLeft: column.getValue(ColumnsColumns.ColHeaderPaddingLeft) as string,
+                    }}
+                >
+                    {props.column.name}
+                </span>
+            );
+        }
+        return null;
+    };
+
     return {
         // Give the column a unique key based on the input collection so changing the columns will recalculate widths etc.
         key: 'col' + column.getRecordId(),
@@ -418,6 +435,7 @@ function mapToGridColumn(
         verticalAligned: undefinedIfNullish(column.getValue(ColumnsColumns.ColVerticalAlign)),
         horizontalAligned: undefinedIfNullish(column.getValue(ColumnsColumns.ColHorizontalAlign)),
         isRowHeader: column.getValue(ColumnsColumns.ColRowHeader) === true,
+        onRenderHeader: onRenderHeader,
     } as IGridColumn;
 
     function undefinedIfNullish<T>(value: T) {
