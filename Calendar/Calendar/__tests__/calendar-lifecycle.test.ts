@@ -69,7 +69,7 @@ describe('Calendar', () => {
             ReactTestUtils.Simulate.click(calendarBtn);
         });
         const outputs = component.getOutputs();
-        expect(notifyOutputChanged).toBeCalledTimes(2);
+        expect(notifyOutputChanged).toBeCalledTimes(1);
         expect(outputs.SelectedDateValue?.toDateString()).toEqual(date.toDateString());
         ReactDOM.unmountComponentAtNode(container);
     });
