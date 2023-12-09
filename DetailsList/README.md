@@ -18,7 +18,7 @@ The DetailsList component has the following properties:
 - `Records` - The dataset that contains the rows to render:
   - `RecordKey` (optional) - The unique key column name. Provide this if you want the selection to be preserved when the Records are updated, and when you want the `EventRowKey` to contain the id instead of the row index after the `OnChange` event is fired.
   - `RecordCanSelect` (optional) - The column name that contains a `boolean` value defining if a row can be selected.
-  - `RecordSelected` (optional) - The column name that contains a `boolean` value defining if a row is selected by default and when setting the `InputEvent` to contain `SetSelection`.  See the section on `Set Selection` below.
+  - `RecordSelected` (optional) - The column name that contains a `boolean` value defining if a row is selected by default and when setting the `InputEvent` to contain `SetSelection`.  See the `Set Row Selection` section below.
 - `Columns` (Optional) - The dataset that contains option metadata for the columns. If this dataset is provided, it will completely replace the columns provided in the Records dataset.
   - `ColDisplayName` (Required) - Provides the name of the column to show in the header.
   - `ColName` (Required) - Provides the actual field name of the column in the Items collection.
