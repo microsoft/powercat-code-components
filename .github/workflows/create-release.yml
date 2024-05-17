@@ -34,7 +34,7 @@ jobs:
               minorVersion: ${{ env.MinorVersion }},
               buildVersion: ${{ env.BuildVersion }},
               manifestsPaths: [
-                `${process.env.GITHUB_WORKSPACE}/AutoWidthLabel/AutoWidthLabel`,
+                `${process.env.GITHUB_WORKSPACE}/Breadcrumb/Breadcrumb`,
                 `${process.env.GITHUB_WORKSPACE}/DonutChart/DonutChart`
                 ],
               solutionPaths: `${process.env.GITHUB_WORKSPACE}/Solution/src/Other/Solution.xml`,
@@ -42,7 +42,7 @@ jobs:
               )
 
       - run: npm ci
-        working-directory: "./AutoWidthLabel"
+        working-directory: "./Breadcrumb"
       - run: npm ci
         working-directory: "./DonutChart"
 

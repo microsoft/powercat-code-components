@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         component-directory:
-         - "./AutoWidthLabel"
+         - "./Breadcrumb"
          - "./DonutChart" 
 
     defaults:

@@ -42,7 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AutoWidthLabel\auto-width-label.pcfproj" />
+    <ProjectReference Include="..\Breadcrumb\BreadCrumb.pcfproj" />
     <ProjectReference Include="..\DonutChart\DonutChart.pcfproj" />
   </ItemGroup>
 
