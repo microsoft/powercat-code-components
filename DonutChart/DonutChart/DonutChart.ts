@@ -43,7 +43,7 @@ export class DonutChart implements ComponentFramework.ReactControl<IInputs, IOut
         const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
         const props: ICanvasDonutChartProps = {
             chartTitle: context.parameters.Title.raw ?? '',
-            hideLabels: context.parameters.HideLabels.raw,
+            hideLabels: context.parameters.HideLabel.raw,
             showLabelsInPercent: context.parameters.ShowLabelsInPercentage.raw,
             chartData: this.items,
             hideTooltip: context.parameters.HideTooltip.raw,

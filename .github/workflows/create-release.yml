@@ -41,21 +41,8 @@ jobs:
               beta: false}
               )
 
-      - run: npm cache clean --force
-
-      - run: |
-          Remove-Item -Recurse -Force ./Breadcrumb/node_modules
-          Remove-Item -Force ./Breadcrumb/package-lock.json
-      - run: npm install
-        working-directory: "./Breadcrumb"
       - run: npm ci
         working-directory: "./Breadcrumb"
-
-      - run: |
-          Remove-Item -Recurse -Force ./DonutChart/node_modules
-          Remove-Item -Force ./DonutChart/package-lock.json
-      - run: npm install
-        working-directory: "./DonutChart"
       - run: npm ci
         working-directory: "./DonutChart"
 

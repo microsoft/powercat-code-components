@@ -7,7 +7,7 @@ import { MockDataSet } from './mock-datasets';
 export function getMockParameters(): IInputs {
     return {
         Title: new MockStringProperty(),
-        HideLabels: new MockTwoOptionsProperty(),
+        HideLabel: new MockTwoOptionsProperty(),
         HideTooltip: new MockTwoOptionsProperty(),
         ShowLabelsInPercentage: new MockTwoOptionsProperty(),
         InnerRadius: new MockWholeNumberProperty(),
