@@ -41,9 +41,12 @@ jobs:
               beta: false}
               )
 
-      - run: npm ci
+      - run: npm cache clean --force
+
+      - run: npm ci --loglevel verbose
         working-directory: "./Breadcrumb"
-      - run: npm ci
+
+      - run: npm ci --loglevel verbose
         working-directory: "./DonutChart"
 
       - uses: actions/setup-dotnet@v1
@@ -85,4 +88,3 @@ jobs:
           asset_path: Solution/bin/Release/Solution_managed.zip
           asset_name: PowerCATCodeComponents_managed_${{ env.MajorVersion }}_${{ env.MinorVersion }}_0_${{ env.BuildVersion }}.zip
           asset_content_type: application/zip
-
