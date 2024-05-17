@@ -35,29 +35,7 @@ jobs:
               buildVersion: ${{ env.BuildVersion }},
               manifestsPaths: [
                 `${process.env.GITHUB_WORKSPACE}/AutoWidthLabel/AutoWidthLabel`,
-                `${process.env.GITHUB_WORKSPACE}/Breadcrumb/Breadcrumb`,
-                `${process.env.GITHUB_WORKSPACE}/Calendar/Calendar`,
-                `${process.env.GITHUB_WORKSPACE}/CommandBar/CommandBar`,
-                `${process.env.GITHUB_WORKSPACE}/ContextMenu/ContextMenu`,
-                `${process.env.GITHUB_WORKSPACE}/DetailsList/DetailsList`,
-                `${process.env.GITHUB_WORKSPACE}/Elevation/Elevation`,
-                `${process.env.GITHUB_WORKSPACE}/Facepile/Facepile`,
-                `${process.env.GITHUB_WORKSPACE}/Icon/Icon`,
-                `${process.env.GITHUB_WORKSPACE}/KeyboardShortcuts/KeyboardShortcuts`,
-                `${process.env.GITHUB_WORKSPACE}/Nav/Nav`,
-                `${process.env.GITHUB_WORKSPACE}/Persona/Persona`,
-                `${process.env.GITHUB_WORKSPACE}/PeoplePicker/PeoplePicker`,
-                `${process.env.GITHUB_WORKSPACE}/Picker/Picker`,
-                `${process.env.GITHUB_WORKSPACE}/Pivot/Pivot`,
-                `${process.env.GITHUB_WORKSPACE}/ProgressIndicator/ProgressIndicator`,
-                `${process.env.GITHUB_WORKSPACE}/ResizableTextarea/ResizableTextarea`,
-                `${process.env.GITHUB_WORKSPACE}/SearchBox/SearchBox`,
-                `${process.env.GITHUB_WORKSPACE}/Shimmer/Shimmer`,
-                `${process.env.GITHUB_WORKSPACE}/SpinButton/SpinButton`,
-                `${process.env.GITHUB_WORKSPACE}/Spinner/Spinner`,
-                `${process.env.GITHUB_WORKSPACE}/SubwayNav/SubwayNav`,
-                `${process.env.GITHUB_WORKSPACE}/TagList/TagList`,
-                `${process.env.GITHUB_WORKSPACE}/ThemeGenerator/ThemeGenerator`
+                `${process.env.GITHUB_WORKSPACE}/DonutChart/DonutChart`
                 ],
               solutionPaths: `${process.env.GITHUB_WORKSPACE}/Solution/src/Other/Solution.xml`,
               beta: false}
@@ -66,53 +44,7 @@ jobs:
       - run: npm ci
         working-directory: "./AutoWidthLabel"
       - run: npm ci
-        working-directory: "./Breadcrumb"
-      - run: npm ci
-        working-directory: "./Calendar"
-      - run: npm ci
-        working-directory: "./CommandBar"
-      - run: npm ci
-        working-directory: "./ContextMenu"
-      - run: npm ci
-        working-directory: "./DetailsList"
-      - run: npm ci
-        working-directory: "./Elevation"
-      - run: npm ci
-        working-directory: "./Facepile"
-      - run: npm ci
-        working-directory: "./Icon"
-      - run: npm ci
-        working-directory: "./KeyboardShortcuts"
-      - run: npm ci
-        working-directory: "./MaskedTextField"
-      - run: npm ci
-        working-directory: "./Nav"
-      - run: npm ci
-        working-directory: "./PeoplePicker"
-      - run: npm ci
-        working-directory: "./Persona"
-      - run: npm ci
-        working-directory: "./Picker"
-      - run: npm ci
-        working-directory: "./Pivot"
-      - run: npm ci
-        working-directory: "./ProgressIndicator"
-      - run: npm ci
-        working-directory: "./ResizableTextarea"
-      - run: npm ci
-        working-directory: "./SearchBox"
-      - run: npm ci
-        working-directory: "./Shimmer"
-      - run: npm ci
-        working-directory: "./Spinner"
-      - run: npm ci
-        working-directory: "./SpinButton"
-      - run: npm ci
-        working-directory: "./SubwayNav"
-      - run: npm ci
-        working-directory: "./TagList"
-      - run: npm ci
-        working-directory: "./ThemeGenerator"
+        working-directory: "./DonutChart"
 
       - uses: actions/setup-dotnet@v1
         with:

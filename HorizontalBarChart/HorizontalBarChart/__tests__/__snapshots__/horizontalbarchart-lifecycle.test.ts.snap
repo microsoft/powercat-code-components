@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Guage renders 1`] = `
+<Memo(CanvasHorizontalChart)
+  barHeight={15}
+  data={
+    Array [
+      Object {
+        "chartData": Array [
+          Object {
+            "color": "#9373c0",
+            "horizontalBarChartdata": Object {
+              "x": undefined,
+              "y": undefined,
+            },
+            "legend": "Item 1",
+            "xAxisCalloutData": undefined,
+            "yAxisCalloutData": undefined,
+          },
+        ],
+        "chartTitle": undefined,
+        "chartTitleAccessibilityData": undefined,
+        "id": "1",
+        "key": "item1",
+      },
+      Object {
+        "chartData": Array [
+          Object {
+            "color": "#57811b",
+            "horizontalBarChartdata": Object {
+              "x": undefined,
+              "y": undefined,
+            },
+            "legend": "Item 1",
+            "xAxisCalloutData": undefined,
+            "yAxisCalloutData": undefined,
+          },
+        ],
+        "chartTitle": undefined,
+        "chartTitleAccessibilityData": undefined,
+        "id": "1",
+        "key": "item1_1",
+      },
+    ]
+  }
+  styles={
+    Object {
+      "root": Object {
+        "height": -1,
+      },
+    }
+  }
+  width={-1}
+/>
+`;
+
+exports[`Guage renders dummy items when no items configured 1`] = `
+<Memo(CanvasHorizontalChart)
+  barHeight={15}
+  data={
+    Array [
+      Object {
+        "chartData": Array [
+          Object {
+            "color": "#ca5010",
+            "horizontalBarChartdata": Object {
+              "x": 10,
+              "y": 50,
+            },
+            "legend": "Action 1",
+          },
+        ],
+        "chartTitle": "Action 1",
+        "id": "Action 1",
+        "key": "Action 1",
+      },
+      Object {
+        "chartData": Array [
+          Object {
+            "color": "#b146c2",
+            "horizontalBarChartdata": Object {
+              "x": 20,
+              "y": 50,
+            },
+            "legend": "Action 2",
+          },
+        ],
+        "chartTitle": "Action 2",
+        "id": "Action 2",
+        "key": "Action 2",
+      },
+      Object {
+        "chartData": Array [
+          Object {
+            "color": "#405f14",
+            "horizontalBarChartdata": Object {
+              "x": 30,
+              "y": 50,
+            },
+            "legend": "Action 3",
+          },
+        ],
+        "chartTitle": "Action 3",
+        "id": "Action 3",
+        "key": "Action 3",
+      },
+    ]
+  }
+  styles={
+    Object {
+      "root": Object {
+        "height": -1,
+      },
+    }
+  }
+  width={-1}
+/>
+`;

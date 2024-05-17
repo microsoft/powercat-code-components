@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetMapping returns correct props when custom color is false 1`] = `
+Array [
+  Object {
+    "chartData": Array [
+      Object {
+        "color": "#2aa0a4",
+        "horizontalBarChartdata": Object {
+          "x": undefined,
+          "y": undefined,
+        },
+        "legend": "Item 1",
+        "xAxisCalloutData": undefined,
+        "yAxisCalloutData": undefined,
+      },
+    ],
+    "chartTitle": undefined,
+    "chartTitleAccessibilityData": "Horizontal Bar Chart",
+    "id": "1",
+    "key": "item1",
+  },
+  Object {
+    "chartData": Array [
+      Object {
+        "color": "#ca5010",
+        "horizontalBarChartdata": Object {
+          "x": undefined,
+          "y": undefined,
+        },
+        "legend": "Item 1",
+        "xAxisCalloutData": undefined,
+        "yAxisCalloutData": undefined,
+      },
+    ],
+    "chartTitle": undefined,
+    "chartTitleAccessibilityData": "Horizontal Bar Chart",
+    "id": "1",
+    "key": "item1_1",
+  },
+]
+`;
+
+exports[`DatasetMapping returns correct props when custom color is true  1`] = `
+Array [
+  Object {
+    "chartData": Array [
+      Object {
+        "color": "blue",
+        "horizontalBarChartdata": Object {
+          "x": undefined,
+          "y": undefined,
+        },
+        "legend": "Item 1",
+        "xAxisCalloutData": undefined,
+        "yAxisCalloutData": undefined,
+      },
+    ],
+    "chartTitle": undefined,
+    "chartTitleAccessibilityData": "Horizontal Bar Chart",
+    "id": "1",
+    "key": "item1",
+  },
+  Object {
+    "chartData": Array [
+      Object {
+        "color": "blue",
+        "horizontalBarChartdata": Object {
+          "x": undefined,
+          "y": undefined,
+        },
+        "legend": "Item 1",
+        "xAxisCalloutData": undefined,
+        "yAxisCalloutData": undefined,
+      },
+    ],
+    "chartTitle": undefined,
+    "chartTitleAccessibilityData": "Horizontal Bar Chart",
+    "id": "1",
+    "key": "item1_1",
+  },
+]
+`;

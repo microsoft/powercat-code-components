@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Donut renders 1`] = `
+<Memo(CanvasDonutChart)
+  chartData={
+    Array [
+      Object {
+        "color": "#637cef",
+        "data": 20,
+        "id": "1",
+        "key": "item1",
+        "legend": "Item 1",
+      },
+      Object {
+        "color": "#13a10e",
+        "data": 20,
+        "id": "1",
+        "key": "item1_2",
+        "legend": "Item 1",
+      },
+    ]
+  }
+  chartKey="DonutChartKey--1-1"
+  chartTitle=""
+  height={-1}
+  innerRadius={0}
+  styles={
+    Object {
+      "chart": Object {
+        "height": "auto",
+        "maxHeight": -21,
+        "width": -1,
+      },
+      "legendContainer": Object {
+        "height": 20,
+      },
+      "root": Object {
+        "backgroundColor": "transparent",
+        "height": -1,
+        "width": -1,
+      },
+    }
+  }
+  valueInsideDonut=""
+  width={-1}
+/>
+`;
+
+exports[`Donut renders dummy items when no items configured 1`] = `
+<Memo(CanvasDonutChart)
+  chartData={
+    Array [
+      Object {
+        "color": "#9373c0",
+        "data": 30,
+        "id": "Action1",
+        "key": "Action1",
+        "legend": "Action1",
+      },
+      Object {
+        "color": "#13a10e",
+        "data": 30,
+        "id": "Action2",
+        "key": "Action2",
+        "legend": "Action2",
+      },
+      Object {
+        "color": "#026467",
+        "data": 30,
+        "id": "Action3",
+        "key": "Action3",
+        "legend": "Action3",
+      },
+    ]
+  }
+  chartKey="DonutChartKey--1-1"
+  chartTitle=""
+  height={-1}
+  innerRadius={0}
+  styles={
+    Object {
+      "chart": Object {
+        "height": "auto",
+        "maxHeight": -21,
+        "width": -1,
+      },
+      "legendContainer": Object {
+        "height": 20,
+      },
+      "root": Object {
+        "backgroundColor": "transparent",
+        "height": -1,
+        "width": -1,
+      },
+    }
+  }
+  valueInsideDonut=""
+  width={-1}
+/>
+`;

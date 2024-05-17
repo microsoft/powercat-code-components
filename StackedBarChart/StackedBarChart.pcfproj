@@ -5,23 +5,24 @@
   </PropertyGroup>
 
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-  <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props')" />
+  <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props')" />
 
   <PropertyGroup>
-    <ProjectGuid>cee3358c-a95e-4a3c-b8a0-2be4718705c6</ProjectGuid>
+    <Name>StackedBarChart</Name>
+    <ProjectGuid>9816d1c8-213f-483a-84ef-04bab7550ea0</ProjectGuid>
+    <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+    <PcfBuildMode>production</PcfBuildMode>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <!--Remove TargetFramework when this is available in 16.1-->
     <TargetFramework>net462</TargetFramework>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
-    <SolutionRootPath>src</SolutionRootPath>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <SolutionPackageType>Both</SolutionPackageType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.PowerApps.MSBuild.Solution" Version="1.*" />
+    <PackageReference Include="Microsoft.PowerApps.MSBuild.Pcf" Version="1.*" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
@@ -29,24 +30,18 @@
     <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\.gitignore" />
     <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\bin\**" />
     <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\obj\**" />
-    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.cdsproj" />
-    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.cdsproj.user" />
+    <ExcludeDirectories Include="$(OutputPath)\**" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.pcfproj" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.pcfproj.user" />
     <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\*.sln" />
+    <ExcludeDirectories Include="$(MSBuildThisFileDirectory)\node_modules\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)\**" Exclude="@(ExcludeDirectories)" />
-    <Content Include="$(SolutionPackageZipFilePath)">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\AutoWidthLabel\auto-width-label.pcfproj" />
-    <ProjectReference Include="..\DonutChart\DonutChart.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
-  <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.targets" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.targets')" />
+  <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.targets" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.targets')" />
 
 </Project>

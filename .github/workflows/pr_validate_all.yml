@@ -13,29 +13,7 @@ jobs:
       matrix:
         component-directory:
          - "./AutoWidthLabel"
-         - "./Breadcrumb"
-         - "./Calendar"
-         - "./CommandBar"
-         - "./ContextMenu"
-         - "./DetailsList"
-         - "./Elevation"
-         - "./Facepile"
-         - "./Icon"
-         - "./KeyboardShortcuts"
-         - "./Nav"
-         - "./PeoplePicker"
-         - "./Persona"
-         - "./Picker"
-         - "./Pivot"
-         - "./ProgressIndicator"
-         - "./ResizableTextarea"
-         - "./SearchBox"
-         - "./SpinButton"
-         - "./Spinner"
-         - "./Shimmer"
-         - "./SubwayNav"
-         - "./TagList"
-
+         - "./DonutChart" 
 
     defaults:
       run:
