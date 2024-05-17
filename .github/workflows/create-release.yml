@@ -43,14 +43,18 @@ jobs:
 
       - run: npm cache clean --force
 
-      - run: rm -rf node_modules package-lock.json
+      - run: |
+          Remove-Item -Recurse -Force node_modules
+          Remove-Item -Force package-lock.json
         working-directory: "./Breadcrumb"
       - run: npm install
         working-directory: "./Breadcrumb"
       - run: npm ci
         working-directory: "./Breadcrumb"
 
-      - run: rm -rf node_modules package-lock.json
+      - run: |
+          Remove-Item -Recurse -Force node_modules
+          Remove-Item -Force package-lock.json
         working-directory: "./DonutChart"
       - run: npm install
         working-directory: "./DonutChart"
