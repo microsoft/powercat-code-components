@@ -43,19 +43,21 @@ jobs:
 
       - run: npm cache clean --force
 
-      - name: Clean and Install Breadcrumb Dependencies
+      - name: Install Breadcrumb Dependencies
         run: |
-          Remove-Item -Recurse -Force ./Breadcrumb/node_modules
-          Remove-Item -Force ./Breadcrumb/package-lock.json
+          if (Test-Path -Path ./Breadcrumb/package-lock.json) {
+            Remove-Item -Force ./Breadcrumb/package-lock.json
+          }
           cd ./Breadcrumb
           npm install
           npm ci
         working-directory: "./"
 
-      - name: Clean and Install DonutChart Dependencies
+      - name: Install DonutChart Dependencies
         run: |
-          Remove-Item -Recurse -Force ./DonutChart/node_modules
-          Remove-Item -Force ./DonutChart/package-lock.json
+          if (Test-Path -Path ./DonutChart/package-lock.json) {
+            Remove-Item -Force ./DonutChart/package-lock.json
+          }
           cd ./DonutChart
           npm install
           npm ci
