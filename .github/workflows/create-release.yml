@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: "16.x"  # Use a more recent version of Node.js
+          node-version: "18.x"  # Update to Node.js version 18.x
 
       - run: npm ci
         working-directory: "./build-scripts"

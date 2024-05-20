@@ -1,5 +1,15 @@
 /* istanbul ignore file */
-
+export const MockResources = {
+    getResource: jest.fn(),
+    getString: jest.fn().mockImplementation((k) => {
+        switch (k) {
+            case '...':
+                return '...';
+            default:
+                return 'Resource_String_' + k;
+        }
+    }),
+};
 export class MockContext<T> implements ComponentFramework.Context<T> {
     constructor(parameters: T) {
         this.parameters = parameters;
@@ -18,6 +28,7 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
             getClient: jest.fn(),
             getFormFactor: jest.fn(),
             isOffline: jest.fn(),
+            isNetworkAvailable: jest.fn(),
         };
 
         // Canvas apps currently assigns a positive tab-index
@@ -31,12 +42,13 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
     formatting: ComponentFramework.Formatting;
     mode: ComponentFramework.Mode;
     navigation: ComponentFramework.Navigation;
-    resources: ComponentFramework.Resources;
+    resources: ComponentFramework.Resources = MockResources;
     userSettings: ComponentFramework.UserSettings;
     utils: ComponentFramework.Utility;
     webAPI: ComponentFramework.WebApi;
     parameters: T;
     updatedProperties: string[] = [];
+    events: IEventBag;
 }
 
 export class MockState implements ComponentFramework.Dictionary {}
@@ -90,3 +102,18 @@ export class MockTwoOptionsProperty implements ComponentFramework.PropertyTypes.
     security?: ComponentFramework.PropertyHelper.SecurityValues | undefined;
     type: string;
 }
+
+export class MockDecimalProperty implements ComponentFramework.PropertyTypes.DecimalNumberProperty {
+    constructor(raw?: number) {
+        if (raw) this.raw = raw;
+    }
+    raw: number;
+    attributes?: ComponentFramework.PropertyHelper.FieldPropertyMetadata.DecimalNumberMetadata | undefined;
+    error: boolean;
+    errorMessage: string;
+    formatted?: string | undefined;
+    security?: ComponentFramework.PropertyHelper.SecurityValues | undefined;
+    type: string;
+}
+
+export declare type IEventBag = Record<string, () => void>;
