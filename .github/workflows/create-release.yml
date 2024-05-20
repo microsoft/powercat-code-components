@@ -17,12 +17,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
       - uses: actions/setup-node@v1
         with:
           node-version: "18.x"
 
-      - run: npm ci
-        working-directory: "./build-scripts"
+      - name: Clear npm cache
+        run: npm cache clean --force
+
+      - name: Install Dependencies in build-scripts
+        run: |
+          cd ./build-scripts
+          npm install
+          npm ci
 
       - name: Version Stamp Code Components
         uses: actions/github-script@v2
@@ -41,10 +48,17 @@ jobs:
               beta: false}
               )
 
-      - run: npm ci
-        working-directory: "./Breadcrumb"
-      - run: npm ci
-        working-directory: "./DonutChart"        
+      - name: Install Dependencies in Breadcrumb
+        run: |
+          cd ./Breadcrumb
+          npm install
+          npm ci
+
+      - name: Install Dependencies in DonutChart
+        run: |
+          cd ./DonutChart
+          npm install
+          npm ci
 
       - uses: actions/setup-dotnet@v1
         with:
