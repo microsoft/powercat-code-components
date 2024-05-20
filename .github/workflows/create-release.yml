@@ -17,10 +17,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/setup-node@v1
         with:
-          node-version: "18.x"  # Update to Node.js version 18.x
+          node-version: "18.x"
 
       - run: npm ci
         working-directory: "./build-scripts"
@@ -42,36 +41,14 @@ jobs:
               beta: false}
               )
 
-      - run: npm cache clean --force
-
-      - name: Install Breadcrumb Dependencies
-        run: |
-          if (Test-Path -Path ./Breadcrumb/package-lock.json) {
-            Remove-Item -Force ./Breadcrumb/package-lock.json
-          }
-          cd ./Breadcrumb
-          npm install --legacy-peer-deps  # Update lock file
-          npm ci  # Ensure exact versions
-        working-directory: "./"
-
-      - name: Install DonutChart Dependencies
-        run: |
-          if (Test-Path -Path ./DonutChart/package-lock.json) {
-            Remove-Item -Force ./DonutChart/package-lock.json
-          }
-          cd ./DonutChart
-          npm install --legacy-peer-deps  # Update lock file
-          npm ci  # Ensure exact versions
-        working-directory: "./"
+      - run: npm ci
+        working-directory: "./Breadcrumb"
+      - run: npm ci
+        working-directory: "./DonutChart"        
 
       - uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: "6.x"  # Ensure .NET 6.0 is installed
-
-      - run: dotnet nuget locals all --clear
-
-      - run: dotnet restore
-        working-directory: "./Solution"
+          dotnet-version: "6.x"
 
       - run: dotnet build -c release
         working-directory: "./Solution"
