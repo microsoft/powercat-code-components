@@ -50,8 +50,8 @@ jobs:
             Remove-Item -Force ./Breadcrumb/package-lock.json
           }
           cd ./Breadcrumb
-          npm install --legacy-peer-deps  # Install peer dependencies
-          npm ci
+          npm install --legacy-peer-deps  # Update lock file
+          npm ci  # Ensure exact versions
         working-directory: "./"
 
       - name: Install DonutChart Dependencies
@@ -60,8 +60,8 @@ jobs:
             Remove-Item -Force ./DonutChart/package-lock.json
           }
           cd ./DonutChart
-          npm install --legacy-peer-deps  # Install peer dependencies
-          npm ci
+          npm install --legacy-peer-deps  # Update lock file
+          npm ci  # Ensure exact versions
         working-directory: "./"
 
       - uses: actions/setup-dotnet@v1
