@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "16.x"  # Use a more recent version of Node.js
 
       - run: npm ci
         working-directory: "./build-scripts"
@@ -50,7 +50,7 @@ jobs:
             Remove-Item -Force ./Breadcrumb/package-lock.json
           }
           cd ./Breadcrumb
-          npm install
+          npm install --legacy-peer-deps  # Install peer dependencies
           npm ci
         working-directory: "./"
 
@@ -60,13 +60,18 @@ jobs:
             Remove-Item -Force ./DonutChart/package-lock.json
           }
           cd ./DonutChart
-          npm install
+          npm install --legacy-peer-deps  # Install peer dependencies
           npm ci
         working-directory: "./"
 
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: "6.x"  # Ensure .NET 6.0 is installed
+
+      - run: dotnet nuget locals all --clear
+
+      - run: dotnet restore
+        working-directory: "./Solution"
 
       - run: dotnet build -c release
         working-directory: "./Solution"
