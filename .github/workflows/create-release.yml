@@ -54,11 +54,19 @@ jobs:
           npm install
           npm ci
 
+      - name: List Installed Packages in Breadcrumb
+        run: npm list
+        working-directory: "./Breadcrumb"
+
       - name: Install Dependencies in DonutChart
         run: |
           cd ./DonutChart
           npm install
           npm ci
+
+      - name: List Installed Packages in DonutChart
+        run: npm list
+        working-directory: "./DonutChart"
 
       - uses: actions/setup-dotnet@v1
         with:
