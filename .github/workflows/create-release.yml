@@ -17,6 +17,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
@@ -65,7 +66,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: "5.x"
+          dotnet-version: "6.x"  # Ensure .NET 6.0 is installed
 
       - run: dotnet build -c release
         working-directory: "./Solution"
