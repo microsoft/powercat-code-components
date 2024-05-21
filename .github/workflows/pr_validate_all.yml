@@ -39,7 +39,6 @@ jobs:
          - "./StackedBarChart"
          - "./SubwayNav"
          - "./TagList"
-         - "./ThemeGenerator"
 
     defaults:
       run:
