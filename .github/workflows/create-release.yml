@@ -17,12 +17,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      
       - uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
+          node-version: "18.x"
 
-      - run: npm ci
-        working-directory: "./build-scripts"
+      - name: Clear npm cache
+        run: npm cache clean --force
+
+      - name: Install Dependencies in build-scripts
+        run: |
+          cd ./build-scripts
+          npm install
+          npm ci
 
       - name: Version Stamp Code Components
         uses: actions/github-script@v2
@@ -40,13 +47,17 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/CommandBar/CommandBar`,
                 `${process.env.GITHUB_WORKSPACE}/ContextMenu/ContextMenu`,
                 `${process.env.GITHUB_WORKSPACE}/DetailsList/DetailsList`,
+                `${process.env.GITHUB_WORKSPACE}/DonutChart/DonutChart`,
                 `${process.env.GITHUB_WORKSPACE}/Elevation/Elevation`,
                 `${process.env.GITHUB_WORKSPACE}/Facepile/Facepile`,
+                `${process.env.GITHUB_WORKSPACE}/GaugeChart/GaugeChart`,
+                `${process.env.GITHUB_WORKSPACE}/HorizontalBarChart/HorizontalBarChart`,
                 `${process.env.GITHUB_WORKSPACE}/Icon/Icon`,
                 `${process.env.GITHUB_WORKSPACE}/KeyboardShortcuts/KeyboardShortcuts`,
+                `${process.env.GITHUB_WORKSPACE}/MaskedTextField/MaskedTextField`,
                 `${process.env.GITHUB_WORKSPACE}/Nav/Nav`,
-                `${process.env.GITHUB_WORKSPACE}/Persona/Persona`,
                 `${process.env.GITHUB_WORKSPACE}/PeoplePicker/PeoplePicker`,
+                `${process.env.GITHUB_WORKSPACE}/Persona/Persona`,
                 `${process.env.GITHUB_WORKSPACE}/Picker/Picker`,
                 `${process.env.GITHUB_WORKSPACE}/Pivot/Pivot`,
                 `${process.env.GITHUB_WORKSPACE}/ProgressIndicator/ProgressIndicator`,
@@ -55,68 +66,192 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/Shimmer/Shimmer`,
                 `${process.env.GITHUB_WORKSPACE}/SpinButton/SpinButton`,
                 `${process.env.GITHUB_WORKSPACE}/Spinner/Spinner`,
+                `${process.env.GITHUB_WORKSPACE}/StackedBarChart/StackedBarChart`,
                 `${process.env.GITHUB_WORKSPACE}/SubwayNav/SubwayNav`,
                 `${process.env.GITHUB_WORKSPACE}/TagList/TagList`,
-                `${process.env.GITHUB_WORKSPACE}/ThemeGenerator/ThemeGenerator`
-                ],
+                `${process.env.GITHUB_WORKSPACE}/ThemeGenerator/ThemeGenerator`                
+              ],
               solutionPaths: `${process.env.GITHUB_WORKSPACE}/Solution/src/Other/Solution.xml`,
               beta: false}
               )
+              
+      - name: Install Dependencies in AutoWidthLabel
+        run: |
+          cd ./AutoWidthLabel
+          npm install
+          npm ci
 
-      - run: npm ci
-        working-directory: "./AutoWidthLabel"
-      - run: npm ci
-        working-directory: "./Breadcrumb"
-      - run: npm ci
-        working-directory: "./Calendar"
-      - run: npm ci
-        working-directory: "./CommandBar"
-      - run: npm ci
-        working-directory: "./ContextMenu"
-      - run: npm ci
-        working-directory: "./DetailsList"
-      - run: npm ci
-        working-directory: "./Elevation"
-      - run: npm ci
-        working-directory: "./Facepile"
-      - run: npm ci
-        working-directory: "./Icon"
-      - run: npm ci
-        working-directory: "./KeyboardShortcuts"
-      - run: npm ci
-        working-directory: "./MaskedTextField"
-      - run: npm ci
-        working-directory: "./Nav"
-      - run: npm ci
-        working-directory: "./PeoplePicker"
-      - run: npm ci
-        working-directory: "./Persona"
-      - run: npm ci
-        working-directory: "./Picker"
-      - run: npm ci
-        working-directory: "./Pivot"
-      - run: npm ci
-        working-directory: "./ProgressIndicator"
-      - run: npm ci
-        working-directory: "./ResizableTextarea"
-      - run: npm ci
-        working-directory: "./SearchBox"
-      - run: npm ci
-        working-directory: "./Shimmer"
-      - run: npm ci
-        working-directory: "./Spinner"
-      - run: npm ci
-        working-directory: "./SpinButton"
-      - run: npm ci
-        working-directory: "./SubwayNav"
-      - run: npm ci
-        working-directory: "./TagList"
-      - run: npm ci
-        working-directory: "./ThemeGenerator"
+      - name: Install Dependencies in Breadcrumb
+        run: |
+          cd ./Breadcrumb
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Calendar
+        run: |
+          cd ./Calendar
+          npm install
+          npm ci
+
+      - name: Install Dependencies in CommandBar
+        run: |
+          cd ./CommandBar
+          npm install
+          npm ci
+
+      - name: Install Dependencies in ContextMenu
+        run: |
+          cd ./ContextMenu
+          npm install
+          npm ci
+
+      - name: Install Dependencies in DetailsList
+        run: |
+          cd ./DetailsList
+          npm install
+          npm ci
+
+      - name: Install Dependencies in DonutChart
+        run: |
+          cd ./DonutChart
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Elevation
+        run: |
+          cd ./Elevation
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Facepile
+        run: |
+          cd ./Facepile
+          npm install
+          npm ci
+
+      - name: Install Dependencies in GaugeChart
+        run: |
+          cd ./GaugeChart
+          npm install
+          npm ci
+
+      - name: Install Dependencies in HorizontalBarChart
+        run: |
+          cd ./HorizontalBarChart
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Icon
+        run: |
+          cd ./Icon
+          npm install
+          npm ci
+
+      - name: Install Dependencies in KeyboardShortcuts
+        run: |
+          cd ./KeyboardShortcuts
+          npm install
+          npm ci
+
+      - name: Install Dependencies in MaskedTextField
+        run: |
+          cd ./MaskedTextField
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Nav
+        run: |
+          cd ./Nav
+          npm install
+          npm ci
+
+      - name: Install Dependencies in PeoplePicker
+        run: |
+          cd ./PeoplePicker
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Persona
+        run: |
+          cd ./Persona
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Picker
+        run: |
+          cd ./Picker
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Pivot
+        run: |
+          cd ./Pivot
+          npm install
+          npm ci
+
+      - name: Install Dependencies in ProgressIndicator
+        run: |
+          cd ./ProgressIndicator
+          npm install
+          npm ci
+
+      - name: Install Dependencies in ResizableTextarea
+        run: |
+          cd ./ResizableTextarea
+          npm install
+          npm ci
+
+      - name: Install Dependencies in SearchBox
+        run: |
+          cd ./SearchBox
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Shimmer
+        run: |
+          cd ./Shimmer
+          npm install
+          npm ci
+
+      - name: Install Dependencies in SpinButton
+        run: |
+          cd ./SpinButton
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Spinner
+        run: |
+          cd ./Spinner
+          npm install
+          npm ci
+
+      - name: Install Dependencies in StackedBarChart
+        run: |
+          cd ./StackedBarChart
+          npm install
+          npm ci
+
+      - name: Install Dependencies in SubwayNav
+        run: |
+          cd ./SubwayNav
+          npm install
+          npm ci
+
+      - name: Install Dependencies in TagList
+        run: |
+          cd ./TagList
+          npm install
+          npm ci
+
+      - name: Install Dependencies in ThemeGenerator
+        run: |
+          cd ./ThemeGenerator
+          npm install
+          npm ci
 
       - uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: "5.x"
+          dotnet-version: "6.x"
 
       - run: dotnet build -c release
         working-directory: "./Solution"
@@ -153,4 +288,3 @@ jobs:
           asset_path: Solution/bin/Release/Solution_managed.zip
           asset_name: PowerCATCodeComponents_managed_${{ env.MajorVersion }}_${{ env.MinorVersion }}_0_${{ env.BuildVersion }}.zip
           asset_content_type: application/zip
-

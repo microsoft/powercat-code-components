@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetMapping returns correct props when custom color is false 1`] = `
+Array [
+  Object {
+    "color": "#e3008c",
+    "data": 20,
+    "id": "1",
+    "key": "item1",
+    "legend": "Item 1",
+  },
+  Object {
+    "color": "#3a96dd",
+    "data": 20,
+    "id": "1",
+    "key": "item1_2",
+    "legend": "Item 1",
+  },
+]
+`;
+
+exports[`DatasetMapping returns correct props when custom color is true  1`] = `
+Array [
+  Object {
+    "color": "blue",
+    "data": 20,
+    "id": "1",
+    "key": "item1",
+    "legend": "Item 1",
+  },
+  Object {
+    "color": "blue",
+    "data": 20,
+    "id": "1",
+    "key": "item1_2",
+    "legend": "Item 1",
+  },
+]
+`;

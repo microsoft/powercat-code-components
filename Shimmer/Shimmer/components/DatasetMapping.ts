@@ -77,6 +77,6 @@ function getDummyItems(): ICustomShimmerItem[] {
             width: '100',
             height: 20,
             type: 'line',
-        }
+        },
     ] as unknown as ICustomShimmerItem[];
 }

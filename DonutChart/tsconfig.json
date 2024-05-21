@@ -1,0 +1,14 @@
+{
+    "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
+    "compilerOptions": {
+        "module": "ES6",
+        "moduleResolution": "Node",
+        "target": "ES6",
+        "typeRoots": ["node_modules/@types"],
+        "esModuleInterop": true   ,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true 
+    }
+}

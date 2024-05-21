@@ -8,6 +8,14 @@
       "plugin:react/recommended",
       "plugin:@typescript-eslint/recommended"
   ],
+  "overrides": [
+    {
+      "files": ["**/components/*.ts"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
       "ecmaFeatures": {
@@ -29,7 +37,7 @@
         "version": "detect"
       }
     },
-  "ignorePatterns": ["**/generated/*.ts"],
+  "ignorePatterns": ["**/generated/*.ts", "**/utilities/"],
   "rules": {
       "eqeqeq": [2, "smart"],
       "react-hooks/exhaustive-deps": "warn",

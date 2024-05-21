@@ -124,6 +124,17 @@ exports[`Calendar theme 1`] = `
                 top: 2px;
                 z-index: 1;
               }
+              :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                border: 1px solid #ffffff;
+                bottom: 2px;
+                content: "";
+                left: 2px;
+                outline: 1px solid #605e5c;
+                position: absolute;
+                right: 2px;
+                top: 2px;
+                z-index: 1;
+              }
           data-is-focusable={false}
           onKeyDown={[Function]}
           tabIndex={-1}
@@ -173,6 +184,17 @@ exports[`Calendar theme 1`] = `
                   border: 0;
                 }
                 .ms-Fabric--isFocusVisible &:focus:after {
+                  border: 1px solid #ffffff;
+                  bottom: 0px;
+                  content: "";
+                  left: 0px;
+                  outline: 1px solid #605e5c;
+                  position: absolute;
+                  right: 0px;
+                  top: 0px;
+                  z-index: 1;
+                }
+                :host(.ms-Fabric--isFocusVisible) &:focus:after {
                   border: 1px solid #ffffff;
                   bottom: 0px;
                   content: "";
@@ -241,6 +263,17 @@ exports[`Calendar theme 1`] = `
                   border: 0;
                 }
                 .ms-Fabric--isFocusVisible &:focus:after {
+                  border: 1px solid #ffffff;
+                  bottom: 0px;
+                  content: "";
+                  left: 0px;
+                  outline: 1px solid #605e5c;
+                  position: absolute;
+                  right: 0px;
+                  top: 0px;
+                  z-index: 1;
+                }
+                :host(.ms-Fabric--isFocusVisible) &:focus:after {
                   border: 1px solid #ffffff;
                   bottom: 0px;
                   content: "";
@@ -849,6 +882,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -951,6 +995,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -1073,6 +1128,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -1175,6 +1241,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -1297,6 +1374,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -1409,6 +1497,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -1511,6 +1610,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -1667,6 +1777,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -1807,6 +1928,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -1937,6 +2069,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -2124,6 +2267,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -2274,6 +2428,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -2410,6 +2575,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -2536,6 +2712,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -2688,6 +2875,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -2814,6 +3012,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -2960,6 +3169,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -3086,6 +3306,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -3232,6 +3463,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -3368,6 +3610,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -3494,6 +3747,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -3646,6 +3910,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -3772,6 +4047,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -3918,6 +4204,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -4044,6 +4341,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -4190,6 +4498,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -4326,6 +4645,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -4452,6 +4782,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -4604,6 +4945,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -4730,6 +5082,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -4876,6 +5239,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -5002,6 +5376,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -5148,6 +5533,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -5284,6 +5680,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -5410,6 +5817,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -5562,6 +5980,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -5688,6 +6117,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -5834,6 +6274,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -5970,6 +6421,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -6096,6 +6558,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -6246,6 +6719,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -6386,6 +6870,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -6513,6 +7008,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -6615,6 +7121,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -6737,6 +7254,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -6839,6 +7367,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -6961,6 +7500,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -7063,6 +7613,17 @@ exports[`Calendar theme 1`] = `
                         border: 0;
                       }
                       .ms-Fabric--isFocusVisible &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
                         border: 1px solid #ffffff;
                         bottom: -2px;
                         content: "";
@@ -7185,6 +7746,17 @@ exports[`Calendar theme 1`] = `
                         top: -2px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: -2px;
+                        content: "";
+                        left: -2px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: -2px;
+                        top: -2px;
+                        z-index: 1;
+                      }
                       & span {
                         height: inherit;
                         line-height: inherit;
@@ -7283,6 +7855,17 @@ exports[`Calendar theme 1`] = `
                   top: 0px;
                   z-index: 1;
                 }
+                :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                  border: 1px solid #ffffff;
+                  bottom: 0px;
+                  content: "";
+                  left: 0px;
+                  outline: 1px solid #605e5c;
+                  position: absolute;
+                  right: 0px;
+                  top: 0px;
+                  z-index: 1;
+                }
                 &:hover {
                   background-color: #edebe9;
                   color: #201f1e;
@@ -7356,6 +7939,17 @@ exports[`Calendar theme 1`] = `
                     top: 0px;
                     z-index: 1;
                   }
+                  :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                    border: 1px solid #ffffff;
+                    bottom: 0px;
+                    content: "";
+                    left: 0px;
+                    outline: 1px solid #605e5c;
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    z-index: 1;
+                  }
                   &:hover {
                     background-color: #edebe9;
                     color: #201f1e;
@@ -7416,6 +8010,17 @@ exports[`Calendar theme 1`] = `
                     border: 0;
                   }
                   .ms-Fabric--isFocusVisible &:focus:after {
+                    border: 1px solid #ffffff;
+                    bottom: 0px;
+                    content: "";
+                    left: 0px;
+                    outline: 1px solid #605e5c;
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    z-index: 1;
+                  }
+                  :host(.ms-Fabric--isFocusVisible) &:focus:after {
                     border: 1px solid #ffffff;
                     bottom: 0px;
                     content: "";
@@ -7533,6 +8138,17 @@ exports[`Calendar theme 1`] = `
                       top: 0px;
                       z-index: 1;
                     }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
                     &:nth-child(4n + 4) {
                       margin-right: 0px;
                     }
@@ -7606,6 +8222,17 @@ exports[`Calendar theme 1`] = `
                       border: 0;
                     }
                     .ms-Fabric--isFocusVisible &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
                       border: 1px solid #ffffff;
                       bottom: 0px;
                       content: "";
@@ -7699,6 +8326,17 @@ exports[`Calendar theme 1`] = `
                       top: 0px;
                       z-index: 1;
                     }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
                     &:nth-child(4n + 4) {
                       margin-right: 0px;
                     }
@@ -7772,6 +8410,17 @@ exports[`Calendar theme 1`] = `
                       border: 0;
                     }
                     .ms-Fabric--isFocusVisible &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
                       border: 1px solid #ffffff;
                       bottom: 0px;
                       content: "";
@@ -7877,6 +8526,17 @@ exports[`Calendar theme 1`] = `
                       top: 0px;
                       z-index: 1;
                     }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
                     &:nth-child(4n + 4) {
                       margin-right: 0px;
                     }
@@ -7950,6 +8610,17 @@ exports[`Calendar theme 1`] = `
                       border: 0;
                     }
                     .ms-Fabric--isFocusVisible &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
                       border: 1px solid #ffffff;
                       bottom: 0px;
                       content: "";
@@ -8043,6 +8714,17 @@ exports[`Calendar theme 1`] = `
                       top: 0px;
                       z-index: 1;
                     }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
                     &:nth-child(4n + 4) {
                       margin-right: 0px;
                     }
@@ -8116,6 +8798,17 @@ exports[`Calendar theme 1`] = `
                       border: 0;
                     }
                     .ms-Fabric--isFocusVisible &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
                       border: 1px solid #ffffff;
                       bottom: 0px;
                       content: "";
@@ -8221,6 +8914,17 @@ exports[`Calendar theme 1`] = `
                       top: 0px;
                       z-index: 1;
                     }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
                     &:nth-child(4n + 4) {
                       margin-right: 0px;
                     }
@@ -8294,6 +8998,17 @@ exports[`Calendar theme 1`] = `
                       border: 0;
                     }
                     .ms-Fabric--isFocusVisible &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
                       border: 1px solid #ffffff;
                       bottom: 0px;
                       content: "";
@@ -8387,6 +9102,17 @@ exports[`Calendar theme 1`] = `
                       top: 0px;
                       z-index: 1;
                     }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
                     &:nth-child(4n + 4) {
                       margin-right: 0px;
                     }
@@ -8470,6 +9196,17 @@ exports[`Calendar theme 1`] = `
                       top: 0px;
                       z-index: 1;
                     }
+                    :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                      border: 1px solid #ffffff;
+                      bottom: 0px;
+                      content: "";
+                      left: 0px;
+                      outline: 1px solid #605e5c;
+                      position: absolute;
+                      right: 0px;
+                      top: 0px;
+                      z-index: 1;
+                    }
                     &:nth-child(4n + 4) {
                       margin-right: 0px;
                     }
@@ -8542,6 +9279,17 @@ exports[`Calendar theme 1`] = `
               border: 0;
             }
             .ms-Fabric--isFocusVisible &:focus:after {
+              border: 1px solid #ffffff;
+              bottom: 0px;
+              content: "";
+              left: 0px;
+              outline: 1px solid #605e5c;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              z-index: 1;
+            }
+            :host(.ms-Fabric--isFocusVisible) &:focus:after {
               border: 1px solid #ffffff;
               bottom: 0px;
               content: "";

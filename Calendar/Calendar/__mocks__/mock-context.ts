@@ -18,6 +18,7 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
             getClient: jest.fn(),
             getFormFactor: jest.fn(),
             isOffline: jest.fn(),
+            isNetworkAvailable: jest.fn(),
         };
 
         // Canvas apps currently assigns a positive tab-index
@@ -37,6 +38,7 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
     webAPI: ComponentFramework.WebApi;
     parameters: T;
     updatedProperties: string[] = [];
+    events: IEventBag;
 }
 
 export class MockState implements ComponentFramework.Dictionary {}
@@ -103,3 +105,5 @@ export class MockDateTimeProperty implements ComponentFramework.PropertyTypes.Da
     security?: ComponentFramework.PropertyHelper.SecurityValues | undefined;
     type: string;
 }
+
+export declare type IEventBag = Record<string, () => void>;

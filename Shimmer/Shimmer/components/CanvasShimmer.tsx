@@ -11,7 +11,7 @@ export const CanvasShimmer = React.memo((props: IShimmerProps) => {
                 margin: spacebetweenShimmer?.concat(' 0'),
             },
         },
-        width:props.width
+        width: props.width,
     });
 
     const theme = React.useMemo(() => {
