@@ -25,7 +25,6 @@ jobs:
          - "./HorizontalBarChart"
          - "./Icon"
          - "./KeyboardShortcuts"
-         - "./MaskedTextField"
          - "./Nav"
          - "./PeoplePicker"
          - "./Persona"
