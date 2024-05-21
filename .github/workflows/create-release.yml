@@ -205,6 +205,12 @@ jobs:
           npm install
           npm ci
 
+      - name: Install Dependencies in SubwayNav
+        run: |
+          cd ./SubwayNav
+          npm install
+          npm ci
+
       - name: Install Dependencies in TagList
         run: |
           cd ./TagList

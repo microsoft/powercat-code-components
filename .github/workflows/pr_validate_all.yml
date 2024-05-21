@@ -38,6 +38,7 @@ jobs:
          - "./SpinButton"
          - "./Spinner"
          - "./StackedBarChart"
+         - "./SubwayNav"
          - "./TagList"
          - "./ThemeGenerator"
 

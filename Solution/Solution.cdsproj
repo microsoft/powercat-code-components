@@ -67,6 +67,7 @@
     <ProjectReference Include="..\SpinButton\SpinButton.pcfproj" />
     <ProjectReference Include="..\Spinner\Spinner.pcfproj" />
     <ProjectReference Include="..\StackedBarChart\StackedBarChart.pcfproj" />
+    <ProjectReference Include="..\SubwayNav\SubwayNav.pcfproj" />
     <ProjectReference Include="..\TagList\TagList.pcfproj" />
     <ProjectReference Include="..\ThemeGenerator\themeGenerator.pcfproj" />
   </ItemGroup>
