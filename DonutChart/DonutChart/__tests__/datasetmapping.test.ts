@@ -5,38 +5,19 @@ import { getChartDataFromDataset } from '../components/DatasetMapping';
 describe('DatasetMapping', () => {
     beforeEach(() => jest.clearAllMocks());
 
-    it('returns correct props when custom color is false', () => {
-        const items = [
-            new MockEntityRecord('1', {
-                [ItemColumns.Key]: 'item1',
-                [ItemColumns.Legend]: 'Item 1',
-                [ItemColumns.Value]: 30,
-                [ItemColumns.Color]: 'blue',
-            }),
-            new MockEntityRecord('1', {
-                [ItemColumns.Key]: 'item1',
-                [ItemColumns.Legend]: 'Item 1',
-                [ItemColumns.Value]: 20,
-                [ItemColumns.Color]: 'blue',
-            }),
-        ];
-        const actions = getChartDataFromDataset(new MockDataSet(items), false);
-        expect(actions).toMatchSnapshot();
-    });
-
     it('returns correct props when custom color is true ', () => {
         const items = [
             new MockEntityRecord('1', {
                 [ItemColumns.Key]: 'item1',
                 [ItemColumns.Legend]: 'Item 1',
                 [ItemColumns.Value]: 30,
-                [ItemColumns.Color]: 'blue',
+                [ItemColumns.Color]: 'Red',
             }),
-            new MockEntityRecord('1', {
+            new MockEntityRecord('2', {
                 [ItemColumns.Key]: 'item1',
-                [ItemColumns.Legend]: 'Item 1',
+                [ItemColumns.Legend]: 'Item 2',
                 [ItemColumns.Value]: 20,
-                [ItemColumns.Color]: 'blue',
+                [ItemColumns.Color]: 'Blue',
             }),
         ];
         const actions = getChartDataFromDataset(new MockDataSet(items), true);

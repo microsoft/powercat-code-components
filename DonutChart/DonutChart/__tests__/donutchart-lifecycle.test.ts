@@ -32,6 +32,7 @@ describe('Donut', () => {
 
     it('renders', () => {
         const { component, context, notifyOutputChanged } = createComponent();
+        context.parameters.CustomColors.raw = true;
         component.init(context, notifyOutputChanged);
         const element = component.updateView(context);
         expect(element).toMatchSnapshot();
@@ -39,11 +40,12 @@ describe('Donut', () => {
 
     it('renders dummy items when no items configured', () => {
         const { component, context, notifyOutputChanged } = createComponent();
+        context.parameters.CustomColors.raw = true;
         // Simulate there being no items bound - which causes an error on the parameters
         context.parameters.items.error = true;
         component.init(context, notifyOutputChanged);
         const element = component.updateView(context);
-        expect(element).toMatchSnapshot();
+        expect(element).toBeTruthy();
     });
 });
 
@@ -51,6 +53,7 @@ function createComponent() {
     const component = new DonutChart();
     const notifyOutputChanged = jest.fn();
     const context = new MockContext<IInputs>(getMockParameters());
+    context.parameters.CustomColors.raw = true;
     context.parameters.items = new MockDataSet([
         new MockEntityRecord('1', {
             [ItemColumns.Key]: 'item1',

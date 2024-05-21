@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Guage renders 1`] = `
+exports[`StackedBar renders 1`] = `
 <Memo(StackedBarChartControl)
   data={
     Object {
       "chartData": Array [
         Object {
-          "color": "#2aa0a4",
+          "color": "Red",
           "data": 20,
           "legend": "Item 1",
           "xAxisCalloutData": undefined,
         },
         Object {
-          "color": "#57811b",
+          "color": "Red",
           "data": 20,
           "legend": "Item 1",
           "xAxisCalloutData": undefined,
@@ -22,45 +22,6 @@ exports[`Guage renders 1`] = `
         "ariaLabel": "",
       },
       "chartTitle": "",
-    }
-  }
-  styles={
-    Object {
-      "root": Object {
-        "width": -1,
-      },
-    }
-  }
-  themeJSON=""
-  width={-1}
-/>
-`;
-
-exports[`Guage renders dummy items when no items configured 1`] = `
-<Memo(StackedBarChartControl)
-  data={
-    Object {
-      "chartData": Array [
-        Object {
-          "color": "#57811b",
-          "data": 100,
-          "legend": "Item 1",
-          "xAxisCalloutData": "1",
-        },
-        Object {
-          "color": "#ad006a",
-          "data": 200,
-          "legend": "Item 2",
-          "xAxisCalloutData": "2",
-        },
-        Object {
-          "color": "#405f14",
-          "data": 300,
-          "legend": "Item 3",
-          "xAxisCalloutData": "3",
-        },
-      ],
-      "chartTitle": "StackChart",
     }
   }
   styles={

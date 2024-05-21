@@ -10,6 +10,7 @@ export class GaugeChart implements ComponentFramework.ReactControl<IInputs, IOut
     notifyOutputChanged: () => void;
     items: IGaugeChartSegment[];
     context: ComponentFramework.Context<IInputs>;
+    customColor: boolean;
     /**
      * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
      * Data-set values are not initialized here, use updateView.
@@ -31,9 +32,10 @@ export class GaugeChart implements ComponentFramework.ReactControl<IInputs, IOut
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const dataset = context.parameters.items;
         const datasetChanged = context.updatedProperties.indexOf(ManifestPropertyNames.dataset) > -1 || !this.items;
-
-        if (datasetChanged) {
-            this.items = getChartDataFromDataset(dataset, context.parameters.CustomColors.raw);
+        const customColor = context.parameters.CustomColors.raw;
+        if (datasetChanged || customColor !== this.customColor) {
+            this.customColor = context.parameters.CustomColors.raw;
+            this.items = getChartDataFromDataset(dataset, this.customColor);
         }
         // The test harness provides width/height as strings so use parseInt
         const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
