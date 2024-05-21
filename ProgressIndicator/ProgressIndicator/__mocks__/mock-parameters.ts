@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 
 import { IInputs } from '../generated/ManifestTypes';
-import { MockEnumProperty, MockStringProperty, MockWholeNumberProperty, MockDecimalNumberProperty, MockTwoOptionsProperty } from './mock-context';
+import { MockEnumProperty, MockStringProperty, MockWholeNumberProperty, MockTwoOptionsProperty } from './mock-context';
 
 export function getMockParameters(): IInputs {
     return {
@@ -12,6 +12,6 @@ export function getMockParameters(): IInputs {
         TypeofIndicator: new MockEnumProperty(),
         PercentComplete: new MockWholeNumberProperty(),
         HideProgressBar: new MockTwoOptionsProperty(),
-        BarHeight: new MockWholeNumberProperty()
+        BarHeight: new MockWholeNumberProperty(),
     };
 }

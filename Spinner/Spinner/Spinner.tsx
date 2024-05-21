@@ -39,7 +39,7 @@ export const CanvasSpinner = React.memo((props: ISpinnerProps) => {
             display: 'flex',
             justifyContent: justify,
             backgroundColor: backgroundColor,
-            width: props.width
+            width: props.width,
         });
     }
 

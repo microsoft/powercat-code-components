@@ -165,7 +165,7 @@ export function selectStateValue<T>(
 export function getPixelValueFromStyle(pixelString?: string): number {
   if (pixelString) {
     const value = Number.parseInt(pixelString.replace("px", ""));
-    return value === NaN ? 0 : value;
+    return Number.isNaN(value) ? 0 : value;
   } else return 0;
 }
 

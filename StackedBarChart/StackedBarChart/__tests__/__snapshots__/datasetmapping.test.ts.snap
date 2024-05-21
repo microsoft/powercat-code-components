@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatasetMapping returns correct props when custom color is false 1`] = `
+Object {
+  "chartData": Array [
+    Object {
+      "color": "#e3008c",
+      "data": 20,
+      "legend": "Item 1",
+      "xAxisCalloutData": undefined,
+    },
+    Object {
+      "color": "#ca5010",
+      "data": 20,
+      "legend": "Item 1",
+      "xAxisCalloutData": undefined,
+    },
+  ],
+  "chartDataAccessibilityData": Object {
+    "ariaLabel": "Stack Bar Chart",
+  },
+  "chartTitle": "Stack Bar Chart",
+}
+`;
+
+exports[`DatasetMapping returns correct props when custom color is true  1`] = `
+Object {
+  "chartData": Array [
+    Object {
+      "color": "#637cef",
+      "data": 20,
+      "legend": "Item 1",
+      "xAxisCalloutData": undefined,
+    },
+    Object {
+      "color": "#13a10e",
+      "data": 20,
+      "legend": "Item 1",
+      "xAxisCalloutData": undefined,
+    },
+  ],
+  "chartDataAccessibilityData": Object {
+    "ariaLabel": "Stack Bar Chart",
+  },
+  "chartTitle": "Stack Bar Chart",
+}
+`;

@@ -1,18 +1,11 @@
 import * as React from 'react';
-import {
-    ThemeProvider,
-    createTheme,
-    IPartialTheme,
-    ICalendar,
-    ICalendarStrings,
-    defaultCalendarStrings,
-} from '@fluentui/react';
+import { ThemeProvider, createTheme, IPartialTheme, ICalendarStrings, defaultCalendarStrings } from '@fluentui/react';
 import { Calendar as CustomCalendar } from '../fluentui-fork/Calendar/Calendar';
 import { ICalendarProps } from './Component.types';
 import { getWeeksFirstDay } from '../components/Utilities';
-import { useAsync } from '@fluentui/react-hooks';
 import { DateTimePickerStrings } from './DateTimePickerStrings';
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 export const CanvasCalendar = React.memo((props: ICalendarProps) => {
     const {
         themeJSON,
@@ -35,6 +28,7 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
         backgroundColor,
         language,
     } = props;
+    const componentRef = React.useRef<HTMLDivElement>(null);
     const [calendarString, setCalendarSting] = React.useState<ICalendarStrings>();
     const theme = React.useMemo(() => {
         try {
@@ -45,24 +39,20 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
         }
     }, [themeJSON]);
 
-    const componentRef = React.useRef<ICalendar>(null);
-    const async = useAsync();
     React.useEffect(() => {
         if (setFocus && setFocus !== '' && componentRef) {
-            async.requestAnimationFrame(() => {
-                (componentRef as React.RefObject<ICalendar>).current?.focus();
-            });
+            const selectedDayBtn = (componentRef.current as HTMLElement).getElementsByClassName(
+                'ms-CalendarDay-daySelected',
+            );
+            if (!isDisabled && selectedDayBtn && selectedDayBtn.length > 0) {
+                (selectedDayBtn[0] as HTMLInputElement).focus();
+            }
         }
-    }, [setFocus, componentRef, async]);
+    }, [setFocus, componentRef, isDisabled]);
 
     function onSelectDate(date: Date) {
         onSelected(date);
     }
-
-    React.useEffect(() => {
-        if (selectedDateValue) onSelected(selectedDateValue);
-        //eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
 
     React.useEffect(() => {
         async function getCalendarStrings() {
@@ -95,6 +85,7 @@ export const CanvasCalendar = React.memo((props: ICalendarProps) => {
                 highlightCurrentMonth={highlightCurrentMonth}
                 minDate={minDate}
                 maxDate={maxDate}
+                ref={componentRef}
                 styles={{ root: { background: backgroundColor } }} // To remove transparency
             />
         </ThemeProvider>

@@ -81,8 +81,10 @@ export class Calendar implements ComponentFramework.ReactControl<IInputs, IOutpu
     }
 
     onSelect = (selectedDateValue: Date): void => {
-        this.selectedDateValue = selectedDateValue;
-        this.notifyOutputChanged();
+        if (this.selectedDateValue !== selectedDateValue) {
+            this.selectedDateValue = selectedDateValue;
+            this.notifyOutputChanged();
+        }
     };
 
     /**

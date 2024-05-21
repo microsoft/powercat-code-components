@@ -10,11 +10,11 @@ This code component provides a wrapper around the [Fluent UI Calendar](https://d
 
 The control accepts the following properties:
 
--   **Selected Date** - The date value to be pre-selected or Selected after on change event. 
-For e.g. : 
+-   **Selected Date** - The date value to be pre-selected or Selected after on change event.
+For e.g. :
 ```
 //Today's Date
-Today() 
+Today()
 // or based on language
 DateValue("24/7/2022",Language())
 // or specific regional language
@@ -34,7 +34,7 @@ Language()
 -   **Show Week Numbers** - Specify Yes or No to show or hide week numbers.
 -   **Show Six Weeks by Default** - - Specify Yes to show six weeks by default.
 -   **Minimum Date** - If specified a date value, navigation beyond that date will not be allowed.
--   **Maximum Date** - If specified a date value, navigation beyond that date will not be allowed. Refer example provided for Selected Date. 
+-   **Maximum Date** - If specified a date value, navigation beyond that date will not be allowed. Refer example provided for Selected Date.
 -   **First Day of Week** - Select the day to be displayed as first day of week in calendar.
 
 ### Style Properties
@@ -55,19 +55,19 @@ Language()
 When a date is selected, value can be obtained by the selectedDate output property. Below is a set of sample code which can be added in 'OnChange' property, depending on how to output need to be visualized.
 
 ```
-Set(var_SelectedDate, If(!IsBlank(Self.selectedDateValue), Text(Self.selectedDateValue, ShortDate, Language())));
+Set(varSelectedDate, Text(Self.SelectedDateValue, DateTimeFormat.ShortDate, Language()));
 // Example - Output: 7/14/2022
 
 ```
 
 ```
-Set(var_SelectedDate, If(!IsBlank(Self.selectedDateValue), Text(Self.selectedDateValue, LongDate, Language())));
+Set(varSelectedDate, Text(Self.SelectedDateValue, DateTimeFormat.LongDate, Language()));
 // Example - Output: Sunday, July 3, 2022
 
 ```
 
 ```
-Set(var_SelectedDate, If(!IsBlank(Self.selectedDateValue), Text(Self.selectedDateValue, ShortDate, "en-GB")));
+Set(varSelectedDate, Text(Self.SelectedDateValue,DateTimeFormat.ShortDate, "en-GB"))
 // Example - Output: 14/07/2022
 ```
 
