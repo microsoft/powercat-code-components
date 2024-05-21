@@ -178,7 +178,7 @@
     <comment>Name of the property that specifies Hide Tooltip</comment>
   </data>
   <data name="DonutChart" xml:space="preserve">
-    <value> Fluent Donut Chart (%VERSION%) Preview</value>
+    <value>Fluent Donut Chart (%VERSION%) Preview</value>
     <comment>Name of the property that specifies Component name</comment>
   </data>
 </root>
