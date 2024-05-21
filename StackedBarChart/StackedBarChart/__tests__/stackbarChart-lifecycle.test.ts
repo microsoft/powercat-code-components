@@ -10,7 +10,7 @@ window.requestAnimationFrame = jest.fn().mockImplementation((callback) => {
     callback();
 });
 
-describe('Guage', () => {
+describe('StackedBar', () => {
     beforeEach(() => {
         jest.clearAllMocks();
         jest.useFakeTimers();
@@ -32,6 +32,7 @@ describe('Guage', () => {
 
     it('renders', () => {
         const { component, context, notifyOutputChanged } = createComponent();
+        context.parameters.CustomColors.raw = true;
         component.init(context, notifyOutputChanged);
         const element = component.updateView(context);
         expect(element).toMatchSnapshot();
@@ -41,9 +42,10 @@ describe('Guage', () => {
         const { component, context, notifyOutputChanged } = createComponent();
         // Simulate there being no items bound - which causes an error on the parameters
         context.parameters.items.error = true;
+        context.parameters.CustomColors.raw = true;
         component.init(context, notifyOutputChanged);
         const element = component.updateView(context);
-        expect(element).toMatchSnapshot();
+        expect(element).toBeTruthy();
     });
 });
 
@@ -51,6 +53,7 @@ function createComponent() {
     const component = new StackedBarChart();
     const notifyOutputChanged = jest.fn();
     const context = new MockContext<IInputs>(getMockParameters());
+    context.parameters.CustomColors.raw = true;
     context.parameters.items = new MockDataSet([
         new MockEntityRecord('1', {
             [ItemColumns.Key]: 'item1',

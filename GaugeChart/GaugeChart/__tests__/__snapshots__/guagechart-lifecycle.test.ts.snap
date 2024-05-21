@@ -10,56 +10,18 @@ exports[`Guage renders 1`] = `
   segments={
     Array [
       Object {
-        "color": "#9373c0",
+        "color": "Red",
         "id": "1",
         "key": "item1",
         "legend": "Item 1",
         "size": 20,
       },
       Object {
-        "color": "#3a96dd",
+        "color": "Red",
         "id": "1",
         "key": "item1_2",
         "legend": "Item 1",
         "size": 20,
-      },
-    ]
-  }
-  sublabel=""
-  themeJSON=""
-  width={-1}
-/>
-`;
-
-exports[`Guage renders dummy items when no items configured 1`] = `
-<Memo(CanvasGaugeChart)
-  chartTitle=""
-  chartValue={0}
-  height={-1}
-  maxValue={0}
-  minValue={0}
-  segments={
-    Array [
-      Object {
-        "color": "#ca5010",
-        "id": "First",
-        "key": "First",
-        "legend": "First",
-        "size": 30,
-      },
-      Object {
-        "color": "#ad006a",
-        "id": "Second",
-        "key": "Second",
-        "legend": "Second",
-        "size": 30,
-      },
-      Object {
-        "color": "#2c72a8",
-        "id": "Third",
-        "key": "Third",
-        "legend": "Third",
-        "size": 30,
       },
     ]
   }

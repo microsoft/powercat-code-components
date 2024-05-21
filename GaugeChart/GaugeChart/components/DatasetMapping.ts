@@ -78,7 +78,7 @@ export function getChartDataFromDataset(
                 key: key,
                 legend: record.getValue(ItemColumns.Legend) as string,
                 size: record.getValue(ItemColumns.Size) as number,
-                color: _randomColor(index),
+                color: getColorFromToken(record.getValue(ItemColumns.Color) as string),
             } as IGaugeChartSegment;
         });
     }

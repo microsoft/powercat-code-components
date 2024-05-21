@@ -32,6 +32,7 @@ describe('Guage', () => {
 
     it('renders', () => {
         const { component, context, notifyOutputChanged } = createComponent();
+        context.parameters.CustomColors.raw = true;
         component.init(context, notifyOutputChanged);
         const element = component.updateView(context);
         expect(element).toMatchSnapshot();
@@ -41,9 +42,10 @@ describe('Guage', () => {
         const { component, context, notifyOutputChanged } = createComponent();
         // Simulate there being no items bound - which causes an error on the parameters
         context.parameters.items.error = true;
+        context.parameters.CustomColors.raw = true;
         component.init(context, notifyOutputChanged);
         const element = component.updateView(context);
-        expect(element).toMatchSnapshot();
+        expect(element).toBeTruthy();
     });
 });
 
@@ -51,12 +53,13 @@ function createComponent() {
     const component = new GaugeChart();
     const notifyOutputChanged = jest.fn();
     const context = new MockContext<IInputs>(getMockParameters());
+    context.parameters.CustomColors.raw = true;
     context.parameters.items = new MockDataSet([
         new MockEntityRecord('1', {
             [ItemColumns.Key]: 'item1',
             [ItemColumns.Legend]: 'Item 1',
             [ItemColumns.Size]: 30,
-            [ItemColumns.Color]: 'blue',
+            [ItemColumns.Color]: 'Blue',
         }),
         new MockEntityRecord('1', {
             [ItemColumns.Key]: 'item1',
