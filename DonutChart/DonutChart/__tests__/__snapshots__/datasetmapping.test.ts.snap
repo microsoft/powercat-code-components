@@ -3,14 +3,14 @@
 exports[`DatasetMapping returns correct props when custom color is false 1`] = `
 Array [
   Object {
-    "color": "#9373c0",
+    "color": "#e3008c",
     "data": 20,
     "id": "1",
     "key": "item1",
     "legend": "Item 1",
   },
   Object {
-    "color": "#57811b",
+    "color": "#3a96dd",
     "data": 20,
     "id": "1",
     "key": "item1_2",

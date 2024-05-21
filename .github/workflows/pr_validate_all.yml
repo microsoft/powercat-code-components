@@ -12,8 +12,14 @@ jobs:
     strategy:
       matrix:
         component-directory:
-         - "./Breadcrumb"
+         - "./AutoWidthLabel"
+         - "./Breadcrumb" 
+         - "./Calendar" 
+         - "./CommandBar" 
+         - "./ContextMenu" 
+         - "./DetailsList" 
          - "./DonutChart" 
+         - "./Elevation" 
 
     defaults:
       run:

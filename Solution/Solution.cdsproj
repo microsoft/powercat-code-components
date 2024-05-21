@@ -42,8 +42,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AutoWidthLabel\auto-width-label.pcfproj" />
     <ProjectReference Include="..\Breadcrumb\BreadCrumb.pcfproj" />
-    <ProjectReference Include="..\DonutChart\DonutChart.pcfproj" />
+    <ProjectReference Include="..\Calendar\Calendar.pcfproj" />
+    <ProjectReference Include="..\CommandBar\CommandBar.pcfproj" />
+    <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
+    <ProjectReference Include="..\DetailsList\DetailsList.pcfproj" />
+    <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

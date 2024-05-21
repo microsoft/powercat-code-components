@@ -47,26 +47,53 @@ jobs:
               solutionPaths: `${process.env.GITHUB_WORKSPACE}/Solution/src/Other/Solution.xml`,
               beta: false}
               )
+      - name: Install Dependencies in AutoWidthLabel
+        run: |
+          cd ./AutoWidthLabel
+          npm install
+          npm ci
 
       - name: Install Dependencies in Breadcrumb
         run: |
           cd ./Breadcrumb
           npm install
           npm ci
+      
+      - name: Install Dependencies in Calendar
+        run: |
+          cd ./Calendar
+          npm install
+          npm ci
 
-      - name: List Installed Packages in Breadcrumb
-        run: npm list
-        working-directory: "./Breadcrumb"
+      - name: Install Dependencies in CommandBar
+        run: |
+          cd ./CommandBar
+          npm install
+          npm ci
 
+      - name: Install Dependencies in ContextMenu
+        run: |
+          cd ./ContextMenu
+          npm install
+          npm ci
+
+      - name: Install Dependencies in DetailsList
+        run: |
+          cd ./DetailsList
+          npm install
+          npm ci
+      
       - name: Install Dependencies in DonutChart
         run: |
           cd ./DonutChart
           npm install
           npm ci
 
-      - name: List Installed Packages in DonutChart
-        run: npm list
-        working-directory: "./DonutChart"
+      - name: Install Dependencies in Elevation
+        run: |
+          cd ./Elevation
+          npm install
+          npm ci
 
       - uses: actions/setup-dotnet@v1
         with:
