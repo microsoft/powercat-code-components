@@ -20,7 +20,7 @@ describe('DatasetMapping', () => {
                 [ItemColumns.Color]: 'blue',
             }),
         ];
-        const actions = getChartDataFromDataset(new MockDataSet(items), stackBarLabel,  stackBarLabel, false);
+        const actions = getChartDataFromDataset(new MockDataSet(items), stackBarLabel, stackBarLabel, false);
         expect(actions).toMatchSnapshot();
     });
 
@@ -39,7 +39,7 @@ describe('DatasetMapping', () => {
                 [ItemColumns.Color]: 'blue',
             }),
         ];
-        const actions = getChartDataFromDataset(new MockDataSet(items), stackBarLabel,  stackBarLabel, false);
+        const actions = getChartDataFromDataset(new MockDataSet(items), stackBarLabel, stackBarLabel, false);
         expect(actions).toMatchSnapshot();
     });
 });

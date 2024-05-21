@@ -1,6 +1,6 @@
-import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { CanvasProgressIndicator, ICustomProgressIndicatorProps } from "./ProgressIndicator";
-import * as React from "react";
+import { IInputs, IOutputs } from './generated/ManifestTypes';
+import { CanvasProgressIndicator, ICustomProgressIndicatorProps } from './ProgressIndicator';
+import * as React from 'react';
 
 export class ProgressIndicator implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     context: ComponentFramework.Context<IInputs>;
@@ -11,9 +11,7 @@ export class ProgressIndicator implements ComponentFramework.ReactControl<IInput
      * @param notifyOutputChanged A callback method to alert the framework that the control has new outputs ready to be retrieved asynchronously.
      * @param state A piece of data that persists in one session for a single user. Can be set at any point in a controls life cycle by calling 'setControlState' in the Mode interface.
      */
-    public init(
-        context: ComponentFramework.Context<IInputs>
-    ): void {
+    public init(context: ComponentFramework.Context<IInputs>): void {
         this.context = context;
         this.context.mode.trackContainerResize(true);
     }
@@ -29,18 +27,16 @@ export class ProgressIndicator implements ComponentFramework.ReactControl<IInput
         const props: ICustomProgressIndicatorProps = {
             width: allocatedWidth,
             height: allocatedHeight,
-            label: context.parameters.Label.raw ?? "",
-            description: context.parameters.Description.raw ?? "",
-            ariaLabel: context.parameters.AccessibilityLabel.raw ?? "",
+            label: context.parameters.Label.raw ?? '',
+            description: context.parameters.Description.raw ?? '',
+            ariaLabel: context.parameters.AccessibilityLabel.raw ?? '',
             percentComplete: context.parameters.PercentComplete.raw ?? 0,
             typeofIndidcator: context.parameters.TypeofIndicator.raw,
-            themeJSON: context.parameters.Theme.raw ?? "",
+            themeJSON: context.parameters.Theme.raw ?? '',
             progressHidden: context.parameters.HideProgressBar.raw ?? false,
             barHeight: context.parameters.BarHeight.raw ?? 2,
         };
-        return React.createElement(
-            CanvasProgressIndicator, props
-        );
+        return React.createElement(CanvasProgressIndicator, props);
     }
 
     /**

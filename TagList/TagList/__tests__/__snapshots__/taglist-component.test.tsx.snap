@@ -45,10 +45,21 @@ exports[`TagList tag renders correctly with no style 1`] = `
         top: 1px;
         z-index: 1;
       }
+      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+        border: 1px solid #ffffff;
+        bottom: 1px;
+        content: "";
+        left: 1px;
+        outline: 1px solid #605e5c;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        z-index: 1;
+      }
       &:hover {
         background: #f3f2f1;
       }
-      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
         border-color: GrayText;
         border: 1px solid WindowText;
       }
@@ -76,7 +87,7 @@ exports[`TagList tag renders correctly with no style 1`] = `
           text-overflow: ellipsis;
           white-space: nowrap;
         }
-        @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+        @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
           color: GrayText;
         }
     id="id__0-text"
@@ -145,10 +156,21 @@ exports[`TagList taglist renders correctly with no style 1`] = `
           top: 1px;
           z-index: 1;
         }
+        :host(.ms-Fabric--isFocusVisible) &:focus:after {
+          border: 1px solid #ffffff;
+          bottom: 1px;
+          content: "";
+          left: 1px;
+          outline: 1px solid #605e5c;
+          position: absolute;
+          right: 1px;
+          top: 1px;
+          z-index: 1;
+        }
         &:hover {
           background: #f3f2f1;
         }
-        @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+        @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
           border-color: GrayText;
           border: 1px solid WindowText;
         }
@@ -176,7 +198,7 @@ exports[`TagList taglist renders correctly with no style 1`] = `
             text-overflow: ellipsis;
             white-space: nowrap;
           }
-          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
             color: GrayText;
           }
       id="id__2-text"

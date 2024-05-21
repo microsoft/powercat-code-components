@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 
 import { IInputs } from '../generated/ManifestTypes';
-import { MockEnumProperty, MockStringProperty, MockTwoOptionsProperty, MockWholeNumberProperty } from './mock-context';
+import { MockStringProperty, MockTwoOptionsProperty, MockWholeNumberProperty } from './mock-context';
 import { MockDataSet } from './mock-datasets';
 
 export function getMockParameters(): IInputs {

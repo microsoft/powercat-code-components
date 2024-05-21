@@ -49,6 +49,26 @@
     <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
     <ProjectReference Include="..\DetailsList\DetailsList.pcfproj" />
     <ProjectReference Include="..\DonutChart\DonutChart.pcfproj" />
+    <ProjectReference Include="..\Elevation\Elevation.pcfproj" />
+    <ProjectReference Include="..\Facepile\Facepile.pcfproj" />
+    <ProjectReference Include="..\GaugeChart\GaugeChart.pcfproj" />
+    <ProjectReference Include="..\HorizontalBarChart\HorizontalBarChart.pcfproj" />
+    <ProjectReference Include="..\Icon\Icon.pcfproj" />
+    <ProjectReference Include="..\KeyboardShortcuts\keyboard-shortcuts.pcfproj" />
+    <ProjectReference Include="..\MaskedTextField\MaskedTextField.pcfproj" />
+    <ProjectReference Include="..\Nav\Nav.pcfproj" />
+    <ProjectReference Include="..\PeoplePicker\PeoplePicker.pcfproj" />
+    <ProjectReference Include="..\Persona\Persona.pcfproj" />
+    <ProjectReference Include="..\Picker\Picker.pcfproj" />
+    <ProjectReference Include="..\Pivot\Pivot.pcfproj" />
+    <ProjectReference Include="..\ProgressIndicator\ProgressIndicator.pcfproj" />
+    <ProjectReference Include="..\SearchBox\SearchBox.pcfproj" />
+    <ProjectReference Include="..\Shimmer\Shimmer.pcfproj" />
+    <ProjectReference Include="..\SpinButton\SpinButton.pcfproj" />
+    <ProjectReference Include="..\Spinner\Spinner.pcfproj" />
+    <ProjectReference Include="..\StackedBarChart\StackedBarChart.pcfproj" />
+    <ProjectReference Include="..\TagList\TagList.pcfproj" />
+    <ProjectReference Include="..\ThemeGenerator\themeGenerator.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />

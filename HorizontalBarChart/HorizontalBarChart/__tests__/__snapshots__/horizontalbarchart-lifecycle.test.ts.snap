@@ -8,7 +8,7 @@ exports[`Guage renders 1`] = `
       Object {
         "chartData": Array [
           Object {
-            "color": "#9373c0",
+            "color": "#637cef",
             "horizontalBarChartdata": Object {
               "x": undefined,
               "y": undefined,
@@ -26,7 +26,7 @@ exports[`Guage renders 1`] = `
       Object {
         "chartData": Array [
           Object {
-            "color": "#57811b",
+            "color": "#13a10e",
             "horizontalBarChartdata": Object {
               "x": undefined,
               "y": undefined,
@@ -77,7 +77,7 @@ exports[`Guage renders dummy items when no items configured 1`] = `
       Object {
         "chartData": Array [
           Object {
-            "color": "#b146c2",
+            "color": "#026467",
             "horizontalBarChartdata": Object {
               "x": 20,
               "y": 50,

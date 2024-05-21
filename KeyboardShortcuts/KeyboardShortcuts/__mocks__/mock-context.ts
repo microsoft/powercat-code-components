@@ -18,6 +18,7 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
       getClient: jest.fn(),
       getFormFactor: jest.fn(),
       isOffline: jest.fn(),
+      isNetworkAvailable: jest.fn(),
     };
 
     // Canvas apps currently assigns a positive tab-index
@@ -37,6 +38,7 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
   webAPI: ComponentFramework.WebApi;
   parameters: T;
   updatedProperties: string[] = [];
+  events: IEventBag;
 }
 
 export class MockState implements ComponentFramework.Dictionary {}
@@ -77,3 +79,31 @@ export class MockEnumProperty<T> implements ComponentFramework.PropertyTypes.Enu
   type: string;
   raw: T;
 }
+
+export class MockTwoOptionsProperty implements ComponentFramework.PropertyTypes.TwoOptionsProperty {
+  constructor(raw?: boolean) {
+    if (raw) this.raw = raw;
+  }
+  raw: boolean;
+  attributes?: ComponentFramework.PropertyHelper.FieldPropertyMetadata.TwoOptionMetadata | undefined;
+  error: boolean;
+  errorMessage: string;
+  formatted?: string | undefined;
+  security?: ComponentFramework.PropertyHelper.SecurityValues | undefined;
+  type: string;
+}
+
+export class MockDateTimeProperty implements ComponentFramework.PropertyTypes.DateTimeProperty {
+  constructor(raw?: Date) {
+    if (raw) this.raw = raw;
+  }
+  raw: Date;
+  attributes?: ComponentFramework.PropertyHelper.FieldPropertyMetadata.DateTimeMetadata | undefined;
+  error: boolean;
+  errorMessage: string;
+  formatted?: string | undefined;
+  security?: ComponentFramework.PropertyHelper.SecurityValues | undefined;
+  type: string;
+}
+
+export declare type IEventBag = Record<string, () => void>;

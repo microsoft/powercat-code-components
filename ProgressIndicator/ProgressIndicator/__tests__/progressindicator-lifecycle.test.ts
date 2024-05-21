@@ -42,11 +42,11 @@ describe('ProgressIndicator', () => {
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
     });
 
-    it('test type of Indicator', async() =>{
+    it('test type of Indicator', async () => {
         const { component, context } = createComponent();
         component.init(context);
         context.parameters.TypeofIndicator.raw = 'Indeterminate Indicator';
-        let spinnerComponent = renderer.create(component.updateView(context));
+        const spinnerComponent = renderer.create(component.updateView(context));
         expect(spinnerComponent.toJSON()).toMatchSnapshot();
     });
 });

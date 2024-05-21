@@ -7,12 +7,6 @@ module.exports = {
         // transform files with ts-jest
         '^.+\\.(js|ts)$': 'ts-jest',
     },
-    // transformIgnorePatterns: [
-    //     // allow fluent ui transformation when running tests
-    //     // this is because we are using path based imports
-    //     'node_modules/(?!(@fluentui/react/lib|@fluentui/style-utilities/lib|@fluentui/react-hooks/lib))',
-    // ],
-
     globals: {
         'ts-jest': {
             tsconfig: {

@@ -6,13 +6,13 @@ exports[`Guage renders 1`] = `
     Object {
       "chartData": Array [
         Object {
-          "color": "#e3008c",
+          "color": "#2aa0a4",
           "data": 20,
           "legend": "Item 1",
           "xAxisCalloutData": undefined,
         },
         Object {
-          "color": "#13a10e",
+          "color": "#57811b",
           "data": 20,
           "legend": "Item 1",
           "xAxisCalloutData": undefined,
@@ -48,13 +48,13 @@ exports[`Guage renders dummy items when no items configured 1`] = `
           "xAxisCalloutData": "1",
         },
         Object {
-          "color": "#026467",
+          "color": "#ad006a",
           "data": 200,
           "legend": "Item 2",
           "xAxisCalloutData": "2",
         },
         Object {
-          "color": "#9a3d0c",
+          "color": "#405f14",
           "data": 300,
           "legend": "Item 3",
           "xAxisCalloutData": "3",

@@ -1,5 +1,4 @@
 /* istanbul ignore file */
-
 import { IInputs } from "../generated/ManifestTypes";
 import {
   MockDecimalNumberProperty,

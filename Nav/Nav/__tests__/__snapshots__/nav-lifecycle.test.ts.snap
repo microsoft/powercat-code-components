@@ -11,6 +11,7 @@ exports[`Nav theme 1`] = `
           outline: none;
         }
     data-focuszone-id="FocusZone50"
+    data-tabster="{\\"uncontrolled\\": {}}"
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseDownCapture={[Function]}
@@ -139,6 +140,17 @@ exports[`Nav theme 1`] = `
                         top: 1px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
                       &:visited {
                         color: #323130;
                       }
@@ -223,7 +235,25 @@ exports[`Nav theme 1`] = `
                         top: 1px;
                         z-index: 1;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                        bottom: -2px;
+                        left: -2px;
+                        outline-color: ButtonText;
+                        right: -2px;
+                        top: -2px;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){:host(.ms-Fabric--isFocusVisible) &:focus:after {
                         bottom: -2px;
                         left: -2px;
                         outline-color: ButtonText;
@@ -235,14 +265,14 @@ exports[`Nav theme 1`] = `
                         position: relative;
                         top: 0px;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                         border-color: Window;
                         border: 0px;
                       }
                       &:hover {
                         color: #test-primary;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                         color: Highlight;
                       }
                       &:hover .ms-Button-icon {
@@ -254,7 +284,7 @@ exports[`Nav theme 1`] = `
                       &:active .ms-Button-icon {
                         color: #004578;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:focus {
                         border: 1px solid WindowText;
                       }
                       .ms-Nav-compositeLink:hover & {
@@ -387,7 +417,25 @@ exports[`Nav theme 1`] = `
                             top: 1px;
                             z-index: 1;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){:host(.ms-Fabric--isFocusVisible) &:focus:after {
                             bottom: -2px;
                             left: -2px;
                             outline-color: ButtonText;
@@ -399,14 +447,14 @@ exports[`Nav theme 1`] = `
                             position: relative;
                             top: 0px;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                             border-color: Window;
                             border: 0px;
                           }
                           &:hover {
                             color: #test-primary;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                             color: Highlight;
                           }
                           &:hover .ms-Button-icon {
@@ -418,7 +466,7 @@ exports[`Nav theme 1`] = `
                           &:active .ms-Button-icon {
                             color: #004578;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:focus {
                             border: 1px solid WindowText;
                           }
                           .ms-Nav-compositeLink:hover & {
@@ -536,7 +584,25 @@ exports[`Nav theme 1`] = `
                             top: 1px;
                             z-index: 1;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){:host(.ms-Fabric--isFocusVisible) &:focus:after {
                             bottom: -2px;
                             left: -2px;
                             outline-color: ButtonText;
@@ -548,14 +614,14 @@ exports[`Nav theme 1`] = `
                             position: relative;
                             top: 0px;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                             border-color: Window;
                             border: 0px;
                           }
                           &:hover {
                             color: #test-primary;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                             color: Highlight;
                           }
                           &:hover .ms-Button-icon {
@@ -567,7 +633,7 @@ exports[`Nav theme 1`] = `
                           &:active .ms-Button-icon {
                             color: #004578;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:focus {
                             border: 1px solid WindowText;
                           }
                           .ms-Nav-compositeLink:hover & {
@@ -691,6 +757,17 @@ exports[`Nav theme 1`] = `
                         top: 1px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
                       &:visited {
                         color: #323130;
                       }
@@ -775,7 +852,25 @@ exports[`Nav theme 1`] = `
                         top: 1px;
                         z-index: 1;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                        bottom: -2px;
+                        left: -2px;
+                        outline-color: ButtonText;
+                        right: -2px;
+                        top: -2px;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){:host(.ms-Fabric--isFocusVisible) &:focus:after {
                         bottom: -2px;
                         left: -2px;
                         outline-color: ButtonText;
@@ -787,14 +882,14 @@ exports[`Nav theme 1`] = `
                         position: relative;
                         top: 0px;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                         border-color: Window;
                         border: 0px;
                       }
                       &:hover {
                         color: #test-primary;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                         color: Highlight;
                       }
                       &:hover .ms-Button-icon {
@@ -806,7 +901,7 @@ exports[`Nav theme 1`] = `
                       &:active .ms-Button-icon {
                         color: #004578;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:focus {
                         border: 1px solid WindowText;
                       }
                       .ms-Nav-compositeLink:hover & {
@@ -939,7 +1034,25 @@ exports[`Nav theme 1`] = `
                             top: 1px;
                             z-index: 1;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){:host(.ms-Fabric--isFocusVisible) &:focus:after {
                             bottom: -2px;
                             left: -2px;
                             outline-color: ButtonText;
@@ -951,14 +1064,14 @@ exports[`Nav theme 1`] = `
                             position: relative;
                             top: 0px;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                             border-color: Window;
                             border: 0px;
                           }
                           &:hover {
                             color: #test-primary;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                             color: Highlight;
                           }
                           &:hover .ms-Button-icon {
@@ -970,7 +1083,7 @@ exports[`Nav theme 1`] = `
                           &:active .ms-Button-icon {
                             color: #004578;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:focus {
                             border: 1px solid WindowText;
                           }
                           .ms-Nav-compositeLink:hover & {
@@ -1094,6 +1207,17 @@ exports[`Nav theme 1`] = `
                         top: 1px;
                         z-index: 1;
                       }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
                       &:visited {
                         color: #323130;
                       }
@@ -1178,7 +1302,25 @@ exports[`Nav theme 1`] = `
                         top: 1px;
                         z-index: 1;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                        bottom: -2px;
+                        left: -2px;
+                        outline-color: ButtonText;
+                        right: -2px;
+                        top: -2px;
+                      }
+                      :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                        border: 1px solid #ffffff;
+                        bottom: 1px;
+                        content: "";
+                        left: 1px;
+                        outline: 1px solid #605e5c;
+                        position: absolute;
+                        right: 1px;
+                        top: 1px;
+                        z-index: 1;
+                      }
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){:host(.ms-Fabric--isFocusVisible) &:focus:after {
                         bottom: -2px;
                         left: -2px;
                         outline-color: ButtonText;
@@ -1190,14 +1332,14 @@ exports[`Nav theme 1`] = `
                         position: relative;
                         top: 0px;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                         border-color: Window;
                         border: 0px;
                       }
                       &:hover {
                         color: #test-primary;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                         color: Highlight;
                       }
                       &:hover .ms-Button-icon {
@@ -1209,7 +1351,7 @@ exports[`Nav theme 1`] = `
                       &:active .ms-Button-icon {
                         color: #004578;
                       }
-                      @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                      @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:focus {
                         border: 1px solid WindowText;
                       }
                       .ms-Nav-compositeLink:hover & {
@@ -1342,7 +1484,25 @@ exports[`Nav theme 1`] = `
                             top: 1px;
                             z-index: 1;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){.ms-Fabric--isFocusVisible &:focus:after {
+                            bottom: -2px;
+                            left: -2px;
+                            outline-color: ButtonText;
+                            right: -2px;
+                            top: -2px;
+                          }
+                          :host(.ms-Fabric--isFocusVisible) &:focus:after {
+                            border: 1px solid #ffffff;
+                            bottom: 1px;
+                            content: "";
+                            left: 1px;
+                            outline: 1px solid #605e5c;
+                            position: absolute;
+                            right: 1px;
+                            top: 1px;
+                            z-index: 1;
+                          }
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){:host(.ms-Fabric--isFocusVisible) &:focus:after {
                             bottom: -2px;
                             left: -2px;
                             outline-color: ButtonText;
@@ -1354,14 +1514,14 @@ exports[`Nav theme 1`] = `
                             position: relative;
                             top: 0px;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){& {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){& {
                             border-color: Window;
                             border: 0px;
                           }
                           &:hover {
                             color: #test-primary;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:hover {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:hover {
                             color: Highlight;
                           }
                           &:hover .ms-Button-icon {
@@ -1373,7 +1533,7 @@ exports[`Nav theme 1`] = `
                           &:active .ms-Button-icon {
                             color: #004578;
                           }
-                          @media screen and (-ms-high-contrast: active), (forced-colors: active){&:focus {
+                          @media screen and (-ms-high-contrast: active), screen and (forced-colors: active){&:focus {
                             border: 1px solid WindowText;
                           }
                           .ms-Nav-compositeLink:hover & {
