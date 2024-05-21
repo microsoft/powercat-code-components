@@ -1,15 +1,5 @@
 /* istanbul ignore file */
-export const MockResources = {
-    getResource: jest.fn(),
-    getString: jest.fn().mockImplementation((k) => {
-        switch (k) {
-            case '...':
-                return '...';
-            default:
-                return 'Resource_String_' + k;
-        }
-    }),
-};
+
 export class MockContext<T> implements ComponentFramework.Context<T> {
     constructor(parameters: T) {
         this.parameters = parameters;
@@ -42,7 +32,7 @@ export class MockContext<T> implements ComponentFramework.Context<T> {
     formatting: ComponentFramework.Formatting;
     mode: ComponentFramework.Mode;
     navigation: ComponentFramework.Navigation;
-    resources: ComponentFramework.Resources = MockResources;
+    resources: ComponentFramework.Resources;
     userSettings: ComponentFramework.UserSettings;
     utils: ComponentFramework.Utility;
     webAPI: ComponentFramework.WebApi;
@@ -103,12 +93,12 @@ export class MockTwoOptionsProperty implements ComponentFramework.PropertyTypes.
     type: string;
 }
 
-export class MockDecimalProperty implements ComponentFramework.PropertyTypes.DecimalNumberProperty {
-    constructor(raw?: number) {
+export class MockDateTimeProperty implements ComponentFramework.PropertyTypes.DateTimeProperty {
+    constructor(raw?: Date) {
         if (raw) this.raw = raw;
     }
-    raw: number;
-    attributes?: ComponentFramework.PropertyHelper.FieldPropertyMetadata.DecimalNumberMetadata | undefined;
+    raw: Date;
+    attributes?: ComponentFramework.PropertyHelper.FieldPropertyMetadata.DateTimeMetadata | undefined;
     error: boolean;
     errorMessage: string;
     formatted?: string | undefined;

@@ -48,7 +48,7 @@
     <ProjectReference Include="..\CommandBar\CommandBar.pcfproj" />
     <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
     <ProjectReference Include="..\DetailsList\DetailsList.pcfproj" />
-    <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
+    <ProjectReference Include="..\DonutChart\DonutChart.pcfproj" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
