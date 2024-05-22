@@ -64,7 +64,7 @@ export function getChartDataFromDataset(
     }
     const keyIndex: Record<string, number> = {};
     if (customColor) {
-        return dataset.sortedRecordIds.map((id, index) => {
+        return dataset.sortedRecordIds.map((id) => {
             const record = dataset.records[id];
 
             // Prevent duplicate keys by appending the duplicate index
