@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
   <control namespace="PowerCAT" constructor="MaskedTextField" version="0.0.1" display-name-key="MaskedTextField" description-key="MaskedTextField_Desc" control-type="virtual">
-    <property name="Value" display-name-key="Value" description-key="CustomizableTextField_Value_Description" of-type="SingleLine.Text" usage="bound" required="true" />
-    <property name="Prefix" display-name-key="Prefix" description-key="Prefix" of-type="SingleLine.Text" usage="input" required="false" />
-    <property name="Suffix" display-name-key="Suffix" description-key="Suffix" of-type="SingleLine.Text" usage="input" required="false" />
-    <property name="ErrorMessage" display-name-key="ErrorMessage" description-key="ErrorMessage_Desc" of-type="SingleLine.Text" usage="input" required="false" />
-    <property name="MaskFormat" display-name-key="MaskFormat" description-key="MaskFormat_Desc" of-type="SingleLine.Text" usage="input" required="false" default-value="[\d\w!#$%'()*+,\-./:;<=>?@_'{}~\t]" />
-    <property name="Mask" display-name-key="Mask" description-key="Mask_Desc" of-type="SingleLine.Text" usage="input" required="false" default-value="***********************************" />
-    <property name="DelayOutput" display-name-key="DelayOutput" of-type="TwoOptions" usage="input" required="false" />
-    <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
-    <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
-    <property name="InputEvent" display-name-key="InputEvent" of-type="SingleLine.Text" usage="input" required="false"/>
+    <property name="Value" display-name-key="MaskedTextField_Value" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="Prefix" display-name-key="MaskedTextField_Prefix" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="Suffix" display-name-key="MaskedTextField_Suffix" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="ErrorMessage" display-name-key="MaskedTextField_ErrorMessage" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="MaskFormat" display-name-key="MaskedTextField_MaskFormat" description-key="MaskFormat_Desc" of-type="SingleLine.Text" usage="input" required="false" default-value="[\d\w!#$%'()*+,\-./:;&lt;=&gt;?@_'{}~\t]" />
+    <property name="Mask" display-name-key="MaskedTextField_Mask" of-type="SingleLine.Text" usage="input" required="false" default-value="***********************************" />
+    <property name="DelayOutput" display-name-key="MaskedTextField_DelayOutput" of-type="TwoOptions" usage="input" required="false" />
+    <property name="Theme" display-name-key="MaskedTextField_Theme" of-type="Multiple" usage="input" required="false" />
+    <property name="AccessibilityLabel" display-name-key="MaskedTextField_AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="InputEvent" display-name-key="MaskedTextField_InputEvent" of-type="SingleLine.Text" usage="input" required="false"/>
     <common-event name="OnChange" />
     <feature-usage>
       <!-- No common events (OnChange, OnSelect, etc.) are shown unless explicitly declared in the manifest -->
