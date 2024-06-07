@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="PowerCAT" constructor="SubwayNavTesting4" version="1.0.26" display-name-key="SubwayNavTesting4" description-key="SubwayNav_Desc" control-type="virtual">
+  <control namespace="PowerCAT" constructor="SubwayNav" version="1.0.26" display-name-key="SubwayNav" description-key="SubwayNav_Desc" control-type="virtual">
     <!-- Style Properties -->
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
