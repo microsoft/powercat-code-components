@@ -28,6 +28,8 @@ export class SubwayNodeBase extends React.Component<ISubwayNavNodeProps> {
             disabled = false,
             isVisuallyDisabled = false,
             state,
+            itemIcon,
+            itemColor,
             subSteps,
             index,
             rootAs,
@@ -36,7 +38,8 @@ export class SubwayNodeBase extends React.Component<ISubwayNavNodeProps> {
             onRenderStepIcon = this._onRenderStepIcon,
         } = this.props;
 
-        const iconRecord: IIconRecord | undefined = getIcon(getIconMap(isSubStep ?? false)[state]);
+        const iconMap = getIcon(getIconMap(isSubStep ?? false, itemIcon)[state]);
+        const iconRecord: IIconRecord | undefined = iconMap || getIcon(getIconMap(isSubStep ?? false, "")[state]);
 
         const buttonProps = getNativeProps<React.ButtonHTMLAttributes<HTMLButtonElement>>(this.props, buttonProperties);
 
@@ -45,6 +48,8 @@ export class SubwayNodeBase extends React.Component<ISubwayNavNodeProps> {
             disabled: disabled,
             isVisuallyDisabled: disabled && isVisuallyDisabled,
             state,
+            itemIcon,
+            itemColor,
             iconRecord: iconRecord!,
             hasSubSteps: subSteps ? subSteps.length > 0 : false,
             index: index!,

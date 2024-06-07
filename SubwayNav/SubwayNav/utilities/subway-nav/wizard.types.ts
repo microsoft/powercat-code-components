@@ -8,4 +8,5 @@ export enum SubwayNavNodeState {
     Skipped = 'Skipped',
     Error = 'Error',
     WizardComplete = 'WizardComplete',
+    Custom = 'Custom',
 }

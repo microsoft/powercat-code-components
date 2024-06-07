@@ -36,6 +36,16 @@ export interface ISubwayNavNodeProps extends React.AllHTMLAttributes<HTMLButtonE
     state: SubwayNavNodeState;
 
     /**
+     *  If state is equal to "Custom", this prop will be used to determine the Icon type (Fluent UI)
+     */
+    itemIcon: string;
+
+    /**
+     *  If state is equal to "Custom", this prop will be used to determine the Icon's color
+     */
+    itemColor: string;
+
+    /**
      * AriaLabel of the icon
      */
     iconAriaLabel?: string;
@@ -142,6 +152,7 @@ export enum SubwayNavNodeState {
     Skipped = 'Skipped',
     Error = 'Error',
     WizardComplete = 'WizardComplete',
+    Custom = 'Custom',
 }
 
 /**
@@ -217,6 +228,16 @@ export interface ISubwayNavNodeStyleProps {
      *  State of the step
      */
     state: SubwayNavNodeState;
+
+    /**
+     *  If state is equal to "Custom", this prop will be used to determine the Icon type (Fluent UI)
+     */
+    itemIcon: string;
+
+    /**
+     *  If state is equal to "Custom", this prop will be used to determine the Icon's color
+     */
+    itemColor: string;
 
     /**
      * Icon record prop used in style merging
