@@ -8,7 +8,7 @@ import { getItemsFromDataset, getDatasetfromItems } from './components/DatasetMa
 import { ISubwayNavNodeProps } from './utilities/subway-nav/subway-node.types';
 import { ContextEx } from './ContextExtended';
 
-export class SubwayNavTesting4 implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+export class SubwayNav implements ComponentFramework.ReactControl<IInputs, IOutputs> {
     notifyOutputChanged: () => void;
     context: ComponentFramework.Context<IInputs>;
     inputEvent?: string | null;
