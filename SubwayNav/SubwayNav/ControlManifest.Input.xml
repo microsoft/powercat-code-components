@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="PowerCAT" constructor="SubwayNav" version="1.0.25" display-name-key="SubwayNav" description-key="SubwayNav_Desc" control-type="virtual">
+  <control namespace="PowerCAT" constructor="SubwayNav" version="1.0.26" display-name-key="SubwayNav" description-key="SubwayNav_Desc" control-type="virtual">
     <!-- Style Properties -->
     <property name="Theme" display-name-key="Theme" of-type="Multiple" usage="input" required="false" />
     <property name="AccessibilityLabel" display-name-key="AccessibilityLabel" of-type="SingleLine.Text" usage="input" required="false" />
@@ -24,6 +24,8 @@
       <property-set name="ItemState" display-name-key="Item State" of-type="SingleLine.Text" usage="bound" required="true" />
       <property-set name="ItemDisabled" display-name-key="Item Disabled" of-type="TwoOptions" usage="bound" required="false" />
       <property-set name="ItemVisuallyDisabled" display-name-key="Item Visually Disabled" of-type="TwoOptions" usage="bound" required="false" />
+      <property-set name="ItemIcon" display-name-key="Item Icon" of-type="SingleLine.Text" usage="bound" required="false" />
+	    <property-set name="ItemColor" display-name-key="Item Color" of-type="SingleLine.Text" usage="bound" required="false" />
     </data-set>
     <property name="Steps" display-name-key="Steps" of-type="Object" usage="output"/>
     <property name="StepsSchema" display-name-key="StepsSchema" of-type="SingleLine.Text" usage="bound" hidden="true"/>
