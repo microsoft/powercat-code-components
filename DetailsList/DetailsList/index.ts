@@ -98,7 +98,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
         this.handleInputEvents(context);
 
         const grid = React.createElement(Grid, this.getGridProps(context));
-        
+
         const pagingChanged =
             this.previousHasPreviousPage !== dataset.paging.hasPreviousPage ||
             this.previousHasNextPage !== dataset.paging.hasNextPage ||
@@ -346,7 +346,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
         } catch (ex) {
             console.error('DetailsList: Error when calling setSelectedRecordIds', ex);
         }
-    
+
         const raiseOnRowsSelectionChangeEvent = this.context.parameters.RaiseOnRowSelectionChangeEvent;
         if (raiseOnRowsSelectionChangeEvent && raiseOnRowsSelectionChangeEvent.raw === true) {
             // When the row selection changes, raise an event
@@ -359,10 +359,11 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
                     this.eventRowKey = firstRecord.getValue(RecordsColumns.RecordKey)?.toString() || firstSelectedId;
                 }
             }
+            else
+                this.eventRowKey=null;
             this.notifyOutputChanged();
         }
     };
-    
 
     onCellAction = (
         item?: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord,
@@ -391,7 +392,7 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
             const currentItems = this.selection.getItems();
             const itemIndex = currentItems.indexOf(item as IObjectWithKey);
             const selectionMode = SelectionTypes[this.context.parameters.SelectionType.raw];
-    
+
             // Select the item being invoked if multi/single select mode
             // By default, the DetailsList will not select the item which has it's action invoked
             if (selectionMode !== SelectionMode.none && itemKey) {
@@ -404,14 +405,14 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
                 this.selection.setChangeEvents(true, true);
                 this.ref && this.ref.forceUpdate();
             }
-    
+
             // No event event/column, so reset it
             if (this.eventColumn !== undefined) {
                 this.eventName = undefined;
                 this.eventColumn = undefined;
                 this.notifyOutputChanged();
             }
-    
+
             this.context.parameters.records.openDatasetItem(item.getNamedReference());
             if (selectionMode === SelectionMode.multiple) {
                 // Ensure that the item being navigated is selected as well as the previous selected items

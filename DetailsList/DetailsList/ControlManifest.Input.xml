@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="PowerCAT" constructor="FluentDetailsList" version="0.2.5" display-name-key="FluentDetailsList" description-key="FluentDetailsList_Desc" control-type="virtual">
+  <control namespace="PowerCAT" constructor="FluentDetailsList" version="0.2.4" display-name-key="FluentDetailsList" description-key="FluentDetailsList_Desc" control-type="virtual">
     <external-service-usage enabled="false"></external-service-usage>
     <data-set name="records" display-name-key="Records" >
       <property-set name="RecordKey" display-name-key="RecordKey" of-type="SingleLine.Text" usage="bound" required="false" />
