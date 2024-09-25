@@ -358,9 +358,9 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
                 if (firstRecord) {
                     this.eventRowKey = firstRecord.getValue(RecordsColumns.RecordKey)?.toString() || firstSelectedId;
                 }
+            } else {
+                this.eventRowKey = null;
             }
-            else
-                this.eventRowKey=null;
             this.notifyOutputChanged();
         }
     };
