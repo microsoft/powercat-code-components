@@ -351,7 +351,16 @@ export class FluentDetailsList implements ComponentFramework.ReactControl<IInput
         if (raiseOnRowsSelectionChangeEvent && raiseOnRowsSelectionChangeEvent.raw === true) {
             // When the row selection changes, raise an event
             this.eventName = OutputEvents.OnRowSelectionChange;
-            this.eventRowKey = ids && ids.length > 0 ? ids[0] : null;
+            // Set the eventRowKey using the RecordKey of the first selected record
+            const firstSelectedId = ids.length > 0 ? ids[0] : null;
+            if (firstSelectedId) {
+                const firstRecord = this.records[firstSelectedId];
+                if (firstRecord) {
+                    this.eventRowKey = firstRecord.getValue(RecordsColumns.RecordKey)?.toString() || firstSelectedId;
+                }
+            } else {
+                this.eventRowKey = null;
+            }
             this.notifyOutputChanged();
         }
     };
