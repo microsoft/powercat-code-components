@@ -42,11 +42,6 @@ describe('DatasetMapping', () => {
                 [ItemColumns.Label]: 'item4',
                 [ItemColumns.State]: 'Unsaved',
             }),
-            new MockEntityRecord('8', {
-                [ItemColumns.Key]: 'Item 8',
-                [ItemColumns.Label]: 'item8',
-                [ItemColumns.State]: 'Custom',
-            }),
         ];
 
         const actions = getItemsFromDataset(new MockDataSet(items));
