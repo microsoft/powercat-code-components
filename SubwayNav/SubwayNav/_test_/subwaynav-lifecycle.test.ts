@@ -138,11 +138,6 @@ function createComponent() {
             [ItemColumns.Label]: 'item4',
             [ItemColumns.State]: 'Unsaved',
         }),
-        new MockEntityRecord('8', {
-            [ItemColumns.Key]: 'Item 8',
-            [ItemColumns.Label]: 'item8',
-            [ItemColumns.State]: 'Custom',
-        }),
     ]);
     context.parameters.Theme.raw = JSON.stringify({
         palette: {
