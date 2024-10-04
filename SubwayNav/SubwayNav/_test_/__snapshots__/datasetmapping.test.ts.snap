@@ -128,23 +128,5 @@ Array [
     "state": "Unsaved",
     "visuallyDisabled": undefined,
   },
-  Object {
-        "data": MockEntityRecord {
-          "getNamedReference": [MockFunction],
-          "id": "8",
-          "values": Object {
-            "ItemKey": "Item 8",
-            "ItemLabel": "item8",
-            "ItemState": "Custom",
-          },
-        },
-        "disabled": undefined,
-        "id": "8",
-        "key": "Item 8",
-        "label": "item8",
-        "parentId": undefined,
-        "state": "Custom",
-        "visuallyDisabled": undefined,
-      },
 ]
 `;
