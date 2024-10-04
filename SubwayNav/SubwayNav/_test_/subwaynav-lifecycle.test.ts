@@ -142,15 +142,6 @@ function createComponent() {
             [ItemColumns.Key]: 'Item 8',
             [ItemColumns.Label]: 'item8',
             [ItemColumns.State]: 'Custom',
-            [ItemColumns.ItemIcon]: 'AddFriend',
-            [ItemColumns.ItemColor]: '#C8A2C8',
-        }),
-        new MockEntityRecord('9', {
-            [ItemColumns.Key]: 'Item 9',
-            [ItemColumns.Label]: 'item8',
-            [ItemColumns.State]: 'Custom',
-            [ItemColumns.ItemIcon]: 'AddTo',
-            [ItemColumns.ItemColor]: '#EE82EE',
         }),
     ]);
     context.parameters.Theme.raw = JSON.stringify({
