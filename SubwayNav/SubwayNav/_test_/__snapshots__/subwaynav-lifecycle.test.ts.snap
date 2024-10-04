@@ -153,8 +153,6 @@ exports[`SubwayNav renders 1`] = `
         "parentId": undefined,
         "state": "Custom",
         "visuallyDisabled": undefined,
-        "ItemIcon": 'AddFriend',
-        "ItemColor": '#C8A2C8',
       },
       Object {
         "data": MockEntityRecord {
@@ -175,8 +173,6 @@ exports[`SubwayNav renders 1`] = `
         "parentId": undefined,
         "state": "Custom",
         "visuallyDisabled": undefined,
-        "ItemIcon": 'AddTo',
-        "ItemColor": '#EE82EE',
       },
     ]
   }
