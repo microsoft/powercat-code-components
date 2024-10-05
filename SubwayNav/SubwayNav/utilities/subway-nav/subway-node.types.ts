@@ -220,14 +220,14 @@ export interface ISubwayNavNodeStyleProps {
     disabled: boolean;
 
     /**
-     * Icon name for this step.
+     *  If state is equal to "Custom", this prop will be used to determine the Icon type (Fluent UI)
      */
-    itemIcon: string;
+     itemIcon: string;
 
-    /**
-     * color of icon for this step
-     */
-    itemColor: string;
+     /**
+      *  If state is equal to "Custom", this prop will be used to determine the Icon's color
+      */
+     itemColor: string;
 
 
     /**
