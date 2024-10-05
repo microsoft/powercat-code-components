@@ -11,7 +11,7 @@ import { ISubNavItem, ISubNavProps } from './components.types';
 
 import { M365Styles, IM365ExtendedSemanticColors } from '../utilities/customizations/src';
 import { useAsync, usePrevious } from '@fluentui/react-hooks';
-import { getSubwayNavNodeState, getSubwayNavNodeStatus } from './DatasetMapping';
+import { getSubwayNavNodeState } from './DatasetMapping';
 import { PPACActualLightTheme, PPACActualDarkTheme } from '../utilities/themes';
 import { ISubwayNavProps } from '../utilities/subway-nav/subway-nav.types';
 
