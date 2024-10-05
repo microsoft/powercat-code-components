@@ -8,6 +8,8 @@ export const enum ItemColumns {
     State = 'ItemState',
     Disabled = 'ItemDisabled',
     VisuallyDisabled = 'ItemVisuallyDisabled',
+    ItemIcon = 'ItemIcon',
+    ItemColor = 'ItemColor',
     ParentKey = 'ParentItemKey',
 }
 

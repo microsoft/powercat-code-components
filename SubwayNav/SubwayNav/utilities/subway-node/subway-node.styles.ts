@@ -16,7 +16,7 @@ export const itemSpacing = 27;
 export const largeSubwayNavIconSize = 16;
 export const smallSubwayNavIconSize = 8;
 
-export const getIconMap = (isSubStep: boolean): SubwayNavStateMap => {
+export const getIconMap = (isSubStep: boolean, Icon: string): SubwayNavStateMap => {
     return isSubStep
         ? {
               Completed: IconNames.StatusCircleCheckMark,
@@ -28,6 +28,7 @@ export const getIconMap = (isSubStep: boolean): SubwayNavStateMap => {
               Unsaved: IconNames.FullCircleMask,
               ViewedNotCompleted: IconNames.FullCircleMask,
               WizardComplete: IconNames.StatusCircleCheckMark,
+              Custom: !Icon ? IconNames.FullCircleMask : Icon,
           }
         : {
               Completed: IconNames.CompletedSolid,
@@ -39,10 +40,11 @@ export const getIconMap = (isSubStep: boolean): SubwayNavStateMap => {
               Unsaved: IconNames.FullCircleMask,
               ViewedNotCompleted: IconNames.FullCircleMask,
               WizardComplete: IconNames.CompletedSolid,
+              Custom: !Icon ? IconNames.FullCircleMask : Icon,
           };
 };
 
-export const getIconColorMap = (isSubStep: boolean, theme: IM365Theme): IconColorMap => {
+export const getIconColorMap = (isSubStep: boolean, theme: IM365Theme, prefferedColor: string): IconColorMap => {
     return isSubStep
         ? {
               Completed: throwOnUndefinedColor(theme.semanticColors.stepCompleted, 'stepCompleted', 'SubwayNode'),
@@ -58,6 +60,8 @@ export const getIconColorMap = (isSubStep: boolean, theme: IM365Theme): IconColo
                   'allStepsComplete',
                   'SubwayNode',
               ),
+              Custom: !prefferedColor ? throwOnUndefinedColor(theme.semanticColors.stepCurrent, 'stepCurrent', 'SubwayNode') : 
+              throwOnUndefinedColor(prefferedColor, 'ItemColor', 'UserInput'),
           }
         : {
               Completed: throwOnUndefinedColor(theme.semanticColors.stepCompleted, 'stepCompleted', 'SubwayNode'),
@@ -77,6 +81,8 @@ export const getIconColorMap = (isSubStep: boolean, theme: IM365Theme): IconColo
                   'allStepsComplete',
                   'SubwayNode',
               ),
+              Custom: !prefferedColor ? throwOnUndefinedColor(theme.semanticColors.stepCurrent, 'stepCurrent', 'SubwayNode') : 
+              throwOnUndefinedColor(prefferedColor, 'ItemColor', 'UserInput'),
           };
 };
 
@@ -91,11 +97,12 @@ export const getIconRingColorMap = (theme: IM365Theme): IconRingColorMap => {
         Unsaved: theme.palette.accent,
         ViewedNotCompleted: 'transparent',
         WizardComplete: 'transparent',
+        Custom: 'transparent',
     };
 };
 
 export const getSubwayNodeStyles = (props: ISubwayNavNodeStyleProps): ISubwayNavNodeStyles => {
-    const { disabled, isVisuallyDisabled, isSubStep, iconRecord, state, theme } = props;
+    const { disabled, isVisuallyDisabled, isSubStep, iconRecord, state, itemColor, theme } = props;
     const options: IGetFocusStylesOptions = {
         inset: undefined,
         position: undefined,
@@ -105,6 +112,7 @@ export const getSubwayNodeStyles = (props: ISubwayNavNodeStyleProps): ISubwayNav
         borderColor: 'transparent',
         outlineColor: undefined,
     };
+    const iconColorMap = getIconColorMap(isSubStep, theme, itemColor)[state];
     const useSelectedStyle: boolean =
         state === SubwayNavNodeState.Current || state === SubwayNavNodeState.CurrentWithSubSteps;
 
@@ -156,7 +164,7 @@ export const getSubwayNodeStyles = (props: ISubwayNavNodeStyleProps): ISubwayNav
         icon: [
             iconRecord?.subset.className,
             {
-                fill: visualDisabledBehavior(getIconColorMap(isSubStep, theme)[state]),
+                fill: visualDisabledBehavior(iconColorMap || getIconColorMap(isSubStep, theme, "")[state]),
                 fontSize: iconSize,
             },
         ],

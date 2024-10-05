@@ -29,9 +29,7 @@ export class MockDataSet implements ComponentFramework.PropertyTypes.DataSet {
     linking: ComponentFramework.PropertyHelper.DataSetApi.Linking;
     loading: boolean;
     paging: ComponentFramework.PropertyHelper.DataSetApi.Paging;
-    records: {
-        [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord;
-    };
+    records: { [id: string]: ComponentFramework.PropertyHelper.DataSetApi.EntityRecord };
     sortedRecordIds: string[];
     sorting: ComponentFramework.PropertyHelper.DataSetApi.SortStatus[];
     clearSelectedRecordIds = jest.fn();

@@ -17,8 +17,9 @@ The control accepts the following properties:
 - **Items** - The action items to render
   - **ItemKey** - The key to use to indicate which item/step is selected. The keys must be unique.
   - **ItemLabel** - Label for the step
-  - **ItemState** - Specifying the state of the step. Here is the list of State available. Current|NotStarted|Completed|Unsaved|ViewedNotCompleted|Error|CurrentWithSubSteps|Skipped|WizardComplete
-
+  - **ItemState** - Specifying the state of the step. Here is the list of State available. Current|NotStarted|Completed|Unsaved|ViewedNotCompleted|Error|CurrentWithSubSteps|Skipped|WizardComplete|Custom
+  - **ItemIcon** - Will not do anything if ItemState isn't set to Custom. If ItemState is set to Custom, you can input the string value of any FluentUI Icon and it will show up. If the ItemIcon name is invalid, blank or doesn't match any FluentUI Icon's, then it will be set to same Icon as when ItemState is equal to Current. 
+  - **ItemColor** - Will not do anything if ItemState isn't set to Custom. If ItemState is set to Custom, you can input most hexadecimal color codes and that will change the color of the Icon. If the input to this column is invalid, it will default to black. If the input to this column is blank, it will be set to the same color as when ItemState is equal to Current. 
 - **SubwayNav state** - To mark the overall state of SubwayNav to Complete or Error.
 
 ### Style Properties
@@ -142,3 +143,17 @@ Set(varThemeBlueJSON,"{""palette"":{
 ```
 
 The Theme JSON string is passed to the component property, whilst the varTheme can be used to style other standard components such as buttons using the individual colors.
+
+
+
+### Example using Custom Item State
+
+Example of input collection value for Items property
+
+```PowerFx
+Table({ItemKey:"1",ItemLabel:"Step 1",ItemState:"Current"},
+{ItemKey:"2",ItemLabel:"Step 2",ItemState:"Custom", ItemIcon:"Admin",ItemColor: "teal"},
+{ItemKey:"3",ItemLabel:"Step 3",ItemState:"Custom",ItemIcon:"AddTo",ItemColor: "#EE82EE"})
+```
+
+You can use either the names of colors or the colors hexadecimal value. However, color hexadecimal value is recommended. If the color name isn't basic, it most likely won't work. 

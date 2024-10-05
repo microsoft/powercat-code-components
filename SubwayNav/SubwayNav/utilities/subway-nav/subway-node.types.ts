@@ -35,6 +35,16 @@ export interface ISubwayNavNodeProps extends React.AllHTMLAttributes<HTMLButtonE
      */
     state: SubwayNavNodeState;
 
+     /**
+     *  If state is equal to "Custom", this prop will be used to determine the Icon type (Fluent UI)
+     */
+     itemIcon: string;
+
+     /**
+      *  If state is equal to "Custom", this prop will be used to determine the Icon's color
+      */
+     itemColor: string;
+
     /**
      * AriaLabel of the icon
      */
@@ -142,6 +152,7 @@ export enum SubwayNavNodeState {
     Skipped = 'Skipped',
     Error = 'Error',
     WizardComplete = 'WizardComplete',
+    Custom = 'Custom',
 }
 
 /**
@@ -207,6 +218,17 @@ export interface ISubwayNavNodeStyleProps {
      * Flag to indicate if step is disabled
      */
     disabled: boolean;
+
+    /**
+     *  If state is equal to "Custom", this prop will be used to determine the Icon type (Fluent UI)
+     */
+     itemIcon: string;
+
+     /**
+      *  If state is equal to "Custom", this prop will be used to determine the Icon's color
+      */
+     itemColor: string;
+
 
     /**
      * Flag to indicate if the step should be visually disabled as well.

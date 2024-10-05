@@ -11,6 +11,8 @@ export interface ISubNavItem {
     disabled?: boolean;
     data: any;
     visuallyDisabled?: boolean;
+    itemIcon: string;
+    itemColor: string;
 }
 
 export interface ICustomSubwayNavProps {
@@ -20,6 +22,8 @@ export interface ICustomSubwayNavProps {
     ItemDisabled?: boolean;
     ParentItemKey?: string;
     ItemVisuallyDisabled?: boolean;
+    ItemIcon: string;
+    ItemColor: string;
 }
 
 export interface ISubNavProps {

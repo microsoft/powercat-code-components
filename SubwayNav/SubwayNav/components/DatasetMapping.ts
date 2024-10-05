@@ -24,6 +24,8 @@ export function getItemsFromDataset(dataset: ComponentFramework.PropertyTypes.Da
             disabled: record.getValue(ItemColumns.Disabled),
             parentId: record.getValue(ItemColumns.ParentKey),
             visuallyDisabled: record.getValue(ItemColumns.VisuallyDisabled),
+            itemIcon: record.getValue(ItemColumns.ItemIcon),
+            itemColor: record.getValue(ItemColumns.ItemColor),
             data: record,
         } as ISubNavItem;
     });
@@ -42,6 +44,8 @@ export function getDatasetfromItems(steps: ISubwayNavNodeProps[]): ICustomSubway
                         ItemDisabled: subStep.disabled,
                         ParentItemKey: subStep.parentId,
                         ItemVisuallyDisabled: subStep.isVisuallyDisabled,
+                        ItemIcon: subStep.itemIcon,
+                        ItemColor: subStep.itemColor,
                     } as ICustomSubwayNavProps;
                 }),
             );
@@ -53,6 +57,8 @@ export function getDatasetfromItems(steps: ISubwayNavNodeProps[]): ICustomSubway
             ItemDisabled: step.disabled,
             ParentItemKey: step.parentId,
             ItemVisuallyDisabled: step.isVisuallyDisabled,
+            ItemIcon: step.itemIcon,
+            ItemColor: step.itemColor,
         } as ICustomSubwayNavProps;
     });
     return [...parentstepDateSet, ...stepDataSet];
@@ -65,6 +71,8 @@ function getDummyAction(id: string): ISubNavItem {
         key: id,
         parentId: id === '5' ? '2' : undefined,
         state: id === '1' ? 'Current' : 'Not Started',
+        itemIcon: '',
+        itemColor: '',
     } as ISubNavItem;
 }
 
@@ -88,6 +96,8 @@ export function getSubwayNavNodeState(state: string): SubwayNavNodeState {
             return SubwayNavNodeState.CurrentWithSubSteps;
         case 'WizardComplete':
             return SubwayNavNodeState.WizardComplete;
+        case 'Custom':
+            return SubwayNavNodeState.Custom;
         default:
             return SubwayNavNodeState.NotStarted;
     }
