@@ -45,6 +45,7 @@ describe('DatasetMapping', () => {
         ];
 
         const actions = getItemsFromDataset(new MockDataSet(items));
+        console.log(actions);
         expect(actions).toMatchSnapshot();
     });
 });
