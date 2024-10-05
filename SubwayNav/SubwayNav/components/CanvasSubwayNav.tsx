@@ -11,7 +11,7 @@ import { ISubNavItem, ISubNavProps } from './components.types';
 
 import { M365Styles, IM365ExtendedSemanticColors } from '../utilities/customizations/src';
 import { useAsync, usePrevious } from '@fluentui/react-hooks';
-import { getSubwayNavNodeState } from './DatasetMapping';
+import { getSubwayNavNodeState, getSubwayNavNodeStatus } from './DatasetMapping';
 import { PPACActualLightTheme, PPACActualDarkTheme } from '../utilities/themes';
 import { ISubwayNavProps } from '../utilities/subway-nav/subway-nav.types';
 
@@ -110,13 +110,15 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
                                 wizardComplete !== 'None'
                                     ? getSubwayNavNodeState(wizardComplete)
                                     : getSubwayNavNodeState(item.state),
+                            status:
+                                wizardComplete !== 'None'
+                                    ? getSubwayNavNodeStatus(wizardComplete)
+                                    : getSubwayNavNodeStatus(item.status),
                             disabled: item.disabled ?? false,
                             parentId: item.parentId,
                             onClickStep,
                             index: 10,
                             isVisuallyDisabled: item.visuallyDisabled ?? false,
-                            itemIcon: item.itemIcon,
-                            itemColor: item.itemColor,
                         };
                     });
                 return {
@@ -127,14 +129,16 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
                         wizardComplete !== 'None'
                             ? getSubwayNavNodeState(wizardComplete)
                             : getSubwayNavNodeState(group.state),
+                    status:
+                        wizardComplete !== 'None'
+                            ? getSubwayNavNodeStatus(wizardComplete)
+                            : getSubwayNavNodeStatus(group.status),
                     data: group,
                     ...(subSteps.length > 0 && { subSteps: subSteps }),
                     disabled: group.disabled ?? false,
                     onClickStep,
                     index: 10,
                     isVisuallyDisabled: group.visuallyDisabled ?? false,
-                    itemIcon: group.itemIcon,
-                    itemColor: group.itemColor,
                 };
             }) as unknown as ISubwayNavNodeProps[];
         return allSteps;
