@@ -124,19 +124,33 @@ function createComponent() {
             [ItemColumns.State]: 'ViewedNotCompleted',
         }),
         new MockEntityRecord('5', {
-            [ItemColumns.Key]: 'Item 5',
-            [ItemColumns.Label]: 'item5',
+            [ItemColumns.Key]: 'Item 4',
+            [ItemColumns.Label]: 'item4',
             [ItemColumns.State]: 'Error',
         }),
         new MockEntityRecord('6', {
-            [ItemColumns.Key]: 'Item 6',
-            [ItemColumns.Label]: 'item6',
+            [ItemColumns.Key]: 'Item 4',
+            [ItemColumns.Label]: 'item4',
             [ItemColumns.State]: 'Skipped',
         }),
         new MockEntityRecord('7', {
-            [ItemColumns.Key]: 'Item 7',
-            [ItemColumns.Label]: 'item7',
+            [ItemColumns.Key]: 'Item 4',
+            [ItemColumns.Label]: 'item4',
             [ItemColumns.State]: 'Unsaved',
+        }),
+        new MockEntityRecord('8', {
+            [ItemColumns.Key]: 'Item 8',
+            [ItemColumns.Label]: 'item8',
+            [ItemColumns.State]: 'Custom',
+            [ItemColumns.ItemIcon]: 'AddFriend',
+            [ItemColumns.ItemColor]: '#C8A2C8',
+        }),
+        new MockEntityRecord('9', {
+            [ItemColumns.Key]: 'Item 9',
+            [ItemColumns.Label]: 'item8',
+            [ItemColumns.State]: 'Custom',
+            [ItemColumns.ItemIcon]: 'AddTo',
+            [ItemColumns.ItemColor]: '#EE82EE',
         }),
     ]);
     context.parameters.Theme.raw = JSON.stringify({
