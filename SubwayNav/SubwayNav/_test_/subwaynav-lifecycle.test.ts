@@ -48,7 +48,7 @@ describe('SubwayNav', () => {
         const subwayNavElement = component.updateView(context);
         const subwayNav = shallow(subwayNavElement);
         const subwayNavSteps = subwayNav.find(CustomSubwayNav).props().steps;
-        expect(subwayNavSteps.length).toEqual(7);
+        expect(subwayNavSteps.length).toEqual(9);
     });
 
     it('Analyse theme', () => {
