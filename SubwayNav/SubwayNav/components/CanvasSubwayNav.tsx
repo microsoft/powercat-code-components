@@ -27,6 +27,7 @@ const ariaLabelStrings = {
     Skipped: 'Skipped',
     Error: 'Error',
     WizardComplete: 'Wizard Complete',
+    Custom: 'Custom',
 };
 
 export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElement => {
@@ -114,6 +115,8 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
                             onClickStep,
                             index: 10,
                             isVisuallyDisabled: item.visuallyDisabled ?? false,
+                            itemIcon: item.itemIcon,
+                            itemColor: item.itemColor,
                         };
                     });
                 return {
@@ -130,6 +133,8 @@ export const CanvasSubwayNav = React.memo((props: ISubNavProps): React.ReactElem
                     onClickStep,
                     index: 10,
                     isVisuallyDisabled: group.visuallyDisabled ?? false,
+                    itemIcon: group.itemIcon,
+                    itemColor: group.itemColor,
                 };
             }) as unknown as ISubwayNavNodeProps[];
         return allSteps;
