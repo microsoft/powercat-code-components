@@ -17,6 +17,8 @@ const stepDetails = {
         ItemDisabled: { type: 'boolean' },
         ItemVisuallyDisabled: { type: 'boolean' },
         ParentItemKey: { type: 'string' },
+        ItemIcon: { type: 'string' },
+        ItemColor: { type: 'string' },
     },
 };
 
