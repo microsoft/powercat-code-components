@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders 1`] = `
+<Memo(CardCanvas)
+  accessibleLabel=""
+  ariaLabel=""
+  description={null}
+  getPopoverRoot={[Function]}
+  headerImage="https://example.com/files/sample-document.pdf"
+  height={-1}
+  image="https://example.com/files/image-file.jpg"
+  items={
+    Array [
+      Object {
+        "appearance": "primary",
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "1",
+          "values": Object {
+            "ItemAppearance": "Primary",
+            "ItemDisplayName": "Add",
+            "ItemIconName": "Add",
+            "ItemIconStyle": "Filled",
+            "ItemKey": "toolAdd",
+            "ItemVisible": true,
+          },
+        },
+        "disabled": false,
+        "iconName": "Add",
+        "iconStyle": "Filled",
+        "id": "1",
+        "key": "toolAdd",
+        "name": "Add",
+        "tooltip": undefined,
+        "visible": true,
+      },
+      Object {
+        "appearance": "subtle",
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "2",
+          "values": Object {
+            "ItemAppearance": "Subtle",
+            "ItemDisplayName": "Edit",
+            "ItemIconName": "Edit",
+            "ItemIconStyle": "Regular",
+            "ItemKey": "toolEdit",
+            "ItemVisible": true,
+          },
+        },
+        "disabled": false,
+        "iconName": "Edit",
+        "iconStyle": "Regular",
+        "id": "2",
+        "key": "toolEdit",
+        "name": "Edit",
+        "tooltip": undefined,
+        "visible": true,
+      },
+    ]
+  }
+  onResize={[Function]}
+  onSelected={[Function]}
+  orientation="vertical"
+  placePreview="Above header"
+  subTitle="Subtitle"
+  title="Title"
+  visible={true}
+  width={-1}
+/>
+`;
