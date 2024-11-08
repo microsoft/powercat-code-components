@@ -5,7 +5,7 @@
     <property name="Title" display-name-key="Card_Title_Display_Key" of-type="SingleLine.Text" usage="bound" required="false" default-value="Title"/>
     <property name="Subtitle" display-name-key="Card_Subtitle_Display_Key" of-type="Multiple" usage="bound" required="false" default-value="Subtitle"/>
     <property name="Description" display-name-key="Card_Description_Display_Key" of-type="Multiple" usage="bound" required="false"/>
-    <property name="HeaderImage" display-name-key="Card_HeaderImage_Display_Key" of-type="Image" usage="input" required="false" pfx-default-value="SampleImage"/>
+    <property name="HeaderImage" display-name-key="Card_HeaderImage_Display_Key" of-type="Image" usage="input" required="false" pfx-default-value="User().Image"/>
     <property name="Image" display-name-key="Card_Image_Display_Key" of-type="Image" usage="input" required="false"/>    
     <property name="ImagePlacement" display-name-key="Card_ImagePlacement_Display_Key" description-key="Card_ImagePlacement_Desc_Key" usage="input" of-type="Enum" default-value="Above header">
       <value name="Above header" display-name-key="Card_ImagePlacement_AboveHeader">Above header</value>
