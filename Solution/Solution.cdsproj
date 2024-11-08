@@ -45,6 +45,7 @@
     <ProjectReference Include="..\AutoWidthLabel\auto-width-label.pcfproj" />
     <ProjectReference Include="..\Breadcrumb\BreadCrumb.pcfproj" />
     <ProjectReference Include="..\Calendar\Calendar.pcfproj" />
+    <ProjectReference Include="..\Card\Card.pcfproj" />
     <ProjectReference Include="..\CommandBar\CommandBar.pcfproj" />
     <ProjectReference Include="..\ContextMenu\ContextMenu.pcfproj" />
     <ProjectReference Include="..\DetailsList\DetailsList.pcfproj" />

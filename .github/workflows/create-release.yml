@@ -50,6 +50,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/AutoWidthLabel/AutoWidthLabel`,
                 `${process.env.GITHUB_WORKSPACE}/Breadcrumb/Breadcrumb`,
                 `${process.env.GITHUB_WORKSPACE}/Calendar/Calendar`,
+                `${process.env.GITHUB_WORKSPACE}/Card/Card`,
                 `${process.env.GITHUB_WORKSPACE}/CommandBar/CommandBar`,
                 `${process.env.GITHUB_WORKSPACE}/ContextMenu/ContextMenu`,
                 `${process.env.GITHUB_WORKSPACE}/DetailsList/DetailsList`,
@@ -96,6 +97,12 @@ jobs:
       - name: Install Dependencies in Calendar
         run: |
           cd ./Calendar
+          npm install
+          npm ci
+
+      - name: Install Dependencies in Card
+        run: |
+          cd ./Card
           npm install
           npm ci
 

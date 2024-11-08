@@ -15,6 +15,7 @@ jobs:
          - "./AutoWidthLabel"
          - "./Breadcrumb" 
          - "./Calendar" 
+         - "./Card" 
          - "./CommandBar" 
          - "./ContextMenu" 
          - "./DetailsList" 
