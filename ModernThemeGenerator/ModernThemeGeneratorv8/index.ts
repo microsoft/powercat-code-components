@@ -32,7 +32,6 @@ export class ModernThemeGeneratorv8 implements ComponentFramework.ReactControl<I
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
         const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
-        console.log(context.fluentDesignLanguage);
         const props: IThemeGeneratorv8 = {
             getTheme: this.getTheme,
             width: allocatedWidth,
