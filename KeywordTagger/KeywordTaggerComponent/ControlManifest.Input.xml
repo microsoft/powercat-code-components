@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="MultiLabelNS" constructor="KeywordTagger" version="0.0.1" display-name-key="KeywordTagger" description-key="A component for adding and managing keywords, stored as comma-separated values" control-type="standard">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <property name="inputField" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+    <resources>
+      <code path="index.ts" order="1"/>
+    </resources>
+  </control>
+</manifest>
