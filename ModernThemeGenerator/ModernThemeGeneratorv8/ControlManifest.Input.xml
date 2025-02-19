@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="PowerCAT" constructor="ModernThemeGeneratorv8" version="0.0.4" display-name-key="ModernThemeGeneratorv8" description-key="ModernThemeGeneratorv8 description" control-type="virtual" >
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="ModernV8Theme" display-name-key="ModernV8Theme_Display_Key" of-type="Multiple" usage="output" required="true" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <resx path="strings/ModernThemeGeneratorv8.1033.resx" version="1.0.0" />
+      <platform-library name="React" version="16.8.6" />
+    </resources>
+  </control>
+</manifest>
