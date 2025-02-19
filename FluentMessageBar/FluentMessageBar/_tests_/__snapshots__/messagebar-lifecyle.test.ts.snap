@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FluentMessageBar renders 1`] = `
+<MessageBarComponent
+  OnDismiss={[Function]}
+  Url="https://google.com"
+  body="Body"
+  getPopoverRoot={[Function]}
+  height={-1}
+  items={
+    [
+      {
+        "appearance": "primary",
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "1",
+          "values": {
+            "ItemAppearance": "Primary",
+            "ItemDisplayName": "Add",
+            "ItemIconName": "Add",
+            "ItemIconStyle": "Filled",
+            "ItemKey": "toolAdd",
+            "ItemVisible": true,
+          },
+        },
+        "disabled": false,
+        "iconName": "Add",
+        "iconStyle": "Filled",
+        "id": "1",
+        "key": "toolAdd",
+        "name": "Add",
+        "tooltip": undefined,
+        "visible": true,
+      },
+      {
+        "appearance": "subtle",
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "2",
+          "values": {
+            "ItemAppearance": "Subtle",
+            "ItemDisplayName": "Edit",
+            "ItemIconName": "Edit",
+            "ItemIconStyle": "Regular",
+            "ItemKey": "toolEdit",
+            "ItemVisible": true,
+          },
+        },
+        "disabled": false,
+        "iconName": "Edit",
+        "iconStyle": "Regular",
+        "id": "2",
+        "key": "toolEdit",
+        "name": "Edit",
+        "tooltip": undefined,
+        "visible": true,
+      },
+    ]
+  }
+  linkText="Link"
+  messageBarIntent="info"
+  messageBarShape="square"
+  onResize={[Function]}
+  onSelected={[Function]}
+  title="Title"
+  width={-1}
+/>
+`;
+
+exports[`FluentMessageBar should update view correctly 1`] = `
+<MessageBarComponent
+  OnDismiss={[Function]}
+  Url="https://google.com"
+  body="Body"
+  getPopoverRoot={[Function]}
+  height={-1}
+  items={
+    [
+      {
+        "appearance": "primary",
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "1",
+          "values": {
+            "ItemAppearance": "Primary",
+            "ItemDisplayName": "Add",
+            "ItemIconName": "Add",
+            "ItemIconStyle": "Filled",
+            "ItemKey": "toolAdd",
+            "ItemVisible": true,
+          },
+        },
+        "disabled": false,
+        "iconName": "Add",
+        "iconStyle": "Filled",
+        "id": "1",
+        "key": "toolAdd",
+        "name": "Add",
+        "tooltip": undefined,
+        "visible": true,
+      },
+      {
+        "appearance": "subtle",
+        "data": MockEntityRecord {
+          "getNamedReference": [MockFunction],
+          "id": "2",
+          "values": {
+            "ItemAppearance": "Subtle",
+            "ItemDisplayName": "Edit",
+            "ItemIconName": "Edit",
+            "ItemIconStyle": "Regular",
+            "ItemKey": "toolEdit",
+            "ItemVisible": true,
+          },
+        },
+        "disabled": false,
+        "iconName": "Edit",
+        "iconStyle": "Regular",
+        "id": "2",
+        "key": "toolEdit",
+        "name": "Edit",
+        "tooltip": undefined,
+        "visible": true,
+      },
+    ]
+  }
+  linkText="Link"
+  messageBarIntent="info"
+  messageBarShape="square"
+  onResize={[Function]}
+  onSelected={[Function]}
+  title="Title"
+  width={-1}
+/>
+`;
