@@ -57,6 +57,7 @@
     <ProjectReference Include="..\Icon\Icon.pcfproj" />
     <ProjectReference Include="..\KeyboardShortcuts\keyboard-shortcuts.pcfproj" />
     <ProjectReference Include="..\MaskedTextField\MaskedTextField.pcfproj" />
+    <ProjectReference Include="..\ModernThemeGenerator\ModernThemeGenerator.pcfproj" />
     <ProjectReference Include="..\Nav\Nav.pcfproj" />
     <ProjectReference Include="..\PeoplePicker\PeoplePicker.pcfproj" />
     <ProjectReference Include="..\Persona\Persona.pcfproj" />
