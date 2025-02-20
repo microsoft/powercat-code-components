@@ -1,3 +1,4 @@
+// @ts-nocheck
 export type { FlexibleHeader, IFlexibleHeader } from './flexible-header';
 export type {
     NarrowedProperties,

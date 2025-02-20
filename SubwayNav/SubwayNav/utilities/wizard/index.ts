@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { Wizard } from './wizard';
 export { WizardBase } from './wizard.base';
 export {

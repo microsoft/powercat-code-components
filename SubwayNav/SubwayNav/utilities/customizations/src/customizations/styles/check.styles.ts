@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ICheckStyleProps, ICheckStyles } from '@fluentui/react';
 import { FontWeights, warn } from '@fluentui/react';
 

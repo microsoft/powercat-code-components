@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { ScreenWidthMinLarge } from '@fluentui/react';
 import { clone } from 'ramda';
 

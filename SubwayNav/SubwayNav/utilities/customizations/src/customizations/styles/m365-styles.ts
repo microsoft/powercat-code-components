@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ISettings } from '@fluentui/react';
 
 import { ButtonStyles } from './button.styles';

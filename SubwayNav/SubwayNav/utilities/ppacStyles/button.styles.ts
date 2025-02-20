@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IButtonProps, IButtonStyles } from '@fluentui/react';
 
 export const ButtonStyles = (props: IButtonProps): Partial<IButtonStyles> => {

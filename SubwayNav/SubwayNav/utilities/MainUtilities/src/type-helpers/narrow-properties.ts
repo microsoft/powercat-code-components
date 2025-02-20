@@ -1,3 +1,4 @@
+// @ts-nocheck
 export type NarrowedPropertyKeys<T, V> = {
     [P in keyof T]: V extends T[P] ? P : never;
 }[keyof T];

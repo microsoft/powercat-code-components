@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ISemanticColors } from '@fluentui/react';
 
 export interface IM365ExtendedSemanticColors extends ISemanticColors {

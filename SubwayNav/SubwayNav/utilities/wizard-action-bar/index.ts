@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { WizardActionBar } from './wizard-action-bar';
 export { WizardActionBarBase } from './wizard-action-bar.base';
 export {

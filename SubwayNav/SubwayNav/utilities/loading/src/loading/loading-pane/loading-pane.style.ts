@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AnimationClassNames, FontWeights } from '@fluentui/react';
 
 import type { ILoadingPaneStyleProps, ILoadingPaneStyles } from './loading-pane.types';

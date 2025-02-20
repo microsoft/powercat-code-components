@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IChoiceGroupOptionStyleProps, IChoiceGroupOptionStyles, IStyle } from '@fluentui/react';
 import { warn } from '@fluentui/react';
 

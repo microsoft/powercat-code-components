@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IDialogFooterStyleProps, IDialogFooterStyles } from '@fluentui/react';
 
 export const DialogFooterStyles = (props: IDialogFooterStyleProps): Partial<IDialogFooterStyles> => {

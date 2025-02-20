@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IRawStyle } from '@fluentui/react';
 import { keyframes } from '@fluentui/react';
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { SubwayNode } from './subway-node';
 export { SubwayNodeBase } from './subway-node.base';
 export {

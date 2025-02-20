@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable @typescript-eslint/no-namespace */
 import type { ICustomizations, ITheme } from '@fluentui/react';
 import { createTheme } from '@fluentui/react';

@@ -10,4 +10,5 @@ export interface ICanvasMaskedTextFieldProps extends IMaskedTextFieldProps {
     onChange: (event?: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>, newValue?: string) => void;
     themeJSON?: string;
     setFocus?: string;
+    ref?: React.Ref<HTMLInputElement>;
 }

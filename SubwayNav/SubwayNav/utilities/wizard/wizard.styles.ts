@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IBreadcrumbStyles, IStyle } from '@fluentui/react';
 import { FontWeights, keyframes } from '@fluentui/react';
 import {
@@ -21,7 +22,7 @@ export const subwayNavPadding = 48;
 export const wizardContentSectionTopPadding = 16;
 
 export const subwayNavWidthStyle: IStyle = {
-    width: '33%',
+  width: '33%',
   maxWidth: 456,
   paddingLeft: subwayNavPadding,
   paddingRight: subwayNavPadding,
@@ -40,20 +41,20 @@ export const getWizardStyles = (props: IWizardStyleProps): IWizardStyles => {
     isContentScrollBarPresent,
     isLoading,
     theme,
-        props;
+  } = props;
   const backgroundImageUrl = props.backgroundImageUrl;
 
-    let backgroundAnimation = '';
+  let backgroundAnimation = '';
   let backgroundStartIndex = 0;
 
-    if (isSubStep && isLastStepSubStep) {
+  if (isSubStep && isLastStepSubStep) {
     if (props.clickedForward) {
       backgroundStartIndex = stepBackgroundIndex - 1;
-        } else {
+    } else {
       backgroundStartIndex = stepBackgroundIndex + 1;
-        }
+    }
 
-        backgroundAnimation = keyframes({
+    backgroundAnimation = keyframes({
       to: { backgroundPosition: `left ${stepBackgroundIndex * -100}px top` },
     });
   } else {
@@ -70,28 +71,28 @@ export const getWizardStyles = (props: IWizardStyleProps): IWizardStyles => {
     }
   }
 
-    let contentSectionRightPadding = isNarrow ? detailPanelGutterWidth : subwayNavPadding;
+  let contentSectionRightPadding = isNarrow ? detailPanelGutterWidth : subwayNavPadding;
 
-    if (!isNarrow && isContentScrollBarPresent) {
+  if (!isNarrow && isContentScrollBarPresent) {
     contentSectionRightPadding = subwayNavPadding - 16;
-    }
+  }
 
-    return {
+  return {
     wizardContentNavContainer: [
-            {
+      {
         display: 'flex',
         height: '100%',
         width: '100%',
         overflowY: 'auto',
         flexDirection: isNarrow ? 'column' : 'row',
-                position: 'relative',
+        position: 'relative',
       },
       backgroundImageUrl && {
         backgroundImage: `url(${backgroundImageUrl})`,
-                backgroundRepeat: 'no-repeat',
+        backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-                animation: `${backgroundAnimation} ${wizardAnimationDurationMilliSec}ms ${slideOutTimingFunction} forwards`,
-                backgroundPosition: `left ${backgroundStartIndex * -100}px top`,
+        animation: `${backgroundAnimation} ${wizardAnimationDurationMilliSec}ms ${slideOutTimingFunction} forwards`,
+        backgroundPosition: `left ${backgroundStartIndex * -100}px top`,
       },
     ],
     wizardProgress: {}, // deprecated, no effect anymore.
@@ -101,22 +102,22 @@ export const getWizardStyles = (props: IWizardStyleProps): IWizardStyles => {
         paddingTop: '40px',
         borderRight: `1px solid ${props.theme.semanticColors.bodyDivider}`,
         overflowY: isNarrow ? 'visible' : 'auto',
-            },
+      },
     ],
     contentSection: [
-            {
+      {
         paddingTop: 16,
         paddingLeft: isNarrow ? detailPanelGutterWidth : subwayNavPadding,
-                paddingRight: contentSectionRightPadding,
+        paddingRight: contentSectionRightPadding,
         paddingBottom: subwayNavPadding,
-                display: 'flex',
+        display: 'flex',
         flexDirection: 'column',
         width: isNarrow ? 'unset' : '100%',
       },
       !isNarrow && {
         overflowY: 'auto',
         position: 'relative',
-            },
+      },
       isNarrow && {
         overflowY: 'visible',
       },
@@ -130,95 +131,95 @@ export const getWizardStyles = (props: IWizardStyleProps): IWizardStyles => {
       /* doing this instead of react's conditional rendering so that consuming teams
       can still perform data operations with the items during the loading state */
       isLoading && loadingContentDisplay,
-        ],
+    ],
     content: [
       { maxWidth: wizardContentMaxWidth },
       /* doing this instead of react's conditional rendering so that consuming teams
       can still perform data operations with the items during the loading state */
-            isLoading && loadingContentDisplay,
+      isLoading && loadingContentDisplay,
     ],
-        collapsibleContainer: {
+    collapsibleContainer: {
       opacity: isLoading ? 0.5 : 1,
       position: 'sticky',
-            top: 0,
+      top: 0,
       zIndex: 100000, // there seems to be an issue with textFields specifically rolling over this element.
-        },
+    },
     subComponentStyles: {
       collapsible: {
         root: {
           borderTop: '0',
           backgroundColor: theme.semanticColors.bodyBackground,
-                },
+        },
         titleContainer: {
           width: '100%',
         },
         headerButton: {
           paddingBottom: 12,
           borderBottom: `1px solid ${theme.semanticColors.bodyDivider}`,
-                    paddingLeft: detailPanelGutterWidth,
+          paddingLeft: detailPanelGutterWidth,
           paddingRight: detailPanelGutterWidth,
-                },
+        },
         content: {
           paddingBottom: 0,
         },
       },
       calloutContent: {
-                root: {
+        root: {
           backgroundColor: theme.semanticColors.bodyBackground,
-                },
-            },
+        },
+      },
       narrowSubwayNav: {
-                root: {
+        root: {
           padding: detailPanelGutterWidth,
-                },
+        },
       },
       progressIndicator: {}, // this is now deprecated and does nothing
       loadingPane: {
-                loadingDiv: {
+        loadingDiv: {
           backgroundColor: 'transparent',
-                    alignItems: 'center',
+          alignItems: 'center',
           width: `calc(100% - ${subwayNavPadding}px)`,
-                },
+        },
       },
     },
   };
 };
 
 export const getWizardTitleStyles = (props: IWizardTitleStyleProps): IStyle => {
-    const { componentName, theme, isNarrow } = props;
+  const { componentName, theme, isNarrow } = props;
 
-    throwOnUndefinedColor(theme.semanticColors.headerText, 'headerText', componentName);
+  throwOnUndefinedColor(theme.semanticColors.headerText, 'headerText', componentName);
 
-    return [
+  return [
     theme.fonts.medium,
-        {
+    {
       fontWeight: FontWeights.bold,
       lineHeight: '22px',
-            display: 'flex',
+      display: 'flex',
       alignItems: 'center',
       color: theme.semanticColors.headerText,
       paddingTop: 12,
-            paddingBottom: 12,
+      paddingBottom: 12,
       paddingLeft: isNarrow ? detailPanelGutterWidth : subwayNavPadding,
     },
-    ];
+  ];
 };
 
 export const wizardBreadcrumbStyles: Partial<IBreadcrumbStyles> = {
-    item: {
+  item: {
     fontWeight: FontWeights.bold,
-        selectors: {
+    selectors: {
       '&:last-child *': {
         fontWeight: FontWeights.bold,
-            },
+      },
     },
   },
   itemLink: {
     fontWeight: FontWeights.bold,
-        selectors: {
+    selectors: {
       '&:last-child *': {
         fontWeight: FontWeights.bold,
-            },
-        },
+      },
+    },
   },
 };

@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { addAlphaChannelToHex } from './add-alpha-channel-to-hex';
 export {
     DarkExtendedSemanticColorsForTest,

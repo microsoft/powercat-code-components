@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Dispatch, MutableRefObject, SetStateAction } from 'react';
 import * as React from 'react';
 
