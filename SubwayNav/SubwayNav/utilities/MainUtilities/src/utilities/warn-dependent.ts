@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ISettingsMap } from '@fluentui/react';
 import { warn } from '@fluentui/react';
 

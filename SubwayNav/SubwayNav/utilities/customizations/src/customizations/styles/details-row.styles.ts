@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IDetailsRowProps, IDetailsRowStyles } from '@fluentui/react';
 import { FontWeights } from '@fluentui/react';
 

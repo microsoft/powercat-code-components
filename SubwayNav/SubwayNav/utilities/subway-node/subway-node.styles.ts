@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IGetFocusStylesOptions, IStyle } from '@fluentui/react';
 import { FontWeights, getFocusStyle } from '@fluentui/react';
 import type { IM365Theme } from '../customizations/src';

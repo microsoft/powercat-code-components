@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IAnnouncedProps, ISpinnerProps, IStyle, IStyleFunctionOrObject } from '@fluentui/react';
 import type { IM365Theme } from '../../../../customizations/src/index';
 

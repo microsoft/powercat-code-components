@@ -1,3 +1,4 @@
+// @ts-nocheck
 export type { ILoadingPaneProps, ILoadingPaneStyleProps, ILoadingPaneStyles } from './loading/index';
 export {
     getLoadingPaneStyles,

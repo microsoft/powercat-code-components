@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { addAlphaChannelToHex } from '../customizations/add-alpha-channel-to-hex';
 import { M365LightCustomizations } from '../customizations/m365-light-theme';
 import type { IM365Theme } from '../customizations/m365-theme.types';

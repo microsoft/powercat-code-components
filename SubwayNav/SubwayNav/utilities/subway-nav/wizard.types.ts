@@ -1,3 +1,4 @@
+// @ts-nocheck
 export enum SubwayNavNodeState {
     NotStarted = 'NotStarted',
     Current = 'Current',

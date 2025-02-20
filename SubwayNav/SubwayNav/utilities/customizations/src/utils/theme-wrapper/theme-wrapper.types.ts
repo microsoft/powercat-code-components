@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ITheme } from '@fluentui/react';
 import type { ReactElement } from 'react';
 

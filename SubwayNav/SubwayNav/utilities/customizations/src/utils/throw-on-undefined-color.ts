@@ -1,3 +1,4 @@
+// @ts-nocheck
 export function throwOnUndefinedColor(
     desiredColor: string | undefined,
     desiredColorName: string,

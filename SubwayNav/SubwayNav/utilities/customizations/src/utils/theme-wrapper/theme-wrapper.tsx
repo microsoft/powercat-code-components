@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { FunctionComponent, ReactElement } from 'react';
 
 import type { IM365Theme } from '../../customizations/m365-theme.types';

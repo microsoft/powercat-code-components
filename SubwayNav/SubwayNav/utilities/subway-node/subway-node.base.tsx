@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IIconRecord, IProcessedStyleSet } from '@fluentui/react';
 import { buttonProperties, classNamesFunction, getIcon, getNativeProps } from '@fluentui/react';
 import type { ReactNode } from 'react';

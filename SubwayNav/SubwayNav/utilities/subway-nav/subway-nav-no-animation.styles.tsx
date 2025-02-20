@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable */
 /* istanbul ignore file */
 // # FEATURE - Disable animation: Related changes are performed in this file

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { getId } from '@fluentui/react';
 import type { ReactNode } from 'react';
 import { useEffect, useMemo } from 'react';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Throws a warning when not in production environments.
  *

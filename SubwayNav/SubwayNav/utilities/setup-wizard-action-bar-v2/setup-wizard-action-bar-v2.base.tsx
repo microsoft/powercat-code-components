@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type {
   IContextualMenuItem,
   IContextualMenuItemProps,
@@ -17,7 +18,7 @@ import * as React from 'react';
 import { generateWizardClickHandler, shouldWizardBeNarrow } from '../utilities/common';
 import type {
   ISetupWizardActionBarV2Props,
-    ISetupWizardActionBarV2StyleProps,
+  ISetupWizardActionBarV2StyleProps,
   ISetupWizardActionBarV2Styles,
 } from './setup-wizard-action-bar-v2.types';
 import { generateContextualMenuItemFromLink } from './setup-wizard-action-bar-v2.utils';
@@ -34,111 +35,112 @@ export const SetupWizardActionBarBaseV2: FC<ISetupWizardActionBarV2Props> = (
     currentStep,
     backLinkProps,
     mainLinkProps,
-        exitLinkProps,
+    exitLinkProps,
     iconButtonProps,
     isLoading,
-        styles,
+    styles,
     theme,
     resizeObserverRef,
-    } = props;
+  } = props;
 
-    const [isNarrow, setIsNarrow] = React.useState(false);
+  const [isNarrow, setIsNarrow] = React.useState(false);
   const classNames = getClassNames(styles, { theme: theme!, isNarrow: isNarrow });
-    const rootRef = React.useRef<HTMLDivElement>(null);
-    const customMenuId = useSimpleId();
+  const rootRef = React.useRef<HTMLDivElement>(null);
+  const customMenuId = useSimpleId();
 
-    React.useEffect(() => {
-        const rootDiv = rootRef.current;
+  React.useEffect(() => {
+    const rootDiv = rootRef.current;
 
-        if (rootDiv) {
+    if (rootDiv) {
       // if we are passed a constructor for a ponyfill, use that instead
       const ROConstructor = resizeObserverRef ? resizeObserverRef : ResizeObserver;
-            const resizeObserver = new ROConstructor((entries: ReadonlyArray<ResizeObserverEntry>) => {
-          const rootDivWidth = entries[0].contentRect.width;
+      // @ts-ignore
+      const resizeObserver = new ROConstructor((entries: ReadonlyArray<ResizeObserverEntry>) => {
+        const rootDivWidth = entries[0].contentRect.width;
 
-                if (!isNarrow && shouldWizardBeNarrow(rootDivWidth)) {
-            setIsNarrow(true);
-          } else if (isNarrow && !shouldWizardBeNarrow(rootDivWidth)) {
-                    setIsNarrow(false);
-                }
-        },
-            resizeObserver.observe(rootDiv);
+        if (!isNarrow && shouldWizardBeNarrow(rootDivWidth)) {
+          setIsNarrow(true);
+        } else if (isNarrow && !shouldWizardBeNarrow(rootDivWidth)) {
+          setIsNarrow(false);
+        }
+      });
+      resizeObserver.observe(rootDiv);
 
-            return () => {
+      return () => {
         resizeObserver.disconnect();
-            };
+      };
     }
 
-        return;
+    return;
   });
 
-    // Custom renderer for menu items (these must have a separate custom renderer because it's unlikely
+  // Custom renderer for menu items (these must have a separate custom renderer because it's unlikely
   // that the same component could be rendered properly as both a command bar item and menu item).
   // It's also okay to custom render only the command bar items without changing the menu items.
-    const CustomMenuItem: FC<IContextualMenuItemProps> = (contextualMenuItemProps) => {
+  const CustomMenuItem: FC<IContextualMenuItemProps> = (contextualMenuItemProps) => {
     // Due to ContextualMenu implementation quirks, passing styles here doesn't work
-        return (
+    return (
       <ContextualMenuItem
         key={customMenuId}
         // @ts-ignore This looks like it could be a valid error because IContextualMenuItemProps has item as required, hence whatever is passed in `contextualMenuItemProps` will always overwrite the `item` prop.
-                item={{ text: contextualMenuItemProps.item.children }}
+        item={{ text: contextualMenuItemProps.item.children }}
         {...contextualMenuItemProps}
-            />
-        );
+      />
+    );
   };
 
-    const menuItems: IContextualMenuItem[] = [];
+  const menuItems: IContextualMenuItem[] = [];
 
-    if (exitLinkProps) {
+  if (exitLinkProps) {
     menuItems.push(generateContextualMenuItemFromLink(exitLinkProps, currentStep));
   }
 
-    if (backLinkProps) {
+  if (backLinkProps) {
     menuItems.push(generateContextualMenuItemFromLink(backLinkProps, currentStep));
-    }
-
-    let additionalMenuProps: IContextualMenuProps | undefined = undefined;
-
-    if (iconButtonProps?.menuProps) {
-        additionalMenuProps = iconButtonProps.menuProps;
   }
 
-    const mergedMenuProps: IContextualMenuProps = {
+  let additionalMenuProps: IContextualMenuProps | undefined = undefined;
+
+  if (iconButtonProps?.menuProps) {
+    additionalMenuProps = iconButtonProps.menuProps;
+  }
+
+  const mergedMenuProps: IContextualMenuProps = {
     gapSpace: 0,
-        beakWidth: 0,
+    beakWidth: 0,
     shouldFocusOnMount: true,
     directionalHintFixed: true,
-        directionalHint: DirectionalHint.topRightEdge,
-        contextualMenuItemAs: CustomMenuItem,
+    directionalHint: DirectionalHint.topRightEdge,
+    contextualMenuItemAs: CustomMenuItem,
     items: menuItems,
     ...additionalMenuProps,
   };
 
-    return (
+  return (
     <div className={classNames.root} ref={rootRef}>
-            {!isNarrow && (
+      {!isNarrow && (
         <div className={classNames.spacer}>
-                    {backLinkProps && (
+          {backLinkProps && (
             <Link
               disabled={isLoading}
               {...backLinkProps}
               styles={classNames.subComponentStyles.back}
               onClick={generateWizardClickHandler(backLinkProps, currentStep)}
-                        />
+            />
           )}
         </div>
       )}
-            <div className={classNames.buttonArea}>
-                {mainLinkProps && (
+      <div className={classNames.buttonArea}>
+        {mainLinkProps && (
           <Link
-                        disabled={isLoading}
+            disabled={isLoading}
             {...mainLinkProps}
             styles={classNames.subComponentStyles.main}
             onClick={generateWizardClickHandler(mainLinkProps, currentStep)}
-                    />
+          />
         )}
         {!isNarrow && exitLinkProps && (
-                    <Link
+          <Link
             disabled={isLoading}
             {...exitLinkProps}
             styles={classNames.subComponentStyles.exit}

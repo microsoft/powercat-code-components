@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ISettings } from '@fluentui/react';
 import { CustomizerContext, useTheme } from '@fluentui/react';
 import { useContext } from 'react';

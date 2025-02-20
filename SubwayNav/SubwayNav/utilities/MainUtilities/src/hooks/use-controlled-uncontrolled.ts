@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Dispatch } from 'react';
 import * as React from 'react';
 

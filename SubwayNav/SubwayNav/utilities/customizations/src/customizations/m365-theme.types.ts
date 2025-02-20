@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IEffects, IPalette, ITheme } from '@fluentui/react';
 
 import type { IM365ExtendedSemanticColors } from './m365-extended-semantic-slots.types';

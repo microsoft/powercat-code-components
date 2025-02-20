@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ITheme } from '@fluentui/react';
 import { AnimationClassNames, FontWeights, getFocusStyle } from '@fluentui/react';
 

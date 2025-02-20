@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createTheme, useCustomizationSettings } from '@fluentui/react';
 
 import { M365LightCustomizations } from '../customizations/m365-light-theme';

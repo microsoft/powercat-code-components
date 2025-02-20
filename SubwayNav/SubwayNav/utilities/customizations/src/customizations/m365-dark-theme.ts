@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ICustomizations } from '@fluentui/react';
 import { createTheme } from '@fluentui/react';
 

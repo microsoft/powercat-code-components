@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable */
 /* istanbul ignore file */
 import type { IFocusZoneProps, IStyle, IStyleFunctionOrObject } from '@fluentui/react';

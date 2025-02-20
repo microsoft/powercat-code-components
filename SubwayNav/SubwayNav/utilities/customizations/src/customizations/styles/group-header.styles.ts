@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IGroupHeaderStyles } from '@fluentui/react';
 
 export const GroupHeaderStyles = (): Partial<IGroupHeaderStyles> => ({

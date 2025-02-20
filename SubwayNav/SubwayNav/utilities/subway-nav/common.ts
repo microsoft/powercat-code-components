@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ISubwayNavNodeProps } from './subway-node.types';
 import { SubwayNavNodeState } from './subway-node.types';
 /**

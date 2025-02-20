@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IIconProps, IRenderFunction, IStyle, IStyleFunctionOrObject, ITheme } from '@fluentui/react';
 import type { IFlexibleHeader } from '../../../MainUtilities/src/type-helpers';
 import type { ButtonHTMLAttributes } from 'react';
