@@ -26,6 +26,7 @@ jobs:
          - "./HorizontalBarChart"
          - "./Icon"
          - "./KeyboardShortcuts"
+         - "./ModernThemeGenerator"
          - "./Nav"
          - "./PeoplePicker"
          - "./Persona"

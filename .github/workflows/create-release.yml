@@ -62,6 +62,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/Icon/Icon`,
                 `${process.env.GITHUB_WORKSPACE}/KeyboardShortcuts/KeyboardShortcuts`,
                 `${process.env.GITHUB_WORKSPACE}/MaskedTextField/MaskedTextField`,
+                `${process.env.GITHUB_WORKSPACE}/ModernThemeGenerator/ModernThemeGenerator`,
                 `${process.env.GITHUB_WORKSPACE}/Nav/Nav`,
                 `${process.env.GITHUB_WORKSPACE}/PeoplePicker/PeoplePicker`,
                 `${process.env.GITHUB_WORKSPACE}/Persona/Persona`,
@@ -169,6 +170,12 @@ jobs:
       - name: Install Dependencies in MaskedTextField
         run: |
           cd ./MaskedTextField
+          npm install
+          npm ci
+
+      - name: Install Dependencies in ModernThemeGenerator
+        run: |
+          cd ./ModernThemeGenerator
           npm install
           npm ci
 
