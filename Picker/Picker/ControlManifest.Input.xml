@@ -52,8 +52,8 @@
       <code path="index.ts" order="1" />
       <resx path="strings/TagPicker.1033.resx" version="1.0.0" />
       <css path="css/TagPicker.css" order="1" />
-      <platform-library name="React" version="16.8.6" />
-      <platform-library name="Fluent" version="8.29.0" />
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="8.121.1" />
     </resources>
   </control>
 </manifest>

@@ -43,7 +43,7 @@
     <resources>
       <code path="index.ts" order="1"/>
       <resx path="strings/Card.1033.resx" version="1.0.0"/>
-      <platform-library name="React" version="16.8.6"/>
+      <platform-library name="React" version="16.14.0"/>
       <platform-library name="Fluent" version="9.19.1"/>
     </resources>
     <feature-usage>

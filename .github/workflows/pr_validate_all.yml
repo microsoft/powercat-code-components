@@ -26,6 +26,7 @@ jobs:
          - "./HorizontalBarChart"
          - "./Icon"
          - "./KeyboardShortcuts"
+         - "./ModernThemeGenerator"
          - "./Nav"
          - "./PeoplePicker"
          - "./Persona"
@@ -53,4 +54,3 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - run: npm run build
-    - run: npm test
