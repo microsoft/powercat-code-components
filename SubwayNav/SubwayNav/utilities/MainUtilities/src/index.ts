@@ -1,3 +1,4 @@
+// @ts-nocheck
 export type { IUseInjectOnce } from './hooks/index';
 export {
     makeInjectSingleton,

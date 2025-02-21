@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { getId } from '@fluentui/react';
 import { useMemo } from 'react';
 

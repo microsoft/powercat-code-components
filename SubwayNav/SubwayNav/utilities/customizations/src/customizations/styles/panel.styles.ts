@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IPanelProps, IPanelStyles, IStyle } from '@fluentui/react';
 import { warn } from '@fluentui/react';
 

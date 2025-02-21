@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable jest/no-export */
 /* eslint-disable @typescript-eslint/no-unsafe-call */

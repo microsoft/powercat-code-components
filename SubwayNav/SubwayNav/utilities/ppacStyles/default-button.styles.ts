@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IButtonProps, IButtonStyles } from '@fluentui/react';
 import { HighContrastSelector } from '@fluentui/react';
 

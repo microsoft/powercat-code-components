@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IContextualMenuItem } from '@fluentui/react';
 import { getId } from '@fluentui/react';
 

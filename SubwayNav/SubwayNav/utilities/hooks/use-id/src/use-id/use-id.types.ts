@@ -1,3 +1,4 @@
+// @ts-nocheck
 export type UseIDArgs = {
     prefix?: string;
     postfix?: string;

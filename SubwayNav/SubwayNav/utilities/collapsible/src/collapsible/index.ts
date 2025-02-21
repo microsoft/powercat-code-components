@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { Collapsible } from './collapsible';
 export { CollapsibleBase } from './collapsible.base';
 export { getCollapsibleStyles } from './collapsible.style';

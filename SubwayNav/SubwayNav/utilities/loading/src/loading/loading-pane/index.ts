@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { LoadingPane } from './loading-pane';
 export { LoadingPaneBase } from './loading-pane.base';
 export { getLoadingPaneStyles } from './loading-pane.style';

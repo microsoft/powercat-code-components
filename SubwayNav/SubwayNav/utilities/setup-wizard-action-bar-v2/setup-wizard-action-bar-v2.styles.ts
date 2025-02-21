@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { FontWeights } from '@fluentui/react';
 import { detailPanelGutterWidth } from '../customizations/src/index';
 

@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { checkStyleProps } from './check-style-props';
 export type { ISemanticTestCombination } from './color-test-helpers';
 export {

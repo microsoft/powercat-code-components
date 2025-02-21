@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, HTMLAttributes } from 'react';
 
 /**

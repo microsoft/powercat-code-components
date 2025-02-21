@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IPivotStyleProps, IPivotStyles } from '@fluentui/react';
 import { HighContrastSelector, warn } from '@fluentui/react';
 

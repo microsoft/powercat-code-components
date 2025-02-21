@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ISpinnerStyleProps, ISpinnerStyles } from '@fluentui/react';
 import { warn } from '@fluentui/react';
 

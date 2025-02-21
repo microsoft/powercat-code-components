@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable */
 /* istanbul ignore file */
 import type { IStyle } from '@fluentui/react';

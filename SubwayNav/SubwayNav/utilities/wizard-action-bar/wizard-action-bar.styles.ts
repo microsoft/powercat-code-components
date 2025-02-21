@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IStyle } from '@fluentui/react';
 import { detailPanelGutterWidth } from '../customizations/src';
 

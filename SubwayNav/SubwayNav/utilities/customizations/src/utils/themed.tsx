@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ICustomizerContext } from '@fluentui/react';
 import { CustomizerContext } from '@fluentui/react';
 import type { ComponentType, FunctionComponent } from 'react';

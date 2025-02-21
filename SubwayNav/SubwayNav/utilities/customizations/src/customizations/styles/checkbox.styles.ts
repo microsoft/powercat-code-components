@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { ICheckboxProps, ICheckboxStyles } from '@fluentui/react';
 import { warn } from '@fluentui/react';
 

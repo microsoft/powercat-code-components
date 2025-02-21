@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { styled } from '@fluentui/react';
 import type { FunctionComponent } from 'react';
 

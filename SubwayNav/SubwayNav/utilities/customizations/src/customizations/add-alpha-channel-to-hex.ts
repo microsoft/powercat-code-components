@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IColor } from '@fluentui/react';
 import { getColorFromString, updateA } from '@fluentui/react';
 

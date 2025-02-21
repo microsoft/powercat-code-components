@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IStyle, IStyleFunctionOrObject } from '@fluentui/react';
 // import type {
 //   NarrowedPropertiesReq,

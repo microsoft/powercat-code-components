@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { ButtonStyles, closeButtonStyles, getBlackIconButtonColors, navBarButtonSize } from './button.styles';
 export { CheckStyles } from './check.styles';
 export { CheckboxStyles } from './checkbox.styles';

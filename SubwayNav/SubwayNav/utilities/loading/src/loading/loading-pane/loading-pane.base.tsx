@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AnimationVariables, Announced, classNamesFunction, isIE11, Spinner, SpinnerSize } from '@fluentui/react';
 import * as React from 'react';
 

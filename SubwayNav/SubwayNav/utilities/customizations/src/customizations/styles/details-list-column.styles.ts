@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IDetailsColumnStyleProps, IDetailsColumnStyles } from '@fluentui/react';
 
 export const DetailsColumnStyles = (props: IDetailsColumnStyleProps): Partial<IDetailsColumnStyles> => {

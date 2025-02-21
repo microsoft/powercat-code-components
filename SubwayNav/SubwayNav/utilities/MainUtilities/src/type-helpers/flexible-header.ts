@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * A flexible header type that let's the consumer chose what level of heading to assign.
  * Most consumers

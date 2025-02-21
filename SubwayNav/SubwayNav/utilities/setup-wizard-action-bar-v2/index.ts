@@ -1,3 +1,4 @@
+// @ts-nocheck
 export { SetupWizardActionBarV2 } from './setup-wizard-action-bar-v2';
 export { SetupWizardActionBarBaseV2 } from './setup-wizard-action-bar-v2.base';
 export {

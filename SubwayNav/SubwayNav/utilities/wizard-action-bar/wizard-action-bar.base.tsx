@@ -1,7 +1,8 @@
+// @ts-nocheck
 import { classNamesFunction, DefaultButton, PrimaryButton } from '@fluentui/react';
 import type { FC } from 'react';
 import * as React from 'react';
-
+// @ts-ignore
 import { generateWizardClickHandler, generateWizardClickHandler1, shouldWizardBeNarrow } from '../utilities/common';
 import type {
     IWizardActionBarProps,

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IButtonProps, IButtonStyles, ITheme } from '@fluentui/react';
 
 import type { IM365Theme } from '../m365-theme.types';

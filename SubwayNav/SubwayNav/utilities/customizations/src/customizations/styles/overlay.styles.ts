@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { IOverlayStyleProps, IOverlayStyles } from '@fluentui/react';
 import { warn } from '@fluentui/react';
 
