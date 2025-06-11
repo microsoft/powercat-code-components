@@ -22,6 +22,7 @@ jobs:
          - "./DonutChart" 
          - "./Elevation" 
          - "./Facepile"
+         - "./FluentMessageBar"
          - "./GaugeChart"
          - "./HorizontalBarChart"
          - "./Icon"

@@ -52,6 +52,7 @@
     <ProjectReference Include="..\DonutChart\DonutChart.pcfproj" />
     <ProjectReference Include="..\Elevation\Elevation.pcfproj" />
     <ProjectReference Include="..\Facepile\Facepile.pcfproj" />
+    <ProjectReference Include="..\FluentMessageBar\FluentMessageBar.pcfproj" />
     <ProjectReference Include="..\GaugeChart\GaugeChart.pcfproj" />
     <ProjectReference Include="..\HorizontalBarChart\HorizontalBarChart.pcfproj" />
     <ProjectReference Include="..\Icon\Icon.pcfproj" />
