@@ -3,7 +3,7 @@ import { FluentMessageBar } from '..';
 import { MockContext, MockState } from '../__mocks__/mock-context';
 import { MockDataSet, MockEntityRecord } from '../__mocks__/mock-datasets';
 import { getMockParameters } from '../__mocks__/mock-parameters';
-import { IInputs, IOutputs } from '../generated/ManifestTypes';
+import { IInputs } from '../generated/ManifestTypes';
 import { ItemColumns } from '../ManifestConstant';
 
 describe('FluentMessageBar', () => {
