@@ -5,7 +5,7 @@
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
-    "lint": "eslint FluentMessageBar --ext .ts,.tsx",
+    "lint": "eslint FluentMessageBar/**/*.ts FluentMessageBar/**/*.tsx",
     "lint:fix": "npm run lint -- --fix",
     "rebuild": "pcf-scripts rebuild",
     "start": "pcf-scripts start",
