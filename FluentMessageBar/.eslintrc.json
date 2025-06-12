@@ -1,33 +1,23 @@
 {
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
-    "es2020": true
+    "commonjs": true,
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
     "plugin:sonarjs/recommended"
   ],
-  "globals": {
-    "ComponentFramework": true
-  },
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    "project": "./tsconfig.json"
   },
   "plugins": [
-    "react",
-    "@microsoft/power-apps",
     "@typescript-eslint",
+    "react",
     "sonarjs"
-  ],
-  "ignorePatterns": [
-    "**/generated/*.ts"
   ],
   "rules": {
     "indent": [
@@ -47,9 +37,23 @@
       "always"
     ]
   },
-  "settings": {
-    "react": {
-      "version": "detect"
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "rules": {
+        "camelcase": [
+          2,
+          {
+            "properties": "never"
+          }
+        ]
+      }
     }
-  }
+  ],
+  "ignorePatterns": [
+    "**/generated/**",
+    "**/.eslint*.json"
+  ]
 }
