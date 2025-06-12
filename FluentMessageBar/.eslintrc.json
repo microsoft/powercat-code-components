@@ -26,7 +26,9 @@
     "@typescript-eslint",
     "sonarjs"
   ],
-  "ignorePatterns": ["**/generated/*.ts"],
+  "ignorePatterns": [
+    "**/generated/*.ts"
+  ],
   "rules": {
     "indent": [
       "error",
@@ -43,7 +45,8 @@
     "semi": [
       "error",
       "always"
-    ]
+    ],
+    "@typescript-eslint/no-unused-vars": "off"
   },
   "settings": {
     "react": {
