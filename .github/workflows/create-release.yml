@@ -53,6 +53,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/Card/Card`,
                 `${process.env.GITHUB_WORKSPACE}/CommandBar/CommandBar`,
                 `${process.env.GITHUB_WORKSPACE}/ContextMenu/ContextMenu`,
+                `${process.env.GITHUB_WORKSPACE}/ControlForTesting/ControlForTesting`,
                 `${process.env.GITHUB_WORKSPACE}/DetailsList/DetailsList`,
                 `${process.env.GITHUB_WORKSPACE}/DonutChart/DonutChart`,
                 `${process.env.GITHUB_WORKSPACE}/Elevation/Elevation`,
@@ -116,6 +117,12 @@ jobs:
       - name: Install Dependencies in ContextMenu
         run: |
           cd ./ContextMenu
+          npm install
+          npm ci
+
+      - name: Install Dependencies in ControlForTesting
+        run: |
+          cd ./ControlForTesting
           npm install
           npm ci
 
