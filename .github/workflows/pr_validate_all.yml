@@ -18,7 +18,6 @@ jobs:
          - "./Card" 
          - "./CommandBar" 
          - "./ContextMenu" 
-         - "./ControlForTesting"
          - "./DetailsList" 
          - "./DonutChart" 
          - "./Elevation" 
