@@ -1,50 +1,43 @@
 {
-  "env": {
-    "browser": true,
-    "es2020": true
-  },
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:sonarjs/recommended"
-  ],
-  "globals": {
-    "ComponentFramework": true
-  },
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+    "parser": "@typescript-eslint/parser",
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jest": true
     },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "sonarjs"
-  ],
-  "ignorePatterns": ["**/generated/*.ts"],
-  "rules": {
-    "indent": [
-      "error",
-      4
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:sonarjs/recommended"
     ],
-    "linebreak-style": [
-      "error",
-      "windows"
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "sonarjs"
     ],
-    "quotes": [
-      "error",
-      "single"
+    "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.ts"
+            ],
+            "rules": {
+                "camelcase": [
+                    2,
+                    {
+                        "properties": "never"
+                    }
+                ]
+            }
+        }
     ],
-    "semi": [
-      "error",
-      "always"
+    "ignorePatterns": [
+        "**/generated/**",
+        "**/.eslint*.json"
     ]
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  }
 }

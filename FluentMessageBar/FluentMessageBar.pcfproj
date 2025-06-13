@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <Name>FluentMessageBar</Name>
-    <ProjectGuid>83e9e0ca-0753-45c4-893a-ed5ffca3f1f5</ProjectGuid>
+    <ProjectGuid>ff0d1665-98df-4699-856c-545e3fae1929</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
     <PcfBuildMode>production</PcfBuildMode>
   </PropertyGroup>

@@ -15,3 +15,9 @@
 
 # MSBuild Binary and Structured Log
 *.binlog
+
+# Visual Studio cache/options directory
+/.vs
+
+# macos
+.DS_Store
