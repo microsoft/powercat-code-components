@@ -19,7 +19,22 @@
         "sonarjs"
     ],
     "rules": {
-        "@typescript-eslint/no-unused-vars": "off"
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
     },
     "overrides": [
         {
