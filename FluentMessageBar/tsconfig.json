@@ -1,6 +1,14 @@
 {
     "extends": "./node_modules/pcf-scripts/tsconfig_base.json",
     "compilerOptions": {
-        "typeRoots": ["node_modules/@types"]
+        "module": "ES2015",
+        "moduleResolution": "Node",
+        "target": "ES6",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "jsx": "react"
     }
 }
