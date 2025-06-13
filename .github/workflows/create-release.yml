@@ -58,6 +58,7 @@ jobs:
                 `${process.env.GITHUB_WORKSPACE}/DonutChart/DonutChart`,
                 `${process.env.GITHUB_WORKSPACE}/Elevation/Elevation`,
                 `${process.env.GITHUB_WORKSPACE}/Facepile/Facepile`,
+                `${process.env.GITHUB_WORKSPACE}/FluentMessageBar/FluentMessageBar`,
                 `${process.env.GITHUB_WORKSPACE}/GaugeChart/GaugeChart`,
                 `${process.env.GITHUB_WORKSPACE}/HorizontalBarChart/HorizontalBarChart`,
                 `${process.env.GITHUB_WORKSPACE}/Icon/Icon`,
@@ -147,6 +148,12 @@ jobs:
       - name: Install Dependencies in Facepile
         run: |
           cd ./Facepile
+          npm install
+          npm ci
+      
+      - name: Install Dependencies in FluentMessageBar
+        run: |
+          cd ./FluentMessageBar
           npm install
           npm ci
 

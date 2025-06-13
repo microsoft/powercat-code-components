@@ -4,8 +4,6 @@
     "es2020": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:sonarjs/recommended"
   ],
@@ -22,7 +20,6 @@
   },
   "plugins": [
     "react",
-    "@microsoft/power-apps",
     "@typescript-eslint",
     "sonarjs"
   ],

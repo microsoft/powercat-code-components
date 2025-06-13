@@ -1,16 +1,16 @@
 {
-  "name": "fluentmessagebar-project",
+  "name": "pcf-project",
   "version": "1.0.0",
   "description": "Project containing your PowerApps Component Framework (PCF) control.",
   "scripts": {
     "build": "pcf-scripts build",
     "clean": "pcf-scripts clean",
-    "lint": "eslint FluentMessageBar --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix",
     "rebuild": "pcf-scripts rebuild",
     "start": "pcf-scripts start",
     "start:watch": "pcf-scripts start watch",
     "refreshTypes": "pcf-scripts refreshTypes",
+    "lint": "eslint FluentMessageBar --ext .ts,.tsx",
+    "lint:fix": "npm run lint -- --fix",
     "test": "jest --collectCoverage"
   },
   "dependencies": {
