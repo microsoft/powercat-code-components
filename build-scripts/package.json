@@ -6,6 +6,6 @@
     "author": "",
     "license": "MIT",
     "dependencies": {
-      "replace-in-file": "^6.1.0"
+      "replace-in-file": "^6.3.5"
     }
   }
